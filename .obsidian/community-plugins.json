@@ -1,4 +1,4 @@
-
+[
   "quickadd",
   "dataview",
   "obsidian-excalidraw-plugin",
@@ -26,4 +26,5 @@
   "mermaid-tools",
   "obsidian-mkdocs-publisher",
   "obsidian-bulk-rename-plugin",
+  "OA-file-hider"
 ]
