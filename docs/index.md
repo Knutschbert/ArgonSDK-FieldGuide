@@ -23,7 +23,7 @@ This guide is currently available in two versons
   ![[FG_View_Obsidian.png]]
     
 > [!tip] Nihi:
-> This guide is created and maintained using Obsidian note-taking app. I suggest giving it a try, as it provides better search and interaction capabilities than the web version. See [(LOCAL) Obsidian vs. Web Version](ArgonSDK)
+> This guide is created and maintained using Obsidian note-taking app. I suggest giving it a try, as it provides better search and interaction capabilities than the web version. See [(LOCAL) Obsidian vs. Web Version](ArgonSDK.md)
 
 #### 2. Exported [Web Version](https://knutschbert.github.io/ArgonSDK-FieldGuide/)
   ![[FG_View_Web.png]]
@@ -34,8 +34,7 @@ Generated doxygen-style documentation of TB’s C++ classes and selected Bluepri
 - Blueprint node preview (where applicable)
 
 > [!important]
-> 
-The documentation is only available as an Obsidian vault at this point. 
+> The documentation is only available as an Obsidian vault at this point. 
 
 ![[Readme_obs_preview.png]]
 

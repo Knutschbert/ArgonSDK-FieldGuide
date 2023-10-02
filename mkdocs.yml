@@ -62,6 +62,9 @@ plugins:
   - embed_file 
   - callouts
 
+extra_css:
+  - javascripts/mermaid-center.css
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
