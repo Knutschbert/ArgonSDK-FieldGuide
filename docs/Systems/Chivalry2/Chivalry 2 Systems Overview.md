@@ -1,6 +1,6 @@
 
 ## Maps
-![[Maps Overview#Summary]]
+[[Maps Overview]]
 ## GameModes
 [[GameModes Overview]]
 ## Spawn System

@@ -1,4 +1,4 @@
-[[Chivalry 2 Official Maps#All Maps|Plain Map List]]
+[[#All Maps|Plain Map List]]
 ## Free-For-All
 
 | Asset Name            | Human-Readable Name |
