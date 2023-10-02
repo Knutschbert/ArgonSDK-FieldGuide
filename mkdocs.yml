@@ -29,6 +29,7 @@ theme:
 
 # Extensions
 markdown_extensions:
+  - nl2br
   - footnotes
   # - attr_list
   - pymdownx.arithmatex:
@@ -57,7 +58,8 @@ markdown_extensions:
 plugins:
   - search
   - roamlinks 
-
+  - embed_file 
+  - callouts
 
 extra_javascript:
   - javascripts/mathjax.js
