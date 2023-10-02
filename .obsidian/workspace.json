@@ -4,97 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "7afb0c6b5d400d4f",
+        "id": "2c948fce4afeeb3d",
         "type": "tabs",
         "children": [
           {
-            "id": "037d3bf5c109378d",
+            "id": "034b92ada75755f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "docs/Systems/Chivalry2/Maps/Chivalry 2 Official Maps.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "e5c7133809f6f01c",
+            "id": "d8f68315ddff1fef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/Tutorials/T2 Creating your first Blueprint Mod.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6f31ab68ccc2588b",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "473c0674e20b27f9",
+            "id": "3e33edb5c51961b3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Tutorials/Creating your first Blueprint Mod.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ebe109781d3e1346",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/index.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a60e5efc6d372a2e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/index.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "826ca99dbca7b64c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/Tutorials/Requirements.md",
+                "file": "docs/Tutorials/T1 Creating a FFA Map (Free-For-All).md",
                 "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "80993b66253cd8bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/Tutorials/Creating your first Blueprint Mod.md",
-                "mode": "preview",
                 "source": false
               }
             }
@@ -166,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "docs/Systems/Chivalry2/Maps/Chivalry 2 Official Maps.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "docs/Systems/Chivalry2/Maps/Chivalry 2 Official Maps.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "docs/Systems/Chivalry2/Maps/Chivalry 2 Official Maps.md"
               }
             }
           }
@@ -233,10 +177,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "037d3bf5c109378d",
+  "active": "034b92ada75755f3",
   "lastOpenFiles": [
-    "docs/index.md",
+    "docs/Systems/Chivalry2/Maps/Maps Overview.md",
+    "docs/Systems/Chivalry2/Maps/Chivalry 2 Official Maps.md",
+    "docs/Tutorials/T2 Creating your first Blueprint Mod.md",
+    "docs/Tutorials/T1 Creating a FFA Map (Free-For-All).md",
+    "docs/Tutorials/Requirements.md",
+    "docs/Tutorials/Tutorials Overview.md",
+    "docs/Tutorials/T3 Creating a TDM Map (Team Deathmatch).md",
+    "docs/Systems/Unchained/Publishing Mods",
+    "docs/Systems/Chivalry2/Configuration/Ini Files",
+    "docs/Systems/Chivalry2/Configuration/CVars",
+    "docs/Systems/Chivalry2/Configuration/Console Commands",
+    "docs/Systems/Chivalry2/Configuration",
+    "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
+    "docs/Systems/Chivalry2/Maps",
+    "docs/Systems/Chivalry2/Weapons/Weapons Overview.md",
+    "docs/Systems/Chivalry2/Spawns/Spawn System Overview.md",
+    "docs/Systems/Chivalry2/Abilities/Abilities Overview.md",
+    "docs/Systems/Chivalry2/Weapons",
+    "docs/Systems/Chivalry2/Objectives/Objectives Overview.md",
+    "docs/Systems/Unchained/ModLoading",
+    "docs/Glossary/Glossary.md",
+    "docs/Systems/Chivalry2/Objectives",
+    "docs/Systems/Chivalry2/Abilities",
+    "docs/Glossary/Mutator.md",
     "README.md",
+    "docs/index.md",
     "docs/ArgonSDK.md",
     "docs/attachments/FG_View_Obsidian.png",
     "docs/attachments/FG_View_Obsidian.bak.png",
@@ -244,14 +212,10 @@
     "docs/attachments/FG_View_Obsidian (Telefon).png",
     "docs/attachments/FG_View_Web (Telefon).png",
     "docs/attachments/FG_View_Web.png",
-    "docs/attachments/orig_size",
-    "docs/attachments/Neuer Ordner",
     "docs/attachments/Pasted image 20231002151521 (Telefon).png",
     "docs/attachments/Pasted image 20231002151355 (Telefon).png",
     "docs/attachments/Pasted image 20231002151521 (Klein).png",
     "docs/attachments/Pasted image 20231002151355 (Klein).png",
-    "docs/attachments",
-    "docs/Tutorials/Creating your first Blueprint Mod.md",
     "Nihi-local/Automating obsidian plugin download.md",
     "Nihi-local/Features/Text Formatting.md",
     "Nihi-local/Features/Mermaid Diagrams.md",
@@ -259,11 +223,6 @@
     "docs/Topic 1/Note 1.md",
     "docs/Topic 1/Note 2.md",
     "online Resources.md",
-    "docs/Tutorials/Requirements.md",
-    "docs/Tutorials/List of Tutorials.md",
-    "Nihi-local",
-    "docs/Tutorials/Untitled.canvas",
-    "docs/Glossary",
-    "docs/Tutorials"
+    "docs/Tutorials/Untitled.canvas"
   ]
 }

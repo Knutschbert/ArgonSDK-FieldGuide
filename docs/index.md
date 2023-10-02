@@ -7,7 +7,7 @@
 
 ## Topics covered by this guide
 - General modding concepts for Chivalry 2
-- [[List of Tutorials|Tutorials]]: creating cosmetic and gameplay Mods
+- [[Tutorials Overview|Tutorials]]: creating cosmetic and gameplay Mods
 - (WIP) Useful [[ Tools]] and [[online Resources]] 
 - (WIP) Breakdown of mods released by [Chivalry 2 Unchained](https://discord.com/invite/chiv2unchained) as [[Case Studies]]
 - Overview and details on interaction with systems created by TB
