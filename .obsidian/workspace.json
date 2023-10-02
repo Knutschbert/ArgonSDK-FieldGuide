@@ -11,9 +11,19 @@
             "id": "034b92ada75755f3",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "Readme_obs_preview.png"
+              }
+            }
+          },
+          {
+            "id": "5bb1c477c8ca04fd",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
+                "file": "docs/index.md",
                 "mode": "source",
                 "source": false
               }
@@ -30,20 +40,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "3e33edb5c51961b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/Tutorials/T1 Creating a FFA Map (Free-For-All).md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -73,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "blu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
+                "file": "docs/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
+                "file": "docs/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md"
+                "file": "docs/index.md"
               }
             }
           }
@@ -177,10 +176,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "034b92ada75755f3",
+  "active": "5bb1c477c8ca04fd",
   "lastOpenFiles": [
-    "docs/Systems/Chivalry2/Maps/Maps Overview.md",
+    "README.md",
+    "docs/index.md",
+    "docs/attachments/FG_View_Obsidian.png",
+    "docs/attachments/FG_View_Web.png",
+    "Readme_obs_graph.png",
+    "Readme_obs_preview.png",
+    "docs/Tutorials/T2 Creating your first Blueprint Mod.md",
     "docs/Systems/Chivalry2/Maps/Chivalry 2 Official Maps.md",
+    "docs/Systems/Chivalry2/Maps/Maps Overview.md",
     "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
     "docs/Systems/Chivalry2/Spawns/Spawner.md",
     "docs/Systems/Chivalry2/Spawns/Spawn System Overview.md",
@@ -190,7 +196,6 @@
     "docs/Systems/Chivalry2/Spawns/SpawnWave.md",
     "docs/Systems/Chivalry2/Spawns/SpawnerTypes/BaseSpawner.md",
     "docs/Systems/Chivalry2/Spawns/SpawnerTypes",
-    "docs/Tutorials/T2 Creating your first Blueprint Mod.md",
     "docs/Tutorials/Requirements.md",
     "docs/Tutorials/Tutorials Overview.md",
     "docs/Tutorials/T3 Creating a TDM Map (Team Deathmatch).md",
@@ -208,23 +213,16 @@
     "docs/Glossary/Glossary.md",
     "docs/Systems/Chivalry2/Objectives",
     "docs/Glossary/Mutator.md",
-    "README.md",
-    "docs/index.md",
     "docs/ArgonSDK.md",
-    "docs/attachments/FG_View_Obsidian.png",
     "docs/attachments/FG_View_Obsidian.bak.png",
     "docs/attachments/FG_View_Web.bak.png",
     "docs/attachments/FG_View_Obsidian (Telefon).png",
     "docs/attachments/FG_View_Web (Telefon).png",
-    "docs/attachments/FG_View_Web.png",
     "docs/attachments/Pasted image 20231002151521 (Telefon).png",
     "docs/attachments/Pasted image 20231002151355 (Telefon).png",
-    "docs/attachments/Pasted image 20231002151521 (Klein).png",
-    "docs/attachments/Pasted image 20231002151355 (Klein).png",
     "Nihi-local/Automating obsidian plugin download.md",
     "Nihi-local/Features/Text Formatting.md",
     "Nihi-local/Features/Mermaid Diagrams.md",
-    "Nihi-local/Features/LaTeX Math Support.md",
     "docs/Tutorials/Untitled.canvas"
   ]
 }

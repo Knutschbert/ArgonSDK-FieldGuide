@@ -15,12 +15,12 @@
 
 | Asset Name      | Human-Readable Name |
 | --------------- | ------------------- |
-| TO_Bridgetown   |                     | 
-| TO_Bulwark      |                     |
+| TO_Bridgetown   |                     |
+| TO_Bulwark      | Baudwyn             |
 | TO_Coxwell      |                     |
 | TO_Falmire      |                     |
 | TO_Galencourt   |                     |
-| TO_Library      |                     |
+| TO_Library      | Askandir            | 
 | TO_Raid         |                     |
 | TO_RudhelmSiege |                     |
 | TO_Stronghold   |                     |
