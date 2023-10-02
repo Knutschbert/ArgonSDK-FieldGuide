@@ -56,7 +56,8 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - mermaid2
+  - mermaid2:
+      theme: dark
   - search
   - roamlinks 
   - embed_file 
@@ -64,6 +65,7 @@ plugins:
 
 extra_css:
   - javascripts/mermaid-center.css
+  - javascripts/extra.css
 
 extra_javascript:
   - javascripts/mathjax.js

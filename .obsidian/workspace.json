@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/ArgonSDK.md",
+                "file": "docs/Glossary/ArgonSDK.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,9 +168,15 @@
   },
   "active": "4db38d41d9132076",
   "lastOpenFiles": [
-    "docs/ArgonSDK.md",
-    "docs/Introduction.md",
+    "docs/javascripts/extra.css",
+    "docs/javascripts/mermaid-center.css",
     "docs/index.md",
+    "docs/Glossary/ArgonSDK.md",
+    "docs/Introduction.md",
+    "docs/Features/Text Formatting.md",
+    "docs/Features/Mermaid Diagrams.md",
+    "docs/Features/LaTeX Math Support.md",
+    "docs/Features",
     "README.md",
     "docs/Tutorials/Requirements.md",
     "docs/Tutorials/T1 Creating a FFA Map (Free-For-All).md",
@@ -203,17 +209,11 @@
     "docs/Systems/Chivalry2/Abilities/Abilities Overview.md",
     "docs/Systems/Chivalry2/Weapons",
     "docs/Systems/Chivalry2/Objectives/Objectives Overview.md",
-    "docs/Systems/Unchained/ModLoading",
     "docs/Glossary/Glossary.md",
-    "docs/Systems/Chivalry2/Objectives",
-    "docs/Glossary/Mutator.md",
     "docs/attachments/FG_View_Obsidian.bak.png",
     "docs/attachments/FG_View_Web.bak.png",
     "docs/attachments/FG_View_Obsidian (Telefon).png",
     "docs/attachments/FG_View_Web (Telefon).png",
-    "Nihi-local/Automating obsidian plugin download.md",
-    "Nihi-local/Features/Text Formatting.md",
-    "Nihi-local/Features/Mermaid Diagrams.md",
     "docs/Tutorials/Untitled.canvas"
   ]
 }
