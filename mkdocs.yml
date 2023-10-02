@@ -36,7 +36,7 @@ markdown_extensions:
       generic: true
   # - pymdownx.superfences
   - admonition
-  - pymdownx.details
+  # - pymdownx.details
   # - pymdownx.magiclink
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -47,15 +47,16 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.superfences:
+    # make exceptions to highlighting of code:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-
+          format: !!python/name:mermaid2.fence_mermaid    
   - toc:
       permalink: true
 
 plugins:
+  - mermaid2
   - search
   - roamlinks 
   - embed_file 
