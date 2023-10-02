@@ -1,30 +1,25 @@
-site_name: Field Guide for ArgonSDK
-repo_url: https://github.com/Knutschbert/ArgonSDK-FieldGuide
-edit_uri: blob/main/docs/
-
+site_name: obsidian-mkdocs template
 
 theme:
     name: 'material'
-    font:
-      text: Volkov
     palette:
 
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue grey
+      primary: pink
       accent: indigo
       toggle:
-        icon: material/brightness-7
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
 
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: amber
+      primary: pink
       accent: blue
       toggle:
-        icon: material/brightness-4
+        icon: material/toggle-switch
         name: Switch to light mode
 
 # Extensions
@@ -34,8 +29,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   # - pymdownx.superfences
-  - admonition
-  - pymdownx.details
+  # - pymdownx.details
   # - pymdownx.magiclink
   - pymdownx.tasklist:
       custom_checkbox: true
