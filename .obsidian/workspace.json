@@ -13,25 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/index.md",
-                "mode": "preview",
+                "file": "docs/ArgonSDK.md",
+                "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4395b2feca44c389",
+            "id": "4db38d41d9132076",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Tutorials/Tutorials Overview.md",
+                "file": "docs/Introduction.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/index.md"
+                "file": "docs/Introduction.md"
               }
             }
           }
@@ -165,15 +166,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "afb703344ce5f402",
+  "active": "4db38d41d9132076",
   "lastOpenFiles": [
-    "docs/Tutorials/Tutorials Overview.md",
+    "docs/ArgonSDK.md",
+    "docs/Introduction.md",
     "docs/index.md",
+    "README.md",
+    "docs/Tutorials/Requirements.md",
+    "docs/Tutorials/T1 Creating a FFA Map (Free-For-All).md",
+    "docs/Tutorials/T3 Creating a TDM Map (Team Deathmatch).md",
+    "docs/Tutorials/Tutorials Overview.md",
     "docs/Tutorials/T2 Creating your first Blueprint Mod.md",
     "Readme_obs_preview.png",
     "docs/attachments/Readme_obs_preview.png",
     "docs/attachments/Readme_obs_graph.png",
-    "README.md",
     "docs/attachments/FG_View_Obsidian.png",
     "docs/attachments/FG_View_Web.png",
     "Readme_obs_graph.png",
@@ -182,14 +188,11 @@
     "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
     "docs/Systems/Chivalry2/Spawns/Spawner.md",
     "docs/Systems/Chivalry2/Spawns/Spawn System Overview.md",
-    "docs/Tutorials/T1 Creating a FFA Map (Free-For-All).md",
     "docs/Systems/Chivalry2/Spawns/SpawnQueuer.md",
     "docs/Systems/Chivalry2/Spawns/SpawnSequence.md",
     "docs/Systems/Chivalry2/Spawns/SpawnWave.md",
     "docs/Systems/Chivalry2/Spawns/SpawnerTypes/BaseSpawner.md",
     "docs/Systems/Chivalry2/Spawns/SpawnerTypes",
-    "docs/Tutorials/Requirements.md",
-    "docs/Tutorials/T3 Creating a TDM Map (Team Deathmatch).md",
     "docs/Systems/Unchained/Publishing Mods",
     "docs/Systems/Chivalry2/Configuration/Ini Files",
     "docs/Systems/Chivalry2/Configuration/CVars",
@@ -204,7 +207,6 @@
     "docs/Glossary/Glossary.md",
     "docs/Systems/Chivalry2/Objectives",
     "docs/Glossary/Mutator.md",
-    "docs/ArgonSDK.md",
     "docs/attachments/FG_View_Obsidian.bak.png",
     "docs/attachments/FG_View_Web.bak.png",
     "docs/attachments/FG_View_Obsidian (Telefon).png",

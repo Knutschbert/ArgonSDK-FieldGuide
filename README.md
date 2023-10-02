@@ -1,6 +1,6 @@
 # ArgonSDK Field Guide
 
-## Release Format
+## Release Formats
 This guide is currently available in two versons
 
 ## Exported [Web Version](https://knutschbert.github.io/ArgonSDK-FieldGuide/)
