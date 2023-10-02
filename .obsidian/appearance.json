@@ -1,7 +1,5 @@
 {
   "accentColor": "",
   "cssTheme": "Obsidian Nord",
-  "enabledCssSnippets": [
-    "clean-embeds-all"
-  ]
+  "enabledCssSnippets": []
 }

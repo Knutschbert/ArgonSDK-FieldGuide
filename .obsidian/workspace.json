@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Systems/Chivalry2/Spawns/Spawner.md",
+                "file": "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Systems/Chivalry2/Spawns/Spawner.md",
+                "file": "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Systems/Chivalry2/Spawns/Spawner.md",
+                "file": "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Systems/Chivalry2/Spawns/Spawner.md"
+                "file": "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md"
               }
             }
           }
@@ -180,16 +180,16 @@
   "active": "034b92ada75755f3",
   "lastOpenFiles": [
     "docs/Systems/Chivalry2/Maps/Maps Overview.md",
+    "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
+    "docs/Systems/Chivalry2/Spawns/Spawner.md",
     "docs/Systems/Chivalry2/Maps/Chivalry 2 Official Maps.md",
     "docs/Systems/Chivalry2/Spawns/Spawn System Overview.md",
-    "docs/Systems/Chivalry2/Spawns/Spawner.md",
     "docs/Tutorials/T1 Creating a FFA Map (Free-For-All).md",
     "docs/Systems/Chivalry2/Spawns/SpawnQueuer.md",
     "docs/Systems/Chivalry2/Spawns/SpawnSequence.md",
     "docs/Systems/Chivalry2/Spawns/SpawnWave.md",
     "docs/Systems/Chivalry2/Spawns/SpawnerTypes/BaseSpawner.md",
     "docs/Systems/Chivalry2/Spawns/SpawnerTypes",
-    "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
     "docs/Tutorials/T2 Creating your first Blueprint Mod.md",
     "docs/Tutorials/Requirements.md",
     "docs/Tutorials/Tutorials Overview.md",
