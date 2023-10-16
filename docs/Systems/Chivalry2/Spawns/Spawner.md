@@ -1,10 +1,10 @@
 ## Related Tutorials
 
 > [!NOTE] Tutorial
->  [[T1 Creating a FFA Map (Free-For-All)]]
+>  [[T2 Create a Free-For-All Map (FFA)]]
 
 > [!NOTE] Tutorial
->  [[T3 Creating a TDM Map (Team Deathmatch)]]
+>  [[T4 Create a Team Deathmatch Map (TDM)]]
 
 ## Types
 ### General
