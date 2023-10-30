@@ -11,9 +11,9 @@ In this tutorial, we will create a simple FFA Map Using Sublevels (More info: [U
 We will create 2 Sub-Levels:
 
 - ``Atmospherics`` (reusable)
-   - Lights, Sky
+	   * Lights, Sky
 - ``FFA``
-   - Spawner
+	   - Spawner
 	  
 > [!faq]
 > Splitting the level into these parts will allow you to reuse atmospherics in other levels, thus saving time when you’re just exploring. Alternatively you can create a single Level containing all actors in this tutorial
@@ -89,7 +89,7 @@ Follow the steps described in 2. Don't forget to open your new level
       ![[Pasted image 20231030173708.png]]
       
 1. Set Actor Scale values to ($X=50, Y=50, Z=0.1$) in the `Details` window
-> (_Optional_) Apply a `Material Instance` of your liking (e.g. `LS_StoneFloor02`)
+   > (_Optional_) Apply a `Material Instance` of your liking (e.g. `LS_StoneFloor02`)
 
       ![[Pasted image 20231030173835.png]]{: style="width:700px"}
 
