@@ -2,9 +2,11 @@
 number headings: first-level 2, max 3, 1.1
 ---
 ## 1 Requirements
-![[Requirements#General]]
+-  Unreal Engine 4.25.4
+-  [recursively cloned](https://explainshell.com/explain?cmd=git+clone+--recursive) version of our  [[ArgonSDK#Repository]] 
+
 ## 2 Introduction
-In this tutorial, we will create a simple FFA Map Using Sublevels (More info: [UE Docs: Sublevels](https://docs.unrealengine.com/4.27/en-US/Basics/Levels/CollaborateWithSublevels/))
+In this tutorial, we will create a simple FFA Map Using Sublevels (More info: [UE Docs: Sublevels](https://docs.unrealengine.com/4.27/en-US/Basics/Levels/CollaborateWithSublevels))
 
 We will create 2 Sub-Levels:
 - ``Atmospherics`` (reusable)
