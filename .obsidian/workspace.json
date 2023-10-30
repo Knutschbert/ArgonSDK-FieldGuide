@@ -8,31 +8,30 @@
         "type": "tabs",
         "children": [
           {
-            "id": "afb703344ce5f402",
+            "id": "3fb71f88f0d676c4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Glossary/ArgonSDK.md",
+                "file": "docs/Systems/Unchained/ModLoading/Mod Loader GUI.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4db38d41d9132076",
+            "id": "44f39817bdbd4a5a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Introduction.md",
+                "file": "docs/Tutorials/Additional Ressources.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -62,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "blu",
+                "query": "base spawner",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 422.5
   },
   "right": {
     "id": "bb09c236cdf39499",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Introduction.md",
+                "file": "docs/Systems/Unchained/ModLoading/Mod Loader GUI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Introduction.md",
+                "file": "docs/Systems/Unchained/ModLoading/Mod Loader GUI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Introduction.md"
+                "file": "docs/Systems/Unchained/ModLoading/Mod Loader GUI.md"
               }
             }
           }
@@ -166,54 +165,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4db38d41d9132076",
+  "active": "3fb71f88f0d676c4",
   "lastOpenFiles": [
-    "docs/javascripts/extra.css",
-    "docs/javascripts/mermaid-center.css",
-    "docs/index.md",
-    "docs/Glossary/ArgonSDK.md",
-    "docs/Introduction.md",
-    "docs/Features/Text Formatting.md",
-    "docs/Features/Mermaid Diagrams.md",
-    "docs/Features/LaTeX Math Support.md",
-    "docs/Features",
-    "README.md",
+    "docs/Systems/Unchained/ModLoading/Mod Loader Command Line Arguments.md",
+    "docs/Tutorials/T2 Create a Free-For-All Map (FFA).md",
+    "docs/Tutorials/assets/Pasted image 20231030223432.png",
+    "docs/Tutorials/assets/Pasted image 20231030223405.png",
+    "docs/Tutorials/assets/ffa_navmesh.gif",
+    "docs/Tutorials/Additional Ressources.md",
     "docs/Tutorials/Requirements.md",
-    "docs/Tutorials/T1 Creating a FFA Map (Free-For-All).md",
-    "docs/Tutorials/T3 Creating a TDM Map (Team Deathmatch).md",
-    "docs/Tutorials/Tutorials Overview.md",
-    "docs/Tutorials/T2 Creating your first Blueprint Mod.md",
-    "Readme_obs_preview.png",
-    "docs/attachments/Readme_obs_preview.png",
-    "docs/attachments/Readme_obs_graph.png",
-    "docs/attachments/FG_View_Obsidian.png",
-    "docs/attachments/FG_View_Web.png",
-    "Readme_obs_graph.png",
+    "docs/Tutorials/Blueprint Know-How.md",
+    "Nihi-local/Server Passwords.md",
+    "Nihi-local/NV Bühne.md",
+    "Nihi-local/EGS PAth autodetect.md",
+    "Nihi-local/Automating obsidian plugin download.md",
+    "Nihi-local/Atmospherics map (Hippodrome).md",
+    "docs/index.md",
+    "README.md",
+    "docs/Systems/Chivalry2/Abilities/Abilities Overview.md",
     "docs/Systems/Chivalry2/Maps/Chivalry 2 Official Maps.md",
     "docs/Systems/Chivalry2/Maps/Maps Overview.md",
-    "docs/Systems/Chivalry2/Chivalry 2 Systems Overview.md",
-    "docs/Systems/Chivalry2/Spawns/Spawner.md",
     "docs/Systems/Chivalry2/Spawns/Spawn System Overview.md",
-    "docs/Systems/Chivalry2/Spawns/SpawnQueuer.md",
-    "docs/Systems/Chivalry2/Spawns/SpawnSequence.md",
-    "docs/Systems/Chivalry2/Spawns/SpawnWave.md",
-    "docs/Systems/Chivalry2/Spawns/SpawnerTypes/BaseSpawner.md",
-    "docs/Systems/Chivalry2/Spawns/SpawnerTypes",
-    "docs/Systems/Unchained/Publishing Mods",
-    "docs/Systems/Chivalry2/Configuration/Ini Files",
-    "docs/Systems/Chivalry2/Configuration/CVars",
-    "docs/Systems/Chivalry2/Configuration/Console Commands",
-    "docs/Systems/Chivalry2/Configuration",
-    "docs/Systems/Chivalry2/Maps",
-    "docs/Systems/Chivalry2/Weapons/Weapons Overview.md",
-    "docs/Systems/Chivalry2/Abilities/Abilities Overview.md",
-    "docs/Systems/Chivalry2/Weapons",
-    "docs/Systems/Chivalry2/Objectives/Objectives Overview.md",
-    "docs/Glossary/Glossary.md",
-    "docs/attachments/FG_View_Obsidian.bak.png",
-    "docs/attachments/FG_View_Web.bak.png",
-    "docs/attachments/FG_View_Obsidian (Telefon).png",
-    "docs/attachments/FG_View_Web (Telefon).png",
+    "docs/Systems/Chivalry2/Spawns/Spawner.md",
+    "docs/Systems/Chivalry2/Tables/LoadingHintsTitlesStringTable DataTable.md",
+    "docs/Systems/Chivalry2/Tables/SubclassPerks DataTable.md",
+    "docs/Systems/Chivalry2/Tables/Abilities DataTable.md",
+    "docs/Systems/Unchained/ModLoading/Mod Loader GUI.md",
+    "docs/Introduction.md",
+    "Untitled.canvas",
+    "Pasted image 20231030162414.png",
+    "Mermaid pthon.md",
+    "online Resources.md",
+    "docs/Tutorials/assets/Chivalry 2 Screenshot 2023.10.30 - 21.45.17.59.png",
+    "docs/Tutorials/assets/Pasted image 20231030211428.png",
+    "docs/Tutorials/assets/Pasted image 20231030211425.png",
+    "docs/Tutorials/assets/Pasted image 20231030184903.png",
+    "docs/Tutorials/assets/Pasted image 20231030184901.png",
+    "docs/Tutorials/assets/Pasted image 20231030184001.png",
+    "docs/Tutorials/assets",
+    "Hippodrome_Atmospherics.umap",
+    "docs/Systems/Chivalry2/Tables/Data/temp_db.db-journal",
+    "docs/Systems/Chivalry2/Tables/Data/temp_db.db",
+    "docs/Systems/Chivalry2/Tables/Data/output.csv",
+    "docs/Systems/Chivalry2/Tables/Data/_query_csv.py",
+    "docs/Systems/Chivalry2/Tables/ST_WeaponPerks DataTable.md",
+    "docs/Systems/Chivalry2/Tables/Tables",
+    "docs/Systems/Chivalry2/Tables/Data/_generate_dataview.py.bak",
+    "docs/Systems/Chivalry2/Tables/Data/_generate_dataview.py",
+    "docs/Systems/Chivalry2/Tables/Data/Orig/ST_WeaponStrings.csv",
     "docs/Tutorials/Untitled.canvas"
   ]
 }

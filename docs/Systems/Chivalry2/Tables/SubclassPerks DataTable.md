@@ -1,10 +1,12 @@
 Source: [SubclassPerks.csv](I:\UNCN\WS\SDK\Mods_Repos\ArgonSDK-FieldGuide\docs\Systems\Chivalry2\Tables\Data\SubclassPerks.csv)
 
 ## Dataview Tables (chunked)
-
 ```dataview
-TABLE WITHOUT ID Index, DisplayName, DisplayLocation, Description, Icon, Value, Subclasses
+TABLE Index, DisplayName, Description, Value, Subclasses
 FROM csv("Data/SubclassPerks.csv")
+MERGE Key
+TABLE Key, DisplayName as SourceString
+FROM csv("Data/ST_Class_Perks.csv")
 ```
 
 ## Regular Markdown Table

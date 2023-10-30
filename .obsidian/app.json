@@ -9,5 +9,6 @@
     "margin": "0",
     "downscalePercent": 75
   },
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "docs/Tutorials/assets"
 }
