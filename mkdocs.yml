@@ -31,7 +31,7 @@ theme:
 markdown_extensions:
   - nl2br
   - footnotes
-  # - attr_list
+  - attr_list
   - pymdownx.arithmatex:
       generic: true
   # - pymdownx.superfences
