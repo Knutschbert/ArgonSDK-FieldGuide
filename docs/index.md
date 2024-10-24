@@ -1,4 +1,6 @@
 # ArgonSDK Field Guide
+## Quick Links
+### [[Installing]]
 
 ## Purpose of this guide
 
