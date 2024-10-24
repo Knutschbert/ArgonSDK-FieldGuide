@@ -54,6 +54,7 @@ Ignore `Duplicate` and `Mod Version Repl` fields.
 |Host Only| Only offline play or on an Unchained Server|
 |Allow on Frontend| Load only on the `Frontend` map (main menu). Mod is instantly enabled when toggled|
 |Clientside|Mod will load on the client only (Unchained and TB MP)|
+
 ## 4. Hello World
 Let’s print something
 1. Open the Mod Actor (`MyFirstMod`)
