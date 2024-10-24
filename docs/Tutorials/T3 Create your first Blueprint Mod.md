@@ -37,9 +37,9 @@ A Mod Marker is required for the mod loader to detect your newly created actor. 
    > You can omit this step if you’re using this base directory and naming scheme `Content\Mods\AgMods\<ModName>\<ModName>`
   - the `value` field is currently unused, in the future it may be displayed as part of the tooltip in main menu
    ![[Pasted image 20241024134125.png]]
-
 ## 3. Mod Settings
-Open the Mod Actor (`MyFirstMod`) and click on `Class Defaults` to view and edit the settings.
+Open the Mod Actor asset (`MyFirstMod`). A new window should open with a list of properties
+_When inside the Blueprint editor, click on `Class Defaults` to view and edit these settings._
 ### General Settings
 ![[Pasted image 20241024134558.png]]
 Ignore `Duplicate` and `Mod Version Repl` fields.
@@ -54,8 +54,15 @@ Ignore `Duplicate` and `Mod Version Repl` fields.
 |Host Only| Only offline play or on an Unchained Server|
 |Allow on Frontend| Load only on the `Frontend` map (main menu). Mod is instantly enabled when toggled|
 |Clientside|Mod will load on the client only (Unchained and TB MP)|
- 
-## 4. Cooking and PAKing
+## 4. Hello World
+Let’s print something
+1. Open the Mod Actor (`MyFirstMod`)
+2. Click on `Open Full Blueprint Editor` if only the class defaults are visible
+3. Right-Click and add a `Show Local Chat` node (wrapper for `ClientReceiveLocalizedChat`)
+4. Connect it to the `Parent:BeginPlay` node
+   ![[Pasted image 20241024162420.png]]
+   Now as soon as the mod actor is loaded (spawned), our message will be displayed in the chat
+## 5. Cooking and PAKing
 See [[Introduction#Loose vs Packaged assets]] for general description.
 ```mermaid
 flowchart LR
@@ -106,7 +113,7 @@ end
 	  ![[Pasted image 20241024143030.png]]
 2. Refer to ArgonSDK Wiki and use `UnrealPak-With-Compression.bat`
    [ArgonSDK Wiki:Step 2: paking](https://github.com/Chiv2-Community/ArgonSDK?tab=readme-ov-file#step-2-paking)
-## 5. In-Match UI (Optional)
+## 6. In-Match UI (Optional)
 
 You can register multiple widgets that will load together with your mod. These will be displayed in the Pause menu. 
 The button in upper left corner toggles menu visibility.
