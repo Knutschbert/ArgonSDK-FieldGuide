@@ -72,7 +72,67 @@ subgraph Cooking and Paking a mod
 	A("Raw Assets\n.uasset\n.umap") --> U[Unreal Engine] -- Cooking --> C("Cooked Assets\n.uasset .uexp .ubulk") -- UnrealPak --> E(Pak File) -- Copy--> cp[Game]
 end
 ```
-### Option A: Cook and Package with a Batch script
+
+### Option A1: Cook and Package in UE4 Editor
+
+![[Pasted image 20241028150247.png]]
+1. Locate `ModPackerWidget` in `Content/Scripts` directory and run it (`Right Click -> Run`)
+2. Change the output directory
+	- You can set it to the Chiv2 `Paks` directory. A running client will block pak replacement
+3. Click on `Find` to locate mod markers, `Cook` if necessary
+
+> [!Note]
+> Options A1 and A2 support content replacement.
+> Any assets placed in `_Content` subdirectory inside a mod’s folder will be saved as `TBL/Game/...`
+
+### Option A2: Cook and Package with Python script
+The Widget Blueprint in [[#Option A1 Cook and Package in UE4 Editor]] is a wrapper for the `build.py` script located in `ArgonSDK/Scripts`.
+The script can be called manually for a more streamlined packaging process.
+
+Supported functions are: `cook`, `pak`
+#### Default values
+Open the script in a text editor and set following paths valid for your setup.
+This step is optional but it will let you omit some parameters when calling the script
+```py
+PROJ_PATH_DEFAULT = 'M:/chivmodding_i/SDK/ArgonSDK/TBL.uproject'
+
+UE4_PATH_DEFAULT = 'H:/epic/UE_4.25/Engine/'
+
+OUTPUT_DIR_DEFAULT = 'M:/chivmodding_i/SDK/ArgonSDK/Scripts'
+```
+#### Cooking
+```
+usage: build.py cook [-h] [uproject_path] [ue4_root]
+
+positional arguments:
+  uproject_path  path to .uproject file
+  ue4_root       path to ue4 ("H:/epic/UE_4.25/Engine/")
+```
+#### Paking
+```
+usage: build.py pak [-h] mod_name [mod_dir] [dest_dir] [uproject_path] [ue4_root]
+
+positional arguments:
+  mod_name       Name of the mod (resulting pak) (or comma separated list)
+  mod_dir        mod directory, base directory (ends with /) or comma-separated list. defaults to "/Game/Mods/AgMods/<mod_name>"
+  dest_dir       Output directory. Will be created on spawn
+  uproject_path  path to .uproject file
+  ue4_root       path to ue4 ("H:/epic/UE_4.25/Engine/")
+```
+
+Single mod: `python build.py pak DripSync` will create `DripSync.pak` from source in `/Game/Mods/AgMods`
+Multiple mods (these commands yield same results):
+```sh
+$ python build.py pak DripSync,ModMenu /Game/Mods/AgMods/DripSync,/Game/Mods/AgMods/ModMenu 
+$ python build.py pak DripSync,ModMenu /Game/Mods/AgMods/ 
+$ python build.py pak DripSync,ModMenu
+
+Mod "DripSync": "/Game/Mods/AgMods/DripSync"
+27 files added to "M:/chivmodding_i/SDK/ArgonSDK/Scripts\DripSync.pak"
+Mod "ModMenu": "/Game/Mods/AgMods/ModMenu"
+36 files added to "M:/chivmodding_i/SDK/ArgonSDK/Scripts\ModMenu.pak"
+```
+### Option B: Cook and Package with a Batch script
 >[!Warning]
 >This method is suitable if:
 > - Your mods are located in `Content\Mods\AgMods\<ModName>` directory (naming not important)
@@ -104,7 +164,6 @@ end
    > It also copies the output .pak file to your Chivalry 2’s `Paks` directory.
    
 
-### Option B: Cook and Package with Python script
 ### Option C: Cook and package manually
 1. Save your assets and click on `File -> Cook Content for Windows` to start the cooking process.
 	![[Pasted image 20241024142331.png]]

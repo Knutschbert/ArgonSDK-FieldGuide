@@ -4,6 +4,9 @@ number headings: first-level 2, max 3, 1.1
 ## 1 Requirements
 -  Unreal Engine 4.25.4
 -  [recursively cloned](https://explainshell.com/explain?cmd=git+clone+--recursive) version of our  [[ArgonSDK#Repository]] 
+Optional:
+- Re-generated mesh and texture assets (AssetGenerator)
+	(_so you can reuse TB’s visual assets_)
 
 ## 2 Introduction
 In this tutorial, we will create a simple FFA Map Using Sublevels (More info: [UE Docs: Sublevels](https://docs.unrealengine.com/4.27/en-US/Basics/Levels/CollaborateWithSublevels))
@@ -98,13 +101,18 @@ Open `World Settings` window if not visible (`Window`→`World Settings`)
 
 Adjust following Settings:
 
-  | Setting                       |  Description/Value                                                      |
+  | Setting                       | Description/Value                                                      |
   | ----------------------------- | ---------------------------------------------------------------------- |
   | `Map Name`, `Map Description` | Visible when the map loads ingame                                      |
   | `Attacking Faction`           | `FFA`                                                                  |
   | `Gamemode Type`               | `Free for All`                                                         |
   | `Kill Z`                      | -5000 _(this ensures that players/bots die when falling off the edge)_ |
+  
+![[Pasted image 20231031010309.png]]
 
+Make sure current Gamemode is set to `Mode_FFA_C`:
+
+![[Pasted image 20231031010110.png]]
 ### 4.5 Initial Spawners
 
 1. Open your `Content Browser` and add a `BaseSpawner`  actor to your level
