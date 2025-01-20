@@ -1,0 +1,3092 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="classATBLPlayerCameraManager.html" rel="prev"/>
+<link href="classATBLPlayerControllerCinematic.html" rel="next"/>
+<link href="../../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.1.17" name="generator"/>
+<title>ATBLPlayerController - Field Guide for ArgonSDK</title>
+<link href="../../../../../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../../../../../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Volkov:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Volkov";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../../javascripts/mermaid-center.css" rel="stylesheet"/>
+<link href="../../../../../javascripts/extra.css" rel="stylesheet"/>
+<link href="../../../../../body {
+  padding-top: 60px; /* Adjust the top padding to make space for the new header */
+}
+.md-header-wrapper {
+  display: none; /* Hide the original header */
+}
+.custom-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #37474F; /* Customize the background color */
+  color: #FFFFFF; /* Customize the text color */
+  padding: 10px 20px; /* Customize padding */
+  z-index: 1000; /* Set a high z-index to ensure it's above other elements */
+}
+" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#atblplayercontroller">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Field Guide for ArgonSDK" class="md-header__button md-logo" data-md-component="logo" href="../../../../../index.html" title="Field Guide for ArgonSDK">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Field Guide for ArgonSDK
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              ATBLPlayerController
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="blue-grey" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="amber" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Knutschbert/ArgonSDK-FieldGuide" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Field Guide for ArgonSDK" class="md-nav__button md-logo" data-md-component="logo" href="../../../../../index.html" title="Field Guide for ArgonSDK">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Field Guide for ArgonSDK
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Knutschbert/ArgonSDK-FieldGuide" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Features/LaTeX%20Math%20Support.html">
+        LaTeX Math Support
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Features/Mermaid%20Diagrams.html">
+        Mermaid diagrams
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Features/Text%20Formatting.html">
+        Text Formatting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Glossary
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Glossary
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Glossary/ArgonSDK.html">
+        ArgonSDK
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Glossary/Glossary.html">
+        Mod Types
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Mods
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Mods
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/1.%20ModTemplate.html">
+        1. ModTemplate
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/BigNumbers.html">
+        BigNumbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/DripSync.html">
+        DripSync
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/FilthyPeasants.html">
+        FilthyPeasants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/FlashBlades.html">
+        FlashBlades
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/GiantSlayers.html">
+        GiantSlayers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/Hitboxes.html">
+        Hitboxes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/ManlyMen.html">
+        ManlyMen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/MapSelector.html">
+        MapSelector
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/NightLife.html">
+        NightLife
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Mods/Portals.html">
+        Portals
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Systems
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Systems
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Chivalry2
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+          Chivalry2
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Chivalry%202%20Systems%20Overview.html">
+        Chivalry 2 Systems Overview
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+          Maps
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Maps
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Maps/Chivalry%202%20Official%20Maps.html">
+        Chivalry 2 Official Maps
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Maps/Landscape%20Materials.html">
+        Landscape Materials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+          Objectives
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_3">
+<span class="md-nav__icon md-icon"></span>
+          Objectives
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Objectives/Objectives%20Overview.html">
+        Objectives Overview
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+          Spawns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_4">
+<span class="md-nav__icon md-icon"></span>
+          Spawns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Spawns/Spawn%20System%20Overview.html">
+        Spawn System Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Spawns/Spawner.html">
+        Spawner
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+          Tables
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_5">
+<span class="md-nav__icon md-icon"></span>
+          Tables
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/Abilities%20DataTable.html">
+        Abilities DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/CharacterMovementModifiers%20DataTable.html">
+        CharacterMovementModifiers DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/CharacterStats%20DataTable.html">
+        CharacterStats DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/EmoteNames%20DataTable.html">
+        EmoteNames DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/EquippedPenalty%20DataTable.html">
+        EquippedPenalty DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/LoadingHintsDescriptionsStringTable%20DataTable.html">
+        LoadingHintsDescriptionsStringTable DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/LoadingHintsTitlesStringTable%20DataTable.html">
+        LoadingHintsTitlesStringTable DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/ST_Class_Perks%20DataTable.html">
+        ST Class Perks DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/ST_Classes%20DataTable.html">
+        ST Classes DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/ST_WeaponDesc%20DataTable.html">
+        ST WeaponDesc DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/ST_WeaponPerks%20DataTable.html">
+        ST WeaponPerks DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/ST_WeaponStrings%20DataTable.html">
+        ST WeaponStrings DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Tables/SubclassPerks%20DataTable.html">
+        SubclassPerks DataTable
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+          Uncategorized
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_6">
+<span class="md-nav__icon md-icon"></span>
+          Uncategorized
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Uncategorized/Input%20Replay%20Component.html">
+        Input Replay Component
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_7" id="__nav_4_1_7_label" tabindex="0">
+          Weapons
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_7">
+<span class="md-nav__icon md-icon"></span>
+          Weapons
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Chivalry2/Weapons/Weapons%20Overview.html">
+        Weapons Overview
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Unchained
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          Unchained
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+          ModLoading
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_1">
+<span class="md-nav__icon md-icon"></span>
+          ModLoading
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Unchained/ModLoading/File%20List%20Overview.html">
+        File List Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Unchained/ModLoading/File%20List.html">
+        File List
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Unchained/ModLoading/Mod%20Loader%20Command%20Line%20Arguments.html">
+        Mod Loader Command Line Arguments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Unchained/ModLoading/Mod%20Loader%20Flags.html">
+        Mod Loader Flags
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Systems/Unchained/ModLoading/Mod%20Loader%20GUI.html">
+        Mod Loader GUI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/Additional%20Ressources.html">
+        DataTables
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/Blueprint%20Know-How.html">
+        QOL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/Requirements.html">
+        Requirements
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/Spawners.html">
+        Spawners
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/T1%20Swapping%20a%20Texture.html">
+        T1 Swapping a Texture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/T2%20Create%20a%20Free-For-All%20Map%20%28FFA%29.html">
+        T2 Create a Free For All Map (FFA)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/T3%20Create%20your%20first%20Blueprint%20Mod.html">
+        T3 Create your first Blueprint Mod
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/T4%20Create%20a%20Team%20Deathmatch%20Map%20%28TDM%29.html">
+        T4 Create a Team Deathmatch Map (TDM)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/TX%20Using%20a%20SaveGame%20Object.html">
+        TX Using a SaveGame Object
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/Tutorials%20Overview.html">
+        Tutorials Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Tutorials/cvar%20tests.html">
+        Cvar tests
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Introduction.html">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../index.html">
+        ArgonSDK Field Guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../Installing.html">
+        UnPaking
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../docs/ClassDocsGenerated/docs/SDK/Source/index_namespaces.md">
+        Namespaces
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#public-functions">
+    Public Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#protected-functions">
+    Protected Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#public-attributes">
+    Public Attributes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#protected-attributes">
+    Protected Attributes
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="atblplayercontroller">ATBLPlayerController<a class="headerlink" href="#atblplayercontroller" title="Permanent link">¶</a></h1>
+<p>Inherits from APlayerController, IGameplayTaskOwnerInterface, <a href="classITBLPlayerControllerInterface.html">ITBLPlayerControllerInterface</a>, <a href="classIReplicatedSubobjectInterface.html">IReplicatedSubobjectInterface</a></p>
+<p>Inherited by <a href="classATBLPlayerControllerCinematic.html">ATBLPlayerControllerCinematic</a></p>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong>[[ATBLPlayerController]]</strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AddAllViewedItems.html">AddAllViewedItems</a></strong>(TEnumAsByte&lt; EAudioClassType::Type &gt; CharacterType, EFaction Faction, FName AssetsTypeName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AddFriendById.html">AddFriendById</a></strong>(const FString &amp; UniqueId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AddOnPossessedAutoVo.html">AddOnPossessedAutoVo</a></strong>(<a href="structFOnPossessedAutoVo.html">FOnPossessedAutoVo</a> OnPossessedAutoVo)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AddUncheckedLevelUpResult.html">AddUncheckedLevelUpResult</a></strong>(const FPrimaryAssetId &amp; NewLevelUpItem)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AddViewedItem.html">AddViewedItem</a></strong>(const FPrimaryAssetId &amp; ItemId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/Admin.html">Admin</a></strong>(const FString &amp; Cmd)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AdminSay.html">AdminSay</a></strong>(FString &amp; Msg)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AnalyticsQuery.html">AnalyticsQuery</a></strong>(const FString &amp; Map, const FString &amp; BuildId)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AreCompoundActionKeysDown.html">AreCompoundActionKeysDown</a></strong>(FName CompoundAction)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AttachCameraToBone.html">AttachCameraToBone</a></strong>(FName BoneName, bool bUseBoneRotation)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AttachCameraToHorse.html">AttachCameraToHorse</a></strong>(FName BoneName, bool bUseBoneRotation)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AttachCameraToProjectile.html">AttachCameraToProjectile</a></strong>(bool bUseProjectileRotation)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AttachCameraToWeapon.html">AttachCameraToWeapon</a></strong>(FName WeaponName, bool bUseWeaponRotation)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/AutoInputRecord.html">AutoInputRecord</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/BroadcastDebugMessage.html">BroadcastDebugMessage</a></strong>(const FString &amp; Message, FColor TextColor, float Duration, bool bToAll, bool bTeamOnly)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/BugAnimation.html">BugAnimation</a></strong>()</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/CanPlayerCallKickVote.html">CanPlayerCallKickVote</a></strong>(APlayerState * KickTarget)</td>
+</tr>
+<tr>
+<td><a href="structFOwnershipResponse.html">FOwnershipResponse</a></td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/CanUseCharacter.html">CanUseCharacter</a></strong>(const TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; &amp; CharacterSubclass)</td>
+</tr>
+<tr>
+<td><a href="structFOwnershipResponse.html">FOwnershipResponse</a></td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/CanUseLoadout.html">CanUseLoadout</a></strong>(const TSubclassOf&lt; <a href="classULoadoutSelection.html">ULoadoutSelection</a> &gt; &amp; LoadoutSelection)</td>
+</tr>
+<tr>
+<td><a href="structFOwnershipResponse.html">FOwnershipResponse</a></td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/CanUseLoadoutItem.html">CanUseLoadoutItem</a></strong>(const TSubclassOf&lt; <a href="classULoadoutSelection.html">ULoadoutSelection</a> &gt; &amp; LoadoutSelection, const TSubclassOf&lt; <a href="classAInventoryItem.html">AInventoryItem</a> &gt; &amp; Item)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ChatMutePlayer.html">ChatMutePlayer</a></strong>(APlayerState * Muted)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ChatUnmutePlayer.html">ChatUnmutePlayer</a></strong>(APlayerState * Unmuted)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/CheckPersonalityOwnership.html">CheckPersonalityOwnership</a></strong>(TEnumAsByte&lt; EAudioPersonalityType::Type &gt; InPersonality, TEnumAsByte&lt; EAudioClassType::Type &gt; CharacterType, EFaction InFaction)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/CinematicSpectatorCamera.html">CinematicSpectatorCamera</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClearFlavorStats.html">ClearFlavorStats</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClearLoadedSoundBanks.html">ClearLoadedSoundBanks</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClearMovementMetrics.html">ClearMovementMetrics</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClearPlayerHasAcceptedNDA.html">ClearPlayerHasAcceptedNDA</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClearSeenGameUpdates.html">ClearSeenGameUpdates</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientAckDoneTravelling.html">ClientAckDoneTravelling</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientAcknowledgeTeamRequest.html">ClientAcknowledgeTeamRequest</a></strong>(bool bSuccess, EFaction Faction)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientCausedFallDeath.html">ClientCausedFallDeath</a></strong>(const <a href="structFDeathDamageTakenEvent.html">FDeathDamageTakenEvent</a> FallDamage)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientClearPostMatchInfo.html">ClientClearPostMatchInfo</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientConfirmExit.html">ClientConfirmExit</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientDrawDebugTracerBox.html">ClientDrawDebugTracerBox</a></strong>(FVector Center, FVector Extent, FQuat Rotation, FColor Color)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientDrawDebugTracerSphere.html">ClientDrawDebugTracerSphere</a></strong>(FVector Center, float Radius, int32 Segments, FColor Color)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientEndOnlineGame.html">ClientEndOnlineGame</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientFadeIn.html">ClientFadeIn</a></strong>(const float PlaybackSpeed)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientFadeOut.html">ClientFadeOut</a></strong>(const float PlaybackSpeed)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientGoingToSpawnAtSpawner.html">ClientGoingToSpawnAtSpawner</a></strong>(<a href="classASpawner.html">ASpawner</a> * InSpawner)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientHandleGlobalGameNotification.html">ClientHandleGlobalGameNotification</a></strong>(EGlobalGameNotificationCategory Category, const FText &amp; Title, const FText &amp; Body, FName Subcategory, UObject * Data)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientKicked.html">ClientKicked</a></strong>(const FText &amp; KickReason)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientNotifyForwardSpawnAwaitingCombatTimer.html">ClientNotifyForwardSpawnAwaitingCombatTimer</a></strong>(<a href="classAForwardSpawnWave.html">AForwardSpawnWave</a> * ForwardWave)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientNotifyPendingSpawn.html">ClientNotifyPendingSpawn</a></strong>(<a href="classASpawner.html">ASpawner</a> * PendingSpawner, float ServerSpawnTimeSeconds)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientNotifyWaveJoinResponse.html">ClientNotifyWaveJoinResponse</a></strong>(<a href="classASpawnWave.html">ASpawnWave</a> * Wave, bool bJoinedWaveSuccess)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientOnBlockedAttack.html">ClientOnBlockedAttack</a></strong>(const EDefenderBlockedPolicy BlockPolicy, <a href="classATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, const bool bWasProjectile)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientOnCounteredAttack.html">ClientOnCounteredAttack</a></strong>(const EDefenderBlockedPolicy BlockPolicy, <a href="classATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientOnPlayerRevived.html">ClientOnPlayerRevived</a></strong>(APawn * RevivingPawn)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientOnRevivedOtherPlayer.html">ClientOnRevivedOtherPlayer</a></strong>(APawn * RevivedPawn)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPlayEmote.html">ClientPlayEmote</a></strong>(FName EmoteName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPostAKSoundAtLocation.html">ClientPostAKSoundAtLocation</a></strong>(FVector_NetQuantize Location, UAkAudioEvent * Sound)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPostAKSoundOnActor.html">ClientPostAKSoundOnActor</a></strong>(AActor * SoundActor, UAkAudioEvent * Sound)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPostAKSoundsOnActor.html">ClientPostAKSoundsOnActor</a></strong>(AActor * SoundActor, const TArray&lt; UAkAudioEvent * &gt; &amp; Sounds)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPostAkSound.html">ClientPostAkSound</a></strong>(UAkAudioEvent * Sound)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPostGameMigrateToNewMatchmakingServer.html">ClientPostGameMigrateToNewMatchmakingServer</a></strong>(const FString &amp; ConnectString)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPostGameStartMatchmaking.html">ClientPostGameStartMatchmaking</a></strong>(bool bAlways)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPrintCustomizationItems.html">ClientPrintCustomizationItems</a></strong>(const TArray&lt; FPrimaryAssetId &gt; &amp; Items)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPushCmd.html">ClientPushCmd</a></strong>(const FString &amp; Cmd)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientReceiveChat.html">ClientReceiveChat</a></strong>(<a href="classATBLPlayerState.html">ATBLPlayerState</a> * SenderPlayerState, const FString &amp; S, EChatType::Type Type, bool IsSenderDev, FColor OverrideColor)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientReceiveDeathRecap.html">ClientReceiveDeathRecap</a></strong>(<a href="structFDeathRecap.html">FDeathRecap</a> DeathRecap)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientReceiveDecapHead.html">ClientReceiveDecapHead</a></strong>(<a href="classAInventoryItem.html">AInventoryItem</a> * InDecapHead)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientReceiveGameModeMessage.html">ClientReceiveGameModeMessage</a></strong>(const <a href="structFGameModeMessage.html">FGameModeMessage</a> &amp; GameModeMessage)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientReceiveGameModeMessages.html">ClientReceiveGameModeMessages</a></strong>(const TArray&lt; <a href="structFGameModeMessage.html">FGameModeMessage</a> &gt; &amp; GameModeMessages)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientReceiveLocalizedChat.html">ClientReceiveLocalizedChat</a></strong>(const FText &amp; FormatText, EChatType::Type Type)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientReceiveLocalizedObjectiveMessage.html">ClientReceiveLocalizedObjectiveMessage</a></strong>(const <a href="structFObjectiveMessage.html">FObjectiveMessage</a> &amp; ObjectiveMessage)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientReceiveObjectiveContextMessage.html">ClientReceiveObjectiveContextMessage</a></strong>(const <a href="structFObjectiveContextMessage.html">FObjectiveContextMessage</a> ObjectiveContextMessage)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientReceivedAutoBalanceNotification.html">ClientReceivedAutoBalanceNotification</a></strong>(EFaction NewFaction)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientRequestPostMatchInfo.html">ClientRequestPostMatchInfo</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientSetSpectatorLocation.html">ClientSetSpectatorLocation</a></strong>(FVector InLocation, FRotator InRotation)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientSetVisibilityOfAllObjectiveZones.html">ClientSetVisibilityOfAllObjectiveZones</a></strong>(bool IsVisible)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientShowHudMarkerPointEvent.html">ClientShowHudMarkerPointEvent</a></strong>(FName HudMarkerTag, float TicketsModified, int32 TeamIndex)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientShowLoadoutScreen.html">ClientShowLoadoutScreen</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientShowTeamSelectScreen.html">ClientShowTeamSelectScreen</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientSpawnerStartAllowingControl.html">ClientSpawnerStartAllowingControl</a></strong>(<a href="classASpawner.html">ASpawner</a> * InSpawner, <a href="classATBLCharacter.html">ATBLCharacter</a> * Char)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientStartOnlineGame.html">ClientStartOnlineGame</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientSwitchToSpectator.html">ClientSwitchToSpectator</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientUpdateVoiceStateForPlayer.html">ClientUpdateVoiceStateForPlayer</a></strong>(<a href="classATBLPlayerState.html">ATBLPlayerState</a> * NewPlayer)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/CloseMovementDebugger.html">CloseMovementDebugger</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClosePropertyDebugger.html">ClosePropertyDebugger</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/CreateInputReplayComponent.html">CreateInputReplayComponent</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DebugSetPartySetting.html">DebugSetPartySetting</a></strong>(const FString &amp; Key, const FString &amp; Value)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DestroyInputReplayComponent.html">DestroyInputReplayComponent</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DevMode.html">DevMode</a></strong>(bool bActivate)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DisableCameraOffset.html">DisableCameraOffset</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DumpFriendList.html">DumpFriendList</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DumpMovementMetrics.html">DumpMovementMetrics</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DumpOwnership.html">DumpOwnership</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DumpStatsExec.html">DumpStatsExec</a></strong>(int32 Threshold)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/EchoPlayFabId.html">EchoPlayFabId</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ForceImmediateRespawn.html">ForceImmediateRespawn</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ForceSelfAutobalance.html">ForceSelfAutobalance</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GenerateStoreJSON.html">GenerateStoreJSON</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="classUTBLScreenManager.html">UTBLScreenManager</a> *</td>
+<td><strong><a href="../../../../TBL_src_clean/UIBlueprintLibrary/nodes/GetActiveScreenManager.html">GetActiveScreenManager</a></strong>()</td>
+</tr>
+<tr>
+<td>TArray&lt; TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; &gt;</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetAllowedCharacterClasses.html">GetAllowedCharacterClasses</a></strong>()</td>
+</tr>
+<tr>
+<td>TSubclassOf&lt; <a href="classULoadoutSelection.html">ULoadoutSelection</a> &gt;</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetAllowedLoadoutSelection.html">GetAllowedLoadoutSelection</a></strong>(TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; RequestedSubclass)</td>
+</tr>
+<tr>
+<td>UAkComponent *</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetAudioComponent.html">GetAudioComponent</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="classUCampaignList.html">UCampaignList</a> *</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetCampaignList.html">GetCampaignList</a></strong>() const</td>
+</tr>
+<tr>
+<td><a href="classUTBLCampaignsCachedData.html">UTBLCampaignsCachedData</a> *</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetCampaignsCachedData.html">GetCampaignsCachedData</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetCatalogExec.html">GetCatalogExec</a></strong>(bool LevelAccessible, int32 LevelsAbove)</td>
+</tr>
+<tr>
+<td>FPrimaryAssetId</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetEquippedCustomizationWeaponAsset.html">GetEquippedCustomizationWeaponAsset</a></strong>(EWeaponTag WeaponTag, EFaction Faction, TEnumAsByte&lt; EAudioClassType::Type &gt; CharacterType)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetInputAnalogStickStateRaw.html">GetInputAnalogStickStateRaw</a></strong>(TEnumAsByte&lt; EControllerAnalogStick::Type &gt; WhichStick, float &amp; StickX, float &amp; StickY) const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetIsProfileDataLoaded.html">GetIsProfileDataLoaded</a></strong>()</td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetLevel.html">GetLevel</a></strong>(EOnlineStat Stat)</td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetLevelExec.html">GetLevelExec</a></strong>(const FString &amp; Stat)</td>
+</tr>
+<tr>
+<td>virtual void</td>
+<td><strong>[[GetLifetimeReplicatedProps]]</strong>(TArray&lt; FLifetimeProperty &gt; &amp; OutLifetimeProps) const override</td>
+</tr>
+<tr>
+<td><a href="classASpawnWave.html">ASpawnWave</a> *</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetNextSpawnWave.html">GetNextSpawnWave</a></strong>()</td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetOnlineCommodity.html">GetOnlineCommodity</a></strong>(const FString &amp; Key)</td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFCustomizationEntry.html">FCustomizationEntry</a> &gt;</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetOwnerCustomizationItems.html">GetOwnerCustomizationItems</a></strong>(TEnumAsByte&lt; EAudioClassType::Type &gt; CharacterType, EFaction Faction, FName AssetsTypeName, bool bPresetCompatible, bool bSort)</td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFCustomizationEntry.html">FCustomizationEntry</a> &gt;</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetOwnerCustomizationWeaponItems.html">GetOwnerCustomizationWeaponItems</a></strong>(EWeaponTag WeaponTag, EFaction Faction)</td>
+</tr>
+<tr>
+<td><a href="structFOwnershipResponse.html">FOwnershipResponse</a></td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetOwnership.html">GetOwnership</a></strong>(const FPrimaryAssetId &amp; AssetIdToCheck, bool BaseOnly)</td>
+</tr>
+<tr>
+<td><a href="classUQuestPool.html">UQuestPool</a> *</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetQuestPool.html">GetQuestPool</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="classUTBLQuestsCachedData.html">UTBLQuestsCachedData</a> *</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetQuestsCachedData.html">GetQuestsCachedData</a></strong>()</td>
+</tr>
+<tr>
+<td>TSubclassOf&lt; <a href="classAInventoryItem.html">AInventoryItem</a> &gt;</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetRandomUnlockedLoadoutItemForSlot.html">GetRandomUnlockedLoadoutItemForSlot</a></strong>(<a href="classULoadoutSelection.html">ULoadoutSelection</a> * LoadoutSelection, EInventoryItemSlot Slot)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetRespawnTime.html">GetRespawnTime</a></strong>(float &amp; TimeRemaining)</td>
+</tr>
+<tr>
+<td>TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt;</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetSavedCharacterSubclass.html">GetSavedCharacterSubclass</a></strong>(TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; ParentClass)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetSavedLoadout.html">GetSavedLoadout</a></strong>(TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; RequestedSubclass, <a href="structFLoadout.html">FLoadout</a> &amp; Loadout)</td>
+</tr>
+<tr>
+<td>FTransform</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetSpectatorPawnSpawnTransform.html">GetSpectatorPawnSpawnTransform</a></strong>()</td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetStat.html">GetStat</a></strong>(EOnlineStat Stat)</td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetStatExec.html">GetStatExec</a></strong>(const FString &amp; StatName)</td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetStatFloat.html">GetStatFloat</a></strong>(const FString &amp; StatName)</td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetStatFloatExec.html">GetStatFloatExec</a></strong>(const FString &amp; StatName)</td>
+</tr>
+<tr>
+<td><a href="classUTBLPlayerInput.html">UTBLPlayerInput</a> *</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetTBLPlayerInput.html">GetTBLPlayerInput</a></strong>()</td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetTeamDamage.html">GetTeamDamage</a></strong>()</td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetTimeUntilRespawn.html">GetTimeUntilRespawn</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetTimesKilledKilledByPlayer.html">GetTimesKilledKilledByPlayer</a></strong>(<a href="classATBLPlayerState.html">ATBLPlayerState</a> * OtherPlayer, int32 &amp; OutTimesKilled, int32 &amp; OutTimesKilledBy)</td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetToggleCameraGamepadInputHoldTimeThreshold.html">GetToggleCameraGamepadInputHoldTimeThreshold</a></strong>() const</td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetTotalTimesKilled.html">GetTotalTimesKilled</a></strong>()</td>
+</tr>
+<tr>
+<td>TArray&lt; FPrimaryAssetId &gt;</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetUnlockedItemsBySubclass.html">GetUnlockedItemsBySubclass</a></strong>(const TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; &amp; CharacterSubclass)</td>
+</tr>
+<tr>
+<td>TMap&lt; FPrimaryAssetId, bool &gt;</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GetUnlocksAtLevel.html">GetUnlocksAtLevel</a></strong>(int32 Level, EOnlineStat Stat)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GiveWeapon.html">GiveWeapon</a></strong>(FName WeaponName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GrantCurrencyExec.html">GrantCurrencyExec</a></strong>(const FString &amp; Currency, int32 Amount)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/GrantFlavorEntitlementExec.html">GrantFlavorEntitlementExec</a></strong>(const FString &amp; Entitlement)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/InputPlay.html">InputPlay</a></strong>(FName ReplayName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/InputRec.html">InputRec</a></strong>(FName ReplayName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/InputStop.html">InputStop</a></strong>()</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsActionKeyDown.html">IsActionKeyDown</a></strong>(FName ActionName)</td>
+</tr>
+<tr>
+<td>FPrimaryAssetId</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsCharacterRecentlyUnlocked.html">IsCharacterRecentlyUnlocked</a></strong>(const TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; &amp; CharacterSubclass)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsGhostCameraMode.html">IsGhostCameraMode</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsHeadlessClient.html">IsHeadlessClient</a></strong>()</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsLoadoutEqualToSavedLoadout.html">IsLoadoutEqualToSavedLoadout</a></strong>(TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; RequestedSubclass, <a href="structFLoadout.html">FLoadout</a> Loadout)</td>
+</tr>
+<tr>
+<td>FPrimaryAssetId</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsLoadoutItemRecentlyUnlocked.html">IsLoadoutItemRecentlyUnlocked</a></strong>(const TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; &amp; CharacterSubclass, const TSubclassOf&lt; <a href="classAInventoryItem.html">AInventoryItem</a> &gt; &amp; Item)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsPlayerChatMuted.html">IsPlayerChatMuted</a></strong>(APlayerState * MutedPlayer)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsPlayerStateMuted.html">IsPlayerStateMuted</a></strong>(<a href="classATBLPlayerState.html">ATBLPlayerState</a> * InPlayerState, bool &amp; OutIsMuted)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsPlayingCinematics.html">IsPlayingCinematics</a></strong>()</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsStatsLoaded.html">IsStatsLoaded</a></strong>()</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsUsingGamepad.html">IsUsingGamepad</a></strong>()</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsVOBankLoaded.html">IsVOBankLoaded</a></strong>(TEnumAsByte&lt; EAudioPersonalityType::Type &gt; PersonalityType)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsViewedItem.html">IsViewedItem</a></strong>(const FPrimaryAssetId &amp; ItemId)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsViewportFocused.html">IsViewportFocused</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ListPlayers.html">ListPlayers</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ListViewedItems.html">ListViewedItems</a></strong>() const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/LoadBank.html">LoadBank</a></strong>(const FString &amp; BankName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/LoadVOASync.html">LoadVOASync</a></strong>(TEnumAsByte&lt; EAudioPersonalityType::Type &gt; PersonalityType)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/MovementDebugger.html">MovementDebugger</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/MovementDebuggerLoadFile.html">MovementDebuggerLoadFile</a></strong>(FName Filename)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/MuteClient.html">MuteClient</a></strong>(bool Enabled)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/NotifyCausedDamage.html">NotifyCausedDamage</a></strong>(const <a href="structFDamageTakenEvent.html">FDamageTakenEvent</a> &amp; Event)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/NotifyEnteredLeftLoadoutVolume.html">NotifyEnteredLeftLoadoutVolume</a></strong>(UObject * LoadoutVolume, bool bInLoadoutVolume)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/OnAbilityInitiated.html">OnAbilityInitiated</a></strong>(<a href="classAAbilityInvocation.html">AAbilityInvocation</a> * Invocation)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong>[[OnEnumerateCloudFilesComplete]]</strong>(const FPlatformInterfaceDelegateResult &amp; Result)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/OnInputExitDeathCam.html">OnInputExitDeathCam</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/OnLoadoutScreenState.html">OnLoadoutScreenState</a></strong>(bool DidOpen)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/OnMatchMakingChanged.html">OnMatchMakingChanged</a></strong>(bool bIsMatchmaking)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong>[[OnReadUserFileComplete]]</strong>(const FPlatformInterfaceDelegateResult &amp; Result)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/OnRep_CheatsEnabled.html">OnRep_CheatsEnabled</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/OnRep_bAutomaticallyChooseSpawnWave.html">OnRep_bAutomaticallyChooseSpawnWave</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PS4TouchpadPressed.html">PS4TouchpadPressed</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PartySay.html">PartySay</a></strong>(FString &amp; Msg)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PendingSpawnExpired.html">PendingSpawnExpired</a></strong>(<a href="classASpawner.html">ASpawner</a> * PendingSpawner)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayCameraShake.html">PlayCameraShake</a></strong>(FName CameraShakeName, bool bLoop)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayDelayedCrossbowHapticsForPS5.html">PlayDelayedCrossbowHapticsForPS5</a></strong>()</td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayGlobalVOEmote.html">PlayGlobalVOEmote</a></strong>(<a href="classUCTBase.html">UCTBase</a> * CTPersonality, FName EmoteName, EFaction Faction, TEnumAsByte&lt; EAudioClassType::Type &gt; Class, EVOType VoType)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayerCallKickVote.html">PlayerCallKickVote</a></strong>(APlayerState * KickTarget)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayerIsBeingKicked.html">PlayerIsBeingKicked</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayerPostGameFeedback.html">PlayerPostGameFeedback</a></strong>(int32 StarRating)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayerSubmitVote.html">PlayerSubmitVote</a></strong>(<a href="classUVotingInstance.html">UVotingInstance</a> * VotingInstance, FName Vote)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayerViewUnlockedLoadoutItem.html">PlayerViewUnlockedLoadoutItem</a></strong>(const TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; &amp; CharacterSubclass, const TSubclassOf&lt; <a href="classAInventoryItem.html">AInventoryItem</a> &gt; &amp; Item)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayerViewedUnlockedSubclass.html">PlayerViewedUnlockedSubclass</a></strong>(const TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; &amp; CharacterSubclass)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PrepareBank.html">PrepareBank</a></strong>(const FString &amp; BankName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PrepareEvent.html">PrepareEvent</a></strong>(const FString &amp; EventName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PressedMenuButton.html">PressedMenuButton</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PrintCameraProperties.html">PrintCameraProperties</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PrintCameraShakeProperties.html">PrintCameraShakeProperties</a></strong>(FName CameraShakeName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PrintWeaponActionEvents.html">PrintWeaponActionEvents</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PropertyDebugger.html">PropertyDebugger</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PropertyDebuggerAdd.html">PropertyDebuggerAdd</a></strong>(const FString &amp; PropertyName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PurchaseItem.html">PurchaseItem</a></strong>(const FPrimaryAssetId &amp; ItemId, const FString &amp; Currency)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PurchaseItemByString.html">PurchaseItemByString</a></strong>(const FString &amp; ItemId, const FString &amp; Currency)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PurchaseItemExec.html">PurchaseItemExec</a></strong>(const FString &amp; ItemId, const FString &amp; Currency)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PurchaseOffer.html">PurchaseOffer</a></strong>(const <a href="structFStoreOfferItem.html">FStoreOfferItem</a> &amp; Offer)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ReadFriendList.html">ReadFriendList</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RefreshRegionPingExec.html">RefreshRegionPingExec</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ReleasedMenuButton.html">ReleasedMenuButton</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RemoveAllViewedItems.html">RemoveAllViewedItems</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RemoveCurrencyExec.html">RemoveCurrencyExec</a></strong>(const FString &amp; Currency, int32 Amount)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RemoveFriendById.html">RemoveFriendById</a></strong>(const FString &amp; UniqueId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RemoveLoadingScreenPanel.html">RemoveLoadingScreenPanel</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RemoveViewedItem.html">RemoveViewedItem</a></strong>(const FPrimaryAssetId &amp; ItemId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ReportPlayer.html">ReportPlayer</a></strong>(APlayerState * ReportedPlayer, const EPlayerReportCategory ReportCategory, const FString &amp; ReportDescription)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RequestJoinSpawnWave.html">RequestJoinSpawnWave</a></strong>(<a href="classASpawnWave.html">ASpawnWave</a> * Wave, bool bFromAutoSpawn)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RequestLeaveSpawnWave.html">RequestLeaveSpawnWave</a></strong>(<a href="classASpawnWave.html">ASpawnWave</a> * Wave)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RequestRejectSpawnWave.html">RequestRejectSpawnWave</a></strong>(<a href="classASpawnWave.html">ASpawnWave</a> * Wave)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/RequestSwitchTeam.html">RequestSwitchTeam</a></strong>(EFaction RequestedFaction)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ResetNativeAchievements.html">ResetNativeAchievements</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SaveAutoInputRecord.html">SaveAutoInputRecord</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SaveCloudFilesIfDirty.html">SaveCloudFilesIfDirty</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SaveLoadout.html">SaveLoadout</a></strong>(TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; RequestedSubclass, TSubclassOf&lt; <a href="classULoadoutSelection.html">ULoadoutSelection</a> &gt; LoadoutSelection, <a href="structFLoadout.html">FLoadout</a> RequestedLoadout)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/Say.html">Say</a></strong>(FString &amp; Msg)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SayChatType.html">SayChatType</a></strong>(const FString &amp; Msg, TEnumAsByte&lt; EChatType::Type &gt; ChatType, FColor OverrideColor)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SendCancelPlayerMessageRequest.html">SendCancelPlayerMessageRequest</a></strong>(int32 MessageId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SendPromptPlayerMessageReply.html">SendPromptPlayerMessageReply</a></strong>(int32 MessageId, bool Response)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SendPromptPlayerMessageRequest.html">SendPromptPlayerMessageRequest</a></strong>(FGameplayTag MessageTag, int32 &amp; SentMessageId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerBPCheat.html">ServerBPCheat</a></strong>(const FString &amp; CheatAndParams)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerBroadcast.html">ServerBroadcast</a></strong>(const FString &amp; Msg, EChatType::Type ChatType, FColor OverrideColor)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerCheat.html">ServerCheat</a></strong>(FName CheatCommand, FName Param)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerCheatObj.html">ServerCheatObj</a></strong>(FName CheatCommand, UObject * Param)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerClearPS5MatchId.html">ServerClearPS5MatchId</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerCloseMovementDebugger.html">ServerCloseMovementDebugger</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerClosePropertyDebugger.html">ServerClosePropertyDebugger</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerCommendPlayer.html">ServerCommendPlayer</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerForceImmediateSpawn.html">ServerForceImmediateSpawn</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerForceSelfAutobalance.html">ServerForceSelfAutobalance</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerForgivePlayer.html">ServerForgivePlayer</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerJoinSpawnWave.html">ServerJoinSpawnWave</a></strong>(<a href="classASpawnWave.html">ASpawnWave</a> * Wave, bool bFromAutoSpawn)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerLeaveSpawnWave.html">ServerLeaveSpawnWave</a></strong>(<a href="classASpawnWave.html">ASpawnWave</a> * Wave)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerMovementDebugger.html">ServerMovementDebugger</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerMovementDebuggerLoadFile.html">ServerMovementDebuggerLoadFile</a></strong>(FName Filename)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerNotifyDoneTravelling.html">ServerNotifyDoneTravelling</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerOnLoadoutScreenState.html">ServerOnLoadoutScreenState</a></strong>(bool DidOpen)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerPrintAllDefaultCustomizationItems.html">ServerPrintAllDefaultCustomizationItems</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerPropertyDebugger.html">ServerPropertyDebugger</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerRegisterAsHeadlessClient.html">ServerRegisterAsHeadlessClient</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerRejectSpawnWave.html">ServerRejectSpawnWave</a></strong>(<a href="classASpawnWave.html">ASpawnWave</a> * Wave)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerReliableSetPlayingPrologue.html">ServerReliableSetPlayingPrologue</a></strong>(bool bInPlayingPrologue)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerReportPlayer.html">ServerReportPlayer</a></strong>(APlayerState * ReportedPlayer, const EPlayerReportCategory ReportCategory, const FString &amp; ReportDescription)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerRequestAnalyticsStart.html">ServerRequestAnalyticsStart</a></strong>(const FString &amp; DataName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerRequestAnalyticsStop.html">ServerRequestAnalyticsStop</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerRequestExit.html">ServerRequestExit</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerResetIdleTime.html">ServerResetIdleTime</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerResetPartyId.html">ServerResetPartyId</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSay.html">ServerSay</a></strong>(FString &amp; Msg)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSendEquippedPersonality.html">ServerSendEquippedPersonality</a></strong>(EAudioPersonalityType::Type PersonalityType)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSendOfflineAnalyticsEvent.html">ServerSendOfflineAnalyticsEvent</a></strong>(<a href="structFOfflineAnalyticsEvent.html">FOfflineAnalyticsEvent</a> LocalAnalyticsEvent)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSendPostMatchInfo.html">ServerSendPostMatchInfo</a></strong>(<a href="structFClientPostMatchInfo.html">FClientPostMatchInfo</a> PostMatchInfo, const TArray&lt; <a href="structFPerMinuteBucket.html">FPerMinuteBucket</a> &gt; &amp; PerMinuteBuckets)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSetHardwarePlatform.html">ServerSetHardwarePlatform</a></strong>(EHardwarePlatform Platform)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSetPS5MatchId.html">ServerSetPS5MatchId</a></strong>(const FString &amp; NewPS5MatchId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSetPartyId.html">ServerSetPartyId</a></strong>(const FString &amp; PartyId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSetPlatformOSSUniqueId.html">ServerSetPlatformOSSUniqueId</a></strong>(const FUniqueNetIdRepl &amp; UniqueIdRepl)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSetPlayerCustomization.html">ServerSetPlayerCustomization</a></strong>(const TArray&lt; <a href="structFCustomizationMap.html">FCustomizationMap</a> &gt; &amp; PlayerCustomization, <a href="classATBLPlayerState.html">ATBLPlayerState</a> * PS)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSetSpectatorCamera.html">ServerSetSpectatorCamera</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerShowDebugCapture.html">ServerShowDebugCapture</a></strong>(bool bActive, FName Category)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSpawnGoreHead.html">ServerSpawnGoreHead</a></strong>(<a href="classATBLPlayerState.html">ATBLPlayerState</a> * InPlayerState, uint8 DeadCharacterId, const FVector_NetQuantize &amp; Location, const FVector_NetQuantize &amp; Rotation, const FVector_NetQuantize &amp; Impulse)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSubmitPlayerPostGameFeedback.html">ServerSubmitPlayerPostGameFeedback</a></strong>(int32 StarRating)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSubmitVote.html">ServerSubmitVote</a></strong>(<a href="classUVotingInstance.html">UVotingInstance</a> * VotingInstance, FName Vote)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerTBSActivateDevMode.html">ServerTBSActivateDevMode</a></strong>(bool bActivate)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerToggleAutospawn.html">ServerToggleAutospawn</a></strong>(bool bEnabled, bool bLeaveCurrentWave)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetAllRegionPingExec.html">SetAllRegionPingExec</a></strong>(int32 Ping)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetAltAttackWithMovement.html">SetAltAttackWithMovement</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetAutoSprint.html">SetAutoSprint</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetCameraOffset.html">SetCameraOffset</a></strong>(float X, float Y, float Z)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetCameraProperty.html">SetCameraProperty</a></strong>(FName PropertyName, const FString &amp; Value)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetCameraRotation.html">SetCameraRotation</a></strong>(float Pitch, float Yaw, float Roll)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetCameraShakeProperty.html">SetCameraShakeProperty</a></strong>(FName CameraShakeName, FName PropertyName, const FString &amp; Value)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLScreenManager/nodes/SetHudVisibility.html">SetHudVisibility</a></strong>(bool bVisible)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetLastReadDeveloperMessageTime.html">SetLastReadDeveloperMessageTime</a></strong>(FDateTime ReadDeveloperMessageTime)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetListenerEnabled.html">SetListenerEnabled</a></strong>(bool Enabled)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TutorialGameMode/nodes/SetLoadout.html">SetLoadout</a></strong>(TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; RequestedSubclass, <a href="structFLoadout.html">FLoadout</a> RequestedLoadout)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetMinimumSpawnDelayOverride.html">SetMinimumSpawnDelayOverride</a></strong>(float InMinimumSpawnDelayOverride)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetNewCustomizationForCurrentPawn.html">SetNewCustomizationForCurrentPawn</a></strong>(const TArray&lt; <a href="structFSwatchSelection.html">FSwatchSelection</a> &gt; &amp; Swatches)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetNewCustomizationForPawn.html">SetNewCustomizationForPawn</a></strong>(const TArray&lt; <a href="structFSwatchSelection.html">FSwatchSelection</a> &gt; &amp; Swatches, APawn * Char, EFaction Faction)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetPlayerHasAcceptedNDA.html">SetPlayerHasAcceptedNDA</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetPlayerHasAcceptedPurchaseDisclaimer.html">SetPlayerHasAcceptedPurchaseDisclaimer</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetPlayerHasPlayedTutorial.html">SetPlayerHasPlayedTutorial</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetPlayingPrologue.html">SetPlayingPrologue</a></strong>(bool bInPlayingPrologue)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetRandomLoadout.html">SetRandomLoadout</a></strong>(<a href="structFLoadout.html">FLoadout</a> &amp; Loadout)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetRegionPingExec.html">SetRegionPingExec</a></strong>(const FString &amp; Region, int32 Ping)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetShowPlayerListOnStartupInOverview.html">SetShowPlayerListOnStartupInOverview</a></strong>(bool bShow)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetSpectatorCamera.html">SetSpectatorCamera</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetStat.html">SetStat</a></strong>(const FString &amp; StatName, int32 StatValue)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetStatFloat.html">SetStatFloat</a></strong>(const FString &amp; StatName, float StatValue)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetStatOriginal.html">SetStatOriginal</a></strong>(const FString &amp; StatType, int32 StatValue)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SetupCameraTargetOnDeath.html">SetupCameraTargetOnDeath</a></strong>(APawn * P, FName AttachSocketName)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldClearDebugTracers.html">ShouldClearDebugTracers</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDisplayNDA.html">ShouldDisplayNDA</a></strong>()</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDisplaySwingThroughInfo.html">ShouldDisplaySwingThroughInfo</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawBackSwingCheck.html">ShouldDrawBackSwingCheck</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawCamera.html">ShouldDrawCamera</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawClientDebugTracers.html">ShouldDrawClientDebugTracers</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugHorseImpact.html">ShouldDrawDebugHorseImpact</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugMeleeHit.html">ShouldDrawDebugMeleeHit</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugParryHit.html">ShouldDrawDebugParryHit</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugProjectile.html">ShouldDrawDebugProjectile</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugRangedInaccuracy.html">ShouldDrawDebugRangedInaccuracy</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugShield.html">ShouldDrawDebugShield</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugTracerCache.html">ShouldDrawDebugTracerCache</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugTracerDirection.html">ShouldDrawDebugTracerDirection</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugTracers.html">ShouldDrawDebugTracers</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawDebugWeaponTip.html">ShouldDrawDebugWeaponTip</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawFacingCheck.html">ShouldDrawFacingCheck</a></strong>() const</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShouldDrawVisibilityCheck.html">ShouldDrawVisibilityCheck</a></strong>() const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShowIngameMenu.html">ShowIngameMenu</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShowMessageDialog.html">ShowMessageDialog</a></strong>(FText Message)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShowMyParryBox.html">ShowMyParryBox</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShowOtherParryBoxes.html">ShowOtherParryBoxes</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ShuffleLoadout.html">ShuffleLoadout</a></strong>(bool bShouldShuffle)</td>
+</tr>
+<tr>
+<td><a href="classUMovementDebugger.html">UMovementDebugger</a> *</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SpawnMovementDebugger.html">SpawnMovementDebugger</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SpawnWaveNoLongerJoinable.html">SpawnWaveNoLongerJoinable</a></strong>(<a href="classASpawnWave.html">ASpawnWave</a> * Wave)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/StartRangedWeaponWarning.html">StartRangedWeaponWarning</a></strong>(float DrawStrength, <a href="classAInventoryItem.html">AInventoryItem</a> * DrawnWeapon, FName AttackName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/StopCameraShake.html">StopCameraShake</a></strong>(FName CameraShakeName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/Suicide.html">Suicide</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SwitchToSpectator.html">SwitchToSpectator</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/TBLClientSetControlRotation.html">TBLClientSetControlRotation</a></strong>(FRotator ClientRotation)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/TeamSay.html">TeamSay</a></strong>(FString &amp; Msg)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ToggleAutospawn.html">ToggleAutospawn</a></strong>(bool bEnabled, bool bLeaveCurrentWave)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ToggleCamera.html">ToggleCamera</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ToggleFriendlyMarkers.html">ToggleFriendlyMarkers</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ToggleGhostCameraMode.html">ToggleGhostCameraMode</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ToggleHud.html">ToggleHud</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ToggleIgnoreAI.html">ToggleIgnoreAI</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/UnPrepareAllVOEVents.html">UnPrepareAllVOEVents</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/UnloadBank.html">UnloadBank</a></strong>(const FString &amp; BankName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/UpdateUncheckedItems.html">UpdateUncheckedItems</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/UpdateVoiceStateForAllPlayers.html">UpdateVoiceStateForAllPlayers</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/VOIPMuteLocalExec.html">VOIPMuteLocalExec</a></strong>(bool Mute)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/VOIPSetRemoteVolumeExec.html">VOIPSetRemoteVolumeExec</a></strong>(float Volume)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/VerifyCustomizationOnlineOwnership.html">VerifyCustomizationOnlineOwnership</a></strong>(bool bOnOnlineStatsLoaded)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/VoteStarted.html">VoteStarted</a></strong>(<a href="classUVotingInstance.html">UVotingInstance</a> * VotingInstance)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-functions">Protected Functions<a class="headerlink" href="#protected-functions" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/CanSwitchCamera.html">CanSwitchCamera</a></strong>() const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClearServerHistoryList.html">ClearServerHistoryList</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientApprovedLoadout.html">ClientApprovedLoadout</a></strong>(bool IsLoadoutApproved, TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; RequestedSubclass, <a href="structFLoadout.html">FLoadout</a> RequestedLoadout)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientBroadcastDebugMessage.html">ClientBroadcastDebugMessage</a></strong>(const FString &amp; Message, FColor TextColor, float Duration, bool bToAll, bool bTeamOnly)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientCancelPlayerMessageRequest.html">ClientCancelPlayerMessageRequest</a></strong>(int32 MessageId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientNotifyCausedDamage.html">ClientNotifyCausedDamage</a></strong>(const <a href="structFDamageTakenEventCompressed.html">FDamageTakenEventCompressed</a> Event)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ClientPromptPlayerMessageRequest.html">ClientPromptPlayerMessageRequest</a></strong>(FGameplayTag MessageTag, int32 MessageId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLSpectatorPawn/nodes/DisplayDebugScrollDown.html">DisplayDebugScrollDown</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLSpectatorPawn/nodes/DisplayDebugScrollReleased.html">DisplayDebugScrollReleased</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLSpectatorPawn/nodes/DisplayDebugScrollUp.html">DisplayDebugScrollUp</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DisplaySwingThroughInfo.html">DisplaySwingThroughInfo</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawAllTracers.html">DrawAllTracers</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawBackSwingCheck.html">DrawBackSwingCheck</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawCamera.html">DrawCamera</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawClientTracers.html">DrawClientTracers</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawFacingCheck.html">DrawFacingCheck</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawHorseImpact.html">DrawHorseImpact</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawMeleeHit.html">DrawMeleeHit</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawParryHit.html">DrawParryHit</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawProjectile.html">DrawProjectile</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawRangedInaccuracy.html">DrawRangedInaccuracy</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawShield.html">DrawShield</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawSocket.html">DrawSocket</a></strong>(FName SocketName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawSpectatorCamera.html">DrawSpectatorCamera</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawTracerCache.html">DrawTracerCache</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawTracerDirection.html">DrawTracerDirection</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawTracers.html">DrawTracers</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawTracersClear.html">DrawTracersClear</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawVisibilityCheck.html">DrawVisibilityCheck</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/DrawWeaponTip.html">DrawWeaponTip</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/IsSelfCamera.html">IsSelfCamera</a></strong>() const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/OwningTeamChanged.html">OwningTeamChanged</a></strong>(<a href="classATBLTeam.html">ATBLTeam</a> * NewOwningTeam)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlaySound.html">PlaySound</a></strong>(UAkAudioEvent * Sound)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PlayerStateMissingOnClientStart.html">PlayerStateMissingOnClientStart</a></strong>(APlayerState * NewPlayerState)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/PrintDebugMessage.html">PrintDebugMessage</a></strong>(const FString &amp; Message, FColor TextColor, float Duration)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ResetSelfCamera.html">ResetSelfCamera</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerAdminCmd.html">ServerAdminCmd</a></strong>(const FString &amp; Cmd)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerBroadcastDebugMessage.html">ServerBroadcastDebugMessage</a></strong>(const FString &amp; Message, FColor TextColor, float Duration, bool bToAll, bool bTeamOnly)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDisplaySwingThroughInfo.html">ServerDisplaySwingThroughInfo</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawAllTracers.html">ServerDrawAllTracers</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawBackSwingCheck.html">ServerDrawBackSwingCheck</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawFacingCheck.html">ServerDrawFacingCheck</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawHorseImpact.html">ServerDrawHorseImpact</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawParryHit.html">ServerDrawParryHit</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawProjectile.html">ServerDrawProjectile</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawShield.html">ServerDrawShield</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawSpectatorCamera.html">ServerDrawSpectatorCamera</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawTracerDirection.html">ServerDrawTracerDirection</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawTracers.html">ServerDrawTracers</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawVisibilityCheck.html">ServerDrawVisibilityCheck</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerDrawWeaponTip.html">ServerDrawWeaponTip</a></strong>(bool bEnable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerOverrideSwatchIndex.html">ServerOverrideSwatchIndex</a></strong>(EInventorySlot Slot, int32 SwatchOverrideIndex)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerPromptPlayerMessageReply.html">ServerPromptPlayerMessageReply</a></strong>(int32 MessageId, bool Response)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerRequestNextSpawnTeam.html">ServerRequestNextSpawnTeam</a></strong>(EFaction RequestedFaction, bool bImmediatelySwitch)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSendMatchProfile.html">ServerSendMatchProfile</a></strong>(const FString &amp; Nickname, const FString &amp; MachineId, const FString &amp; MachineName, const FString &amp; OperatingSystemId, const FString &amp; CommandLine, <a href="structFTBLQualityLevels.html">FTBLQualityLevels</a> ScalabilitySettings)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSetForFFAPlayer.html">ServerSetForFFAPlayer</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSetInitialLoadouts.html">ServerSetInitialLoadouts</a></strong>(const TArray&lt; <a href="structFSavedLoadout.html">FSavedLoadout</a> &gt; &amp; Loadouts)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSetLoadout.html">ServerSetLoadout</a></strong>(TSubclassOf&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt; RequestedSubclass, <a href="structFLoadout.html">FLoadout</a> RequestedLoadout)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerStopAnalytics.html">ServerStopAnalytics</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSuicide.html">ServerSuicide</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ServerSwitchToSpectator.html">ServerSwitchToSpectator</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/StartAllSayChat.html">StartAllSayChat</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/StartLastChannelChat.html">StartLastChannelChat</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/StartTeamSayChat.html">StartTeamSayChat</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/StopAnalytics.html">StopAnalytics</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/StopSoundAllSounds.html">StopSoundAllSounds</a></strong>(UAkAudioEvent * Sound)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SwitchClass.html">SwitchClass</a></strong>(int32 RequestedClassIndex, int32 RequestedSubclassIndex)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SwitchTeam.html">SwitchTeam</a></strong>(int32 RequestedTeamIndex)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/SwitchToSelfCamera.html">SwitchToSelfCamera</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/TeamAppliedToPlayer.html">TeamAppliedToPlayer</a></strong>(<a href="classATBLTeam.html">ATBLTeam</a> * Team)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ToggleCameraKeyPressed.html">ToggleCameraKeyPressed</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ToggleCameraKeyReleased.html">ToggleCameraKeyReleased</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/ToggleGhost.html">ToggleGhost</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLPlayerController/nodes/UpdateSelfCamera.html">UpdateSelfCamera</a></strong>()</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TArray&lt; FString &gt;</td>
+<td><strong>[[ArmourTypeStrings]]</strong></td>
+</tr>
+<tr>
+<td>FAutoBalanceNotificationReceived</td>
+<td><strong>[[AutoBalanceNotificationReceived]]</strong></td>
+</tr>
+<tr>
+<td>FOnRepAutomaticallyChooseSpawnWave</td>
+<td><strong>[[AutomaticallyChooseSpawnWaveReplicated]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[BotTeamDamageScale]]</strong></td>
+</tr>
+<tr>
+<td><a href="classATBLCharacter.html">ATBLCharacter</a> *</td>
+<td><strong>[[CharacterSoundDummy]]</strong></td>
+</tr>
+<tr>
+<td><a href="classUCinematicsComponent.html">UCinematicsComponent</a> *</td>
+<td><strong>[[CinematicsComponent]]</strong></td>
+</tr>
+<tr>
+<td><a href="classASpawner.html">ASpawner</a> *</td>
+<td><strong>[[ClientSpawnerStartAllowingControl_PendingSpawner]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; FString &gt;</td>
+<td><strong>[[CombatStateStrings]]</strong></td>
+</tr>
+<tr>
+<td><a href="classASpawner.html">ASpawner</a> *</td>
+<td><strong>[[CurrentPendingSpawner]]</strong></td>
+</tr>
+<tr>
+<td><a href="structFCameraTargetParams.html">FCameraTargetParams</a></td>
+<td><strong>[[DeathCameraTargetParams]]</strong></td>
+</tr>
+<tr>
+<td><a href="structFDebugProjectileHit.html">FDebugProjectileHit</a></td>
+<td><strong>[[DebugFakeProjectileHit]]</strong></td>
+</tr>
+<tr>
+<td><a href="structFDebugProjectileHit.html">FDebugProjectileHit</a></td>
+<td><strong>[[DebugProjectileHit]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFDebugReliableRPC.html">FDebugReliableRPC</a> &gt;</td>
+<td><strong>[[DebugReliableRPC]]</strong></td>
+</tr>
+<tr>
+<td><a href="classAInventoryItem.html">AInventoryItem</a> *</td>
+<td><strong>[[DecapHead]]</strong></td>
+</tr>
+<tr>
+<td>TSoftClassPtr&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt;</td>
+<td><strong>[[DefaultClassChoice]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[DisplayDebugScrollY]]</strong></td>
+</tr>
+<tr>
+<td>FGameModeMessageReceived</td>
+<td><strong>[[GameModeMessageReceived]]</strong></td>
+</tr>
+<tr>
+<td>UGameplayTasksComponent *</td>
+<td><strong>[[GameplayTasksComponent]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFSoundSwitchEntry.html">FSoundSwitchEntry</a> &gt;</td>
+<td><strong>[[HighPriorityAKSwitches]]</strong></td>
+</tr>
+<tr>
+<td><a href="classUInputReplayComponent.html">UInputReplayComponent</a> *</td>
+<td><strong><a href="../../../../../Systems/Chivalry2/Uncategorized/Input%20Replay%20Component.html">InputReplayComponent</a></strong></td>
+</tr>
+<tr>
+<td><a href="classUItemPreVisualizationInterfaceHelper.html">UItemPreVisualizationInterfaceHelper</a> *</td>
+<td><strong>[[ItemPreVisualizationHelper]]</strong></td>
+</tr>
+<tr>
+<td>FRotator</td>
+<td><strong>[[LastClientSetRotation]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[LastPingTime]]</strong></td>
+</tr>
+<tr>
+<td><a href="classATBLCharacter.html">ATBLCharacter</a> *</td>
+<td><strong>[[LastPossessedCharacter]]</strong></td>
+</tr>
+<tr>
+<td>FDateTime</td>
+<td><strong>[[LastReadDeveloperMessageTime]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[LastVFov]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFSavedLoadout.html">FSavedLoadout</a> &gt;</td>
+<td><strong>[[LoadoutPerClass]]</strong></td>
+</tr>
+<tr>
+<td>double</td>
+<td><strong>[[LoginTime]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFSoundSwitchEntry.html">FSoundSwitchEntry</a> &gt;</td>
+<td><strong>[[LowPriorityAKSwitches]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[MinimumSpawnDelayOverride]]</strong></td>
+</tr>
+<tr>
+<td><a href="structFLoadout.html">FLoadout</a></td>
+<td><strong>[[NextSpawnLoadout]]</strong></td>
+</tr>
+<tr>
+<td><a href="classASpawnWave.html">ASpawnWave</a> *</td>
+<td><strong>[[NextSpawnWave]]</strong></td>
+</tr>
+<tr>
+<td>FNextSpawnWave</td>
+<td><strong>[[NextSpawnWaveReplicated]]</strong></td>
+</tr>
+<tr>
+<td><a href="classASpawner.html">ASpawner</a> *</td>
+<td><strong>[[NextSpawner]]</strong></td>
+</tr>
+<tr>
+<td>FAcknowledgeTeamRequestSignature</td>
+<td><strong>[[OnAcknowledgedTeamRequest]]</strong></td>
+</tr>
+<tr>
+<td>FTakenBlockDamageSignature</td>
+<td><strong>[[OnBlockDamageTaken]]</strong></td>
+</tr>
+<tr>
+<td>FBlockedAttackSignature</td>
+<td><strong><a href="../../../../TBL_src_clean/BlockProjectileWorker/nodes/OnBlockedAttack.html">OnBlockedAttack</a></strong></td>
+</tr>
+<tr>
+<td>FCausedDamageSignature</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLCharacter/nodes/OnCausedDamage.html">OnCausedDamage</a></strong></td>
+</tr>
+<tr>
+<td>FOnClearPlayerMessageRequest</td>
+<td><strong>[[OnClearPlayerMessageRequest]]</strong></td>
+</tr>
+<tr>
+<td>FPossessedPawnSignature</td>
+<td><strong>[[OnClientPossessedPawn]]</strong></td>
+</tr>
+<tr>
+<td>FOnClientPreTravel</td>
+<td><strong><a href="../../../../TBL_src_clean/FxEventListener/nodes/OnClientPreTravel.html">OnClientPreTravel</a></strong></td>
+</tr>
+<tr>
+<td>FCounteredAttackSignature</td>
+<td><strong><a href="../../../../TBL_src_clean/CounterXWorker/nodes/OnCounteredAttack.html">OnCounteredAttack</a></strong></td>
+</tr>
+<tr>
+<td>FOnPlayerCustomizationsLoaded</td>
+<td><strong>[[OnCustomizationsLoaded]]</strong></td>
+</tr>
+<tr>
+<td>FDeathRecapReplicatedSignature</td>
+<td><strong>[[OnDeathRecapReplicated]]</strong></td>
+</tr>
+<tr>
+<td>FOnEnteredLeftLoadoutVolumeSignature</td>
+<td><strong>[[OnEnteredLeftLoadoutVolume]]</strong></td>
+</tr>
+<tr>
+<td>FGameViewportLostFocus</td>
+<td><strong>[[OnGameViewportLostFocus]]</strong></td>
+</tr>
+<tr>
+<td>FGameViewportReceivedFocus</td>
+<td><strong>[[OnGameViewportReceivedFocus]]</strong></td>
+</tr>
+<tr>
+<td>FSpawningAtSpawner</td>
+<td><strong>[[OnGoingToSpawnAtSpawner]]</strong></td>
+</tr>
+<tr>
+<td>FGotKeybindKey</td>
+<td><strong>[[OnGotKeybindingKey]]</strong></td>
+</tr>
+<tr>
+<td>FOnHealingAppliedToCharacter</td>
+<td><strong>[[OnHealingAppliedToCharacter]]</strong></td>
+</tr>
+<tr>
+<td>FJoinableSpawnWavesUpdated</td>
+<td><strong>[[OnJoinableSpawnWavesUpdated]]</strong></td>
+</tr>
+<tr>
+<td>FOnPlayerEnteredOutOfCombatArea</td>
+<td><strong>[[OnLocalPlayerEnteredOutOfCombatArea]]</strong></td>
+</tr>
+<tr>
+<td>FOnPlayerExitedOutOfCombatArea</td>
+<td><strong>[[OnLocalPlayerExitedOutOfCombatArea]]</strong></td>
+</tr>
+<tr>
+<td>FOnLookInputUpdatedSignature</td>
+<td><strong>[[OnLookInputUpdated]]</strong></td>
+</tr>
+<tr>
+<td>FOnLookRateInputUpdatedSignature</td>
+<td><strong>[[OnLookRateInputUpdated]]</strong></td>
+</tr>
+<tr>
+<td>FOnObjectiveZonesVisiblityChanged</td>
+<td><strong>[[OnObjectiveZonesVisiblityChanged]]</strong></td>
+</tr>
+<tr>
+<td>FOnPlayerCausedFallDamage</td>
+<td><strong>[[OnPlayerCausedFallDamage]]</strong></td>
+</tr>
+<tr>
+<td>FPlayerControllerPostProcessInputSignature</td>
+<td><strong>[[OnPlayerControllerPostProcessInput]]</strong></td>
+</tr>
+<tr>
+<td>FOnPlayerKicked</td>
+<td><strong>[[OnPlayerKicked]]</strong></td>
+</tr>
+<tr>
+<td>FOnPlayerRevived</td>
+<td><strong><a href="../../../../TBL_src_clean/BeRevivedWorker/nodes/OnPlayerRevived.html">OnPlayerRevived</a></strong></td>
+</tr>
+<tr>
+<td>FSpectatorSwitchSignature</td>
+<td><strong>[[OnPlayerSelectedSpectatorMode]]</strong></td>
+</tr>
+<tr>
+<td>FOnRepPlayerState</td>
+<td><strong><a href="../../../../TBL_src_clean/HudMarkerDisplayComponent/nodes/OnPlayerStateReplicated.html">OnPlayerStateReplicated</a></strong></td>
+</tr>
+<tr>
+<td>FOnPlayerUsedItem</td>
+<td><strong><a href="../../../../TBL_src_clean/BandageXTimesWorker/nodes/OnPlayerUsedItem.html">OnPlayerUsedItem</a></strong></td>
+</tr>
+<tr>
+<td>FPossessedPawnSignature</td>
+<td><strong><a href="../../../../TBL_src_clean/TBLHUD/nodes/OnPossessedPawn.html">OnPossessedPawn</a></strong></td>
+</tr>
+<tr>
+<td>FOnProcessPlayerInput</td>
+<td><strong><a href="../../../../TBL_src_clean/Horse/nodes/OnProcessPlayerInput.html">OnProcessPlayerInput</a></strong></td>
+</tr>
+<tr>
+<td>FOnProfileDataLoaded</td>
+<td><strong>[[OnProfileDataLoaded]]</strong></td>
+</tr>
+<tr>
+<td>FOnPromptPlayerMessageReply</td>
+<td><strong>[[OnPromptPlayerMessageReply]]</strong></td>
+</tr>
+<tr>
+<td>FOnPromptPlayerMessageRequest</td>
+<td><strong>[[OnPromptPlayerMessageRequest]]</strong></td>
+</tr>
+<tr>
+<td>FPurchaseItemCompleted</td>
+<td><strong>[[OnPurchaseCompleted]]</strong></td>
+</tr>
+<tr>
+<td>FGlobalGameNotification</td>
+<td><strong>[[OnReceivedGlobalGameNotification]]</strong></td>
+</tr>
+<tr>
+<td>FOnReceivedLocalMessage</td>
+<td><strong>[[OnReceivedLocalMessage]]</strong></td>
+</tr>
+<tr>
+<td>FOnReceivedPendingSpawn</td>
+<td><strong>[[OnReceivedPendingSpawn]]</strong></td>
+</tr>
+<tr>
+<td>FJoinWaveResponse</td>
+<td><strong>[[OnReceivedSpawnWaveJoinResponse]]</strong></td>
+</tr>
+<tr>
+<td>FOnPlayerRevived</td>
+<td><strong><a href="../../../../TBL_src_clean/ReviveOthersWorker/nodes/OnRevivedOtherPlayer.html">OnRevivedOtherPlayer</a></strong></td>
+</tr>
+<tr>
+<td>FSavedClassUnavailable</td>
+<td><strong>[[OnSavedClassUnavailable]]</strong></td>
+</tr>
+<tr>
+<td>FServerApprovedLoadoutSignature</td>
+<td><strong>[[OnServerApprovedLoadout]]</strong></td>
+</tr>
+<tr>
+<td>FOnSpectatorPawnDestroyed</td>
+<td><strong>[[OnSpectatorPawnDestroyed]]</strong></td>
+</tr>
+<tr>
+<td>FTakenDamageSignature</td>
+<td><strong><a href="../../../../TBL_src_clean/DieFromFireWorker/nodes/OnTakenDamage.html">OnTakenDamage</a></strong></td>
+</tr>
+<tr>
+<td>FOnToggleCamera</td>
+<td><strong>[[OnToggleCamera]]</strong></td>
+</tr>
+<tr>
+<td>FOnToggleControlMap</td>
+<td><strong>[[OnToggleControlMap]]</strong></td>
+</tr>
+<tr>
+<td>FOnVotingStartedSignature</td>
+<td><strong>[[OnVotingStarted]]</strong></td>
+</tr>
+<tr>
+<td>FOnZoomDisabled</td>
+<td><strong>[[OnZoomDisabled]]</strong></td>
+</tr>
+<tr>
+<td>FOnZoomEnabled</td>
+<td><strong>[[OnZoomEnabled]]</strong></td>
+</tr>
+<tr>
+<td>TSoftObjectPtr&lt; <a href="classUTBLPS5BlockingHaptics.html">UTBLPS5BlockingHaptics</a> &gt;</td>
+<td><strong>[[PS5BlockingHaptic]]</strong></td>
+</tr>
+<tr>
+<td>TSoftObjectPtr&lt; <a href="classUTBLPS5DamageHaptics.html">UTBLPS5DamageHaptics</a> &gt;</td>
+<td><strong>[[PS5PlayerDamageTakenHaptic]]</strong></td>
+</tr>
+<tr>
+<td>TSoftObjectPtr&lt; <a href="classUTBLPS5GeneralHaptics.html">UTBLPS5GeneralHaptics</a> &gt;</td>
+<td><strong>[[PS5PlayerGeneralHaptic]]</strong></td>
+</tr>
+<tr>
+<td>TSoftObjectPtr&lt; <a href="classUTBLPS5RangedWeaponHaptics.html">UTBLPS5RangedWeaponHaptics</a> &gt;</td>
+<td><strong>[[PS5PlayerRangedWeaponHaptic]]</strong></td>
+</tr>
+<tr>
+<td>TSoftObjectPtr&lt; <a href="classUTBLPS5SiegeEngineHaptics.html">UTBLPS5SiegeEngineHaptics</a> &gt;</td>
+<td><strong>[[PS5PlayerSiegeEngineHaptic]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFSoundSwitchEntry.html">FSoundSwitchEntry</a> &gt;</td>
+<td><strong>[[PlayerExertionAKSwitches]]</strong></td>
+</tr>
+<tr>
+<td><a href="classATBLPlayerState.html">ATBLPlayerState</a> *</td>
+<td><strong>[[PlayerToCommendOrForgive]]</strong></td>
+</tr>
+<tr>
+<td>FString</td>
+<td><strong>[[PostMatchMatchmakingConnectString]]</strong></td>
+</tr>
+<tr>
+<td><a href="structFReplicationPredictionState.html">FReplicationPredictionState</a></td>
+<td><strong>[[PredictionState]]</strong></td>
+</tr>
+<tr>
+<td>FNextSpawnWave</td>
+<td><strong>[[RequestedToJoinSpawnWave]]</strong></td>
+</tr>
+<tr>
+<td>TSoftClassPtr&lt; <a href="classATBLCharacter.html">ATBLCharacter</a> &gt;</td>
+<td><strong>[[SavedClassChoice]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[SavedFov]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFSavedSubclass.html">FSavedSubclass</a> &gt;</td>
+<td><strong>[[SavedSubclassChoice]]</strong></td>
+</tr>
+<tr>
+<td>UInputComponent *</td>
+<td><strong>[[SelfCameraInputComponent]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[TeamDamage2MinThreshold]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[TeamDamage30SecThreshold]]</strong></td>
+</tr>
+<tr>
+<td>int8</td>
+<td><strong>[[TeamDamageWarningLevel]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[TimeSinceRotationInputWasNonZero]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; FPrimaryAssetId &gt;</td>
+<td><strong>[[UncheckedLevelUpItems]]</strong></td>
+</tr>
+<tr>
+<td>FPrimaryAssetType</td>
+<td><strong>[[VOBankAssetType]]</strong></td>
+</tr>
+<tr>
+<td><a href="classATBLCharacter.html">ATBLCharacter</a> *</td>
+<td><strong>[[WaitingForSpawnGoreHead]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; FString &gt;</td>
+<td><strong>[[WeaponActionNameStrings]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFSoundSwitchEntry.html">FSoundSwitchEntry</a> &gt;</td>
+<td><strong>[[WeaponAkSwitches]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; FString &gt;</td>
+<td><strong>[[WeaponNameStrings]]</strong></td>
+</tr>
+<tr>
+<td><a href="classAInventoryItem.html">AInventoryItem</a> *</td>
+<td><strong>[[WeaponSoundDummy]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bAccessAllItems]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bAltAttackWithMovement]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bAutoSprint]]</strong></td>
+</tr>
+<tr>
+<td>uint8</td>
+<td><strong>[[bAutomaticallyChooseSpawnWave]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bAwaitingInitialRequestedPlayerClass]]</strong></td>
+</tr>
+<tr>
+<td>uint8</td>
+<td><strong>[[bCheatsEnabled]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDisableHUDPostProcess]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bFirstTimeSpectating]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bIdleWarned]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bIsHeadlessClient]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bIsLoadoutScreenOpen]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bIsPostMatchMatchmaking]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bIsReadyToPostMatchMatchmakingTravel]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bIsShufflingLoadout]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bIsSpeaking]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bIsTravelling]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bPlayerHasAcceptedNDA]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bPlayerHasAcceptedPurchaseDisclaimer]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bPlayerHasPlayedTutorial]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bPlayerIsWaitingToEnterSpectatorMode]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bPlayerOpenedTutorial]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bPlayerSelectedSpectatorMode]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bPlayingPrologue]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bReceivedInitialLoadouts]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bShowMyParryBox]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bShowOtherParryBoxes]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bShowPlayerListOnStartupInOverview]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bShuffleLoadout]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bStartedForceRespawn]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bTBSDevMode]]</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-attributes">Protected Attributes<a class="headerlink" href="#protected-attributes" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSubclassOf&lt; UCineCameraComponent &gt;</td>
+<td><strong>[[CinematicSpectatorCameraClass]]</strong></td>
+</tr>
+<tr>
+<td><a href="classATBLCharacter.html">ATBLCharacter</a> *</td>
+<td><strong>[[CustomizationCharacter]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; UAkComponent * &gt;</td>
+<td><strong>[[DebugAkComponents]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="structFDebugSpectatorCamera.html">FDebugSpectatorCamera</a> &gt;</td>
+<td><strong>[[DebugSpectatorCamera]]</strong></td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong>[[DisplayDebugScrollDir]]</strong></td>
+</tr>
+<tr>
+<td>FName</td>
+<td><strong>[[DrawDebugSocketName]]</strong></td>
+</tr>
+<tr>
+<td>FRotator</td>
+<td><strong>[[LastControlRotation]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[LastInputTime]]</strong></td>
+</tr>
+<tr>
+<td>APawn *</td>
+<td><strong>[[LastReplicatedPawn]]</strong></td>
+</tr>
+<tr>
+<td><a href="structFMatchSessionComplete.html">FMatchSessionComplete</a></td>
+<td><strong>[[MatchSessionComplete]]</strong></td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong>[[NextSpawnTeam]]</strong></td>
+</tr>
+<tr>
+<td><a href="structFSelfCameraProperties.html">FSelfCameraProperties</a></td>
+<td><strong>[[SelfCamera]]</strong></td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong>[[SpamCheckIndex]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[SpamCheckPeriod]]</strong></td>
+</tr>
+<tr>
+<td>int32</td>
+<td><strong>[[SpamCheckPeriodMaxMessages]]</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; float &gt;</td>
+<td><strong>[[SpamCheckPreviousMessages]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[SpamMuteDurationIncreasePerMute]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[SpamMuteDurationMax]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[SpamMuteDurationMin]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[SpamMutedDuration]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[SpamMutedTime]]</strong></td>
+</tr>
+<tr>
+<td>float</td>
+<td><strong>[[ThirdPersonFOVCap]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDebugIgnoreAI]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDisplaySwingThroughInfo]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawClientDebugTracers]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugBackSwingCheck]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugCamera]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugFacingCheck]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugHorseImpact]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugMeleeHit]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugParryHit]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugProjectile]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugRangedInaccuracy]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugShield]]</strong></td>
+</tr>
+<tr>
+<td>uint8</td>
+<td><strong>[[bDrawDebugSpectatorCamera]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugTracerCache]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugTracerDirection]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugTracers]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugTracersClear]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugVisibilityCheck]]</strong></td>
+</tr>
+<tr>
+<td>bool</td>
+<td><strong>[[bDrawDebugWeaponTip]]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p>Updated on 2023-07-04 at 02:30:59 +0200</p>
+</article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.top", "navigation.prune"], "search": "../../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+<script src="../../../../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
