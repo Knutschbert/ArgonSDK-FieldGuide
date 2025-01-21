@@ -1,0 +1,2474 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="ATBLAutoNavLink.html" rel="prev"/>
+<link href="ATBLCharacterBase.html" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.1.17" name="generator"/>
+<title>ATBLCharacter - Field Guide for ArgonSDK</title>
+<link href="../../../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ecc896b0.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Volkov:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Volkov";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../javascripts/mermaid-center.css" rel="stylesheet"/>
+<link href="../../../javascripts/extra.css" rel="stylesheet"/>
+<link href="../../../body {
+  padding-top: 60px; /* Adjust the top padding to make space for the new header */
+}
+.md-header-wrapper {
+  display: none; /* Hide the original header */
+}
+.custom-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #37474F; /* Customize the background color */
+  color: #FFFFFF; /* Customize the text color */
+  padding: 10px 20px; /* Customize padding */
+  z-index: 1000; /* Set a high z-index to ensure it's above other elements */
+}
+" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#atblcharacter">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Field Guide for ArgonSDK" class="md-header__button md-logo" data-md-component="logo" href="../../../index.html" title="Field Guide for ArgonSDK">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Field Guide for ArgonSDK
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              ATBLCharacter
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="blue-grey" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="amber" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Knutschbert/ArgonSDK-FieldGuide" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Field Guide for ArgonSDK" class="md-nav__button md-logo" data-md-component="logo" href="../../../index.html" title="Field Guide for ArgonSDK">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Field Guide for ArgonSDK
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Knutschbert/ArgonSDK-FieldGuide" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Features/LaTeX%20Math%20Support.html">
+        LaTeX Math Support
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Features/Mermaid%20Diagrams.html">
+        Mermaid diagrams
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Features/Text%20Formatting.html">
+        Text Formatting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Glossary
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Glossary
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Glossary/ArgonSDK.html">
+        ArgonSDK
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Glossary/Glossary.html">
+        Mod Types
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Mods
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Mods
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/1.%20ModTemplate.html">
+        1. ModTemplate
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/BigNumbers.html">
+        BigNumbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/DripSync.html">
+        DripSync
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/FilthyPeasants.html">
+        FilthyPeasants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/FlashBlades.html">
+        FlashBlades
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/GiantSlayers.html">
+        GiantSlayers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/Hitboxes.html">
+        Hitboxes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/ManlyMen.html">
+        ManlyMen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/MapSelector.html">
+        MapSelector
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/NightLife.html">
+        NightLife
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Mods/Portals.html">
+        Portals
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Systems
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Systems
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Chivalry2
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+          Chivalry2
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Chivalry%202%20Systems%20Overview.html">
+        Chivalry 2 Systems Overview
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+          Maps
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Maps
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Maps/Chivalry%202%20Official%20Maps.html">
+        Chivalry 2 Official Maps
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Maps/Landscape%20Materials.html">
+        Landscape Materials
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+          Objectives
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_3">
+<span class="md-nav__icon md-icon"></span>
+          Objectives
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Objectives/Objectives%20Overview.html">
+        Objectives Overview
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+          Spawns
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_4">
+<span class="md-nav__icon md-icon"></span>
+          Spawns
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Spawns/Spawn%20System%20Overview.html">
+        Spawn System Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Spawns/Spawner.html">
+        Spawner
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+          Tables
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_5">
+<span class="md-nav__icon md-icon"></span>
+          Tables
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/Abilities%20DataTable.html">
+        Abilities DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/CharacterMovementModifiers%20DataTable.html">
+        CharacterMovementModifiers DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/CharacterStats%20DataTable.html">
+        CharacterStats DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/EmoteNames%20DataTable.html">
+        EmoteNames DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/EquippedPenalty%20DataTable.html">
+        EquippedPenalty DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/LoadingHintsDescriptionsStringTable%20DataTable.html">
+        LoadingHintsDescriptionsStringTable DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/LoadingHintsTitlesStringTable%20DataTable.html">
+        LoadingHintsTitlesStringTable DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/ST_Class_Perks%20DataTable.html">
+        ST Class Perks DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/ST_Classes%20DataTable.html">
+        ST Classes DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/ST_WeaponDesc%20DataTable.html">
+        ST WeaponDesc DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/ST_WeaponPerks%20DataTable.html">
+        ST WeaponPerks DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/ST_WeaponStrings%20DataTable.html">
+        ST WeaponStrings DataTable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Tables/SubclassPerks%20DataTable.html">
+        SubclassPerks DataTable
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+          Uncategorized
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_6">
+<span class="md-nav__icon md-icon"></span>
+          Uncategorized
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Uncategorized/Input%20Replay%20Component.html">
+        Input Replay Component
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_7" id="__nav_4_1_7_label" tabindex="0">
+          Weapons
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_7">
+<span class="md-nav__icon md-icon"></span>
+          Weapons
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Chivalry2/Weapons/Weapons%20Overview.html">
+        Weapons Overview
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Unchained
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          Unchained
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+          ModLoading
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_1">
+<span class="md-nav__icon md-icon"></span>
+          ModLoading
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Unchained/ModLoading/File%20List%20Overview.html">
+        File List Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Unchained/ModLoading/File%20List.html">
+        File List
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Unchained/ModLoading/Mod%20Loader%20Command%20Line%20Arguments.html">
+        Mod Loader Command Line Arguments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Unchained/ModLoading/Mod%20Loader%20Flags.html">
+        Mod Loader Flags
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Systems/Unchained/ModLoading/Mod%20Loader%20GUI.html">
+        Mod Loader GUI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/Additional%20Ressources.html">
+        DataTables
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/Blueprint%20Know-How.html">
+        QOL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/Requirements.html">
+        Requirements
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/Spawners.html">
+        Spawners
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/T1%20Swapping%20a%20Texture.html">
+        T1 Swapping a Texture
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/T2%20Create%20a%20Free-For-All%20Map%20%28FFA%29.html">
+        T2 Create a Free For All Map (FFA)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/T3%20Create%20your%20first%20Blueprint%20Mod.html">
+        T3 Create your first Blueprint Mod
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/T4%20Create%20a%20Team%20Deathmatch%20Map%20%28TDM%29.html">
+        T4 Create a Team Deathmatch Map (TDM)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/TX%20Using%20a%20SaveGame%20Object.html">
+        TX Using a SaveGame Object
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/Tutorials%20Overview.html">
+        Tutorials Overview
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Tutorials/cvar%20tests.html">
+        Cvar tests
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../index.html">
+        ArgonSDK Field Guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../index_classes.html">
+        Classes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../index_namespaces.html">
+        Namespaces
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Introduction.html">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../index.html">
+        ArgonSDK Field Guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Installing.html">
+        UnPaking
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docs/ClassDocsGenerated/docs/SDK/Source/index_namespaces.md">
+        Namespaces
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#public-functions">
+    Public Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#protected-functions">
+    Protected Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#public-attributes">
+    Public Attributes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#protected-attributes">
+    Protected Attributes
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="atblcharacter">ATBLCharacter<a class="headerlink" href="#atblcharacter" title="Permanent link">¶</a></h1>
+<p><code>#include &lt;TBLCharacter.h&gt;</code></p>
+<p>Inherits from <a href="ATBLCharacterBase.html">ATBLCharacterBase</a>, IVisualLoggerDebugSnapshotInterface, <a href="IReplicatedSubobjectInterface.html">IReplicatedSubobjectInterface</a>, IGenericTeamAgentInterface, <a href="IMatchStateListenerInterface.html">IMatchStateListenerInterface</a>, IAISightTargetInterface, <a href="ISignificanceInterface.html">ISignificanceInterface</a></p>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong><a href="ATBLCharacter.html">ATBLCharacter</a></strong>(const FObjectInitializer &amp; ObjectInitializer =FObjectInitializer::Get())</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/AddConstructableActor.html">AddConstructableActor</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * CarryableItem, AActor * NewActor)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastCharacterEmote.html">BroadcastCharacterEmote</a></strong>([[uint8]] EmoteRowNum, [[EAudioPersonalityType::Type]] PersonalityType, [[uint8]] EmotePlayingSeqNum, [[uint8]] EmoteRandomSeed, [[uint8]] bIsOverrideEmote, [[uint8]] EmoteType)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastChickenEmote.html">BroadcastChickenEmote</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastCinematicAllowControl.html">BroadcastCinematicAllowControl</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastCinematicRestrictControl.html">BroadcastCinematicRestrictControl</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastClashEvent.html">BroadcastClashEvent</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Target, <a href="FClashEventReplicated.html">FClashEventReplicated</a> ClashEventReplicated)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastDetachFromController.html">BroadcastDetachFromController</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastHitWorld.html">BroadcastHitWorld</a></strong>(const <a href="FHitWorldParams.html">FHitWorldParams</a> &amp; Params)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastLoseHelmet.html">BroadcastLoseHelmet</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastOnHealedByLocalPlayer.html">BroadcastOnHealedByLocalPlayer</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastParryEvent.html">BroadcastParryEvent</a></strong>(AActor * Target, <a href="FParryEventReplicated.html">FParryEventReplicated</a> ParryEventReplicated)</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/CanClash.html">CanClash</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/CanFullSprint.html">CanFullSprint</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacterMovement/nodes/CanSprintAttack.html">CanSprintAttack</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/CanSprintCharge.html">CanSprintCharge</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacterMovement/nodes/CanSprintShove.html">CanSprintShove</a></strong>() const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/CarryableAnimationEvent.html">CarryableAnimationEvent</a></strong>([[FName]] EventName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/CarryableCharacterEvent.html">CarryableCharacterEvent</a></strong>([[FName]] EventName, <a href="ATBLCharacter.html">ATBLCharacter</a> * ParentCharacter)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClearTutorialPlayerControl.html">ClearTutorialPlayerControl</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientApplyCondition.html">ClientApplyCondition</a></strong>([[EConditionType]] Condition)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugArrow.html">ClientDrawDebugArrow</a></strong>([[FVector]] LineStart, [[FVector]] LineEnd, FColor Clr, [[bool]] bPersistentLines, [[float]] Lifetime, [[float]] Thickness)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugBox.html">ClientDrawDebugBox</a></strong>([[FVector]] Center, [[FVector]] Box, [[FTransform]] Transform, FColor Color, [[bool]] bPersistentLines, [[float]] Lifetime)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugCapsule.html">ClientDrawDebugCapsule</a></strong>([[FVector]] Center, [[float]] HalfHeight, [[float]] Radius, FColor Color)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugLine.html">ClientDrawDebugLine</a></strong>([[FVector]] LineStart, [[FVector]] LineEnd, FColor Clr, [[bool]] bPersistentLines, [[float]] Lifetime, [[float]] Thickness)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugPoint.html">ClientDrawDebugPoint</a></strong>([[FVector]] Location, [[float]] Size, FColor Clr, [[bool]] bPersistentLines, [[float]] Lifetime)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugPose.html">ClientDrawDebugPose</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character, FColor Clr)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugSphere.html">ClientDrawDebugSphere</a></strong>([[FVector]] Center, [[float]] Radius, [[int32]] Segments, FColor Clr, [[bool]] bPersistentLines)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugString.html">ClientDrawDebugString</a></strong>([[FVector]] Location, const FString &amp; Text, FColor Clr, [[float]] Duration, [[float]] FontScale)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientReliableNotifySuicide.html">ClientReliableNotifySuicide</a></strong>([[EKillReason]] KillReason)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientSetCustomizationSwatches.html">ClientSetCustomizationSwatches</a></strong>(const TArray&lt; <a href="FSwatchSelection.html">FSwatchSelection</a> &gt; &amp; Swatches)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientSuicideReceived.html">ClientSuicideReceived</a></strong>(<a href="FDamageTakenEventCompressed.html">FDamageTakenEventCompressed</a> DamageEventCompressed)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientTeleportTo.html">ClientTeleportTo</a></strong>([[FVector]] vecTargetPos, [[FRotator]] vecTargetRot)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ConditionAppliedByActor.html">ConditionAppliedByActor</a></strong>([[EConditionType]] ConditionApplied, AActor * ConditionCauser)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ConsumeInputAction.html">ConsumeInputAction</a></strong>([[FName]] ActionName, TEnumAsByte&lt; EInputEvent &gt; InputType)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/DamageWithHitParams.html">DamageWithHitParams</a></strong>([[float]] Damage, [[FHitResult]] HitResult, [[FVector]] HitDirection, [[bool]] bLoseLimbCheat)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/DebugDrawCamera.html">DebugDrawCamera</a></strong>([[float]] DeltaTime)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/DebugDrawParryBox.html">DebugDrawParryBox</a></strong>([[float]] DeltaTime)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/DebugDrawShield.html">DebugDrawShield</a></strong>(<a href="ATBLPlayerController.html">ATBLPlayerController</a> * DebugController)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyAxis.html">DoKeyAxis</a></strong>([[FName]] ActionName, [[float]] AxisValue)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyEvent.html">DoKeyEvent</a></strong>([[FName]] ActionName, TEnumAsByte&lt; EInputEvent &gt; KeyEvent)</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/DoesCountTowardKillsAndKnockdowns.html">DoesCountTowardKillsAndKnockdowns</a></strong>() const</td>
+</tr>
+<tr>
+<td>TArray&lt; AActor * &gt;</td>
+<td><strong><a href="../Nodes/TBLGameMode/nodes/GetAIObjectiveActors.html">GetAIObjectiveActors</a></strong>() const</td>
+</tr>
+<tr>
+<td>FString</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetAIObjectiveDebugString.html">GetAIObjectiveDebugString</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetActionEvent.html">GetActionEvent</a></strong>(UAkAudioEvent <em>&amp; StartEvent, UAkAudioEvent </em>&amp; StopEvent)</td>
+</tr>
+<tr>
+<td>AActor *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetActorWhoAppliedCondition.html">GetActorWhoAppliedCondition</a></strong>([[EConditionType]] ConditionApplied)</td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetAnimationPercent.html">GetAnimationPercent</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetAutoVODistanceSqrdByType.html">GetAutoVODistanceSqrdByType</a></strong>(TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt; Type)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetBattlecryActionEvent.html">GetBattlecryActionEvent</a></strong>(UAkAudioEvent <em>&amp; StartEvent, UAkAudioEvent </em>&amp; StopEvent)</td>
+</tr>
+<tr>
+<td>TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetBlockingInventoryItem.html">GetBlockingInventoryItem</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter) const</td>
+</tr>
+<tr>
+<td>[[FVector]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetCameraSocketLocation.html">GetCameraSocketLocation</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[FVector]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetCenterPlayArea.html">GetCenterPlayArea</a></strong>() const</td>
+</tr>
+<tr>
+<td>TEnumAsByte&lt; [[EAudioClassType::Type]] &gt;</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetCharacterAudioType.html">GetCharacterAudioType</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[ECharacterClass]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetCharacterClassArchetype.html">GetCharacterClassArchetype</a></strong>([[ECharacterClass]] Type)</td>
+</tr>
+<tr>
+<td>FString</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetCharacterClassAudioSwitch.html">GetCharacterClassAudioSwitch</a></strong>(TEnumAsByte&lt; [[EAudioClassType::Type]] &gt; ClassType, [[EFaction]] Faction)</td>
+</tr>
+<tr>
+<td>[[ECharacterClassType]]</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetCharacterClassType.html">GetCharacterClassType</a></strong>([[ECharacterClass]] Type)</td>
+</tr>
+<tr>
+<td><a href="UCombatStateComponent.html">UCombatStateComponent</a> *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetCombatStateComponent.html">GetCombatStateComponent</a></strong>() const</td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="AInventoryItem.html">AInventoryItem</a> * &gt;</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetCurrentAttackingWeapons.html">GetCurrentAttackingWeapons</a></strong>() const</td>
+</tr>
+<tr>
+<td>USkeletalMeshComponent *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetCurrentMesh.html">GetCurrentMesh</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetDeathTime.html">GetDeathTime</a></strong>()</td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="AInventoryItem.html">AInventoryItem</a> * &gt;</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetEquippedInventoryItems.html">GetEquippedInventoryItems</a></strong>() const</td>
+</tr>
+<tr>
+<td><a href="AInventoryItem.html">AInventoryItem</a> *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetEquippedItemByHand.html">GetEquippedItemByHand</a></strong>([[EEquippedHand]] Hand) const</td>
+</tr>
+<tr>
+<td><a href="AInventoryItem.html">AInventoryItem</a> *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetEquippedWeapon.html">GetEquippedWeapon</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[FVector]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetFacingDirection.html">GetFacingDirection</a></strong>() const</td>
+</tr>
+<tr>
+<td><a href="UInteractableComponent.html">UInteractableComponent</a> *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetFocusedInteractable.html">GetFocusedInteractable</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="UInventory.html">UInventory</a> *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetInventory.html">GetInventory</a></strong>() const</td>
+</tr>
+<tr>
+<td>AController *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetLastController.html">GetLastController</a></strong>()</td>
+</tr>
+<tr>
+<td>virtual void</td>
+<td><strong>[[GetLifetimeReplicatedProps]]</strong>(TArray&lt; FLifetimeProperty &gt; &amp; OutLifetimeProps) const override</td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetNeedsHealingThreshold.html">GetNeedsHealingThreshold</a></strong>()</td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="UParryComponent.html">UParryComponent</a> * &gt;</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetParryComponents.html">GetParryComponents</a></strong>()</td>
+</tr>
+<tr>
+<td>[[ECharacterClass]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetPawnClassArchetype.html">GetPawnClassArchetype</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[ECharacterClass]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetPawnClassType.html">GetPawnClassType</a></strong>() const</td>
+</tr>
+<tr>
+<td>USkeletalMeshComponent *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetPawnMesh.html">GetPawnMesh</a></strong>([[bool]] WantFirstPerson) const</td>
+</tr>
+<tr>
+<td>TEnumAsByte&lt; [[EAudioPersonalityType::Type]] &gt;</td>
+<td><strong><a href="../Nodes/TBLPlayerState/nodes/GetPersonalityType.html">GetPersonalityType</a></strong>() const</td>
+</tr>
+<tr>
+<td><a href="USpecialItemAbility.html">USpecialItemAbility</a> *</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetSpecialItemAbility.html">GetSpecialItemAbility</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="FThirdPersonCameraParams.html">FThirdPersonCameraParams</a></td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetThirdPersonCameraParams.html">GetThirdPersonCameraParams</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/HandleOnCustomizationJobsEmptied.html">HandleOnCustomizationJobsEmptied</a></strong>()</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/HasCondition.html">HasCondition</a></strong>([[EConditionType]] Condition) const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/HideCharacterAndEquipment.html">HideCharacterAndEquipment</a></strong>([[bool]] bHide)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/HitClash.html">HitClash</a></strong>([[FHitResult]] &amp; Hit, <a href="ATBLCharacter.html">ATBLCharacter</a> * OtherCharacter)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/HitWorld.html">HitWorld</a></strong>(const [[FHitResult]] &amp; Hit)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/HitWorldWithStats.html">HitWorldWithStats</a></strong>([[FHitResult]] Hit, [[bool]] bParried)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/InitiateAbilityByName.html">InitiateAbilityByName</a></strong>([[FName]] AbilityName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/InterruptUse.html">InterruptUse</a></strong>([[FName]] NextCombatState)</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsArrowCameraEnabled.html">IsArrowCameraEnabled</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsBlocking.html">IsBlocking</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter) const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsCharacterClassArchetype.html">IsCharacterClassArchetype</a></strong>([[ECharacterClass]] Type)</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsCharacterPaused.html">IsCharacterPaused</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsCinematicRestrictedControl.html">IsCinematicRestrictedControl</a></strong>()</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsFacingTarget.html">IsFacingTarget</a></strong>(const [[FHitResult]] &amp; Hit, const <a href="FFacingTargetParams.html">FFacingTargetParams</a> &amp; Params)</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsFollowAnimationEnabled.html">IsFollowAnimationEnabled</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsHoldingAltAttack.html">IsHoldingAltAttack</a></strong>([[float]] Tolerance)</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsInParryView.html">IsInParryView</a></strong>(<a href="UParryComponent.html">UParryComponent</a> * ParryComp, const [[FTransform]] &amp; BoxTransform, const [[FVector]] &amp; BoxExtents, [[float]] IgnoreParryDepth) const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsInRagdoll.html">IsInRagdoll</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacterMovementBaseComponent/nodes/IsInitialAutorun.html">IsInitialAutorun</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsInterpingToMountLocation.html">IsInterpingToMountLocation</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsLocalPlayer.html">IsLocalPlayer</a></strong>()</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsPawnSubclass.html">IsPawnSubclass</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLPlayerCameraManager/nodes/IsSpawnFadeOutEnabled.html">IsSpawnFadeOutEnabled</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsSpecialPawnClass.html">IsSpecialPawnClass</a></strong>() const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacterMovement/nodes/IsSprinting.html">IsSprinting</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/Kill.html">Kill</a></strong>([[EKillReason]] KillReason, [[bool]] bSwitchedTeamsInLoadoutVolume, AActor * Killer)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/KillWithHitParams.html">KillWithHitParams</a></strong>([[EKillReason]] KillReason, [[bool]] bSwitchedTeamsInLoadoutVolume, [[FHitResult]] HitResult, [[FVector]] HitDirection, AActor * Killer)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/LoserEnterPostGameState.html">LoserEnterPostGameState</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/NetMulticastFastSharedReplication.html">NetMulticastFastSharedReplication</a></strong>(const <a href="FFastSharedProperties__TBLCharacter.html">FFastSharedProperties_TBLCharacter</a> &amp; Properties)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnAttachedRagdollActorDestroyed.html">OnAttachedRagdollActorDestroyed</a></strong>(AActor * DestroyedActor)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacterAnimInstance/nodes/OnCombatStateBegin.html">OnCombatStateBegin</a></strong>(AActor * Actor, [[FName]] State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatState)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnCombatStateEnd.html">OnCombatStateEnd</a></strong>(AActor * Actor, [[FName]] State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatState)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnCustomized.html">OnCustomized</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnInitializeAltWeightsState.html">OnInitializeAltWeightsState</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnMeleeHitSuccess.html">OnMeleeHitSuccess</a></strong>(AActor * HitActor)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLPlayerState/nodes/OnRep_AttachToProjectile.html">OnRep_AttachToProjectile</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * Projectile)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_BeingRevivedBy.html">OnRep_BeingRevivedBy</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_InventorySlots.html">OnRep_InventorySlots</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_LockMeshRotation.html">OnRep_LockMeshRotation</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_ShouldCharacterBeHidden.html">OnRep_ShouldCharacterBeHidden</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_SpawnedAtSpawnComp.html">OnRep_SpawnedAtSpawnComp</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_SpecialItemCharge.html">OnRep_SpecialItemCharge</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCheatManager/nodes/PauseCharacter.html">PauseCharacter</a></strong>([[bool]] bPaused)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayAutoVO.html">PlayAutoVO</a></strong>(TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt; AutoVoType)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayAutoVOFromServer.html">PlayAutoVOFromServer</a></strong>(TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt; AutoVoType, [[bool]] SkipLocalPlayer)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayCharacterActionEvent.html">PlayCharacterActionEvent</a></strong>(const <a href="FSoundSwitchEntry.html">FSoundSwitchEntry</a> SoundSwitch, [[bool]] IsLocalPlayerInvolved) const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayChickenEmote.html">PlayChickenEmote</a></strong>()</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayEmote.html">PlayEmote</a></strong>(<a href="FPersonalityEmoteTableRow.html">FPersonalityEmoteTableRow</a> Emote, [[ERadialVOMenuPage]] Page)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayEmoteFromServer.html">PlayEmoteFromServer</a></strong>([[FName]] EmoteName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayHighPriorityCharacterActionEvent.html">PlayHighPriorityCharacterActionEvent</a></strong>(const <a href="FSoundSwitchEntry.html">FSoundSwitchEntry</a> SoundSwitch)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayLowPriorityCharacterActionEvent.html">PlayLowPriorityCharacterActionEvent</a></strong>(const <a href="FSoundSwitchEntry.html">FSoundSwitchEntry</a> SoundSwitch) const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PushRespawnState.html">PushRespawnState</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/RemoveEmoteFromQueue.html">RemoveEmoteFromQueue</a></strong>([[int32]] EmoteId)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCheatManager/nodes/Revive.html">Revive</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * DownedCharacter)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerEnterPostGameState.html">ServerEnterPostGameState</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerHandleOnCustomizationJobsEmptied.html">ServerHandleOnCustomizationJobsEmptied</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerHitWorld.html">ServerHitWorld</a></strong>(const <a href="FHitWorldParams.html">FHitWorldParams</a> &amp; Params, [[float]] ClientTimeStamp)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerPlayChickenEmote.html">ServerPlayChickenEmote</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerPlayEmote.html">ServerPlayEmote</a></strong>([[uint8]] EmoteRowNum, [[EAudioPersonalityType::Type]] PersonalityType, [[uint8]] EmotePlayingSeqNum, [[uint8]] bIsOverrideEmote, [[uint8]] EmoteType)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetCinematicRestrictedControl.html">SetCinematicRestrictedControl</a></strong>([[bool]] bRestricted)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetDeathAnimationParameters.html">SetDeathAnimationParameters</a></strong>(const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; Event)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetFirstPersonDeathCamera.html">SetFirstPersonDeathCamera</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetIgnoreAI.html">SetIgnoreAI</a></strong>([[bool]] bNewIgnoreAI)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetIsInitialAutorun.html">SetIsInitialAutorun</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetPlayerDrunk.html">SetPlayerDrunk</a></strong>([[bool]] IsDrunk)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetRagdollPhysics.html">SetRagdollPhysics</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetSpectatingPawn.html">SetSpectatingPawn</a></strong>(<a href="ATBLSpectatorPawn.html">ATBLSpectatorPawn</a> * NewSpectatingPawn)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetThirdPersonDeathCamera.html">SetThirdPersonDeathCamera</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetupAI.html">SetupAI</a></strong>()</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldAttackBeCountered.html">ShouldAttackBeCountered</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="AInventoryItem.html">AInventoryItem</a> * DefenderItem) const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldBlockCharacter.html">ShouldBlockCharacter</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * HitCharacter, <a href="FActionContext.html">FActionContext</a> &amp; Context) const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldClash.html">ShouldClash</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * InitiatorCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * TargetCharacter, [[FVector]] ClashLocation) const</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldIgnoreAI.html">ShouldIgnoreAI</a></strong>() const</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/StartRevive.html">StartRevive</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * DownedCharacter)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/StopCharacterActionEvent.html">StopCharacterActionEvent</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/StopHighPriorityCharacterActionEvent.html">StopHighPriorityCharacterActionEvent</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/StopLowPriorityCharacterActionEvent.html">StopLowPriorityCharacterActionEvent</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/StopRevive.html">StopRevive</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * DownedCharacter)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLPlayerController/nodes/Suicide.html">Suicide</a></strong>([[EKillReason]] KillReason)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SwitchAttachedItemMesh.html">SwitchAttachedItemMesh</a></strong>(USkeletalMeshComponent * ParentMesh)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/TutorialPlayerControl.html">TutorialPlayerControl</a></strong>(<a href="FTutorialPlayerControlParams.html">FTutorialPlayerControlParams</a> Params)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UnfreezeRagdoll.html">UnfreezeRagdoll</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateLockMeshRotation.html">UpdateLockMeshRotation</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateRagdoll.html">UpdateRagdoll</a></strong>([[float]] DeltaSeconds)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateSpecialItemAbility.html">UpdateSpecialItemAbility</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * SpecialItem)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateThirdPersonCamera.html">UpdateThirdPersonCamera</a></strong>([[float]] DeltaSeconds, [[bool]] bSpectator)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/WasHitAfterDeath.html">WasHitAfterDeath</a></strong>([[FHitResult]] &amp; Hit, <a href="ATBLCharacter.html">ATBLCharacter</a> * OtherCharacter)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/WasHitEarly.html">WasHitEarly</a></strong>(const [[FHitResult]] &amp; Hit, <a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-functions">Protected Functions<a class="headerlink" href="#protected-functions" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/AddConstructableActorToArray.html">AddConstructableActorToArray</a></strong>(AActor * NewActor)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastAbleToHealIfChanged.html">BroadcastAbleToHealIfChanged</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastHitWorldWithStats.html">BroadcastHitWorldWithStats</a></strong>(const <a href="FHitWorldParams.html">FHitWorldParams</a> &amp; Params)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastPauseCharacter.html">BroadcastPauseCharacter</a></strong>([[bool]] bPaused)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastWasHitEarly.html">BroadcastWasHitEarly</a></strong>(const <a href="FEarlyHitResult.html">FEarlyHitResult</a> &amp; EarlyHit)</td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/CanRevive.html">CanRevive</a></strong>(APawn * Pawn)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/CheckTeamCollision.html">CheckTeamCollision</a></strong>(AActor * OtherActor, UPrimitiveComponent * OtherComp)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/DeathAnimationOverlap.html">DeathAnimationOverlap</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/FellOutOfWorldTimer.html">FellOutOfWorldTimer</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnApplyCondition.html">OnApplyCondition</a></strong>(AActor * Actor, [[EConditionType]] Condition)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnCausedDamage.html">OnCausedDamage</a></strong>(const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageEvent)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnComponentHit.html">OnComponentHit</a></strong>(UPrimitiveComponent * HitComponent, AActor * OtherActor, UPrimitiveComponent * OtherComp, [[FVector]] NormalImpulse, const [[FHitResult]] &amp; Hit)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnComponentOverlap.html">OnComponentOverlap</a></strong>(UPrimitiveComponent * OverlappedComponent, AActor * Other, UPrimitiveComponent * OtherComp, [[int32]] OtherBodyIndex, [[bool]] bFromSweep, const [[FHitResult]] &amp; OverlapInfo)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnConstructableActorDestroyed.html">OnConstructableActorDestroyed</a></strong>(AActor * DestroyedActor)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnConstructableActorKilled.html">OnConstructableActorKilled</a></strong>(const <a href="FDeathDamageTakenEvent.html">FDeathDamageTakenEvent</a> &amp; Event)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnDamageTaken.html">OnDamageTaken</a></strong>(const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageEvent)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacterMovement/nodes/OnEquippedItemsChanged.html">OnEquippedItemsChanged</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnInteractableUsePawnChanged.html">OnInteractableUsePawnChanged</a></strong>(APawn * Pawn)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/WaterActor/nodes/OnKilled.html">OnKilled</a></strong>(const <a href="FDeathDamageTakenEvent.html">FDeathDamageTakenEvent</a> &amp; DamageEvent)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnProjectileStopAfterDeath.html">OnProjectileStopAfterDeath</a></strong>(const [[FHitResult]] &amp; ImpactResult)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_CinematicRestrictedControl.html">OnRep_CinematicRestrictedControl</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_RandomSeed.html">OnRep_RandomSeed</a></strong>([[int32]] PreviousRandomInt)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnTeamChanged.html">OnTeamChanged</a></strong>(<a href="ATBLTeam.html">ATBLTeam</a> * OwnerTeam)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLSpectatorPawn/nodes/ProcessTurnAndLookInput.html">ProcessTurnAndLookInput</a></strong>(const TEnumAsByte&lt; [[EAxis::Type]] &gt; Axis, const [[float]] Value)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLSpectatorPawn/nodes/ProcessTurnAndLookInputRate.html">ProcessTurnAndLookInputRate</a></strong>(const TEnumAsByte&lt; [[EAxis::Type]] &gt; Axis, const [[float]] Rate)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/RemoveConstructableActor.html">RemoveConstructableActor</a></strong>(AActor * DestroyedActor)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerDismountPressed.html">ServerDismountPressed</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerSetFireSource.html">ServerSetFireSource</a></strong>(<a href="UFireSourceComponent.html">UFireSourceComponent</a> * NewFireSource)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerUse.html">ServerUse</a></strong>(<a href="UInteractableComponent.html">UInteractableComponent</a> * Interactable, [[bool]] bIsAutoPickup)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerUseHeldComplete.html">ServerUseHeldComplete</a></strong>(<a href="UInteractableComponent.html">UInteractableComponent</a> * Interactable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerUseHeldRelease.html">ServerUseHeldRelease</a></strong>(<a href="UInteractableComponent.html">UInteractableComponent</a> * Interactable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerUseHeldStart.html">ServerUseHeldStart</a></strong>(<a href="UInteractableComponent.html">UInteractableComponent</a> * Interactable)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerUseTornOffItem.html">ServerUseTornOffItem</a></strong>(TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; ItemClass, [[FName]] TornOffName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateAttachedSmoothing.html">UpdateAttachedSmoothing</a></strong>([[float]] DeltaSeconds)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateBlending.html">UpdateBlending</a></strong>([[float]] DeltaSeconds)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateParryAim.html">UpdateParryAim</a></strong>([[float]] DeltaSeconds)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdatePlayingVO.html">UpdatePlayingVO</a></strong>([[float]] DeltaSeconds)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="UAbilitiesComponent.html">UAbilitiesComponent</a> *</td>
+<td><strong>Abilities</strong></td>
+</tr>
+<tr>
+<td>TMap&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> *, <a href="FArmHitInfo.html">FArmHitInfo</a> &gt;</td>
+<td><strong>ArmHits</strong></td>
+</tr>
+<tr>
+<td><a href="FAttachRagdollBlendParams.html">FAttachRagdollBlendParams</a></td>
+<td><strong>AttachRagdollBlendParams</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="AInventoryItem.html">AInventoryItem</a> * &gt;</td>
+<td><strong>AttachedItems</strong></td>
+</tr>
+<tr>
+<td><a href="FAttachedRagdoll.html">FAttachedRagdoll</a></td>
+<td><strong>AttachedRagdoll</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>AttackFromBehindAngle</strong></td>
+</tr>
+<tr>
+<td>TEnumAsByte&lt; [[EAudioClassType::Type]] &gt;</td>
+<td><strong>AudioClassType</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="UDamageSource.html">UDamageSource</a> * &gt;</td>
+<td><strong>AutoVONegativeDamageSources</strong></td>
+</tr>
+<tr>
+<td>TMap&lt; TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt;, [[float]] &gt;</td>
+<td><strong>AutoVOProbabilty</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>BaseLookUpRate</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>BaseTurnRate</strong></td>
+</tr>
+<tr>
+<td>UCameraComponent *</td>
+<td><strong>Camera1P</strong></td>
+</tr>
+<tr>
+<td><a href="FCamera1PBlendParams.html">FCamera1PBlendParams</a></td>
+<td><strong>Camera1PBlendParams</strong></td>
+</tr>
+<tr>
+<td>[[FName]]</td>
+<td><strong>Camera1PSocket</strong></td>
+</tr>
+<tr>
+<td>UCameraComponent *</td>
+<td><strong>Camera3P</strong></td>
+</tr>
+<tr>
+<td>[[FName]]</td>
+<td><strong>Camera3PSocket</strong></td>
+</tr>
+<tr>
+<td>[[FVector]]</td>
+<td><strong>CameraOffset1P</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; TSubclassOf&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt; &gt;</td>
+<td><strong>CharacterSubclasses</strong></td>
+</tr>
+<tr>
+<td><a href="UProgressionSpec.html">UProgressionSpec</a> *</td>
+<td><strong>ClassProgressionSpec</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; [[FName]] &gt;</td>
+<td><strong>ClientTracerHitBones</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; TWeakObjectPtr&lt; UPrimitiveComponent &gt; &gt;</td>
+<td><strong>ClientTracerHitComponents</strong></td>
+</tr>
+<tr>
+<td>[[int32]]</td>
+<td><strong>ClientTracerHitCount</strong></td>
+</tr>
+<tr>
+<td><a href="UCombatStateComponent.html">UCombatStateComponent</a> *</td>
+<td><strong>CombatStateComponent</strong></td>
+</tr>
+<tr>
+<td><a href="UCombatStateQueue.html">UCombatStateQueue</a> *</td>
+<td><strong>CombatStateQueue</strong></td>
+</tr>
+<tr>
+<td>TSubclassOf&lt; <a href="UCombatStateSet.html">UCombatStateSet</a> &gt;</td>
+<td><strong>CombatStateSet</strong></td>
+</tr>
+<tr>
+<td><a href="UCombatStateSynchronization.html">UCombatStateSynchronization</a> *</td>
+<td><strong>CombatStateSynchronization</strong></td>
+</tr>
+<tr>
+<td><a href="UConditionsComponent.html">UConditionsComponent</a> *</td>
+<td><strong>ConditionsComponent</strong></td>
+</tr>
+<tr>
+<td><a href="FThirdPersonCameraParams.html">FThirdPersonCameraParams</a></td>
+<td><strong>CurrentCameraParams</strong></td>
+</tr>
+<tr>
+<td><a href="UCustomizationComponent.html">UCustomizationComponent</a> *</td>
+<td><strong>CustomizationComponent</strong></td>
+</tr>
+<tr>
+<td><a href="FCustomizationContext.html">FCustomizationContext</a></td>
+<td><strong>CustomizationContext</strong></td>
+</tr>
+<tr>
+<td>[[uint8]]</td>
+<td><strong>DeadCharacterId</strong></td>
+</tr>
+<tr>
+<td>[[FName]]</td>
+<td><strong>DeathAnimationMontageName</strong></td>
+</tr>
+<tr>
+<td>[[FName]]</td>
+<td><strong>DeathAnimationSectionName1p</strong></td>
+</tr>
+<tr>
+<td>[[FName]]</td>
+<td><strong>DeathAnimationSectionName3p</strong></td>
+</tr>
+<tr>
+<td><a href="AInventoryItem.html">AInventoryItem</a> *</td>
+<td><strong>DebugDroppedItem</strong></td>
+</tr>
+<tr>
+<td><a href="AInventoryItem.html">AInventoryItem</a> *</td>
+<td><strong>DebugFakeClientProjectile</strong></td>
+</tr>
+<tr>
+<td><a href="FDebugMovementReplication.html">FDebugMovementReplication</a></td>
+<td><strong>DebugMovementReplication</strong></td>
+</tr>
+<tr>
+<td><a href="AInventoryItem.html">AInventoryItem</a> *</td>
+<td><strong>DebugProjectile</strong></td>
+</tr>
+<tr>
+<td>USkeletalMesh *</td>
+<td><strong>DefaultMesh1P</strong></td>
+</tr>
+<tr>
+<td><a href="FCharacterDisplayInfo.html">FCharacterDisplayInfo</a></td>
+<td><strong>DisplayInfo</strong></td>
+</tr>
+<tr>
+<td>TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;</td>
+<td><strong>EquippedCarryableOnSpawn</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>FirstPossessedTimeSeconds</strong></td>
+</tr>
+<tr>
+<td><a href="UFollowMasterSkeletalMeshComponent.html">UFollowMasterSkeletalMeshComponent</a> *</td>
+<td><strong>FollowMeshComponent</strong></td>
+</tr>
+<tr>
+<td>[[int32]]</td>
+<td><strong>GamepadUsePressedCount</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>GamepadUsePressedStartTime</strong></td>
+</tr>
+<tr>
+<td>[[FRotator]]</td>
+<td><strong>GoreHeadRotationOffset</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; AActor * &gt;</td>
+<td><strong>HeadShotActors</strong></td>
+</tr>
+<tr>
+<td><a href="UHeadlookComponent.html">UHeadlookComponent</a> *</td>
+<td><strong>HeadlookComponent</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; &gt;</td>
+<td><strong>HealingItemTypes</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; &gt;</td>
+<td><strong>HealingSpecialItemTypes</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="FHitActorWithItemInfo.html">FHitActorWithItemInfo</a> &gt;</td>
+<td><strong>HitActorWithWeaponInfos</strong></td>
+</tr>
+<tr>
+<td><a href="FHorseLookAtParams.html">FHorseLookAtParams</a></td>
+<td><strong>HorseLookAtParams</strong></td>
+</tr>
+<tr>
+<td><a href="FHorseLookAtParams.html">FHorseLookAtParams</a></td>
+<td><strong>HorseOrientCameraOnBumpParams</strong></td>
+</tr>
+<tr>
+<td><a href="UInteractableComponent.html">UInteractableComponent</a> *</td>
+<td><strong>InteractableComponent</strong></td>
+</tr>
+<tr>
+<td><a href="AHorse.html">AHorse</a> *</td>
+<td><strong>KnockdownOffHorse</strong></td>
+</tr>
+<tr>
+<td>TWeakObjectPtr&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt;</td>
+<td><strong>LastCharacterHitBy</strong></td>
+</tr>
+<tr>
+<td><a href="AInventoryItem.html">AInventoryItem</a> *</td>
+<td><strong>LastFiredProjectile</strong></td>
+</tr>
+<tr>
+<td><a href="FParryEventState.html">FParryEventState</a></td>
+<td><strong>LastParryEvent</strong></td>
+</tr>
+<tr>
+<td>FBasedMovementInfo</td>
+<td><strong>LastReplicatedBasedMovement</strong></td>
+</tr>
+<tr>
+<td>TWeakObjectPtr&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;</td>
+<td><strong>LastWeaponHitBy</strong></td>
+</tr>
+<tr>
+<td>TSubclassOf&lt; <a href="ULoadoutSelection.html">ULoadoutSelection</a> &gt;</td>
+<td><strong>LoadoutSelection</strong></td>
+</tr>
+<tr>
+<td><a href="FLockMeshBlendOutParams.html">FLockMeshBlendOutParams</a></td>
+<td><strong>LockMeshBlendInParams</strong></td>
+</tr>
+<tr>
+<td><a href="FLockMeshBlendOutParams.html">FLockMeshBlendOutParams</a></td>
+<td><strong>LockMeshBlendOutParams</strong></td>
+</tr>
+<tr>
+<td>USkeletalMeshComponent *</td>
+<td><strong>Mesh1P</strong></td>
+</tr>
+<tr>
+<td>[[FVector]]</td>
+<td><strong>Mesh1PLocation</strong></td>
+</tr>
+<tr>
+<td>[[FRotator]]</td>
+<td><strong>Mesh1PRotation</strong></td>
+</tr>
+<tr>
+<td><a href="FBlendParams.html">FBlendParams</a></td>
+<td><strong>MountControlBlendParams</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>MountOrDismountCameraInterpSpeed</strong></td>
+</tr>
+<tr>
+<td><a href="FMountRootBlendParams.html">FMountRootBlendParams</a></td>
+<td><strong>MountRootBlendParams</strong></td>
+</tr>
+<tr>
+<td><a href="UMovementDebugger.html">UMovementDebugger</a> *</td>
+<td><strong>MovementDebugger</strong></td>
+</tr>
+<tr>
+<td><a href="UMovementModifierComponent.html">UMovementModifierComponent</a> *</td>
+<td><strong>MovementModifiers</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>ObjectHighlightMaxDistance</strong></td>
+</tr>
+<tr>
+<td>FOnAbleToHealChanged</td>
+<td><strong>OnAbleToHealChanged</strong></td>
+</tr>
+<tr>
+<td>FOnAnimationSetChanged</td>
+<td><strong>OnAnimationSetChanged</strong></td>
+</tr>
+<tr>
+<td>FOnBeingRevivedByChangedSignature</td>
+<td><strong>OnBeingRevivedByChangedDelegate</strong></td>
+</tr>
+<tr>
+<td>FOnCameraChanged</td>
+<td><strong>OnCameraChanged</strong></td>
+</tr>
+<tr>
+<td>FOnCarryableAnimationEvent</td>
+<td><strong>OnCarryableAnimationEvent</strong></td>
+</tr>
+<tr>
+<td>FOnCarryableCharacterEvent</td>
+<td><strong>OnCarryableCharacterEvent</strong></td>
+</tr>
+<tr>
+<td>FCinematicAllowedControl</td>
+<td><strong>OnCinematicAllowedControl</strong></td>
+</tr>
+<tr>
+<td>FCinematicRestrictedControl</td>
+<td><strong>OnCinematicRestrictedControl</strong></td>
+</tr>
+<tr>
+<td>FOnClash</td>
+<td><strong>OnClash</strong></td>
+</tr>
+<tr>
+<td>FOnClientNotifyKilled</td>
+<td><strong>OnClientNotifyKilled</strong></td>
+</tr>
+<tr>
+<td>FOnClientNotifySuicide</td>
+<td><strong>OnClientNotifySuicide</strong></td>
+</tr>
+<tr>
+<td>FOnDamageEvent</td>
+<td><strong>OnDamage</strong></td>
+</tr>
+<tr>
+<td>FOnDamageEvent</td>
+<td><strong>OnDamageCaused</strong></td>
+</tr>
+<tr>
+<td>FOnDismount</td>
+<td><strong>OnDismount</strong></td>
+</tr>
+<tr>
+<td>FOnDismountPressed</td>
+<td><strong>OnDismountPressed</strong></td>
+</tr>
+<tr>
+<td>FOnFallDamageEvent</td>
+<td><strong>OnFallDamage</strong></td>
+</tr>
+<tr>
+<td>FOnFreezeRagdollPhysics</td>
+<td><strong>OnFreezeRagdollPhysics</strong></td>
+</tr>
+<tr>
+<td>FOnHealedByLocalPlayer</td>
+<td><strong>OnHealedByLocalPlayer</strong></td>
+</tr>
+<tr>
+<td>FOnHitWorld</td>
+<td><strong>OnHitWorld</strong></td>
+</tr>
+<tr>
+<td>FOnInteractableFocused</td>
+<td><strong>OnInteractableFocused</strong></td>
+</tr>
+<tr>
+<td>FOnInteractableLostFocus</td>
+<td><strong>OnInteractableLostFocus</strong></td>
+</tr>
+<tr>
+<td>FInventoryItemEquipped</td>
+<td><strong>OnInventoryItemEquipped</strong></td>
+</tr>
+<tr>
+<td>FInventoryItemEquipped</td>
+<td><strong>OnInventoryItemToBeEquipped</strong></td>
+</tr>
+<tr>
+<td>FInventoryItemEquipped</td>
+<td><strong>OnInventoryItemUnequipped</strong></td>
+</tr>
+<tr>
+<td>FOnMeleeSuccess</td>
+<td><strong>OnMeleeSuccess</strong></td>
+</tr>
+<tr>
+<td>FOnMount</td>
+<td><strong>OnMount</strong></td>
+</tr>
+<tr>
+<td>FOnParryEvent</td>
+<td><strong>OnParrySuccess</strong></td>
+</tr>
+<tr>
+<td>FOnPlayEmote</td>
+<td><strong>OnPlayEmote</strong></td>
+</tr>
+<tr>
+<td>FOnPlayerMeshChanged</td>
+<td><strong>OnPlayerMeshChanged</strong></td>
+</tr>
+<tr>
+<td>FOnRepCharacterPlayerState</td>
+<td><strong>OnPlayerStateReplicated</strong></td>
+</tr>
+<tr>
+<td>FOnPossessedSignature</td>
+<td><strong>OnPossessed</strong></td>
+</tr>
+<tr>
+<td>FOnProjectileBeginPlay</td>
+<td><strong>OnProjectileBeginPlay</strong></td>
+</tr>
+<tr>
+<td>FOnRootMotionChanged</td>
+<td><strong>OnRootMotionChanged</strong></td>
+</tr>
+<tr>
+<td>FOnSetFirstPersonDeathCamera</td>
+<td><strong>OnSetFirstPersonDeathCamera</strong></td>
+</tr>
+<tr>
+<td>FOnSetRagdollPhysics</td>
+<td><strong>OnSetRagdollPhysics</strong></td>
+</tr>
+<tr>
+<td>FOnSetThirdPersonDeathCamera</td>
+<td><strong>OnSetThirdPersonDeathCamera</strong></td>
+</tr>
+<tr>
+<td>FOnShowInGameMenuDelegate</td>
+<td><strong>OnShowInGameMenu</strong></td>
+</tr>
+<tr>
+<td>FOnSpecialItemAbilitySet</td>
+<td><strong>OnSpecialAbilitySet</strong></td>
+</tr>
+<tr>
+<td>FOnStaminaCostFailed</td>
+<td><strong>OnStaminaCostFailed</strong></td>
+</tr>
+<tr>
+<td>FOnStartHeal</td>
+<td><strong>OnStartHeal</strong></td>
+</tr>
+<tr>
+<td>FOnStatsComponentFocused</td>
+<td><strong>OnStatsComponentFocused</strong></td>
+</tr>
+<tr>
+<td>FOnStatsComponentLostFocus</td>
+<td><strong>OnStatsComponentLostFocused</strong></td>
+</tr>
+<tr>
+<td>FOnUnderCrosshairChanged</td>
+<td><strong>OnUnderCrosshairChanged</strong></td>
+</tr>
+<tr>
+<td>FOnFreezeRagdollPhysics</td>
+<td><strong>OnUnfreezeRagdollPhysics</strong></td>
+</tr>
+<tr>
+<td>FOnInteractableFocused</td>
+<td><strong>OnUseableActorInteractableFocused</strong></td>
+</tr>
+<tr>
+<td>FOnInteractableFocused</td>
+<td><strong>OnUseableActorInteractableLostFocused</strong></td>
+</tr>
+<tr>
+<td>FOnWasHitEarly</td>
+<td><strong>OnWasHitEarly</strong></td>
+</tr>
+<tr>
+<td>FOnParryEvent</td>
+<td><strong>OnWasParried</strong></td>
+</tr>
+<tr>
+<td>[[FName]]</td>
+<td><strong>OnlineXpStatName</strong></td>
+</tr>
+<tr>
+<td>TSubclassOf&lt; <a href="ULoadoutSelection.html">ULoadoutSelection</a> &gt;</td>
+<td><strong>OverrideLoadoutSelection</strong></td>
+</tr>
+<tr>
+<td>TMap&lt; FSoftObjectPath, uint32 &gt;</td>
+<td><strong>ParticleSystemsToPrepopulate</strong></td>
+</tr>
+<tr>
+<td>[[ECharacterClass]]</td>
+<td><strong>PawnClassType</strong></td>
+</tr>
+<tr>
+<td><a href="UPerksComponent.html">UPerksComponent</a> *</td>
+<td><strong>PerksComponent</strong></td>
+</tr>
+<tr>
+<td>FPlayInventoryAnimation</td>
+<td><strong>PlayInventoryAnimation</strong></td>
+</tr>
+<tr>
+<td><a href="FReplicationPredictionState.html">FReplicationPredictionState</a></td>
+<td><strong>PredictionState</strong></td>
+</tr>
+<tr>
+<td><a href="UPushingComponent.html">UPushingComponent</a> *</td>
+<td><strong>PushingComponent</strong></td>
+</tr>
+<tr>
+<td>[[int32]]</td>
+<td><strong>RandomSeed</strong></td>
+</tr>
+<tr>
+<td>[[uint8]]</td>
+<td><strong>ReplicatedServerFrame</strong></td>
+</tr>
+<tr>
+<td>USkeletalMesh *</td>
+<td><strong>SKMesh3P</strong></td>
+</tr>
+<tr>
+<td>FSetOnHorse</td>
+<td><strong>SetOnHorse</strong></td>
+</tr>
+<tr>
+<td>USceneComponent *</td>
+<td><strong>SpawnedAtSpawnComp</strong></td>
+</tr>
+<tr>
+<td><a href="ASpawner.html">ASpawner</a> *</td>
+<td><strong>SpawnedAtSpawner</strong></td>
+</tr>
+<tr>
+<td>[[int32]]</td>
+<td><strong>SpawnerPosition</strong></td>
+</tr>
+<tr>
+<td><a href="USpecialItemAbility.html">USpecialItemAbility</a> *</td>
+<td><strong>SpecialItemAbility</strong></td>
+</tr>
+<tr>
+<td><a href="ATBLSpectatorPawn.html">ATBLSpectatorPawn</a> *</td>
+<td><strong>SpectatingPawn</strong></td>
+</tr>
+<tr>
+<td><a href="UStatsComponent.html">UStatsComponent</a> *</td>
+<td><strong>Stats</strong></td>
+</tr>
+<tr>
+<td><a href="FThirdPersonCameraParams.html">FThirdPersonCameraParams</a></td>
+<td><strong>ThirdPersonCameraParams</strong></td>
+</tr>
+<tr>
+<td><a href="FTutorialLocationBlendParams.html">FTutorialLocationBlendParams</a></td>
+<td><strong>TutorialLocationBlendParams</strong></td>
+</tr>
+<tr>
+<td><a href="FTutorialLookAtParams.html">FTutorialLookAtParams</a></td>
+<td><strong>TutorialLookAtParams</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="UDamageSource.html">UDamageSource</a> * &gt;</td>
+<td><strong>VOFriendlyDamageSources</strong></td>
+</tr>
+<tr>
+<td>TWeakObjectPtr&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;</td>
+<td><strong>WeaponAppliedBleed</strong></td>
+</tr>
+<tr>
+<td>[[uint8]]</td>
+<td><strong>bCustomizationMenuComponentsSpawned</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bDebugIgnoreAI</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bHasAltAttack</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bHasAttackedSuccessfully</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bHelmetKnockedOff</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bIsCinematicsRelevant</strong></td>
+</tr>
+<tr>
+<td>[[uint8]]</td>
+<td><strong>bIsForCustomizationMenu</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bLastAbleToHealCheck</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bPlayerNeedsHealing</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bPreventForwardSpawn</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bShouldCrouchOverrideRecoveryAnimation</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bShouldPlayDeathAnimation</strong></td>
+</tr>
+<tr>
+<td>[[uint8]]</td>
+<td><strong>bSpawnedGoreHead</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-attributes">Protected Attributes<a class="headerlink" href="#protected-attributes" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TArray&lt; TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt; &gt;</td>
+<td><strong>AliveFriendlyAudoVO</strong></td>
+</tr>
+<tr>
+<td><a href="FAttachedSmoothing.html">FAttachedSmoothing</a></td>
+<td><strong>AttachedSmoothing</strong></td>
+</tr>
+<tr>
+<td>UAkComponent *</td>
+<td><strong>AudioComponent</strong></td>
+</tr>
+<tr>
+<td>UBehaviorTree *</td>
+<td><strong>AutoPossessAIBehaviorTree</strong></td>
+</tr>
+<tr>
+<td>[[EFaction]]</td>
+<td><strong>AutoPossessAIFaction</strong></td>
+</tr>
+<tr>
+<td>TMap&lt; TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt;, [[float]] &gt;</td>
+<td><strong>AutoVODistanceByType</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>BattleCryVOCooldown</strong></td>
+</tr>
+<tr>
+<td><a href="ATBLPlayerState.html">ATBLPlayerState</a> *</td>
+<td><strong>BeingRevivedBy</strong></td>
+</tr>
+<tr>
+<td><a href="UInteractableComponent.html">UInteractableComponent</a> *</td>
+<td><strong>CachedInteractableUseHeldComponent</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; <a href="UParryComponent.html">UParryComponent</a> * &gt;</td>
+<td><strong>CachedParryComponents</strong></td>
+</tr>
+<tr>
+<td>[[FTransform]]</td>
+<td><strong>Camera3PRotation</strong></td>
+</tr>
+<tr>
+<td>TWeakObjectPtr&lt; <a href="UTeamCapturePointComponent.html">UTeamCapturePointComponent</a> &gt;</td>
+<td><strong>CapturePoint</strong></td>
+</tr>
+<tr>
+<td><a href="UFireSourceComponent.html">UFireSourceComponent</a> *</td>
+<td><strong>ClosestFireSource</strong></td>
+</tr>
+<tr>
+<td><a href="UInteractableComponent.html">UInteractableComponent</a> *</td>
+<td><strong>ClosestInteractable</strong></td>
+</tr>
+<tr>
+<td><a href="UStatsComponent.html">UStatsComponent</a> *</td>
+<td><strong>ClosestStatsComponent</strong></td>
+</tr>
+<tr>
+<td>TMap&lt; [[uint8]], TWeakObjectPtr&lt; AActor &gt; &gt;</td>
+<td><strong>ConditionsAppliedByActor</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; AActor * &gt;</td>
+<td><strong>ConstructableActors</strong></td>
+</tr>
+<tr>
+<td>TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt;</td>
+<td><strong>CurrentAutoVo</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>DeathAnimationLength</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>DeathAnimationToRagdollImpulse</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt; &gt;</td>
+<td><strong>DeathFriendlyAudoVO</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>DeathTime</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>FellOutOfWorldKillTime</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>GamepadDismountPressedStartTime</strong></td>
+</tr>
+<tr>
+<td><a href="FInteractableSettings.html">FInteractableSettings</a></td>
+<td><strong>InteractableSettings</strong></td>
+</tr>
+<tr>
+<td><a href="UInventory.html">UInventory</a> *</td>
+<td><strong>Inventory</strong></td>
+</tr>
+<tr>
+<td>AController *</td>
+<td><strong>LastController</strong></td>
+</tr>
+<tr>
+<td><a href="ATBLPlayerController.html">ATBLPlayerController</a> *</td>
+<td><strong>LastPlayerController</strong></td>
+</tr>
+<tr>
+<td><a href="ATBLPlayerState.html">ATBLPlayerState</a> *</td>
+<td><strong>LastPlayerState</strong></td>
+</tr>
+<tr>
+<td>UCurveFloat *</td>
+<td><strong>LipSyncVOCurve</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>NeedsHealingThreshold</strong></td>
+</tr>
+<tr>
+<td>[[int32]]</td>
+<td><strong>NumberOfAllowedVOsWithinExpiry</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; [[float]] &gt;</td>
+<td><strong>PausedActorLifespans</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; AActor * &gt;</td>
+<td><strong>PausedActors</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; UActorComponent * &gt;</td>
+<td><strong>PausedComponents</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; UPrimitiveComponent * &gt;</td>
+<td><strong>PausedPhysics</strong></td>
+</tr>
+<tr>
+<td>TArray&lt; FTimerHandle &gt;</td>
+<td><strong>PausedTimerHandles</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>PreviousIsPlayingRootMotion</strong></td>
+</tr>
+<tr>
+<td><a href="ATBLTeam.html">ATBLTeam</a> *</td>
+<td><strong>PreviousTeam</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>RagdollStartTime</strong></td>
+</tr>
+<tr>
+<td>TMap&lt; uint64, <a href="FLastSightCheckInfo.html">FLastSightCheckInfo</a> &gt;</td>
+<td><strong>SightCacheMap</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>TimeToVOExpiry</strong></td>
+</tr>
+<tr>
+<td><a href="UInteractableComponent.html">UInteractableComponent</a> *</td>
+<td><strong>UseableActorInteractable</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>VOCooldown</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>VOQueueEmoteWindow</strong></td>
+</tr>
+<tr>
+<td><a href="FVOTracker.html">FVOTracker</a></td>
+<td><strong>VOTracker</strong></td>
+</tr>
+<tr>
+<td>[[float]]</td>
+<td><strong>WaitForAttachToProjectileTime</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bAutoPossessAIStartCinematicRestricted</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bCanSuicide</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bCountTowardsKillsAndKnockdowns</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bDidPushRespawnState</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bHasRandomSeed</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bIsCharacterPaused</strong></td>
+</tr>
+<tr>
+<td>[[uint8]]</td>
+<td><strong>bIsDying</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bIsInitialAutorun</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bNeverPerceiveCharacter</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bPreventSuicide</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bRagdollCustomTick</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bRagdollTriggered</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bRemovableBot</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bSuicideTried</strong></td>
+</tr>
+<tr>
+<td>[[bool]]</td>
+<td><strong>bTapOutHeld</strong></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p>Updated on 2025-01-21 at 09:02:23 +0100</p>
+</article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.prune"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
