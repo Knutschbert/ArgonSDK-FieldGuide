@@ -735,7 +735,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/PropertyDebugger/nodes/DrawProperty.html">DrawProperty</a></strong>(UCanvas * Canvas, [[float]] &amp; XPos, [[float]] &amp; YPos, const FString &amp; PropName, const FString &amp; PropVal)</td>
+<td><strong><a href="../Nodes/PropertyDebugger/nodes/DrawProperty.html">DrawProperty</a></strong>(UCanvas * Canvas, float &amp; XPos, float &amp; YPos, const FString &amp; PropName, const FString &amp; PropVal)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -798,14 +798,14 @@
 </tr>
 <tr>
 <td>UStruct *</td>
-<td><strong><a href="../Nodes/PropertyDebugger/nodes/GetOverrideBaseClass.html">GetOverrideBaseClass</a></strong>([[FName]] BaseObj)</td>
+<td><strong><a href="../Nodes/PropertyDebugger/nodes/GetOverrideBaseClass.html">GetOverrideBaseClass</a></strong>(FName BaseObj)</td>
 </tr>
 <tr>
 <td>UStruct *</td>
 <td><strong><a href="../Nodes/PropertyDebugger/nodes/GetOverrideSelectedClass.html">GetOverrideSelectedClass</a></strong>(const <a href="FDebugProperty.html">FDebugProperty</a> &amp; Property)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/PropertyDebugger/nodes/HandleFilterText.html">HandleFilterText</a></strong>(const FString &amp; Char)</td>
 </tr>
 <tr>
@@ -878,15 +878,15 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/PropertyDebugger/nodes/ServerDeleteDebugProperty.html">ServerDeleteDebugProperty</a></strong>([[bool]] bFromEnd)</td>
+<td><strong><a href="../Nodes/PropertyDebugger/nodes/ServerDeleteDebugProperty.html">ServerDeleteDebugProperty</a></strong>(bool bFromEnd)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/PropertyDebugger/nodes/ServerEnableReplication.html">ServerEnableReplication</a></strong>([[bool]] bReplicate)</td>
+<td><strong><a href="../Nodes/PropertyDebugger/nodes/ServerEnableReplication.html">ServerEnableReplication</a></strong>(bool bReplicate)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/PropertyDebugger/nodes/ServerGetBaseClass.html">ServerGetBaseClass</a></strong>([[FName]] BaseObj)</td>
+<td><strong><a href="../Nodes/PropertyDebugger/nodes/ServerGetBaseClass.html">ServerGetBaseClass</a></strong>(FName BaseObj)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -943,11 +943,11 @@
 <td><strong>ActorComponents</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>AllClassNames</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>CurrentHistoryIndex</strong></td>
 </tr>
 <tr>
@@ -955,7 +955,7 @@
 <td><strong>CurrentMenu</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>DebugAllOption</strong></td>
 </tr>
 <tr>
@@ -963,11 +963,11 @@
 <td><strong>DebugProperties</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>DisplayDebugScrollDir</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DisplayDebugScrollY</strong></td>
 </tr>
 <tr>
@@ -983,11 +983,11 @@
 <td><strong>LastInputTime</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>MenuDirection</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MenuHeldTime</strong></td>
 </tr>
 <tr>
@@ -995,11 +995,11 @@
 <td><strong>MenuInputComponent</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MenuTimer</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MenuTimerRate</strong></td>
 </tr>
 <tr>
@@ -1007,7 +1007,7 @@
 <td><strong>MyHUD</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>OtherCharacterTraceTime</strong></td>
 </tr>
 <tr>
@@ -1031,7 +1031,7 @@
 <td><strong>SelectedProperty</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>SelectedPropertyIndex</strong></td>
 </tr>
 <tr>
@@ -1039,19 +1039,19 @@
 <td><strong>UndoStack</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bFilterEnabled</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bReplicateProperties</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bShowDebugOther</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bShowMenu</strong></td>
 </tr>
 </tbody>

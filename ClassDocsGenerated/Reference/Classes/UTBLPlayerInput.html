@@ -726,11 +726,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/ClearActionBinding.html">ClearActionBinding</a></strong>([[FName]] ActionName, [[bool]] ClearMouseKeyboardBinding, [[bool]] ClearGamepadBinding)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/ClearActionBinding.html">ClearActionBinding</a></strong>(FName ActionName, bool ClearMouseKeyboardBinding, bool ClearGamepadBinding)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/ClearAxisBinding.html">ClearAxisBinding</a></strong>([[FName]] AxisName, [[bool]] ClearMouseKeyboardBinding, [[bool]] ClearGamepadBinding)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/ClearAxisBinding.html">ClearAxisBinding</a></strong>(FName AxisName, bool ClearMouseKeyboardBinding, bool ClearGamepadBinding)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -749,7 +749,7 @@
 <td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetAllActionKeyMappings.html">GetAllActionKeyMappings</a></strong>()</td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetAllActionKeyNames.html">GetAllActionKeyNames</a></strong>()</td>
 </tr>
 <tr>
@@ -757,24 +757,24 @@
 <td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetAllAxisKeyMappings.html">GetAllAxisKeyMappings</a></strong>()</td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetAllAxisKeyNames.html">GetAllAxisKeyNames</a></strong>()</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetDefaultKeysForAction.html">GetDefaultKeysForAction</a></strong>([[FName]] ActionName, TArray&lt; FInputActionKeyMapping &gt; &amp; Bindings)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetDefaultKeysForAction.html">GetDefaultKeysForAction</a></strong>(FName ActionName, TArray&lt; FInputActionKeyMapping &gt; &amp; Bindings)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetDefaultKeysForAxis.html">GetDefaultKeysForAxis</a></strong>([[FName]] AxisName, TArray&lt; FInputAxisKeyMapping &gt; &amp; Bindings)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetDefaultKeysForAxis.html">GetDefaultKeysForAxis</a></strong>(FName AxisName, TArray&lt; FInputAxisKeyMapping &gt; &amp; Bindings)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetKeysForAction.html">GetKeysForAction</a></strong>([[FName]] ActionName, TArray&lt; FInputActionKeyMapping &gt; &amp; Bindings)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetKeysForAction.html">GetKeysForAction</a></strong>(FName ActionName, TArray&lt; FInputActionKeyMapping &gt; &amp; Bindings)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetKeysForAxis.html">GetKeysForAxis</a></strong>([[FName]] AxisName, TArray&lt; FInputAxisKeyMapping &gt; &amp; Bindings)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/GetKeysForAxis.html">GetKeysForAxis</a></strong>(FName AxisName, TArray&lt; FInputAxisKeyMapping &gt; &amp; Bindings)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -785,24 +785,24 @@
 <td><strong><a href="../Nodes/TBLPlayerInput/nodes/InvertGamepad.html">InvertGamepad</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLPlayerInput/nodes/IsAltPressed.html">IsAltPressed</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLPlayerInput/nodes/IsCtrlPressed.html">IsCtrlPressed</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/IsKeybindingDefault.html">IsKeybindingDefault</a></strong>([[FName]] KeybindingName, [[bool]] ActionBinding, [[bool]] AxisBinding)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/IsKeybindingDefault.html">IsKeybindingDefault</a></strong>(FName KeybindingName, bool ActionBinding, bool AxisBinding)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLPlayerInput/nodes/IsShiftPressed.html">IsShiftPressed</a></strong>()</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/ResetActionBinding.html">ResetActionBinding</a></strong>([[FName]] ActionName)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/ResetActionBinding.html">ResetActionBinding</a></strong>(FName ActionName)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -810,7 +810,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/ResetAxisBinding.html">ResetAxisBinding</a></strong>([[FName]] AxisName)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/ResetAxisBinding.html">ResetAxisBinding</a></strong>(FName AxisName)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -822,11 +822,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/SetActionBinding.html">SetActionBinding</a></strong>([[FName]] ActionName, [[FKey]] Key, [[bool]] bIsShiftPressed, [[bool]] bIsCtrlPressed, [[bool]] bIsAltPressed, [[bool]] bBypassDialog)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/SetActionBinding.html">SetActionBinding</a></strong>(FName ActionName, [[FKey]] Key, bool bIsShiftPressed, bool bIsCtrlPressed, bool bIsAltPressed, bool bBypassDialog)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/SetAxisBinding.html">SetAxisBinding</a></strong>([[FName]] AxisName, [[FKey]] Key, [[float]] Scale, [[bool]] bBypassDialog)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/SetAxisBinding.html">SetAxisBinding</a></strong>(FName AxisName, [[FKey]] Key, float Scale, bool bBypassDialog)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -834,11 +834,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/SetGamepadRXSens.html">SetGamepadRXSens</a></strong>(const [[float]] Sensitivity)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/SetGamepadRXSens.html">SetGamepadRXSens</a></strong>(const float Sensitivity)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLPlayerInput/nodes/SetGamepadRYSens.html">SetGamepadRYSens</a></strong>(const [[float]] Sensitivity)</td>
+<td><strong><a href="../Nodes/TBLPlayerInput/nodes/SetGamepadRYSens.html">SetGamepadRYSens</a></strong>(const float Sensitivity)</td>
 </tr>
 <tr>
 <td></td>

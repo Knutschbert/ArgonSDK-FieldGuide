@@ -751,20 +751,20 @@
 <td><strong><a href="../Nodes/Spawner/nodes/GenerateSpawnComponents.html">GenerateSpawnComponents</a></strong>()</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/Spawner/nodes/GetMaxPlayerCount.html">GetMaxPlayerCount</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/Spawner/nodes/GetMinPlayerCount.html">GetMinPlayerCount</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/Spawner/nodes/GetRemainingReservations.html">GetRemainingReservations</a></strong>() const</td>
 </tr>
 <tr>
 <td>USceneComponent *</td>
-<td><strong><a href="../Nodes/Spawner/nodes/GetSpawnLocationAndComponent.html">GetSpawnLocationAndComponent</a></strong>([[int32]] Index, [[FTransform]] &amp; OutTransform, [[float]] &amp; SpawnRadius, [[float]] &amp; SpawnHalfHeight) const</td>
+<td><strong><a href="../Nodes/Spawner/nodes/GetSpawnLocationAndComponent.html">GetSpawnLocationAndComponent</a></strong>(int32 Index, FTransform &amp; OutTransform, float &amp; SpawnRadius, float &amp; SpawnHalfHeight) const</td>
 </tr>
 <tr>
 <td><a href="ASpawnWave.html">ASpawnWave</a> *</td>
@@ -775,15 +775,15 @@
 <td><strong><a href="../Nodes/Spawner/nodes/GetSpawnedCharacters.html">GetSpawnedCharacters</a></strong>()</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/Spawner/nodes/GetSpawnerScoreForAllPlayers.html">GetSpawnerScoreForAllPlayers</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/Spawner/nodes/GetSpawnerScoreForFaction.html">GetSpawnerScoreForFaction</a></strong>([[EFaction]] Faction) const</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/Spawner/nodes/GetTotalReservations.html">GetTotalReservations</a></strong>() const</td>
 </tr>
 <tr>
@@ -791,19 +791,19 @@
 <td><strong><a href="../Nodes/TBLCharacter/nodes/HandleOnCustomizationJobsEmptied.html">HandleOnCustomizationJobsEmptied</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/Spawner/nodes/IsChildSpawner.html">IsChildSpawner</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/Spawner/nodes/IsPendingLock.html">IsPendingLock</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
-<td><strong><a href="../Nodes/Spawner/nodes/IsThereAPlayerTooClose.html">IsThereAPlayerTooClose</a></strong>([[EFaction]] Faction, [[int32]] LocationIndex, [[bool]] bIsSpawningIn) const</td>
+<td>int32</td>
+<td><strong><a href="../Nodes/Spawner/nodes/IsThereAPlayerTooClose.html">IsThereAPlayerTooClose</a></strong>([[EFaction]] Faction, int32 LocationIndex, bool bIsSpawningIn) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/Spawner/nodes/IsWaveLocked.html">IsWaveLocked</a></strong>() const</td>
 </tr>
 <tr>
@@ -820,7 +820,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Spawner/nodes/OnSpawningCharacter.html">OnSpawningCharacter</a></strong>(const [[FTransform]] &amp; SpawningTransform)</td>
+<td><strong><a href="../Nodes/Spawner/nodes/OnSpawningCharacter.html">OnSpawningCharacter</a></strong>(const FTransform &amp; SpawningTransform)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -836,7 +836,7 @@
 </tr>
 <tr>
 <td><a href="ATBLCharacter.html">ATBLCharacter</a> *</td>
-<td><strong><a href="../Nodes/Spawner/nodes/SpawnCharacter.html">SpawnCharacter</a></strong>(const [[FTransform]] &amp; SpawnTransform, TSubclassOf&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt; Class, AController * Controller)</td>
+<td><strong><a href="../Nodes/Spawner/nodes/SpawnCharacter.html">SpawnCharacter</a></strong>(const FTransform &amp; SpawnTransform, TSubclassOf&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt; Class, AController * Controller)</td>
 </tr>
 <tr>
 <td><a href="AForcedRespawnSpawnWave.html">AForcedRespawnSpawnWave</a> *</td>
@@ -866,8 +866,8 @@
 <td><strong><a href="../Nodes/Spawner/nodes/HandleAddedReservation.html">HandleAddedReservation</a></strong>(const <a href="FSpawnerSpawnReservation.html">FSpawnerSpawnReservation</a> &amp; Reservation)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/Spawner/nodes/IsValidSpawnLocation.html">IsValidSpawnLocation</a></strong>(const [[FTransform]] &amp; OutTransform, TSubclassOf&lt; APawn &gt; PawnClass) const</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/Spawner/nodes/IsValidSpawnLocation.html">IsValidSpawnLocation</a></strong>(const FTransform &amp; OutTransform, TSubclassOf&lt; APawn &gt; PawnClass) const</td>
 </tr>
 <tr>
 <td>void</td>
@@ -885,31 +885,31 @@
 </thead>
 <tbody>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>CameraInterpTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ColumnSpacing</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>Columns</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>LastSpawnTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MinimumPlayerDistance</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MinimumVulnerabilityTime</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>NextReservationToSpawn</strong></td>
 </tr>
 <tr>
@@ -933,27 +933,27 @@
 <td><strong>PendingPossessCharacters</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>PostSpawnPossesionTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>RowOffsetPercent</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>RowSpacing</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>Rows</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>SnapToGroundDistance</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>SpawnLocationIndex</strong></td>
 </tr>
 <tr>
@@ -969,7 +969,7 @@
 <td><strong>SpawnedCharacters</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>SpawnerScoreMultiplier</strong></td>
 </tr>
 <tr>
@@ -977,27 +977,27 @@
 <td><strong>SpawningConfig</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>StartCameraOffset</strong></td>
 </tr>
 <tr>
-<td>[[FRotator]]</td>
+<td>FRotator</td>
 <td><strong>StartCameraRotation</strong></td>
 </tr>
 <tr>
-<td>[[FTransform]]</td>
+<td>FTransform</td>
 <td><strong>StartingSpawnerTransform</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>TimeBeforeVulnerable</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bPrioritizeFrontmost</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bSkipLocationValidation</strong></td>
 </tr>
 </tbody>
@@ -1012,7 +1012,7 @@
 </thead>
 <tbody>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DelayBeforeSpawningStops</strong></td>
 </tr>
 <tr>
@@ -1020,11 +1020,11 @@
 <td><strong>SpecialSpawnSpecOverride</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bAllowInvalidSpawnLocation</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bSkipPawnOverlapTest</strong></td>
 </tr>
 </tbody>

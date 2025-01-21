@@ -746,15 +746,15 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/CombatStateQueue/nodes/OnCancelGamepadTimeout.html">OnCancelGamepadTimeout</a></strong>([[float]] OverTime)</td>
+<td><strong><a href="../Nodes/CombatStateQueue/nodes/OnCancelGamepadTimeout.html">OnCancelGamepadTimeout</a></strong>(float OverTime)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/CombatStateQueue/nodes/OnComboCancelTimeout.html">OnComboCancelTimeout</a></strong>([[float]] OverTime)</td>
+<td><strong><a href="../Nodes/CombatStateQueue/nodes/OnComboCancelTimeout.html">OnComboCancelTimeout</a></strong>(float OverTime)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/CombatStateQueue/nodes/OnFeintQueueTimeout.html">OnFeintQueueTimeout</a></strong>([[float]] OverTime)</td>
+<td><strong><a href="../Nodes/CombatStateQueue/nodes/OnFeintQueueTimeout.html">OnFeintQueueTimeout</a></strong>(float OverTime)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -762,15 +762,15 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/CombatStateQueue/nodes/QueueFeint.html">QueueFeint</a></strong>([[FName]] FeintAttack)</td>
+<td><strong><a href="../Nodes/CombatStateQueue/nodes/QueueFeint.html">QueueFeint</a></strong>(FName FeintAttack)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/CombatStateQueue/nodes/ServerAddHeldInput.html">ServerAddHeldInput</a></strong>([[FName]] InputActionName)</td>
+<td><strong><a href="../Nodes/CombatStateQueue/nodes/ServerAddHeldInput.html">ServerAddHeldInput</a></strong>(FName InputActionName)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/CombatStateQueue/nodes/ServerQueueInput.html">ServerQueueInput</a></strong>([[FName]] NewQueuedInput)</td>
+<td><strong><a href="../Nodes/CombatStateQueue/nodes/ServerQueueInput.html">ServerQueueInput</a></strong>(FName NewQueuedInput)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -778,7 +778,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/CombatStateQueue/nodes/ServerRemoveHeldInput.html">ServerRemoveHeldInput</a></strong>([[FName]] InputActionName)</td>
+<td><strong><a href="../Nodes/CombatStateQueue/nodes/ServerRemoveHeldInput.html">ServerRemoveHeldInput</a></strong>(FName InputActionName)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -796,11 +796,11 @@
 </thead>
 <tbody>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>EarlyBlockStates</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>ParryCounterQueueStates</strong></td>
 </tr>
 </tbody>
@@ -819,15 +819,15 @@
 <td><strong>AttackList</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>CancelAttackPressedTime</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>CancelGamepadTimer</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>CancelIntoParryPressedTime</strong></td>
 </tr>
 <tr>
@@ -839,15 +839,15 @@
 <td><strong>CombatStateSynchronization</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>ComboCancelQueued</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ComboCancelTime</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>ComboCancelTimer</strong></td>
 </tr>
 <tr>
@@ -855,23 +855,23 @@
 <td><strong>ConsumedKeys</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>FeintQueueTimer</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadReloadPressedStartTime</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>HeldInput</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>HoldAttackQueueTime</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>HoldAttackQueued</strong></td>
 </tr>
 <tr>
@@ -879,19 +879,19 @@
 <td><strong>InputQueue</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>LastAltAttackPressedTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>LastAltAttackTime</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>LastJumpInput</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>PendingAttackId</strong></td>
 </tr>
 <tr>
@@ -899,79 +899,79 @@
 <td><strong>PendingParryCounterAttack</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>QueuedInput</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>SendHeldInputToServer</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>TimeSinceLastQueuedAttack</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bAltAttack</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bCanFeintSameAttackOnGamepad</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bDisableSpecial</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bDisableThrow</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bFeintQueued</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bFocusAttackHeld</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bFocusHeld</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bHoldAttack</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsCancelAttackKeyDown</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsCancelGamepadKeyDown</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsCancelIntoParryKeyDown</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsParryGamepadKeyDown</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bParryQueued</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bQueueHeldInputs</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bShouldComboCancelQueue</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bToggleAlt</strong></td>
 </tr>
 </tbody>

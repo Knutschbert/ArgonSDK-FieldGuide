@@ -717,11 +717,11 @@
 <tbody>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/MovementDebugger/nodes/Animate.html">Animate</a></strong>([[float]] Scale)</td>
+<td><strong><a href="../Nodes/MovementDebugger/nodes/Animate.html">Animate</a></strong>(float Scale)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/MovementDebugger/nodes/AutoSaveToFile.html">AutoSaveToFile</a></strong>([[bool]] bSendToServer, const FString &amp; Directory)</td>
+<td><strong><a href="../Nodes/MovementDebugger/nodes/AutoSaveToFile.html">AutoSaveToFile</a></strong>(bool bSendToServer, const FString &amp; Directory)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -733,7 +733,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/MovementDebugger/nodes/ClientSendFrame.html">ClientSendFrame</a></strong>(<a href="FMovementDebugFrame.html">FMovementDebugFrame</a> DebugFrame, [[bool]] bSyncTimeStamp)</td>
+<td><strong><a href="../Nodes/MovementDebugger/nodes/ClientSendFrame.html">ClientSendFrame</a></strong>(<a href="FMovementDebugFrame.html">FMovementDebugFrame</a> DebugFrame, bool bSyncTimeStamp)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -769,11 +769,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/MovementDebugger/nodes/DrawStatLine.html">DrawStatLine</a></strong>([[FVector]] Start, [[FVector]] End, FColor Clr)</td>
+<td><strong><a href="../Nodes/MovementDebugger/nodes/DrawStatLine.html">DrawStatLine</a></strong>(FVector Start, FVector End, FColor Clr)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/MovementDebugger/nodes/FindServerFrame.html">FindServerFrame</a></strong>(TArray&lt; <a href="FMovementDebugFrame.html">FMovementDebugFrame</a> &gt; &amp; SearchFrames, <a href="FMovementDebugFrame.html">FMovementDebugFrame</a> &amp; ReturnFrame, [[float]] ClientTimeStamp, [[int32]] Direction)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/MovementDebugger/nodes/FindServerFrame.html">FindServerFrame</a></strong>(TArray&lt; <a href="FMovementDebugFrame.html">FMovementDebugFrame</a> &gt; &amp; SearchFrames, <a href="FMovementDebugFrame.html">FMovementDebugFrame</a> &amp; ReturnFrame, float ClientTimeStamp, int32 Direction)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -788,7 +788,7 @@
 <td><strong><a href="../Nodes/MovementDebugger/nodes/GetClientFrame.html">GetClientFrame</a></strong>()</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/MovementDebugger/nodes/GetClientIndex.html">GetClientIndex</a></strong>()</td>
 </tr>
 <tr>
@@ -813,7 +813,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/PropertyDebugger/nodes/OnMovementSync.html">OnMovementSync</a></strong>([[float]] ClientTimeStamp, [[float]] DeltaTime)</td>
+<td><strong><a href="../Nodes/PropertyDebugger/nodes/OnMovementSync.html">OnMovementSync</a></strong>(float ClientTimeStamp, float DeltaTime)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -833,7 +833,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/MovementDebugger/nodes/RecordBoneChain.html">RecordBoneChain</a></strong>(<a href="FDebugDrawShapes.html">FDebugDrawShapes</a> &amp; DebugDraw, ACharacter * Pawn, [[FName]] BoneName, FColor Color)</td>
+<td><strong><a href="../Nodes/MovementDebugger/nodes/RecordBoneChain.html">RecordBoneChain</a></strong>(<a href="FDebugDrawShapes.html">FDebugDrawShapes</a> &amp; DebugDraw, ACharacter * Pawn, FName BoneName, FColor Color)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -857,11 +857,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/MovementDebugger/nodes/ServerSetClientIndex.html">ServerSetClientIndex</a></strong>([[int32]] Index)</td>
+<td><strong><a href="../Nodes/MovementDebugger/nodes/ServerSetClientIndex.html">ServerSetClientIndex</a></strong>(int32 Index)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/MovementDebugger/nodes/ServerSetClientTimeStamp.html">ServerSetClientTimeStamp</a></strong>([[float]] ClientTimeStamp, [[int32]] Direction)</td>
+<td><strong><a href="../Nodes/MovementDebugger/nodes/ServerSetClientTimeStamp.html">ServerSetClientTimeStamp</a></strong>(float ClientTimeStamp, int32 Direction)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -911,27 +911,27 @@
 </thead>
 <tbody>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>BoneNames</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DebugPositionIndex</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>DisplayDebugScrollDir</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DisplayDebugScrollY</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>FrameOffset</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>ID</strong></td>
 </tr>
 <tr>
@@ -943,15 +943,15 @@
 <td><strong>LastSavedFileName</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>OtherCharacterIndex</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>PlayDirection</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>PlayDirectionDelay</strong></td>
 </tr>
 <tr>
@@ -967,7 +967,7 @@
 <td><strong>ServerFramesFromFile</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>ServerSyncFrame</strong></td>
 </tr>
 <tr>
@@ -975,15 +975,15 @@
 <td><strong>TargetCharacter</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bDrawClient</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bDrawServer</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bRecording</strong></td>
 </tr>
 </tbody>

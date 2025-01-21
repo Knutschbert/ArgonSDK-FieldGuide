@@ -716,95 +716,95 @@
 </thead>
 <tbody>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/ApplyDamageConditions.html">ApplyDamageConditions</a></strong>(AActor * HitActor, const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageEvent)</td>
 </tr>
 <tr>
 <td>[[EAttackerBlockedPolicy]]</td>
-<td><strong><a href="../Nodes/GameplayRules/nodes/GetAttackerBlockedPolicy.html">GetAttackerBlockedPolicy</a></strong>([[EAttackerBlockedPolicy]] InAttackerBlockedPolicy, <a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * DefendingCharacter, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="AInventoryItem.html">AInventoryItem</a> * DefendingItem, [[bool]] bSameAttackClash)</td>
+<td><strong><a href="../Nodes/GameplayRules/nodes/GetAttackerBlockedPolicy.html">GetAttackerBlockedPolicy</a></strong>([[EAttackerBlockedPolicy]] InAttackerBlockedPolicy, <a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * DefendingCharacter, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="AInventoryItem.html">AInventoryItem</a> * DefendingItem, bool bSameAttackClash)</td>
 </tr>
 <tr>
 <td>[[EComboTimingPolicy]]</td>
-<td><strong><a href="../Nodes/GameplayRules/nodes/GetComboTimingPolicy.html">GetComboTimingPolicy</a></strong>([[EComboTimingPolicy]] InComboTimingPolicy, <a href="ATBLCharacter.html">ATBLCharacter</a> * Character, [[FName]] CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; PrevAttack, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; NextAttack)</td>
+<td><strong><a href="../Nodes/GameplayRules/nodes/GetComboTimingPolicy.html">GetComboTimingPolicy</a></strong>([[EComboTimingPolicy]] InComboTimingPolicy, <a href="ATBLCharacter.html">ATBLCharacter</a> * Character, FName CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; PrevAttack, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; NextAttack)</td>
 </tr>
 <tr>
 <td>[[ECrowdControlVariant]]</td>
-<td><strong><a href="../Nodes/GameplayRules/nodes/GetCrowdControlVariant.html">GetCrowdControlVariant</a></strong>([[ECrowdControlVariant]] InCrowdControlVariant, AActor * HitActor, [[FName]] CombatState, TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; InventoryItemClass, [[FName]] AbilityName, <a href="UAttackType.html">UAttackType</a> * AttackType, [[bool]] IsOnHorse)</td>
+<td><strong><a href="../Nodes/GameplayRules/nodes/GetCrowdControlVariant.html">GetCrowdControlVariant</a></strong>([[ECrowdControlVariant]] InCrowdControlVariant, AActor * HitActor, FName CombatState, TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; InventoryItemClass, FName AbilityName, <a href="UAttackType.html">UAttackType</a> * AttackType, bool IsOnHorse)</td>
 </tr>
 <tr>
 <td>[[EDefenderBlockedPolicy]]</td>
-<td><strong><a href="../Nodes/GameplayRules/nodes/GetDefenderBlockedPolicy.html">GetDefenderBlockedPolicy</a></strong>([[bool]] &amp; bShouldDisarm, [[EDefenderBlockedPolicy]] InDefenderBlockedPolicy, <a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * DefendingCharacter, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="AInventoryItem.html">AInventoryItem</a> * DefendingItem, [[bool]] bProjectileAttack, [[bool]] bSameAttackClash, [[bool]] bWasBlockedWithParryForgivenessWindow)</td>
+<td><strong><a href="../Nodes/GameplayRules/nodes/GetDefenderBlockedPolicy.html">GetDefenderBlockedPolicy</a></strong>(bool &amp; bShouldDisarm, [[EDefenderBlockedPolicy]] InDefenderBlockedPolicy, <a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * DefendingCharacter, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="AInventoryItem.html">AInventoryItem</a> * DefendingItem, bool bProjectileAttack, bool bSameAttackClash, bool bWasBlockedWithParryForgivenessWindow)</td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
-<td><strong><a href="../Nodes/GameplayRules/nodes/GetDisarmImpulse.html">GetDisarmImpulse</a></strong>(const <a href="AInventoryItem.html">AInventoryItem</a> * AttackerItem, const [[FVector]] HitDirection) const</td>
+<td>FVector</td>
+<td><strong><a href="../Nodes/GameplayRules/nodes/GetDisarmImpulse.html">GetDisarmImpulse</a></strong>(const <a href="AInventoryItem.html">AInventoryItem</a> * AttackerItem, const FVector HitDirection) const</td>
 </tr>
 <tr>
 <td><a href="FGoreEvent.html">FGoreEvent</a></td>
-<td><strong><a href="../Nodes/GameplayRules/nodes/GetGoreEventOnDamage.html">GetGoreEventOnDamage</a></strong>(const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageTakenEvent, [[bool]] bIsRagdollHit, [[bool]] bShouldApplyConditions)</td>
+<td><strong><a href="../Nodes/GameplayRules/nodes/GetGoreEventOnDamage.html">GetGoreEventOnDamage</a></strong>(const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageTakenEvent, bool bIsRagdollHit, bool bShouldApplyConditions)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/GetRangedInaccuracy.html">GetRangedInaccuracy</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * Projectile)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/IsBlocking.html">IsBlocking</a></strong>(const <a href="ATBLCharacter.html">ATBLCharacter</a> * Character, [[FName]] AttackName, [[FName]] CombatState, <a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter) const</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsBlocking.html">IsBlocking</a></strong>(const <a href="ATBLCharacter.html">ATBLCharacter</a> * Character, FName AttackName, FName CombatState, <a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/IsValidSelfInflictedDamageSource.html">IsValidSelfInflictedDamageSource</a></strong>(<a href="UDamageSource.html">UDamageSource</a> * DamageSource)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/OnDamageTaken.html">OnDamageTaken</a></strong>([[EOnHitEffect]] &amp; OutHitEffect, [[ECrowdControlVariant]] &amp; OutCrowdControlVariant, [[EOnHitEffect]] InHitEffect, [[ECrowdControlVariant]] InCrowdControlVariant, AActor * HitActor, const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageEvent, [[FName]] AttackName, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="UAttackType.html">UAttackType</a> * AttackType)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnDamageTaken.html">OnDamageTaken</a></strong>([[EOnHitEffect]] &amp; OutHitEffect, [[ECrowdControlVariant]] &amp; OutCrowdControlVariant, [[EOnHitEffect]] InHitEffect, [[ECrowdControlVariant]] InCrowdControlVariant, AActor * HitActor, const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageEvent, FName AttackName, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="UAttackType.html">UAttackType</a> * AttackType)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/OnParryBreak.html">OnParryBreak</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * DefendingCharacter, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="AInventoryItem.html">AInventoryItem</a> * DefendingItem)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/OnProjectileHit.html">OnProjectileHit</a></strong>([[EOnProjectileHitEffect]] &amp; OutHitEffect, [[float]] &amp; OutBounceVelocityModifier, <a href="AInventoryItem.html">AInventoryItem</a> * Projectile, [[EOnProjectileHitEffect]] InHitEffect, const [[FHitResult]] &amp; InHitResult, [[float]] InBounceVelocityModifier)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/OnProjectileHit.html">OnProjectileHit</a></strong>([[EOnProjectileHitEffect]] &amp; OutHitEffect, float &amp; OutBounceVelocityModifier, <a href="AInventoryItem.html">AInventoryItem</a> * Projectile, [[EOnProjectileHitEffect]] InHitEffect, const [[FHitResult]] &amp; InHitResult, float InBounceVelocityModifier)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldAttackBeCountered.html">ShouldAttackBeCountered</a></strong>(const <a href="ATBLCharacter.html">ATBLCharacter</a> * HitCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="AInventoryItem.html">AInventoryItem</a> * DefenderItem) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/ShouldBlockSameAttack.html">ShouldBlockSameAttack</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * DefendingCharacter) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/GameplayRules/nodes/ShouldComboCancelQueue.html">ShouldComboCancelQueue</a></strong>([[FName]] CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; Attack)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/GameplayRules/nodes/ShouldComboCancelQueue.html">ShouldComboCancelQueue</a></strong>(FName CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; Attack)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/GameplayRules/nodes/ShouldGotoDowned.html">ShouldGotoDowned</a></strong>(AActor * Target, AActor * Initiator, [[FName]] AbilityName, <a href="AInventoryItem.html">AInventoryItem</a> * InventoryItem, <a href="UDamageSource.html">UDamageSource</a> * DamageType, const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageTakenEvent)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/GameplayRules/nodes/ShouldGotoDowned.html">ShouldGotoDowned</a></strong>(AActor * Target, AActor * Initiator, FName AbilityName, <a href="AInventoryItem.html">AInventoryItem</a> * InventoryItem, <a href="UDamageSource.html">UDamageSource</a> * DamageType, const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageTakenEvent)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/ShouldPlayDamageTaken.html">ShouldPlayDamageTaken</a></strong>(const <a href="FDamageTakenEvent.html">FDamageTakenEvent</a> &amp; DamageTakenEvent)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/ShouldScoreKill.html">ShouldScoreKill</a></strong>(AController * Killer, AController * Killed, const <a href="FDeathDamageTakenEvent.html">FDeathDamageTakenEvent</a> &amp; DamageEvent)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/ShouldStartActiveRiposteWindow.html">ShouldStartActiveRiposteWindow</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/ShouldStartCounterWindow.html">ShouldStartCounterWindow</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/ShouldStartProjectileCounterWindow.html">ShouldStartProjectileCounterWindow</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/GameplayRules/nodes/TutorialCanDamage.html">TutorialCanDamage</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * InitiatorCharacter, AActor * TargetActor)</td>
 </tr>
 <tr>
@@ -812,8 +812,8 @@
 <td><strong><a href="UGameplayRules.html">UGameplayRules</a></strong>()</td>
 </tr>
 <tr>
-<td>[[float]]</td>
-<td><strong><a href="../Nodes/GameplayRules/nodes/UpdateAimPenalty.html">UpdateAimPenalty</a></strong>([[float]] DeltaSeconds, const TArray&lt; <a href="FAimPenalty.html">FAimPenalty</a> &gt; &amp; AimPenalties)</td>
+<td>float</td>
+<td><strong><a href="../Nodes/GameplayRules/nodes/UpdateAimPenalty.html">UpdateAimPenalty</a></strong>(float DeltaSeconds, const TArray&lt; <a href="FAimPenalty.html">FAimPenalty</a> &gt; &amp; AimPenalties)</td>
 </tr>
 </tbody>
 </table>
@@ -827,7 +827,7 @@
 </thead>
 <tbody>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>AimPenalty</strong></td>
 </tr>
 </tbody>

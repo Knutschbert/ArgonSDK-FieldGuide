@@ -712,7 +712,7 @@
 <tbody>
 <tr>
 <td><a href="UHudMarkerDisplayComponent.html">UHudMarkerDisplayComponent</a> *</td>
-<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/AddHudMarkerComponentToActor.html">AddHudMarkerComponentToActor</a></strong>(AActor * Actor, [[EFaction]] VisibleToFaction, TSubclassOf&lt; <a href="UHudMarkerDisplayComponent.html">UHudMarkerDisplayComponent</a> &gt; Class, [[bool]] bReplicates)</td>
+<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/AddHudMarkerComponentToActor.html">AddHudMarkerComponentToActor</a></strong>(AActor * Actor, [[EFaction]] VisibleToFaction, TSubclassOf&lt; <a href="UHudMarkerDisplayComponent.html">UHudMarkerDisplayComponent</a> &gt; Class, bool bReplicates)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -728,7 +728,7 @@
 </tr>
 <tr>
 <td>FInputActionKeyMapping</td>
-<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetActionBindingFromName.html">GetActionBindingFromName</a></strong>([[FName]] ActionName, UObject * WorldContextObject)</td>
+<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetActionBindingFromName.html">GetActionBindingFromName</a></strong>(FName ActionName, UObject * WorldContextObject)</td>
 </tr>
 <tr>
 <td><a href="UTBLScreenManager.html">UTBLScreenManager</a> *</td>
@@ -744,7 +744,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetAllMapNames.html">GetAllMapNames</a></strong>(TArray&lt; [[FName]] &gt; &amp; OutAssetNames, const FString &amp; MapPath)</td>
+<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetAllMapNames.html">GetAllMapNames</a></strong>(TArray&lt; FName &gt; &amp; OutAssetNames, const FString &amp; MapPath)</td>
 </tr>
 <tr>
 <td>TArray&lt; <a href="FButtonCallout.html">FButtonCallout</a> &gt;</td>
@@ -788,15 +788,15 @@
 </tr>
 <tr>
 <td>[[FText]]</td>
-<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetKeyTextFromActionBindingName.html">GetKeyTextFromActionBindingName</a></strong>(const FString &amp; ActionName, FInputActionKeyMapping &amp; ActionMappingOut, [[bool]] bLongDisplayName, [[EGamepadInputMode]] InputMode, UObject * WorldContextObject)</td>
+<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetKeyTextFromActionBindingName.html">GetKeyTextFromActionBindingName</a></strong>(const FString &amp; ActionName, FInputActionKeyMapping &amp; ActionMappingOut, bool bLongDisplayName, [[EGamepadInputMode]] InputMode, UObject * WorldContextObject)</td>
 </tr>
 <tr>
 <td>EUINavigation</td>
-<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetNavigationDirectionFromAnalog.html">GetNavigationDirectionFromAnalog</a></strong>(const FAnalogInputEvent &amp; InAnalogEvent, [[bool]] &amp; bInvalid)</td>
+<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetNavigationDirectionFromAnalog.html">GetNavigationDirectionFromAnalog</a></strong>(const FAnalogInputEvent &amp; InAnalogEvent, bool &amp; bInvalid)</td>
 </tr>
 <tr>
 <td>EUINavigation</td>
-<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetNavigationDirectionFromKey.html">GetNavigationDirectionFromKey</a></strong>(const FKeyEvent &amp; InKeyEvent, [[bool]] &amp; bInvalid)</td>
+<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetNavigationDirectionFromKey.html">GetNavigationDirectionFromKey</a></strong>(const FKeyEvent &amp; InKeyEvent, bool &amp; bInvalid)</td>
 </tr>
 <tr>
 <td><a href="UTBLLocalPlayer.html">UTBLLocalPlayer</a> *</td>
@@ -807,11 +807,11 @@
 <td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/GetOwningTBLPlayerController.html">GetOwningTBLPlayerController</a></strong>(UObject * Target)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/IsHandled.html">IsHandled</a></strong>(const FEventReply &amp; EventReply)</td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/Key_GetFName.html">Key_GetFName</a></strong>(const [[FKey]] &amp; Key)</td>
 </tr>
 <tr>
@@ -820,7 +820,7 @@
 </tr>
 <tr>
 <td>FLinearColor</td>
-<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/LinearColorFromHsluv.html">LinearColorFromHsluv</a></strong>([[float]] H, [[float]] S, [[float]] L)</td>
+<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/LinearColorFromHsluv.html">LinearColorFromHsluv</a></strong>(float H, float S, float L)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -828,7 +828,7 @@
 </tr>
 <tr>
 <td>FLinearColor</td>
-<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/RandomLinearColorFromHsluv.html">RandomLinearColorFromHsluv</a></strong>([[float]] h_min, [[float]] h_max, [[float]] s_min, [[float]] s_max, [[float]] l_min, [[float]] l_max)</td>
+<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/RandomLinearColorFromHsluv.html">RandomLinearColorFromHsluv</a></strong>(float h_min, float h_max, float s_min, float s_max, float l_min, float l_max)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -860,14 +860,14 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/SendGlobalGameNotification.html">SendGlobalGameNotification</a></strong>([[EGlobalGameNotificationCategory]] Category, [[FText]] Title, [[FText]] Body, [[FName]] Subcategory, UObject * Data, UObject * WorldContextObject)</td>
+<td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/SendGlobalGameNotification.html">SendGlobalGameNotification</a></strong>([[EGlobalGameNotificationCategory]] Category, [[FText]] Title, [[FText]] Body, FName Subcategory, UObject * Data, UObject * WorldContextObject)</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/SetInputActionMode.html">SetInputActionMode</a></strong>(APlayerController * InPlayerController, [[EInputActionMode]] InInputActionMode)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/UIBlueprintLibrary/nodes/ShouldDisableWorkInProgressFeatures.html">ShouldDisableWorkInProgressFeatures</a></strong>()</td>
 </tr>
 <tr>

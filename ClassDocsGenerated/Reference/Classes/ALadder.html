@@ -730,7 +730,7 @@
 <td><strong><a href="ALadder.html">ALadder</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/Ladder/nodes/CanMountLadder.html">CanMountLadder</a></strong>(APawn * Pawn)</td>
 </tr>
 <tr>
@@ -746,12 +746,12 @@
 <td><strong>[[GetLifetimeReplicatedProps]]</strong>(TArray&lt; FLifetimeProperty &gt; &amp; OutLifetimeProps) const override</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/Ladder/nodes/IsLadderEnabled.html">IsLadderEnabled</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/Ladder/nodes/WantsDismountOnThisEnd.html">WantsDismountOnThisEnd</a></strong>([[bool]] bTop) const</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/Ladder/nodes/WantsDismountOnThisEnd.html">WantsDismountOnThisEnd</a></strong>(bool bTop) const</td>
 </tr>
 </tbody>
 </table>
@@ -766,11 +766,11 @@
 <tbody>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Ladder/nodes/BeginJumpOverlap.html">BeginJumpOverlap</a></strong>(UPrimitiveComponent * OverlappedComponent, AActor * Other, UPrimitiveComponent * OtherComp, [[int32]] OtherBodyIndex, [[bool]] bFromSweep, const [[FHitResult]] &amp; OverlapInfo)</td>
+<td><strong><a href="../Nodes/Ladder/nodes/BeginJumpOverlap.html">BeginJumpOverlap</a></strong>(UPrimitiveComponent * OverlappedComponent, AActor * Other, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const [[FHitResult]] &amp; OverlapInfo)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Ladder/nodes/EndJumpOverlap.html">EndJumpOverlap</a></strong>(UPrimitiveComponent * OverlappedComponent, AActor * Other, UPrimitiveComponent * OtherComp, [[int32]] OtherBodyIndex)</td>
+<td><strong><a href="../Nodes/Ladder/nodes/EndJumpOverlap.html">EndJumpOverlap</a></strong>(UPrimitiveComponent * OverlappedComponent, AActor * Other, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -778,11 +778,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Ladder/nodes/MountLadder.html">MountLadder</a></strong>(APawn * Pawn, [[bool]] bIsJumping)</td>
+<td><strong><a href="../Nodes/Ladder/nodes/MountLadder.html">MountLadder</a></strong>(APawn * Pawn, bool bIsJumping)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Ladder/nodes/OnMovementChangedInJumpCollider.html">OnMovementChangedInJumpCollider</a></strong>([[FName]] MovementState)</td>
+<td><strong><a href="../Nodes/Ladder/nodes/OnMovementChangedInJumpCollider.html">OnMovementChangedInJumpCollider</a></strong>(FName MovementState)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -831,19 +831,19 @@
 </thead>
 <tbody>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>AttachOffset</strong></td>
 </tr>
 <tr>
-<td>[[FRotator]]</td>
+<td>FRotator</td>
 <td><strong>AttachRotation</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>DismountPointBottom</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>DismountPointTop</strong></td>
 </tr>
 <tr>
@@ -859,11 +859,11 @@
 <td><strong>JumpOverlappingCharacters</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>LadderBottom</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>LadderHeight</strong></td>
 </tr>
 <tr>
@@ -871,27 +871,27 @@
 <td><strong>LadderMontage</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>LadderTop</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MaxMountAngle</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MaxMountDist</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>MountPointBottom</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>MountPointTop</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MoveDownAngle</strong></td>
 </tr>
 <tr>
@@ -927,15 +927,15 @@
 <td><strong>SmartLinkTop</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>TurnLimit</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bCanDismountOffBottom</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bCanDismountOffTop</strong></td>
 </tr>
 <tr>
@@ -943,11 +943,11 @@
 <td><strong>bLadderEnabled</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bSmartLinkIsRelevant</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bStartEnabled</strong></td>
 </tr>
 </tbody>

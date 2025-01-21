@@ -712,11 +712,11 @@
 <tbody>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLAILibrary/nodes/AITagActor.html">AITagActor</a></strong>(AActor * Actor, FGameplayTagContainer TagsToAdd, [[EFaction]] Faction, [[bool]] bUntagWhenActorDies)</td>
+<td><strong><a href="../Nodes/TBLAILibrary/nodes/AITagActor.html">AITagActor</a></strong>(AActor * Actor, FGameplayTagContainer TagsToAdd, [[EFaction]] Faction, bool bUntagWhenActorDies)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLAILibrary/nodes/AITagManyActors.html">AITagManyActors</a></strong>(TArray&lt; AActor * &gt; Actors, FGameplayTagContainer TagsToAdd, [[EFaction]] Faction, [[bool]] bUntagWhenActorDies)</td>
+<td><strong><a href="../Nodes/TBLAILibrary/nodes/AITagManyActors.html">AITagManyActors</a></strong>(TArray&lt; AActor * &gt; Actors, FGameplayTagContainer TagsToAdd, [[EFaction]] Faction, bool bUntagWhenActorDies)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -736,7 +736,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLAISystem/nodes/CreateAvoidanceArea.html">CreateAvoidanceArea</a></strong>(UObject * WorldContextObject, UObject * Instigator, const [[FVector]] &amp; Location, [[float]] Radius)</td>
+<td><strong><a href="../Nodes/TBLAISystem/nodes/CreateAvoidanceArea.html">CreateAvoidanceArea</a></strong>(UObject * WorldContextObject, UObject * Instigator, const FVector &amp; Location, float Radius)</td>
 </tr>
 <tr>
 <td>FGameplayTagContainer</td>
@@ -747,16 +747,16 @@
 <td><strong><a href="../Nodes/TBLAILibrary/nodes/GetActorsByAITag.html">GetActorsByAITag</a></strong>(UObject * WorldContextObject, [[FGameplayTag]] Tag, [[EFaction]] Faction)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLAILibrary/nodes/GetPerceivedLocationOfActor.html">GetPerceivedLocationOfActor</a></strong>(AAIController * Controller, AActor * Actor, [[FVector]] &amp; OutVector)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLAILibrary/nodes/GetPerceivedLocationOfActor.html">GetPerceivedLocationOfActor</a></strong>(AAIController * Controller, AActor * Actor, FVector &amp; OutVector)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
-<td><strong><a href="../Nodes/TBLAILibrary/nodes/InfluenceAtLocation.html">InfluenceAtLocation</a></strong>(TSubclassOf&lt; <a href="UI__Influence.html">UI_Influence</a> &gt; InfluenceInput, AAIController * Controller, [[FVector]] Location)</td>
+<td>float</td>
+<td><strong><a href="../Nodes/TBLAILibrary/nodes/InfluenceAtLocation.html">InfluenceAtLocation</a></strong>(TSubclassOf&lt; <a href="UI__Influence.html">UI_Influence</a> &gt; InfluenceInput, AAIController * Controller, FVector Location)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayEmote.html">PlayEmote</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character, [[FName]] EmoteName)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayEmote.html">PlayEmote</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character, FName EmoteName)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -764,11 +764,11 @@
 </tr>
 <tr>
 <td><a href="ATBLAIController.html">ATBLAIController</a> *</td>
-<td><strong><a href="../Nodes/TBLAILibrary/nodes/SpawnTBLAIControllerFromClass.html">SpawnTBLAIControllerFromClass</a></strong>(UObject * WorldContextObject, [[EFaction]] Faction, TSubclassOf&lt; <a href="ATBLAIController.html">ATBLAIController</a> &gt; ControllerClass, TSubclassOf&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt; NextSpawnCharacterClass, UBehaviorTree * BehaviorTree, [[bool]] IsPlayerBot)</td>
+<td><strong><a href="../Nodes/TBLAILibrary/nodes/SpawnTBLAIControllerFromClass.html">SpawnTBLAIControllerFromClass</a></strong>(UObject * WorldContextObject, [[EFaction]] Faction, TSubclassOf&lt; <a href="ATBLAIController.html">ATBLAIController</a> &gt; ControllerClass, TSubclassOf&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt; NextSpawnCharacterClass, UBehaviorTree * BehaviorTree, bool IsPlayerBot)</td>
 </tr>
 <tr>
 <td><a href="ATBLCharacter.html">ATBLCharacter</a> *</td>
-<td><strong><a href="../Nodes/TBLAILibrary/nodes/SpawnTBLAIFromClass.html">SpawnTBLAIFromClass</a></strong>(UObject * WorldContextObject, TSubclassOf&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt; CharacterClass, [[EFaction]] Faction, TSubclassOf&lt; <a href="ATBLAIController.html">ATBLAIController</a> &gt; ControllerClass, UBehaviorTree * BehaviorTree, [[FVector]] Location, [[FRotator]] Rotation, [[bool]] bNoCollisionFail)</td>
+<td><strong><a href="../Nodes/TBLAILibrary/nodes/SpawnTBLAIFromClass.html">SpawnTBLAIFromClass</a></strong>(UObject * WorldContextObject, TSubclassOf&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt; CharacterClass, [[EFaction]] Faction, TSubclassOf&lt; <a href="ATBLAIController.html">ATBLAIController</a> &gt; ControllerClass, UBehaviorTree * BehaviorTree, FVector Location, FRotator Rotation, bool bNoCollisionFail)</td>
 </tr>
 <tr>
 <td></td>

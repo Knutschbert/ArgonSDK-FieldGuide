@@ -712,14 +712,14 @@
 <tbody>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AddClosedCaptionLine.html">AddClosedCaptionLine</a></strong>([[FText]] OriginString, [[FText]] ChatString, AActor * OriginatingActor, [[EClosedCaptionType]] Type, UObject * WorldContextObject, [[bool]] IgnoreDistance)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AddClosedCaptionLine.html">AddClosedCaptionLine</a></strong>([[FText]] OriginString, [[FText]] ChatString, AActor * OriginatingActor, [[EClosedCaptionType]] Type, UObject * WorldContextObject, bool IgnoreDistance)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AddTagsToActor.html">AddTagsToActor</a></strong>(AActor * Actor, TArray&lt; [[FName]] &gt; Tags, UObject * WorldContextObject)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AddTagsToActor.html">AddTagsToActor</a></strong>(AActor * Actor, TArray&lt; FName &gt; Tags, UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AreHardwarePlatformsFromTheSameFirstParty.html">AreHardwarePlatformsFromTheSameFirstParty</a></strong>([[EHardwarePlatform]] A, [[EHardwarePlatform]] B)</td>
 </tr>
 <tr>
@@ -728,30 +728,30 @@
 </tr>
 <tr>
 <td>USceneComponent *</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AttachComponentFromSCS.html">AttachComponentFromSCS</a></strong>(UClass * Class, AActor * TargetActor, USceneComponent * TargetComponent, [[FName]] ComponentName)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AttachComponentFromSCS.html">AttachComponentFromSCS</a></strong>(UClass * Class, AActor * TargetActor, USceneComponent * TargetComponent, FName ComponentName)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AwardOverrideScoreToPlayer.html">AwardOverrideScoreToPlayer</a></strong>([[FName]] RowName, [[int32]] Score, <a href="ATBLPlayerState.html">ATBLPlayerState</a> * Player, <a href="ATBLPlayerState.html">ATBLPlayerState</a> * OtherPlayer)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AwardOverrideScoreToPlayer.html">AwardOverrideScoreToPlayer</a></strong>(FName RowName, int32 Score, <a href="ATBLPlayerState.html">ATBLPlayerState</a> * Player, <a href="ATBLPlayerState.html">ATBLPlayerState</a> * OtherPlayer)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AwardScoreToPlayers.html">AwardScoreToPlayers</a></strong>(UObject * WorldContextObject, TArray&lt; <a href="ATBLPlayerState.html">ATBLPlayerState</a> * &gt; PlayerStates, [[FName]] RowName, [[EOnlineStat]] Stat)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/AwardScoreToPlayers.html">AwardScoreToPlayers</a></strong>(UObject * WorldContextObject, TArray&lt; <a href="ATBLPlayerState.html">ATBLPlayerState</a> * &gt; PlayerStates, FName RowName, [[EOnlineStat]] Stat)</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/BeginProfilerStat.html">BeginProfilerStat</a></strong>(const <a href="FProfilerStat.html">FProfilerStat</a> &amp; ProfilerStat)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/BlueprintOnlineUserEquals.html">BlueprintOnlineUserEquals</a></strong>(const <a href="FBlueprintOnlineUser.html">FBlueprintOnlineUser</a> &amp; A, const <a href="FBlueprintOnlineUser.html">FBlueprintOnlineUser</a> &amp; B)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/BreakCanvasIcon.html">BreakCanvasIcon</a></strong>(FCanvasIcon Icon, UTexture *&amp; Texture, [[float]] &amp; U, [[float]] &amp; V, [[float]] &amp; UL, [[float]] &amp; VL)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/BreakCanvasIcon.html">BreakCanvasIcon</a></strong>(FCanvasIcon Icon, UTexture *&amp; Texture, float &amp; U, float &amp; V, float &amp; UL, float &amp; VL)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/CanCharacterSubclassUsePrimaryWeapon.html">CanCharacterSubclassUsePrimaryWeapon</a></strong>(TSubclassOf&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt; CharacterSubclass, TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; PrimaryWeapon)</td>
 </tr>
 <tr>
@@ -764,7 +764,7 @@
 </tr>
 <tr>
 <td>AActor *</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/CreateSoundActor.html">CreateSoundActor</a></strong>(AActor * ReferenceActor, [[FVector]] OffsetLocation)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/CreateSoundActor.html">CreateSoundActor</a></strong>(AActor * ReferenceActor, FVector OffsetLocation)</td>
 </tr>
 <tr>
 <td><a href="UStatsComponent.html">UStatsComponent</a> *</td>
@@ -780,19 +780,19 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DisableComponentsOnServer.html">DisableComponentsOnServer</a></strong>(AActor * Actor, [[int32]] DisableFlags)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DisableComponentsOnServer.html">DisableComponentsOnServer</a></strong>(AActor * Actor, int32 DisableFlags)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyAxis.html">DoKeyAxis</a></strong>(AActor * Actor, [[FName]] ActionName, [[float]] AxisValue)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyAxis.html">DoKeyAxis</a></strong>(AActor * Actor, FName ActionName, float AxisValue)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyEvent.html">DoKeyEvent</a></strong>(AActor * Actor, [[FName]] ActionName, TEnumAsByte&lt; EInputEvent &gt; KeyEvent)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyEvent.html">DoKeyEvent</a></strong>(AActor * Actor, FName ActionName, TEnumAsByte&lt; EInputEvent &gt; KeyEvent)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoesActorHaveInventoryItem.html">DoesActorHaveInventoryItem</a></strong>(AActor * Actor, TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; InventoryItem, [[bool]] bCanBeChildOf)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoesActorHaveInventoryItem.html">DoesActorHaveInventoryItem</a></strong>(AActor * Actor, TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; InventoryItem, bool bCanBeChildOf)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -824,11 +824,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/FrameDelay.html">FrameDelay</a></strong>(UObject * WorldContextObject, [[int32]] NumFramesToDelay, FLatentActionInfo LatentInfo)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/FrameDelay.html">FrameDelay</a></strong>(UObject * WorldContextObject, int32 NumFramesToDelay, FLatentActionInfo LatentInfo)</td>
 </tr>
 <tr>
 <td>FLinearColor</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GammaCorrectLinearColor.html">GammaCorrectLinearColor</a></strong>(FLinearColor LinCol, [[float]] Gamma)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GammaCorrectLinearColor.html">GammaCorrectLinearColor</a></strong>(FLinearColor LinCol, float Gamma)</td>
 </tr>
 <tr>
 <td>FString</td>
@@ -847,7 +847,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetAbilityConfig.html">GetAbilityConfig</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetAbilityConfigLoaded.html">GetAbilityConfigLoaded</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
@@ -864,7 +864,7 @@
 </tr>
 <tr>
 <td>UActorComponent *</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetActorComponentWithTag.html">GetActorComponentWithTag</a></strong>(AActor * Actor, [[FName]] Tag)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetActorComponentWithTag.html">GetActorComponentWithTag</a></strong>(AActor * Actor, FName Tag)</td>
 </tr>
 <tr>
 <td><a href="AInventoryItem.html">AInventoryItem</a> *</td>
@@ -888,11 +888,11 @@
 </tr>
 <tr>
 <td>TArray&lt; AActor * &gt;</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetActorsWithTag.html">GetActorsWithTag</a></strong>(const [[FName]] &amp; Tag, UObject * WorldContextObject)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetActorsWithTag.html">GetActorsWithTag</a></strong>(const FName &amp; Tag, UObject * WorldContextObject)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetActorsWithTagClassSpecifier.html">GetActorsWithTagClassSpecifier</a></strong>([[FName]] Tag, TSubclassOf&lt; AActor &gt; ActorClass, const UObject * WorldContextObject, TArray&lt; AActor * &gt; &amp; OutActors)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetActorsWithTagClassSpecifier.html">GetActorsWithTagClassSpecifier</a></strong>(FName Tag, TSubclassOf&lt; AActor &gt; ActorClass, const UObject * WorldContextObject, TArray&lt; AActor * &gt; &amp; OutActors)</td>
 </tr>
 <tr>
 <td>TArray&lt; AActor * &gt;</td>
@@ -904,7 +904,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetAllActorsWithTag.html">GetAllActorsWithTag</a></strong>(const UObject * WorldContextObject, [[FName]] Tag, TArray&lt; AActor * &gt; &amp; OutActors)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetAllActorsWithTag.html">GetAllActorsWithTag</a></strong>(const UObject * WorldContextObject, FName Tag, TArray&lt; AActor * &gt; &amp; OutActors)</td>
 </tr>
 <tr>
 <td>TArray&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> * &gt;</td>
@@ -968,7 +968,7 @@
 </tr>
 <tr>
 <td>TArray&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> * &gt;</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetCharactersFromFactions.html">GetCharactersFromFactions</a></strong>(UObject * WorldContextObject, TArray&lt; [[EFaction]] &gt; Factions, [[bool]] AllowBots, [[bool]] AllowNPCs)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetCharactersFromFactions.html">GetCharactersFromFactions</a></strong>(UObject * WorldContextObject, TArray&lt; [[EFaction]] &gt; Factions, bool AllowBots, bool AllowNPCs)</td>
 </tr>
 <tr>
 <td>FString</td>
@@ -988,7 +988,7 @@
 </tr>
 <tr>
 <td>[[ECrowdControlDirection]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetCrowdControlDirection.html">GetCrowdControlDirection</a></strong>([[FName]] Direction)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetCrowdControlDirection.html">GetCrowdControlDirection</a></strong>(FName Direction)</td>
 </tr>
 <tr>
 <td>FString</td>
@@ -1007,7 +1007,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetCurrentServerNameString.html">GetCurrentServerNameString</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetCustomPersonalityEmoteOverride.html">GetCustomPersonalityEmoteOverride</a></strong>(<a href="FPersonalityEmoteTableRow.html">FPersonalityEmoteTableRow</a> Emote, TEnumAsByte&lt; [[EAudioPersonalityType::Type]] &gt; PersonalityType, <a href="FPersonalityEmoteTableRow.html">FPersonalityEmoteTableRow</a> &amp; OutRow)</td>
 </tr>
 <tr>
@@ -1027,7 +1027,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetDamageSourceIconTexture.html">GetDamageSourceIconTexture</a></strong>(const <a href="UDamageSource.html">UDamageSource</a> * DamageSource)</td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetDamageSourceName.html">GetDamageSourceName</a></strong>(const <a href="UDamageSource.html">UDamageSource</a> * DamageSource)</td>
 </tr>
 <tr>
@@ -1059,7 +1059,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetDemoServer.html">GetDemoServer</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetDemoTeam.html">GetDemoTeam</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
@@ -1091,8 +1091,8 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetGameModeNameString.html">GetGameModeNameString</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[FName]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetHitDirectionName.html">GetHitDirectionName</a></strong>(AActor * HitActor, [[FVector]] HitDirection)</td>
+<td>FName</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetHitDirectionName.html">GetHitDirectionName</a></strong>(AActor * HitActor, FVector HitDirection)</td>
 </tr>
 <tr>
 <td>UTexture2D *</td>
@@ -1107,7 +1107,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetKilledActor.html">GetKilledActor</a></strong>(const <a href="FDeathDamageTakenEvent.html">FDeathDamageTakenEvent</a> &amp; Event)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetLastServerReceivePacketTime.html">GetLastServerReceivePacketTime</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
@@ -1123,7 +1123,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetLocalizedCharacterClassText.html">GetLocalizedCharacterClassText</a></strong>([[ECharacterClass]] CharacterClass)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetLocalizedGameModeFromMapString.html">GetLocalizedGameModeFromMapString</a></strong>(const FString &amp; MapNameString, [[FText]] &amp; LongForm, [[FText]] &amp; ShortForm)</td>
 </tr>
 <tr>
@@ -1152,14 +1152,14 @@
 </tr>
 <tr>
 <td><a href="UTBLMapSummary.html">UTBLMapSummary</a> *</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetMapSummary.html">GetMapSummary</a></strong>(UObject * WorldContextObject, const FString &amp; MapFileNameWithOptions, [[bool]] bCheckGameInstance)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetMapSummary.html">GetMapSummary</a></strong>(UObject * WorldContextObject, const FString &amp; MapFileNameWithOptions, bool bCheckGameInstance)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetMaxFloat.html">GetMaxFloat</a></strong>()</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetMaxPlayersForServer.html">GetMaxPlayersForServer</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
@@ -1171,7 +1171,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetMovementModifierComponent.html">GetMovementModifierComponent</a></strong>(AActor * Actor)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetNDASigned.html">GetNDASigned</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
@@ -1179,11 +1179,11 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetNameFromCharacterClass.html">GetNameFromCharacterClass</a></strong>(TSubclassOf&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt; CharacterClass)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetNegativeMaxFloat.html">GetNegativeMaxFloat</a></strong>()</td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetNegativeMaxFloatVector.html">GetNegativeMaxFloatVector</a></strong>()</td>
 </tr>
 <tr>
@@ -1191,19 +1191,19 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetNeutralTeamDisplayInfo.html">GetNeutralTeamDisplayInfo</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetNumPlayers.html">GetNumPlayers</a></strong>(UObject * WorldContextObject, [[bool]] IncludeBots, [[bool]] IncludeNPCs)</td>
+<td>int32</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetNumPlayers.html">GetNumPlayers</a></strong>(UObject * WorldContextObject, bool IncludeBots, bool IncludeNPCs)</td>
 </tr>
 <tr>
 <td>[[FText]]</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetObjectiveScoreTextFromEnum.html">GetObjectiveScoreTextFromEnum</a></strong>(TEnumAsByte&lt; [[EObjectivePointCategory::Type]] &gt; ObjPointCat)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatBattlecries.html">GetOnlineStatBattlecries</a></strong>(<a href="ATBLPlayerState.html">ATBLPlayerState</a> * PlayerState)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatCommendations.html">GetOnlineStatCommendations</a></strong>(<a href="ATBLPlayerState.html">ATBLPlayerState</a> * PlayerState)</td>
 </tr>
 <tr>
@@ -1215,31 +1215,31 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatFromWeaponTag.html">GetOnlineStatFromWeaponTag</a></strong>([[EWeaponTag]] WeaponTag)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatSubClassDeaths.html">GetOnlineStatSubClassDeaths</a></strong>(<a href="ATBLPlayerState.html">ATBLPlayerState</a> * PlayerState, [[ECharacterClass]] CharacterClass)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatSubClassKills.html">GetOnlineStatSubClassKills</a></strong>(<a href="ATBLPlayerState.html">ATBLPlayerState</a> * PlayerState, [[ECharacterClass]] CharacterClass)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatSubClassPlaytime.html">GetOnlineStatSubClassPlaytime</a></strong>(<a href="ATBLPlayerState.html">ATBLPlayerState</a> * PlayerState, [[ECharacterClass]] CharacterClass)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatSubClassTakedowns.html">GetOnlineStatSubClassTakedowns</a></strong>(<a href="ATBLPlayerState.html">ATBLPlayerState</a> * PlayerState, [[ECharacterClass]] CharacterClass)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatWeaponDeaths.html">GetOnlineStatWeaponDeaths</a></strong>(<a href="ATBLPlayerState.html">ATBLPlayerState</a> * PlayerState, [[EWeaponTag]] Weapon)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatWeaponKills.html">GetOnlineStatWeaponKills</a></strong>(<a href="ATBLPlayerState.html">ATBLPlayerState</a> * PlayerState, [[EWeaponTag]] Weapon)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetOnlineStatWeaponTakedowns.html">GetOnlineStatWeaponTakedowns</a></strong>(<a href="ATBLPlayerState.html">ATBLPlayerState</a> * State, [[EWeaponTag]] WeaponTag)</td>
 </tr>
 <tr>
@@ -1276,7 +1276,7 @@
 </tr>
 <tr>
 <td>TArray&lt; AController * &gt;</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetPlayersFromFactions.html">GetPlayersFromFactions</a></strong>(UObject * WorldContextObject, TArray&lt; [[EFaction]] &gt; Factions, [[bool]] AllowBots, [[bool]] AllowNPCs)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetPlayersFromFactions.html">GetPlayersFromFactions</a></strong>(UObject * WorldContextObject, TArray&lt; [[EFaction]] &gt; Factions, bool AllowBots, bool AllowNPCs)</td>
 </tr>
 <tr>
 <td>AActor *</td>
@@ -1284,22 +1284,22 @@
 </tr>
 <tr>
 <td>TArray&lt; <a href="FGameModeMessageTable.html">FGameModeMessageTable</a> &gt;</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetScoredStageGameModeMessageRows.html">GetScoredStageGameModeMessageRows</a></strong>(UDataTable * GameModeMessageDataTable, [[int32]] StageNum, [[int32]] NewScore, [[int32]] LastScore)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetScoredStageGameModeMessageRows.html">GetScoredStageGameModeMessageRows</a></strong>(UDataTable * GameModeMessageDataTable, int32 StageNum, int32 NewScore, int32 LastScore)</td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetScreenPositionForActor.html">GetScreenPositionForActor</a></strong>(APlayerController * PlayerController, AActor * Actor, const [[FVector]] &amp; RelativeLocation, [[bool]] bUseActorBoundsOrigin)</td>
+<td>FVector</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetScreenPositionForActor.html">GetScreenPositionForActor</a></strong>(APlayerController * PlayerController, AActor * Actor, const FVector &amp; RelativeLocation, bool bUseActorBoundsOrigin)</td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetScreenPositionForLocation.html">GetScreenPositionForLocation</a></strong>(APlayerController * PlayerController, const [[FVector]] &amp; Location)</td>
+<td>FVector</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetScreenPositionForLocation.html">GetScreenPositionForLocation</a></strong>(APlayerController * PlayerController, const FVector &amp; Location)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetServerTimeoutTime.html">GetServerTimeoutTime</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetShowBigNotification.html">GetShowBigNotification</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
@@ -1336,7 +1336,7 @@
 </tr>
 <tr>
 <td><a href="ATBLLevelScriptActor.html">ATBLLevelScriptActor</a> *</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetTBLLevelScriptActor.html">GetTBLLevelScriptActor</a></strong>(UObject * WorldContextObject, [[bool]] &amp; bIsValid)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetTBLLevelScriptActor.html">GetTBLLevelScriptActor</a></strong>(UObject * WorldContextObject, bool &amp; bIsValid)</td>
 </tr>
 <tr>
 <td><a href="ATBLTeam.html">ATBLTeam</a> *</td>
@@ -1351,7 +1351,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetTextFromNamespace.html">GetTextFromNamespace</a></strong>(const FString &amp; Namespace, const FString &amp; Key)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetTimeSeconds.html">GetTimeSeconds</a></strong>(AActor * Actor)</td>
 </tr>
 <tr>
@@ -1359,7 +1359,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetTinyFont.html">GetTinyFont</a></strong>()</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetTotalPlayerCount.html">GetTotalPlayerCount</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
@@ -1371,128 +1371,128 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetWorldType.html">GetWorldType</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/HasActorBegunPlay.html">HasActorBegunPlay</a></strong>(AActor * Actor)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/HasRole.html">HasRole</a></strong>(AActor * Actor, [[int32]] Role)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/HasRole.html">HasRole</a></strong>(AActor * Actor, int32 Role)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/InterpolateFloatOverTime.html">InterpolateFloatOverTime</a></strong>(UObject * WorldContextObject, [[float]] StartValue, [[float]] EndValue, [[float]] Duration, [[bool]] bEaseOut, [[bool]] bEaseIn, [[float]] EasingExp, UCurveFloat * Curve, FInterpolatorFloatUpdated UpdateDelegate, TEnumAsByte&lt; [[EInterpolateOverTimeAction::Type]] &gt; InterpolateAction, FLatentActionInfo LatentInfo, [[bool]] bCallUpdatesParams)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/InterpolateFloatOverTime.html">InterpolateFloatOverTime</a></strong>(UObject * WorldContextObject, float StartValue, float EndValue, float Duration, bool bEaseOut, bool bEaseIn, float EasingExp, UCurveFloat * Curve, FInterpolatorFloatUpdated UpdateDelegate, TEnumAsByte&lt; [[EInterpolateOverTimeAction::Type]] &gt; InterpolateAction, FLatentActionInfo LatentInfo, bool bCallUpdatesParams)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/InterpolateVectorOverTime.html">InterpolateVectorOverTime</a></strong>(UObject * WorldContextObject, [[FVector]] StartValue, [[FVector]] EndValue, [[float]] Duration, [[bool]] bEaseOut, [[bool]] bEaseIn, [[float]] EasingExp, UCurveFloat * Curve, FInterpolatorVectorUpdated UpdateDelegate, TEnumAsByte&lt; [[EInterpolateOverTimeAction::Type]] &gt; InterpolateAction, FLatentActionInfo LatentInfo, [[bool]] bCallUpdatesParams)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/InterpolateVectorOverTime.html">InterpolateVectorOverTime</a></strong>(UObject * WorldContextObject, FVector StartValue, FVector EndValue, float Duration, bool bEaseOut, bool bEaseIn, float EasingExp, UCurveFloat * Curve, FInterpolatorVectorUpdated UpdateDelegate, TEnumAsByte&lt; [[EInterpolateOverTimeAction::Type]] &gt; InterpolateAction, FLatentActionInfo LatentInfo, bool bCallUpdatesParams)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsAttackingFaction.html">IsAttackingFaction</a></strong>(const UObject * WorldContextObject, [[EFaction]] Faction)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsAutomationTesting.html">IsAutomationTesting</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsBot.html">IsBot</a></strong>(AActor * Actor)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsControllerMounted.html">IsControllerMounted</a></strong>(AController * Controller, TSubclassOf&lt; <a href="ASiegeEngine.html">ASiegeEngine</a> &gt; SiegeEngineClass)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsDamageExemptFromTeamDamage.html">IsDamageExemptFromTeamDamage</a></strong>(AActor * DamageCauser, <a href="UDamageSource.html">UDamageSource</a> * DamageSource)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsDefendingFaction.html">IsDefendingFaction</a></strong>(const UObject * WorldContextObject, [[EFaction]] Faction)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsDemoMode.html">IsDemoMode</a></strong>(const UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsFirstMainMenuLoad.html">IsFirstMainMenuLoad</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsMergedMaterial.html">IsMergedMaterial</a></strong>(ACharacter * Character)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsMergedMesh.html">IsMergedMesh</a></strong>(ACharacter * Character)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsNonSpecificTeamFaction.html">IsNonSpecificTeamFaction</a></strong>([[EFaction]] Faction)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsOfficialServer.html">IsOfficialServer</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsPartOfFaction.html">IsPartOfFaction</a></strong>([[EFaction]] Target, [[EFaction]] Other)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsRangedOrThrownAttack.html">IsRangedOrThrownAttack</a></strong>([[FName]] AttackName)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsRangedOrThrownAttack.html">IsRangedOrThrownAttack</a></strong>(FName AttackName)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsRangedWeapon.html">IsRangedWeapon</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * Weapon)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsRunningAutomatedTesting.html">IsRunningAutomatedTesting</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsSimulatingInEditor.html">IsSimulatingInEditor</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsSoundEnabled.html">IsSoundEnabled</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsSpecificTeamFaction.html">IsSpecificTeamFaction</a></strong>([[EFaction]] Faction)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsSteamInitialized.html">IsSteamInitialized</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsThrownImpactSoundDebugEnabled.html">IsThrownImpactSoundDebugEnabled</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsTutorial.html">IsTutorial</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsValidClassID.html">IsValidClassID</a></strong>(const TSoftClassPtr&lt; <a href="UTBLScreenWidget.html">UTBLScreenWidget</a> &gt; &amp; ClassID)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsValidHorseServer.html">IsValidHorseServer</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsValidUser.html">IsValidUser</a></strong>(const <a href="FBlueprintOnlineUser.html">FBlueprintOnlineUser</a> &amp; InUser)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/IsWindowsOSSInitialized.html">IsWindowsOSSInitialized</a></strong>()</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/LevelBlueprintEvent.html">LevelBlueprintEvent</a></strong>(UObject * WorldContextObject, [[FName]] EventName)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/LevelBlueprintEvent.html">LevelBlueprintEvent</a></strong>(UObject * WorldContextObject, FName EventName)</td>
 </tr>
 <tr>
 <td>TScriptInterface&lt; <a href="IStageInterface.html">IStageInterface</a> &gt;</td>
@@ -1508,11 +1508,11 @@
 </tr>
 <tr>
 <td><a href="FDamageTakenEvent.html">FDamageTakenEvent</a></td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/MakeDamageTakenEvent.html">MakeDamageTakenEvent</a></strong>([[float]] InDamage, <a href="UDamageSource.html">UDamageSource</a> * InDamageSource, AActor * InDamageCauser, AActor * InDamageTaker, AActor * InDamageInstigator, [[bool]] InbKillingBlow, [[bool]] InbSuicide, [[bool]] InbEnteredKillVolume, [[FHitResult]] InHitResult, <a href="UAbilitySpec.html">UAbilitySpec</a> * InAbilitySpec, FVector_NetQuantizeNormal InHitDirection, [[FName]] InDamageTakerCombatState, <a href="AInventoryItem.html">AInventoryItem</a> * InInventoryItem, AActor * InProjectile, [[FName]] InAttackName)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/MakeDamageTakenEvent.html">MakeDamageTakenEvent</a></strong>(float InDamage, <a href="UDamageSource.html">UDamageSource</a> * InDamageSource, AActor * InDamageCauser, AActor * InDamageTaker, AActor * InDamageInstigator, bool InbKillingBlow, bool InbSuicide, bool InbEnteredKillVolume, [[FHitResult]] InHitResult, <a href="UAbilitySpec.html">UAbilitySpec</a> * InAbilitySpec, FVector_NetQuantizeNormal InHitDirection, FName InDamageTakerCombatState, <a href="AInventoryItem.html">AInventoryItem</a> * InInventoryItem, AActor * InProjectile, FName InAttackName)</td>
 </tr>
 <tr>
 <td><a href="FGoreEvent.html">FGoreEvent</a></td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/MakeGoreEvent.html">MakeGoreEvent</a></strong>([[FName]] InBoneName, [[EHeadGoreAction]] InHeadGoreAction, [[ELimbGoreAction]] InLimbGoreAction, [[FVector]] InImpulse, [[bool]] bInSpawnedItem, [[bool]] bKillingBlow)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/MakeGoreEvent.html">MakeGoreEvent</a></strong>(FName InBoneName, [[EHeadGoreAction]] InHeadGoreAction, [[ELimbGoreAction]] InLimbGoreAction, FVector InImpulse, bool bInSpawnedItem, bool bKillingBlow)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1523,20 +1523,20 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/PlayDemo.html">PlayDemo</a></strong>(const FString &amp; DemoName, UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/PlaySoundAtLocation.html">PlaySoundAtLocation</a></strong>(UAkAudioEvent * SoundEvent, const [[FVector]] &amp; Location, const [[FRotator]] &amp; Rotation, UObject * WorldContextObject, [[bool]] bPrintEvents)</td>
+<td>int32</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/PlaySoundAtLocation.html">PlaySoundAtLocation</a></strong>(UAkAudioEvent * SoundEvent, const FVector &amp; Location, const FRotator &amp; Rotation, UObject * WorldContextObject, bool bPrintEvents)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/PlaySoundAtLocationWithParams.html">PlaySoundAtLocationWithParams</a></strong>(UAkAudioEvent * SoundEvent, const [[FVector]] &amp; Location, const [[FRotator]] &amp; Rotation, const TArray&lt; <a href="FSoundStateEntry.html">FSoundStateEntry</a> &gt; &amp; States, const TArray&lt; <a href="FSoundRTPCEntry.html">FSoundRTPCEntry</a> &gt; &amp; RtpcValues, UObject * WorldContextObject, [[bool]] bPrintEvents)</td>
-</tr>
-<tr>
-<td>UAkComponent *</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/PlaySoundOnActor.html">PlaySoundOnActor</a></strong>(UAkAudioEvent * SoundEvent, AActor * Actor, [[FName]] AttachSocket, [[bool]] bPrintEvents)</td>
+<td>int32</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/PlaySoundAtLocationWithParams.html">PlaySoundAtLocationWithParams</a></strong>(UAkAudioEvent * SoundEvent, const FVector &amp; Location, const FRotator &amp; Rotation, const TArray&lt; <a href="FSoundStateEntry.html">FSoundStateEntry</a> &gt; &amp; States, const TArray&lt; <a href="FSoundRTPCEntry.html">FSoundRTPCEntry</a> &gt; &amp; RtpcValues, UObject * WorldContextObject, bool bPrintEvents)</td>
 </tr>
 <tr>
 <td>UAkComponent *</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/PlaySoundOnActorWithParams.html">PlaySoundOnActorWithParams</a></strong>(UAkAudioEvent * SoundEvent, AActor * Actor, [[FName]] AttachSocket, const TArray&lt; <a href="FSoundSwitchEntry.html">FSoundSwitchEntry</a> &gt; &amp; Switches, const TArray&lt; <a href="FSoundRTPCEntry.html">FSoundRTPCEntry</a> &gt; &amp; RtpcValues, [[bool]] bPrintEvents)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/PlaySoundOnActor.html">PlaySoundOnActor</a></strong>(UAkAudioEvent * SoundEvent, AActor * Actor, FName AttachSocket, bool bPrintEvents)</td>
+</tr>
+<tr>
+<td>UAkComponent *</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/PlaySoundOnActorWithParams.html">PlaySoundOnActorWithParams</a></strong>(UAkAudioEvent * SoundEvent, AActor * Actor, FName AttachSocket, const TArray&lt; <a href="FSoundSwitchEntry.html">FSoundSwitchEntry</a> &gt; &amp; Switches, const TArray&lt; <a href="FSoundRTPCEntry.html">FSoundRTPCEntry</a> &gt; &amp; RtpcValues, bool bPrintEvents)</td>
 </tr>
 <tr>
 <td>FString</td>
@@ -1552,15 +1552,15 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/RemoveTagFromActor.html">RemoveTagFromActor</a></strong>(AActor * Actor, [[FName]] Tag, UObject * WorldContextObject)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/RemoveTagFromActor.html">RemoveTagFromActor</a></strong>(AActor * Actor, FName Tag, UObject * WorldContextObject)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/RemoveTagFromAllActors.html">RemoveTagFromAllActors</a></strong>([[FName]] Tag, UObject * WorldContextObject)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/RemoveTagFromAllActors.html">RemoveTagFromAllActors</a></strong>(FName Tag, UObject * WorldContextObject)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/RenameComponentToStableName.html">RenameComponentToStableName</a></strong>(UActorComponent * Component, const FString &amp; NamePrefix, [[int32]] ComponentId)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/RenameComponentToStableName.html">RenameComponentToStableName</a></strong>(UActorComponent * Component, const FString &amp; NamePrefix, int32 ComponentId)</td>
 </tr>
 <tr>
 <td><a href="FReplicatedDateTime.html">FReplicatedDateTime</a></td>
@@ -1568,7 +1568,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SetActorComponentCanAffectNavigation.html">SetActorComponentCanAffectNavigation</a></strong>(UActorComponent * Component, [[bool]] bCanAffectNavigation)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SetActorComponentCanAffectNavigation.html">SetActorComponentCanAffectNavigation</a></strong>(UActorComponent * Component, bool bCanAffectNavigation)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1576,15 +1576,15 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SetComponentsEnabled.html">SetComponentsEnabled</a></strong>(AActor * Actor, [[int32]] ComponentFlags, [[bool]] bEnabled)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SetComponentsEnabled.html">SetComponentsEnabled</a></strong>(AActor * Actor, int32 ComponentFlags, bool bEnabled)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SetNDASigned.html">SetNDASigned</a></strong>([[bool]] NDASigned, UObject * WorldContextObject)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SetNDASigned.html">SetNDASigned</a></strong>(bool NDASigned, UObject * WorldContextObject)</td>
 </tr>
 <tr>
 <td>FTimerHandle</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SetNonResettingTimer.html">SetNonResettingTimer</a></strong>(UObject * WorldContextObject, [[float]] Time, [[bool]] Looping, FBlueprintNonResettingTimeExpired Event)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SetNonResettingTimer.html">SetNonResettingTimer</a></strong>(UObject * WorldContextObject, float Time, bool Looping, FBlueprintNonResettingTimeExpired Event)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1599,24 +1599,24 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SetupCubeBrushInConstructionScript.html">SetupCubeBrushInConstructionScript</a></strong>(AVolume * Volume)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/ShouldBuildShowWIP.html">ShouldBuildShowWIP</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/ShouldUseLegacyFXSoundFunction.html">ShouldUseLegacyFXSoundFunction</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/ShouldUseOpenLoadout.html">ShouldUseOpenLoadout</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/ShouldUsePIEJoinGameFlow.html">ShouldUsePIEJoinGameFlow</a></strong>(UObject * WorldContextObject)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SortActorArray.html">SortActorArray</a></strong>(TArray&lt; AActor * &gt; InActors, FActorSortDelegate SortDelegate, UObject * BoolContainer, [[FName]] BoolPropertyName, TArray&lt; AActor * &gt; &amp; OutActors)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SortActorArray.html">SortActorArray</a></strong>(TArray&lt; AActor * &gt; InActors, FActorSortDelegate SortDelegate, UObject * BoolContainer, FName BoolPropertyName, TArray&lt; AActor * &gt; &amp; OutActors)</td>
 </tr>
 <tr>
 <td>TArray&lt; <a href="FGameModeMessage.html">FGameModeMessage</a> &gt;</td>
@@ -1648,19 +1648,19 @@
 </tr>
 <tr>
 <td><a href="AInventoryItem.html">AInventoryItem</a> *</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SpawnAndDropInventoryItem.html">SpawnAndDropInventoryItem</a></strong>(UObject * WorldContextObject, TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; InventoryItemClass, [[FTransform]] SpawnTransform, <a href="FDropItemParams.html">FDropItemParams</a> DropParams, [[FVector]] Impulse)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/SpawnAndDropInventoryItem.html">SpawnAndDropInventoryItem</a></strong>(UObject * WorldContextObject, TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; InventoryItemClass, FTransform SpawnTransform, <a href="FDropItemParams.html">FDropItemParams</a> DropParams, FVector Impulse)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/StopSoundById.html">StopSoundById</a></strong>([[int32]] PlayingID)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/StopSoundById.html">StopSoundById</a></strong>(int32 PlayingID)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/TBLApplyDamage.html">TBLApplyDamage</a></strong>(AActor * DamagedActor, [[float]] Amount, <a href="UDamageSource.html">UDamageSource</a> * DamageSource, AActor * DamageCauser, <a href="AInventoryItem.html">AInventoryItem</a> * InventoryItem, [[bool]] bOverrideImpactPoint, [[FVector]] ImpactPointOverride, AActor * DamageInstigator, [[bool]] CheckForValidDamageSource)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/TBLApplyDamage.html">TBLApplyDamage</a></strong>(AActor * DamagedActor, float Amount, <a href="UDamageSource.html">UDamageSource</a> * DamageSource, AActor * DamageCauser, <a href="AInventoryItem.html">AInventoryItem</a> * InventoryItem, bool bOverrideImpactPoint, FVector ImpactPointOverride, AActor * DamageInstigator, bool CheckForValidDamageSource)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/TBLSetEquippedItemsOnFire.html">TBLSetEquippedItemsOnFire</a></strong>(AActor * Actor, [[float]] Amount, <a href="UDamageSource.html">UDamageSource</a> * DamageSource)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/TBLSetEquippedItemsOnFire.html">TBLSetEquippedItemsOnFire</a></strong>(AActor * Actor, float Amount, <a href="UDamageSource.html">UDamageSource</a> * DamageSource)</td>
 </tr>
 <tr>
 <td></td>
@@ -1668,11 +1668,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/UpdateActorsTags.html">UpdateActorsTags</a></strong>(AActor * Actor, TArray&lt; [[FName]] &gt; Tags, UObject * WorldContextObject)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/UpdateActorsTags.html">UpdateActorsTags</a></strong>(AActor * Actor, TArray&lt; FName &gt; Tags, UObject * WorldContextObject)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/WasRecentlyRenderedOnScreen.html">WasRecentlyRenderedOnScreen</a></strong>(AActor * InActor, [[float]] InTolerance)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/WasRecentlyRenderedOnScreen.html">WasRecentlyRenderedOnScreen</a></strong>(AActor * InActor, float InTolerance)</td>
 </tr>
 </tbody>
 </table>

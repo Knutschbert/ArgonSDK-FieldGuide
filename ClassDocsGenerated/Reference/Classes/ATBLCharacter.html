@@ -735,7 +735,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastCharacterEmote.html">BroadcastCharacterEmote</a></strong>([[uint8]] EmoteRowNum, [[EAudioPersonalityType::Type]] PersonalityType, [[uint8]] EmotePlayingSeqNum, [[uint8]] EmoteRandomSeed, [[uint8]] bIsOverrideEmote, [[uint8]] EmoteType)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastCharacterEmote.html">BroadcastCharacterEmote</a></strong>(uint8 EmoteRowNum, [[EAudioPersonalityType::Type]] PersonalityType, uint8 EmotePlayingSeqNum, uint8 EmoteRandomSeed, uint8 bIsOverrideEmote, uint8 EmoteType)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -774,32 +774,32 @@
 <td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastParryEvent.html">BroadcastParryEvent</a></strong>(AActor * Target, <a href="FParryEventReplicated.html">FParryEventReplicated</a> ParryEventReplicated)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/CanClash.html">CanClash</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/CanFullSprint.html">CanFullSprint</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacterMovement/nodes/CanSprintAttack.html">CanSprintAttack</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/CanSprintCharge.html">CanSprintCharge</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacterMovement/nodes/CanSprintShove.html">CanSprintShove</a></strong>() const</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/CarryableAnimationEvent.html">CarryableAnimationEvent</a></strong>([[FName]] EventName)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/CarryableAnimationEvent.html">CarryableAnimationEvent</a></strong>(FName EventName)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/CarryableCharacterEvent.html">CarryableCharacterEvent</a></strong>([[FName]] EventName, <a href="ATBLCharacter.html">ATBLCharacter</a> * ParentCharacter)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/CarryableCharacterEvent.html">CarryableCharacterEvent</a></strong>(FName EventName, <a href="ATBLCharacter.html">ATBLCharacter</a> * ParentCharacter)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -811,23 +811,23 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugArrow.html">ClientDrawDebugArrow</a></strong>([[FVector]] LineStart, [[FVector]] LineEnd, FColor Clr, [[bool]] bPersistentLines, [[float]] Lifetime, [[float]] Thickness)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugArrow.html">ClientDrawDebugArrow</a></strong>(FVector LineStart, FVector LineEnd, FColor Clr, bool bPersistentLines, float Lifetime, float Thickness)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugBox.html">ClientDrawDebugBox</a></strong>([[FVector]] Center, [[FVector]] Box, [[FTransform]] Transform, FColor Color, [[bool]] bPersistentLines, [[float]] Lifetime)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugBox.html">ClientDrawDebugBox</a></strong>(FVector Center, FVector Box, FTransform Transform, FColor Color, bool bPersistentLines, float Lifetime)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugCapsule.html">ClientDrawDebugCapsule</a></strong>([[FVector]] Center, [[float]] HalfHeight, [[float]] Radius, FColor Color)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugCapsule.html">ClientDrawDebugCapsule</a></strong>(FVector Center, float HalfHeight, float Radius, FColor Color)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugLine.html">ClientDrawDebugLine</a></strong>([[FVector]] LineStart, [[FVector]] LineEnd, FColor Clr, [[bool]] bPersistentLines, [[float]] Lifetime, [[float]] Thickness)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugLine.html">ClientDrawDebugLine</a></strong>(FVector LineStart, FVector LineEnd, FColor Clr, bool bPersistentLines, float Lifetime, float Thickness)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugPoint.html">ClientDrawDebugPoint</a></strong>([[FVector]] Location, [[float]] Size, FColor Clr, [[bool]] bPersistentLines, [[float]] Lifetime)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugPoint.html">ClientDrawDebugPoint</a></strong>(FVector Location, float Size, FColor Clr, bool bPersistentLines, float Lifetime)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -835,11 +835,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugSphere.html">ClientDrawDebugSphere</a></strong>([[FVector]] Center, [[float]] Radius, [[int32]] Segments, FColor Clr, [[bool]] bPersistentLines)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugSphere.html">ClientDrawDebugSphere</a></strong>(FVector Center, float Radius, int32 Segments, FColor Clr, bool bPersistentLines)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugString.html">ClientDrawDebugString</a></strong>([[FVector]] Location, const FString &amp; Text, FColor Clr, [[float]] Duration, [[float]] FontScale)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientDrawDebugString.html">ClientDrawDebugString</a></strong>(FVector Location, const FString &amp; Text, FColor Clr, float Duration, float FontScale)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -855,7 +855,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientTeleportTo.html">ClientTeleportTo</a></strong>([[FVector]] vecTargetPos, [[FRotator]] vecTargetRot)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ClientTeleportTo.html">ClientTeleportTo</a></strong>(FVector vecTargetPos, FRotator vecTargetRot)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -863,19 +863,19 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ConsumeInputAction.html">ConsumeInputAction</a></strong>([[FName]] ActionName, TEnumAsByte&lt; EInputEvent &gt; InputType)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ConsumeInputAction.html">ConsumeInputAction</a></strong>(FName ActionName, TEnumAsByte&lt; EInputEvent &gt; InputType)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/DamageWithHitParams.html">DamageWithHitParams</a></strong>([[float]] Damage, [[FHitResult]] HitResult, [[FVector]] HitDirection, [[bool]] bLoseLimbCheat)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/DamageWithHitParams.html">DamageWithHitParams</a></strong>(float Damage, [[FHitResult]] HitResult, FVector HitDirection, bool bLoseLimbCheat)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/DebugDrawCamera.html">DebugDrawCamera</a></strong>([[float]] DeltaTime)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/DebugDrawCamera.html">DebugDrawCamera</a></strong>(float DeltaTime)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/DebugDrawParryBox.html">DebugDrawParryBox</a></strong>([[float]] DeltaTime)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/DebugDrawParryBox.html">DebugDrawParryBox</a></strong>(float DeltaTime)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -883,14 +883,14 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyAxis.html">DoKeyAxis</a></strong>([[FName]] ActionName, [[float]] AxisValue)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyAxis.html">DoKeyAxis</a></strong>(FName ActionName, float AxisValue)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyEvent.html">DoKeyEvent</a></strong>([[FName]] ActionName, TEnumAsByte&lt; EInputEvent &gt; KeyEvent)</td>
+<td><strong><a href="../Nodes/TBLSystemLibrary/nodes/DoKeyEvent.html">DoKeyEvent</a></strong>(FName ActionName, TEnumAsByte&lt; EInputEvent &gt; KeyEvent)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/DoesCountTowardKillsAndKnockdowns.html">DoesCountTowardKillsAndKnockdowns</a></strong>() const</td>
 </tr>
 <tr>
@@ -910,11 +910,11 @@
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetActorWhoAppliedCondition.html">GetActorWhoAppliedCondition</a></strong>([[EConditionType]] ConditionApplied)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetAnimationPercent.html">GetAnimationPercent</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetAutoVODistanceSqrdByType.html">GetAutoVODistanceSqrdByType</a></strong>(TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt; Type)</td>
 </tr>
 <tr>
@@ -926,11 +926,11 @@
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetBlockingInventoryItem.html">GetBlockingInventoryItem</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter) const</td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetCameraSocketLocation.html">GetCameraSocketLocation</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetCenterPlayArea.html">GetCenterPlayArea</a></strong>() const</td>
 </tr>
 <tr>
@@ -962,7 +962,7 @@
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetCurrentMesh.html">GetCurrentMesh</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetDeathTime.html">GetDeathTime</a></strong>()</td>
 </tr>
 <tr>
@@ -978,7 +978,7 @@
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetEquippedWeapon.html">GetEquippedWeapon</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetFacingDirection.html">GetFacingDirection</a></strong>() const</td>
 </tr>
 <tr>
@@ -998,7 +998,7 @@
 <td><strong>[[GetLifetimeReplicatedProps]]</strong>(TArray&lt; FLifetimeProperty &gt; &amp; OutLifetimeProps) const override</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/GetNeedsHealingThreshold.html">GetNeedsHealingThreshold</a></strong>()</td>
 </tr>
 <tr>
@@ -1015,7 +1015,7 @@
 </tr>
 <tr>
 <td>USkeletalMeshComponent *</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/GetPawnMesh.html">GetPawnMesh</a></strong>([[bool]] WantFirstPerson) const</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/GetPawnMesh.html">GetPawnMesh</a></strong>(bool WantFirstPerson) const</td>
 </tr>
 <tr>
 <td>TEnumAsByte&lt; [[EAudioPersonalityType::Type]] &gt;</td>
@@ -1034,12 +1034,12 @@
 <td><strong><a href="../Nodes/TBLCharacter/nodes/HandleOnCustomizationJobsEmptied.html">HandleOnCustomizationJobsEmptied</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/HasCondition.html">HasCondition</a></strong>([[EConditionType]] Condition) const</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/HideCharacterAndEquipment.html">HideCharacterAndEquipment</a></strong>([[bool]] bHide)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/HideCharacterAndEquipment.html">HideCharacterAndEquipment</a></strong>(bool bHide)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1051,91 +1051,91 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/HitWorldWithStats.html">HitWorldWithStats</a></strong>([[FHitResult]] Hit, [[bool]] bParried)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/HitWorldWithStats.html">HitWorldWithStats</a></strong>([[FHitResult]] Hit, bool bParried)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/InitiateAbilityByName.html">InitiateAbilityByName</a></strong>([[FName]] AbilityName)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/InitiateAbilityByName.html">InitiateAbilityByName</a></strong>(FName AbilityName)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/InterruptUse.html">InterruptUse</a></strong>([[FName]] NextCombatState)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/InterruptUse.html">InterruptUse</a></strong>(FName NextCombatState)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsArrowCameraEnabled.html">IsArrowCameraEnabled</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsBlocking.html">IsBlocking</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsCharacterClassArchetype.html">IsCharacterClassArchetype</a></strong>([[ECharacterClass]] Type)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsCharacterPaused.html">IsCharacterPaused</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsCinematicRestrictedControl.html">IsCinematicRestrictedControl</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsFacingTarget.html">IsFacingTarget</a></strong>(const [[FHitResult]] &amp; Hit, const <a href="FFacingTargetParams.html">FFacingTargetParams</a> &amp; Params)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsFollowAnimationEnabled.html">IsFollowAnimationEnabled</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/IsHoldingAltAttack.html">IsHoldingAltAttack</a></strong>([[float]] Tolerance)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsHoldingAltAttack.html">IsHoldingAltAttack</a></strong>(float Tolerance)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/IsInParryView.html">IsInParryView</a></strong>(<a href="UParryComponent.html">UParryComponent</a> * ParryComp, const [[FTransform]] &amp; BoxTransform, const [[FVector]] &amp; BoxExtents, [[float]] IgnoreParryDepth) const</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/IsInParryView.html">IsInParryView</a></strong>(<a href="UParryComponent.html">UParryComponent</a> * ParryComp, const FTransform &amp; BoxTransform, const FVector &amp; BoxExtents, float IgnoreParryDepth) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsInRagdoll.html">IsInRagdoll</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacterMovementBaseComponent/nodes/IsInitialAutorun.html">IsInitialAutorun</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsInterpingToMountLocation.html">IsInterpingToMountLocation</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsLocalPlayer.html">IsLocalPlayer</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsPawnSubclass.html">IsPawnSubclass</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLPlayerCameraManager/nodes/IsSpawnFadeOutEnabled.html">IsSpawnFadeOutEnabled</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/IsSpecialPawnClass.html">IsSpecialPawnClass</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacterMovement/nodes/IsSprinting.html">IsSprinting</a></strong>()</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/Kill.html">Kill</a></strong>([[EKillReason]] KillReason, [[bool]] bSwitchedTeamsInLoadoutVolume, AActor * Killer)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/Kill.html">Kill</a></strong>([[EKillReason]] KillReason, bool bSwitchedTeamsInLoadoutVolume, AActor * Killer)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/KillWithHitParams.html">KillWithHitParams</a></strong>([[EKillReason]] KillReason, [[bool]] bSwitchedTeamsInLoadoutVolume, [[FHitResult]] HitResult, [[FVector]] HitDirection, AActor * Killer)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/KillWithHitParams.html">KillWithHitParams</a></strong>([[EKillReason]] KillReason, bool bSwitchedTeamsInLoadoutVolume, [[FHitResult]] HitResult, FVector HitDirection, AActor * Killer)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1151,11 +1151,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacterAnimInstance/nodes/OnCombatStateBegin.html">OnCombatStateBegin</a></strong>(AActor * Actor, [[FName]] State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatState)</td>
+<td><strong><a href="../Nodes/TBLCharacterAnimInstance/nodes/OnCombatStateBegin.html">OnCombatStateBegin</a></strong>(AActor * Actor, FName State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatState)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/OnCombatStateEnd.html">OnCombatStateEnd</a></strong>(AActor * Actor, [[FName]] State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatState)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnCombatStateEnd.html">OnCombatStateEnd</a></strong>(AActor * Actor, FName State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatState)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1199,7 +1199,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCheatManager/nodes/PauseCharacter.html">PauseCharacter</a></strong>([[bool]] bPaused)</td>
+<td><strong><a href="../Nodes/TBLCheatManager/nodes/PauseCharacter.html">PauseCharacter</a></strong>(bool bPaused)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1207,23 +1207,23 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayAutoVOFromServer.html">PlayAutoVOFromServer</a></strong>(TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt; AutoVoType, [[bool]] SkipLocalPlayer)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayAutoVOFromServer.html">PlayAutoVOFromServer</a></strong>(TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt; AutoVoType, bool SkipLocalPlayer)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayCharacterActionEvent.html">PlayCharacterActionEvent</a></strong>(const <a href="FSoundSwitchEntry.html">FSoundSwitchEntry</a> SoundSwitch, [[bool]] IsLocalPlayerInvolved) const</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayCharacterActionEvent.html">PlayCharacterActionEvent</a></strong>(const <a href="FSoundSwitchEntry.html">FSoundSwitchEntry</a> SoundSwitch, bool IsLocalPlayerInvolved) const</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/PlayChickenEmote.html">PlayChickenEmote</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/PlayEmote.html">PlayEmote</a></strong>(<a href="FPersonalityEmoteTableRow.html">FPersonalityEmoteTableRow</a> Emote, [[ERadialVOMenuPage]] Page)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayEmoteFromServer.html">PlayEmoteFromServer</a></strong>([[FName]] EmoteName)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/PlayEmoteFromServer.html">PlayEmoteFromServer</a></strong>(FName EmoteName)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1239,7 +1239,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/RemoveEmoteFromQueue.html">RemoveEmoteFromQueue</a></strong>([[int32]] EmoteId)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/RemoveEmoteFromQueue.html">RemoveEmoteFromQueue</a></strong>(int32 EmoteId)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1255,7 +1255,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerHitWorld.html">ServerHitWorld</a></strong>(const <a href="FHitWorldParams.html">FHitWorldParams</a> &amp; Params, [[float]] ClientTimeStamp)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerHitWorld.html">ServerHitWorld</a></strong>(const <a href="FHitWorldParams.html">FHitWorldParams</a> &amp; Params, float ClientTimeStamp)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1263,11 +1263,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerPlayEmote.html">ServerPlayEmote</a></strong>([[uint8]] EmoteRowNum, [[EAudioPersonalityType::Type]] PersonalityType, [[uint8]] EmotePlayingSeqNum, [[uint8]] bIsOverrideEmote, [[uint8]] EmoteType)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerPlayEmote.html">ServerPlayEmote</a></strong>(uint8 EmoteRowNum, [[EAudioPersonalityType::Type]] PersonalityType, uint8 EmotePlayingSeqNum, uint8 bIsOverrideEmote, uint8 EmoteType)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/SetCinematicRestrictedControl.html">SetCinematicRestrictedControl</a></strong>([[bool]] bRestricted)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetCinematicRestrictedControl.html">SetCinematicRestrictedControl</a></strong>(bool bRestricted)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1279,7 +1279,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/SetIgnoreAI.html">SetIgnoreAI</a></strong>([[bool]] bNewIgnoreAI)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetIgnoreAI.html">SetIgnoreAI</a></strong>(bool bNewIgnoreAI)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1287,7 +1287,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/SetPlayerDrunk.html">SetPlayerDrunk</a></strong>([[bool]] IsDrunk)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/SetPlayerDrunk.html">SetPlayerDrunk</a></strong>(bool IsDrunk)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1306,19 +1306,19 @@
 <td><strong><a href="../Nodes/TBLCharacter/nodes/SetupAI.html">SetupAI</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldAttackBeCountered.html">ShouldAttackBeCountered</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="AInventoryItem.html">AInventoryItem</a> * AttackingItem, <a href="AInventoryItem.html">AInventoryItem</a> * DefenderItem) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldBlockCharacter.html">ShouldBlockCharacter</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * AttackingCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * HitCharacter, <a href="FActionContext.html">FActionContext</a> &amp; Context) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldClash.html">ShouldClash</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * InitiatorCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * TargetCharacter, [[FVector]] ClashLocation) const</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldClash.html">ShouldClash</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * InitiatorCharacter, <a href="ATBLCharacter.html">ATBLCharacter</a> * TargetCharacter, FVector ClashLocation) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/ShouldIgnoreAI.html">ShouldIgnoreAI</a></strong>() const</td>
 </tr>
 <tr>
@@ -1363,7 +1363,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateRagdoll.html">UpdateRagdoll</a></strong>([[float]] DeltaSeconds)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateRagdoll.html">UpdateRagdoll</a></strong>(float DeltaSeconds)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1371,7 +1371,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateThirdPersonCamera.html">UpdateThirdPersonCamera</a></strong>([[float]] DeltaSeconds, [[bool]] bSpectator)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateThirdPersonCamera.html">UpdateThirdPersonCamera</a></strong>(float DeltaSeconds, bool bSpectator)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1406,14 +1406,14 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastPauseCharacter.html">BroadcastPauseCharacter</a></strong>([[bool]] bPaused)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastPauseCharacter.html">BroadcastPauseCharacter</a></strong>(bool bPaused)</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/BroadcastWasHitEarly.html">BroadcastWasHitEarly</a></strong>(const <a href="FEarlyHitResult.html">FEarlyHitResult</a> &amp; EarlyHit)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/TBLCharacter/nodes/CanRevive.html">CanRevive</a></strong>(APawn * Pawn)</td>
 </tr>
 <tr>
@@ -1438,11 +1438,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/OnComponentHit.html">OnComponentHit</a></strong>(UPrimitiveComponent * HitComponent, AActor * OtherActor, UPrimitiveComponent * OtherComp, [[FVector]] NormalImpulse, const [[FHitResult]] &amp; Hit)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnComponentHit.html">OnComponentHit</a></strong>(UPrimitiveComponent * HitComponent, AActor * OtherActor, UPrimitiveComponent * OtherComp, FVector NormalImpulse, const [[FHitResult]] &amp; Hit)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/OnComponentOverlap.html">OnComponentOverlap</a></strong>(UPrimitiveComponent * OverlappedComponent, AActor * Other, UPrimitiveComponent * OtherComp, [[int32]] OtherBodyIndex, [[bool]] bFromSweep, const [[FHitResult]] &amp; OverlapInfo)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnComponentOverlap.html">OnComponentOverlap</a></strong>(UPrimitiveComponent * OverlappedComponent, AActor * Other, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const [[FHitResult]] &amp; OverlapInfo)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1478,7 +1478,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_RandomSeed.html">OnRep_RandomSeed</a></strong>([[int32]] PreviousRandomInt)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnRep_RandomSeed.html">OnRep_RandomSeed</a></strong>(int32 PreviousRandomInt)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1486,11 +1486,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSpectatorPawn/nodes/ProcessTurnAndLookInput.html">ProcessTurnAndLookInput</a></strong>(const TEnumAsByte&lt; [[EAxis::Type]] &gt; Axis, const [[float]] Value)</td>
+<td><strong><a href="../Nodes/TBLSpectatorPawn/nodes/ProcessTurnAndLookInput.html">ProcessTurnAndLookInput</a></strong>(const TEnumAsByte&lt; [[EAxis::Type]] &gt; Axis, const float Value)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLSpectatorPawn/nodes/ProcessTurnAndLookInputRate.html">ProcessTurnAndLookInputRate</a></strong>(const TEnumAsByte&lt; [[EAxis::Type]] &gt; Axis, const [[float]] Rate)</td>
+<td><strong><a href="../Nodes/TBLSpectatorPawn/nodes/ProcessTurnAndLookInputRate.html">ProcessTurnAndLookInputRate</a></strong>(const TEnumAsByte&lt; [[EAxis::Type]] &gt; Axis, const float Rate)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1506,7 +1506,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerUse.html">ServerUse</a></strong>(<a href="UInteractableComponent.html">UInteractableComponent</a> * Interactable, [[bool]] bIsAutoPickup)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerUse.html">ServerUse</a></strong>(<a href="UInteractableComponent.html">UInteractableComponent</a> * Interactable, bool bIsAutoPickup)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1522,23 +1522,23 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerUseTornOffItem.html">ServerUseTornOffItem</a></strong>(TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; ItemClass, [[FName]] TornOffName)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/ServerUseTornOffItem.html">ServerUseTornOffItem</a></strong>(TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt; ItemClass, FName TornOffName)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateAttachedSmoothing.html">UpdateAttachedSmoothing</a></strong>([[float]] DeltaSeconds)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateAttachedSmoothing.html">UpdateAttachedSmoothing</a></strong>(float DeltaSeconds)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateBlending.html">UpdateBlending</a></strong>([[float]] DeltaSeconds)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateBlending.html">UpdateBlending</a></strong>(float DeltaSeconds)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateParryAim.html">UpdateParryAim</a></strong>([[float]] DeltaSeconds)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdateParryAim.html">UpdateParryAim</a></strong>(float DeltaSeconds)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdatePlayingVO.html">UpdatePlayingVO</a></strong>([[float]] DeltaSeconds)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/UpdatePlayingVO.html">UpdatePlayingVO</a></strong>(float DeltaSeconds)</td>
 </tr>
 </tbody>
 </table>
@@ -1572,7 +1572,7 @@
 <td><strong>AttachedRagdoll</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>AttackFromBehindAngle</strong></td>
 </tr>
 <tr>
@@ -1584,15 +1584,15 @@
 <td><strong>AutoVONegativeDamageSources</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt;, [[float]] &gt;</td>
+<td>TMap&lt; TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt;, float &gt;</td>
 <td><strong>AutoVOProbabilty</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>BaseLookUpRate</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>BaseTurnRate</strong></td>
 </tr>
 <tr>
@@ -1604,7 +1604,7 @@
 <td><strong>Camera1PBlendParams</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>Camera1PSocket</strong></td>
 </tr>
 <tr>
@@ -1612,11 +1612,11 @@
 <td><strong>Camera3P</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>Camera3PSocket</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>CameraOffset1P</strong></td>
 </tr>
 <tr>
@@ -1628,7 +1628,7 @@
 <td><strong>ClassProgressionSpec</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>ClientTracerHitBones</strong></td>
 </tr>
 <tr>
@@ -1636,7 +1636,7 @@
 <td><strong>ClientTracerHitComponents</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>ClientTracerHitCount</strong></td>
 </tr>
 <tr>
@@ -1672,19 +1672,19 @@
 <td><strong>CustomizationContext</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>DeadCharacterId</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>DeathAnimationMontageName</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>DeathAnimationSectionName1p</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>DeathAnimationSectionName3p</strong></td>
 </tr>
 <tr>
@@ -1716,7 +1716,7 @@
 <td><strong>EquippedCarryableOnSpawn</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>FirstPossessedTimeSeconds</strong></td>
 </tr>
 <tr>
@@ -1724,15 +1724,15 @@
 <td><strong>FollowMeshComponent</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>GamepadUsePressedCount</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadUsePressedStartTime</strong></td>
 </tr>
 <tr>
-<td>[[FRotator]]</td>
+<td>FRotator</td>
 <td><strong>GoreHeadRotationOffset</strong></td>
 </tr>
 <tr>
@@ -1808,11 +1808,11 @@
 <td><strong>Mesh1P</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>Mesh1PLocation</strong></td>
 </tr>
 <tr>
-<td>[[FRotator]]</td>
+<td>FRotator</td>
 <td><strong>Mesh1PRotation</strong></td>
 </tr>
 <tr>
@@ -1820,7 +1820,7 @@
 <td><strong>MountControlBlendParams</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MountOrDismountCameraInterpSpeed</strong></td>
 </tr>
 <tr>
@@ -1836,7 +1836,7 @@
 <td><strong>MovementModifiers</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ObjectHighlightMaxDistance</strong></td>
 </tr>
 <tr>
@@ -2032,7 +2032,7 @@
 <td><strong>OnWasParried</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>OnlineXpStatName</strong></td>
 </tr>
 <tr>
@@ -2064,11 +2064,11 @@
 <td><strong>PushingComponent</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>RandomSeed</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>ReplicatedServerFrame</strong></td>
 </tr>
 <tr>
@@ -2088,7 +2088,7 @@
 <td><strong>SpawnedAtSpawner</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>SpawnerPosition</strong></td>
 </tr>
 <tr>
@@ -2124,55 +2124,55 @@
 <td><strong>WeaponAppliedBleed</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bCustomizationMenuComponentsSpawned</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bDebugIgnoreAI</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bHasAltAttack</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bHasAttackedSuccessfully</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bHelmetKnockedOff</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsCinematicsRelevant</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsForCustomizationMenu</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bLastAbleToHealCheck</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bPlayerNeedsHealing</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bPreventForwardSpawn</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bShouldCrouchOverrideRecoveryAnimation</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bShouldPlayDeathAnimation</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bSpawnedGoreHead</strong></td>
 </tr>
 </tbody>
@@ -2207,11 +2207,11 @@
 <td><strong>AutoPossessAIFaction</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt;, [[float]] &gt;</td>
+<td>TMap&lt; TEnumAsByte&lt; [[EAudioAutoVOType::Type]] &gt;, float &gt;</td>
 <td><strong>AutoVODistanceByType</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>BattleCryVOCooldown</strong></td>
 </tr>
 <tr>
@@ -2227,7 +2227,7 @@
 <td><strong>CachedParryComponents</strong></td>
 </tr>
 <tr>
-<td>[[FTransform]]</td>
+<td>FTransform</td>
 <td><strong>Camera3PRotation</strong></td>
 </tr>
 <tr>
@@ -2247,7 +2247,7 @@
 <td><strong>ClosestStatsComponent</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; [[uint8]], TWeakObjectPtr&lt; AActor &gt; &gt;</td>
+<td>TMap&lt; uint8, TWeakObjectPtr&lt; AActor &gt; &gt;</td>
 <td><strong>ConditionsAppliedByActor</strong></td>
 </tr>
 <tr>
@@ -2259,11 +2259,11 @@
 <td><strong>CurrentAutoVo</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DeathAnimationLength</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DeathAnimationToRagdollImpulse</strong></td>
 </tr>
 <tr>
@@ -2271,15 +2271,15 @@
 <td><strong>DeathFriendlyAudoVO</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DeathTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>FellOutOfWorldKillTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadDismountPressedStartTime</strong></td>
 </tr>
 <tr>
@@ -2307,15 +2307,15 @@
 <td><strong>LipSyncVOCurve</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>NeedsHealingThreshold</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>NumberOfAllowedVOsWithinExpiry</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[float]] &gt;</td>
+<td>TArray&lt; float &gt;</td>
 <td><strong>PausedActorLifespans</strong></td>
 </tr>
 <tr>
@@ -2335,7 +2335,7 @@
 <td><strong>PausedTimerHandles</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>PreviousIsPlayingRootMotion</strong></td>
 </tr>
 <tr>
@@ -2343,7 +2343,7 @@
 <td><strong>PreviousTeam</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>RagdollStartTime</strong></td>
 </tr>
 <tr>
@@ -2351,7 +2351,7 @@
 <td><strong>SightCacheMap</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>TimeToVOExpiry</strong></td>
 </tr>
 <tr>
@@ -2359,11 +2359,11 @@
 <td><strong>UseableActorInteractable</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>VOCooldown</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>VOQueueEmoteWindow</strong></td>
 </tr>
 <tr>
@@ -2371,67 +2371,67 @@
 <td><strong>VOTracker</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>WaitForAttachToProjectileTime</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bAutoPossessAIStartCinematicRestricted</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bCanSuicide</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bCountTowardsKillsAndKnockdowns</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bDidPushRespawnState</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bHasRandomSeed</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsCharacterPaused</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsDying</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsInitialAutorun</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bNeverPerceiveCharacter</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bPreventSuicide</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bRagdollCustomTick</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bRagdollTriggered</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bRemovableBot</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bSuicideTried</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bTapOutHeld</strong></td>
 </tr>
 </tbody>

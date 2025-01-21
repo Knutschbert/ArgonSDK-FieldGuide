@@ -739,15 +739,15 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/AddToStackCount.html">AddToStackCount</a></strong>([[int32]] Delta)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/AddToStackCount.html">AddToStackCount</a></strong>(int32 Delta)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCheatManager/nodes/ApplyDamage.html">ApplyDamage</a></strong>([[float]] InDamage)</td>
+<td><strong><a href="../Nodes/TBLCheatManager/nodes/ApplyDamage.html">ApplyDamage</a></strong>(float InDamage)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/ApplyImpulseToGoreHead.html">ApplyImpulseToGoreHead</a></strong>([[FVector]] Impulse)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/ApplyImpulseToGoreHead.html">ApplyImpulseToGoreHead</a></strong>(FVector Impulse)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -755,14 +755,14 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/BounceOnProjectileHit.html">BounceOnProjectileHit</a></strong>(const [[FHitResult]] &amp; HitResult, <a href="AInventoryItem.html">AInventoryItem</a> * BlockingItem, [[float]] InBounceVelocityModifier)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/BounceOnProjectileHit.html">BounceOnProjectileHit</a></strong>(const [[FHitResult]] &amp; HitResult, <a href="AInventoryItem.html">AInventoryItem</a> * BlockingItem, float InBounceVelocityModifier)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/CanUseItem.html">CanUseItem</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/CannotAutoPickup.html">CannotAutoPickup</a></strong>(APawn * Pawn)</td>
 </tr>
 <tr>
@@ -790,8 +790,8 @@
 <td><strong><a href="../Nodes/InventoryItem/nodes/DisableCollisionForFakeClient.html">DisableCollisionForFakeClient</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/DualWieldShouldUseBothWeaponsForAttack.html">DualWieldShouldUseBothWeaponsForAttack</a></strong>([[FName]] AttackName)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/DualWieldShouldUseBothWeaponsForAttack.html">DualWieldShouldUseBothWeaponsForAttack</a></strong>(FName AttackName)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -810,8 +810,8 @@
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetAttachRagdollParams.html">GetAttachRagdollParams</a></strong>(<a href="FAttachRagdollParams.html">FAttachRagdollParams</a> &amp; AttachRagdollParams, <a href="ATBLCharacter.html">ATBLCharacter</a> * Character, const <a href="FDeathDamageTakenEvent.html">FDeathDamageTakenEvent</a> &amp; DamageEvent)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/GetBaseDamage.html">GetBaseDamage</a></strong>([[FName]] AttackName)</td>
+<td>float</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/GetBaseDamage.html">GetBaseDamage</a></strong>(FName AttackName)</td>
 </tr>
 <tr>
 <td><a href="ATBLCharacterBase.html">ATBLCharacterBase</a> *</td>
@@ -822,7 +822,7 @@
 <td><strong><a href="../Nodes/TBLSystemLibrary/nodes/GetDamageSourceName.html">GetDamageSourceName</a></strong>([[FText]] &amp; NameText)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetDamageSourcePenetration.html">GetDamageSourcePenetration</a></strong>()</td>
 </tr>
 <tr>
@@ -834,15 +834,15 @@
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetDualWieldOffhand.html">GetDualWieldOffhand</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetEquippableOnHorse.html">GetEquippableOnHorse</a></strong>()</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetHealth.html">GetHealth</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/StatsComponent/nodes/GetHealthPercent.html">GetHealthPercent</a></strong>() const</td>
 </tr>
 <tr>
@@ -851,10 +851,10 @@
 </tr>
 <tr>
 <td>[[EWeaponMaterial]]</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/GetMaterialByWeaponAction.html">GetMaterialByWeaponAction</a></strong>([[bool]] IsAttacking, [[bool]] IsDefending, [[FName]] AttackName)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/GetMaterialByWeaponAction.html">GetMaterialByWeaponAction</a></strong>(bool IsAttacking, bool IsDefending, FName AttackName)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetMaxHealth.html">GetMaxHealth</a></strong>() const</td>
 </tr>
 <tr>
@@ -866,7 +866,7 @@
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetOwningPawn.html">GetOwningPawn</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetPendingHiddenInGame.html">GetPendingHiddenInGame</a></strong>() const</td>
 </tr>
 <tr>
@@ -890,7 +890,7 @@
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetSpecialAttackWindupSwitchOverride.html">GetSpecialAttackWindupSwitchOverride</a></strong>(FString &amp; SwitchState)</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/GetStackCount.html">GetStackCount</a></strong>()</td>
 </tr>
 <tr>
@@ -903,38 +903,38 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/InitializeGoreHead.html">InitializeGoreHead</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character, <a href="FGoreHeadParams.html">FGoreHeadParams</a> Params, [[FVector]] Impulse)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/InitializeGoreHead.html">InitializeGoreHead</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character, <a href="FGoreHeadParams.html">FGoreHeadParams</a> Params, FVector Impulse)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/InitializeProjectileMovement.html">InitializeProjectileMovement</a></strong>(AActor * Initiator, [[float]] InitialSpeed, [[bool]] bFakeClient)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/InitializeProjectileMovement.html">InitializeProjectileMovement</a></strong>(AActor * Initiator, float InitialSpeed, bool bFakeClient)</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/InitializeStackCountOnSpawn.html">InitializeStackCountOnSpawn</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * CharacterOwner)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/IsAbilityMultiAttack.html">IsAbilityMultiAttack</a></strong>([[FName]] AttackName)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/IsAbilityMultiAttack.html">IsAbilityMultiAttack</a></strong>(FName AttackName)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/IsAddedToInventory.html">IsAddedToInventory</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/IsDualWieldOffhandEquipped.html">IsDualWieldOffhandEquipped</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/IsLowAmmo.html">IsLowAmmo</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/IsSimulatingPhysics.html">IsSimulatingPhysics</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/IsTwoHandedWeapon.html">IsTwoHandedWeapon</a></strong>()</td>
 </tr>
 <tr>
@@ -963,7 +963,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/OnAttackInterrupted.html">OnAttackInterrupted</a></strong>([[int32]] AttackID)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/OnAttackInterrupted.html">OnAttackInterrupted</a></strong>(int32 AttackID)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -995,7 +995,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/OnPickupEnded.html">OnPickupEnded</a></strong>(AActor * Actor, [[FName]] CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/OnPickupEnded.html">OnPickupEnded</a></strong>(AActor * Actor, FName CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1007,7 +1007,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/OnProjectileBounce.html">OnProjectileBounce</a></strong>([[FHitResult]] Hit, [[bool]] bParried)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/OnProjectileBounce.html">OnProjectileBounce</a></strong>([[FHitResult]] Hit, bool bParried)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1039,22 +1039,22 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/OnUseItemEnded.html">OnUseItemEnded</a></strong>(AActor * Actor, [[FName]] CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/OnUseItemEnded.html">OnUseItemEnded</a></strong>(AActor * Actor, FName CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/OnWasParried.html">OnWasParried</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * ParryingCharacter)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/OverridePickupEvent.html">OverridePickupEvent</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character, [[bool]] bGiveWeapon, [[bool]] bIsAutoPickup)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/OverridePickupEvent.html">OverridePickupEvent</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * Character, bool bGiveWeapon, bool bIsAutoPickup)</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/PerformFinishedMovementOverlap.html">PerformFinishedMovementOverlap</a></strong>()</td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/PlayActionEvent.html">PlayActionEvent</a></strong>(const <a href="FSoundSwitchEntry.html">FSoundSwitchEntry</a> SoundSwitch)</td>
 </tr>
 <tr>
@@ -1075,7 +1075,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/ResetItemToTransform.html">ResetItemToTransform</a></strong>([[FTransform]] Transform)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/ResetItemToTransform.html">ResetItemToTransform</a></strong>(FTransform Transform)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1083,7 +1083,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/SetAddedToInventory.html">SetAddedToInventory</a></strong>([[bool]] inAddedToInventory)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/SetAddedToInventory.html">SetAddedToInventory</a></strong>(bool inAddedToInventory)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1091,7 +1091,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCheatManager/nodes/SetHealth.html">SetHealth</a></strong>([[float]] Health)</td>
+<td><strong><a href="../Nodes/TBLCheatManager/nodes/SetHealth.html">SetHealth</a></strong>(float Health)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1107,11 +1107,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/SetOverrideLifeSpan.html">SetOverrideLifeSpan</a></strong>([[bool]] EnableOverride, [[float]] NewOverrideLifespan)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/SetOverrideLifeSpan.html">SetOverrideLifeSpan</a></strong>(bool EnableOverride, float NewOverrideLifespan)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/SetPendingHiddenInGame.html">SetPendingHiddenInGame</a></strong>([[bool]] NewBPendingHiddenInGame)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/SetPendingHiddenInGame.html">SetPendingHiddenInGame</a></strong>(bool NewBPendingHiddenInGame)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1119,35 +1119,35 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/SetStackCount.html">SetStackCount</a></strong>([[int32]] Count)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/SetStackCount.html">SetStackCount</a></strong>(int32 Count)</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/SetupHapticsForPS5OnSpawningAttachment.html">SetupHapticsForPS5OnSpawningAttachment</a></strong>(AController * InController)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/ShouldAttachRagdoll.html">ShouldAttachRagdoll</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/ShouldCustomizePlacedInWorldItem.html">ShouldCustomizePlacedInWorldItem</a></strong>(<a href="ATBLCharacter.html">ATBLCharacter</a> * OwningCharacter)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/ShouldDropOnDowned.html">ShouldDropOnDowned</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/ShouldShowWIPInUI.html">ShouldShowWIPInUI</a></strong>()</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/StartSimulatedProjectile.html">StartSimulatedProjectile</a></strong>([[int32]] AttackID)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/StartSimulatedProjectile.html">StartSimulatedProjectile</a></strong>(int32 AttackID)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/UpdateVisualization.html">UpdateVisualization</a></strong>([[float]] DeltaTime)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/UpdateVisualization.html">UpdateVisualization</a></strong>(float DeltaTime)</td>
 </tr>
 </tbody>
 </table>
@@ -1162,10 +1162,10 @@
 <tbody>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/BroadcastAttachRagdoll.html">BroadcastAttachRagdoll</a></strong>([[FVector]] AttachLocation)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/BroadcastAttachRagdoll.html">BroadcastAttachRagdoll</a></strong>(FVector AttachLocation)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/InventoryItem/nodes/CanPickup.html">CanPickup</a></strong>(APawn * Pawn)</td>
 </tr>
 <tr>
@@ -1182,7 +1182,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/OnEquipCombatStateEnd.html">OnEquipCombatStateEnd</a></strong>(AActor * Actor, [[FName]] CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/OnEquipCombatStateEnd.html">OnEquipCombatStateEnd</a></strong>(AActor * Actor, FName CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1194,7 +1194,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/OnReloadCombatStateEnd.html">OnReloadCombatStateEnd</a></strong>(AActor * Actor, [[FName]] CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/OnReloadCombatStateEnd.html">OnReloadCombatStateEnd</a></strong>(AActor * Actor, FName CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1222,7 +1222,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/InventoryItem/nodes/OnUnequipCombatStateEnd.html">OnUnequipCombatStateEnd</a></strong>(AActor * Actor, [[FName]] CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
+<td><strong><a href="../Nodes/InventoryItem/nodes/OnUnequipCombatStateEnd.html">OnUnequipCombatStateEnd</a></strong>(AActor * Actor, FName CombatState, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * CombatStateBP)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1252,11 +1252,11 @@
 <td><strong>Abilities</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ActivationMaxDistanceOverride</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ActivationMinDistanceOverride</strong></td>
 </tr>
 <tr>
@@ -1264,7 +1264,7 @@
 <td><strong>AimAssistTargetBoxOverrides</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>AimPenaltyModifier</strong></td>
 </tr>
 <tr>
@@ -1288,7 +1288,7 @@
 <td><strong>Animation</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>AnimationSpeedModifier</strong></td>
 </tr>
 <tr>
@@ -1296,7 +1296,7 @@
 <td><strong>ArrowCamSettings</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>AttachAmmoSocket</strong></td>
 </tr>
 <tr>
@@ -1324,15 +1324,15 @@
 <td><strong>BlockingCategory</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>BounceDamageParried</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>BounceDamageWorld</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>BounceVelocityModifier</strong></td>
 </tr>
 <tr>
@@ -1340,7 +1340,7 @@
 <td><strong>BrokenItemClass</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>CanBeDisarmed</strong></td>
 </tr>
 <tr>
@@ -1352,7 +1352,7 @@
 <td><strong>CompatibleSlots</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>ConstructableLimit</strong></td>
 </tr>
 <tr>
@@ -1364,11 +1364,11 @@
 <td><strong>CustomizationWeaponTag</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>Damage</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DamageModifier</strong></td>
 </tr>
 <tr>
@@ -1384,7 +1384,7 @@
 <td><strong>DamagedMesh</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DamagedPercent</strong></td>
 </tr>
 <tr>
@@ -1396,7 +1396,7 @@
 <td><strong>DestroyedMesh</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>DisabledInLoadout</strong></td>
 </tr>
 <tr>
@@ -1404,15 +1404,15 @@
 <td><strong>DisplayInfo</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>DrawStrength</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>EquipOnPickup</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>EquipTime</strong></td>
 </tr>
 <tr>
@@ -1420,7 +1420,7 @@
 <td><strong>FakeClientBlendParams</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>FakeClientSpawnPoint</strong></td>
 </tr>
 <tr>
@@ -1436,7 +1436,7 @@
 <td><strong>FirstPersonTransformRoot</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GlobalLifespan</strong></td>
 </tr>
 <tr>
@@ -1444,7 +1444,7 @@
 <td><strong>GoreActions</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>HealthValue</strong></td>
 </tr>
 <tr>
@@ -1500,7 +1500,7 @@
 <td><strong>Knockback</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>LowAmmoPercent</strong></td>
 </tr>
 <tr>
@@ -1516,19 +1516,19 @@
 <td><strong>LungeRight</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MagnetismMoveSpeedModifierSelf</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MagnetismMoveSpeedModifierTarget</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MaxDrawPowerTime</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>MaxStackCount</strong></td>
 </tr>
 <tr>
@@ -1536,11 +1536,11 @@
 <td><strong>MeleeAttackCategory</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MinDrawPowerTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>MinDrawStrength</strong></td>
 </tr>
 <tr>
@@ -1616,15 +1616,15 @@
 <td><strong>OverrideItemClassByTeam</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>OverrideLifespan</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; TSoftClassPtr&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt;, [[uint8]] &gt;</td>
+<td>TMap&lt; TSoftClassPtr&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt;, uint8 &gt;</td>
 <td><strong>OverrideMaxStackCount</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; TSoftClassPtr&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt;, [[uint8]] &gt;</td>
+<td>TMap&lt; TSoftClassPtr&lt; <a href="ATBLCharacter.html">ATBLCharacter</a> &gt;, uint8 &gt;</td>
 <td><strong>OverrideStackCount</strong></td>
 </tr>
 <tr>
@@ -1636,7 +1636,7 @@
 <td><strong>ParrySuccess</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>PercentChanceToBreak</strong></td>
 </tr>
 <tr>
@@ -1660,7 +1660,7 @@
 <td><strong>ProjectileDistanceDamageScale</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ProjectileDrag</strong></td>
 </tr>
 <tr>
@@ -1668,7 +1668,7 @@
 <td><strong>ProjectileDrawDamageScale</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ProjectileInitialRotation</strong></td>
 </tr>
 <tr>
@@ -1692,7 +1692,7 @@
 <td><strong>ProjectileRotationCurve</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ProjectileRotationRate</strong></td>
 </tr>
 <tr>
@@ -1704,11 +1704,11 @@
 <td><strong>ProjectileSounds</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>ProjectileSpawnOffset</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>ProjectileSpawnPoint</strong></td>
 </tr>
 <tr>
@@ -1716,7 +1716,7 @@
 <td><strong>QuiverItemClass</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>RagdollImpulse</strong></td>
 </tr>
 <tr>
@@ -1732,11 +1732,11 @@
 <td><strong>RecentAttackReleaseWeaponActionSwitch</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>ReloadCombatState</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ReloadTime</strong></td>
 </tr>
 <tr>
@@ -1744,15 +1744,15 @@
 <td><strong>ReverseTurnLimitCurve</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ReverseTurnLimitStrength</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>RiposteTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>ShieldDamageModifier</strong></td>
 </tr>
 <tr>
@@ -1760,7 +1760,7 @@
 <td><strong>ShieldSettings</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>SiegeDamage</strong></td>
 </tr>
 <tr>
@@ -1776,7 +1776,7 @@
 <td><strong>SpeedPenalty</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>StackCount</strong></td>
 </tr>
 <tr>
@@ -1796,7 +1796,7 @@
 <td><strong>StaticMesh1PShadow</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>StickPlayersToWallDistance</strong></td>
 </tr>
 <tr>
@@ -1804,11 +1804,11 @@
 <td><strong>StickPoint</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>SwingWindDistance</strong></td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong>ThirdPersonProjectileSpawnPointOverride</strong></td>
 </tr>
 <tr>
@@ -1820,7 +1820,7 @@
 <td><strong>ThrownAttackType</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>ThwackOnHit</strong></td>
 </tr>
 <tr>
@@ -1840,15 +1840,15 @@
 <td><strong>TurnLimitScaleByDegreesTurned</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>TurnLimitStrength</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>UnequipTime</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>UseFirstAndThirdPersonTransformSetup</strong></td>
 </tr>
 <tr>
@@ -1856,15 +1856,15 @@
 <td><strong>UseItemSettings</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>UseProjectileSpawnOffsetAsProjectileOrigin</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>UseRangedCrossHair</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>Version</strong></td>
 </tr>
 <tr>
@@ -1872,7 +1872,7 @@
 <td><strong>VerticalTurnLimitCurve</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>VerticalTurnLimitStrength</strong></td>
 </tr>
 <tr>
@@ -1904,227 +1904,227 @@
 <td><strong>WorldHitAngleRange</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>WorldHitStartPercentage</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>WorldHitStopPercentage</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bAlignProjectilePitchToSurfaceOnStick</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bAlwaysAutoPickup</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bAlwaysEnableFriction</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bAlwaysEnableInnerBoxForgiveness</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bAlwaysFrictionInnerOnly</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bAlwaysPrioritizeCloserTargets</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bAlwaysScalingDistanceFrictionEnabled</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bAutoPickupOwned</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bAutomaticReload</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bCanAttackWhileUnequipped</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bCanBeLitOnFire</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bCanFistsParry</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bCanProjectileStick</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bCanProjectileStickToShield</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bCanStickPlayersToWall</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bCanUseOffhandCarryable</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bCannotEquipOnHorse</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bClickToFire</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bDisableJump</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bDoNotAutoEquip</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>bDropOffOnCharacterHitTime</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bGenerateOverlapEventsWhenMovementFinished</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsBreakable</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsCarryableNPCItem</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsCustomizationApplied</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsDualWield</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsFakeItem</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsOnFire</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsShield</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsSlashCounteredByStab</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsSpecialStabAnimation</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsSpecialVerticalAnimation</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsWIPItem</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bLoaded</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bNeedsUpdateVisualization</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bOnlyTargetAllies</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bPlaceOnGroundWhenSwapped</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bPlayEquipAnimation</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bPlayPickupAnimation</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bProjectileAttachedViaReplication</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bQuickThrowSpecial</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bRotateProjectileCollision</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bShouldScaleDrawStrength</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bShouldSpecialIgnoreIsFacingTarget</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bShouldStartOnFire</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bTearOffOnMovementFinished</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bTrackKillAchievement</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bUseFireAmmo</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bUseHorseAiming</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bUseItemOnEquip</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bUseOverrideLifespan</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bUseRangedSignificance</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bUseThirdPersonProjectileSpawnPointOverride</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>hasHealth</strong></td>
 </tr>
 </tbody>
@@ -2139,15 +2139,15 @@
 </thead>
 <tbody>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>AddedToInventory</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>AnimTimingProperties</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>AttachRadollLocation</strong></td>
 </tr>
 <tr>
@@ -2163,7 +2163,7 @@
 <td><strong>CurrentWeaponTracers</strong></td>
 </tr>
 <tr>
-<td>[[FVector]]</td>
+<td>FVector</td>
 <td><strong>DebugPreviousLocation</strong></td>
 </tr>
 <tr>
@@ -2175,7 +2175,7 @@
 <td><strong>DefaultPrimaryAttachPoint</strong></td>
 </tr>
 <tr>
-<td>[[FTransform]]</td>
+<td>FTransform</td>
 <td><strong>DefaultShieldCollisionRelativeTransform</strong></td>
 </tr>
 <tr>
@@ -2191,7 +2191,7 @@
 <td><strong>Inventory</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>LastStackCount</strong></td>
 </tr>
 <tr>
@@ -2211,19 +2211,19 @@
 <td><strong>OnUseItem</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>PrevAnimPercent</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>PreviousAimPitch</strong></td>
 </tr>
 <tr>
-<td>[[FTransform]]</td>
+<td>FTransform</td>
 <td><strong>PreviousArmBase</strong></td>
 </tr>
 <tr>
-<td>[[FTransform]]</td>
+<td>FTransform</td>
 <td><strong>PreviousComponentTrs</strong></td>
 </tr>
 <tr>
@@ -2243,7 +2243,7 @@
 <td><strong>SimulatedProjectile</strong></td>
 </tr>
 <tr>
-<td>[[FTransform]]</td>
+<td>FTransform</td>
 <td><strong>SkeletalMeshTransform</strong></td>
 </tr>
 <tr>
@@ -2251,35 +2251,35 @@
 <td><strong>Slot</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bAttachAmmo</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bFakeClientStickPoint</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bIsAnimating</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bMatchStateHidden</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bPendingHiddenInGame</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bPlacedInWorld</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bShouldAttachRagdoll</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bWasThrown</strong></td>
 </tr>
 </tbody>

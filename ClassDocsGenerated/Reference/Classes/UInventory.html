@@ -735,11 +735,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Inventory/nodes/BroadcastProjectilePenetratedPassiveShield.html">BroadcastProjectilePenetratedPassiveShield</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * Shield, <a href="AInventoryItem.html">AInventoryItem</a> * Projectile, [[FVector]] HitLocation)</td>
+<td><strong><a href="../Nodes/Inventory/nodes/BroadcastProjectilePenetratedPassiveShield.html">BroadcastProjectilePenetratedPassiveShield</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * Shield, <a href="AInventoryItem.html">AInventoryItem</a> * Projectile, FVector HitLocation)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/Inventory/nodes/CanSwitchInventoryItem.html">CanSwitchInventoryItem</a></strong>([[FName]] KeyBind)</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/Inventory/nodes/CanSwitchInventoryItem.html">CanSwitchInventoryItem</a></strong>(FName KeyBind)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -755,7 +755,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Inventory/nodes/DropItem.html">DropItem</a></strong>([[EInventoryItemSlot]] Slot, <a href="FDropItemParams.html">FDropItemParams</a> Params, [[bool]] bDuringParryEvent)</td>
+<td><strong><a href="../Nodes/Inventory/nodes/DropItem.html">DropItem</a></strong>([[EInventoryItemSlot]] Slot, <a href="FDropItemParams.html">FDropItemParams</a> Params, bool bDuringParryEvent)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -774,7 +774,7 @@
 <td><strong><a href="../Nodes/Inventory/nodes/GetAmmoItem.html">GetAmmoItem</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * Item)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/Inventory/nodes/GetBattleCryHeldProgress.html">GetBattleCryHeldProgress</a></strong>()</td>
 </tr>
 <tr>
@@ -806,7 +806,7 @@
 <td><strong><a href="../Nodes/Inventory/nodes/GetInventoryItemsBySlot.html">GetInventoryItemsBySlot</a></strong>([[EInventoryItemSlot]] Slot)</td>
 </tr>
 <tr>
-<td>[[FName]]</td>
+<td>FName</td>
 <td><strong><a href="../Nodes/Inventory/nodes/GetKeybindName.html">GetKeybindName</a></strong>([[EInventoryItemSlot]] Slot)</td>
 </tr>
 <tr>
@@ -819,18 +819,18 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Inventory/nodes/GetRefillItemsToGrant.html">GetRefillItemsToGrant</a></strong>(TMap&lt; TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;, [[int32]] &gt; &amp; ItemsToGrant, const TArray&lt; TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;&gt; &amp; ItemsToRefill, [[bool]] RefillAllAmmoItems, [[bool]] UseStackCountFromItem, [[int32]] StacksToAdd)</td>
+<td><strong><a href="../Nodes/Inventory/nodes/GetRefillItemsToGrant.html">GetRefillItemsToGrant</a></strong>(TMap&lt; TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;, int32 &gt; &amp; ItemsToGrant, const TArray&lt; TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;&gt; &amp; ItemsToRefill, bool RefillAllAmmoItems, bool UseStackCountFromItem, int32 StacksToAdd)</td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong><a href="../Nodes/Inventory/nodes/GetTimeSinceLastTriedBandage.html">GetTimeSinceLastTriedBandage</a></strong>() const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/Inventory/nodes/HasMissingItemsToRefill.html">HasMissingItemsToRefill</a></strong>(const TArray&lt; TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;&gt; &amp; ItemsToRefill) const</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/Inventory/nodes/IsShieldEquipped.html">IsShieldEquipped</a></strong>()</td>
 </tr>
 <tr>
@@ -839,7 +839,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Inventory/nodes/PickupItem.html">PickupItem</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * Item, [[int32]] StackCountToAdd, [[EPickupEquipOptions]] EquipOptions, AActor * Initiator, [[bool]] bIgnoreStateCheck, [[bool]] bGiveWeapon)</td>
+<td><strong><a href="../Nodes/Inventory/nodes/PickupItem.html">PickupItem</a></strong>(<a href="AInventoryItem.html">AInventoryItem</a> * Item, int32 StackCountToAdd, [[EPickupEquipOptions]] EquipOptions, AActor * Initiator, bool bIgnoreStateCheck, bool bGiveWeapon)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -851,18 +851,18 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Inventory/nodes/RefillItems.html">RefillItems</a></strong>(TArray&lt; <a href="AInventoryItem.html">AInventoryItem</a> * &gt; &amp; OutGrantedItems, const TArray&lt; TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;&gt; &amp; ItemsToRefill, [[bool]] RefillAllAmmoItems, [[bool]] UseStackCountFromItem, [[int32]] StacksToAdd, [[bool]] GrantFullAmmo, [[EPickupEquipOptions]] EquipOptions)</td>
+<td><strong><a href="../Nodes/Inventory/nodes/RefillItems.html">RefillItems</a></strong>(TArray&lt; <a href="AInventoryItem.html">AInventoryItem</a> * &gt; &amp; OutGrantedItems, const TArray&lt; TSubclassOf&lt; <a href="AInventoryItem.html">AInventoryItem</a> &gt;&gt; &amp; ItemsToRefill, bool RefillAllAmmoItems, bool UseStackCountFromItem, int32 StacksToAdd, bool GrantFullAmmo, [[EPickupEquipOptions]] EquipOptions)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Inventory/nodes/ServerDebugSetAmmo.html">ServerDebugSetAmmo</a></strong>([[int32]] Ammo)</td>
+<td><strong><a href="../Nodes/Inventory/nodes/ServerDebugSetAmmo.html">ServerDebugSetAmmo</a></strong>(int32 Ammo)</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="../Nodes/Inventory/nodes/SetObjectForItemLoad.html">SetObjectForItemLoad</a></strong>(UObject * Object)</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong><a href="../Nodes/Inventory/nodes/ShowBandageRefillActors.html">ShowBandageRefillActors</a></strong>() const</td>
 </tr>
 <tr>
@@ -871,7 +871,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Inventory/nodes/UnequipAllItems.html">UnequipAllItems</a></strong>([[bool]] bImmediately, [[bool]] bPlayUnequip)</td>
+<td><strong><a href="../Nodes/Inventory/nodes/UnequipAllItems.html">UnequipAllItems</a></strong>(bool bImmediately, bool bPlayUnequip)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -894,7 +894,7 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/Inventory/nodes/ClientIsUnequippingOnMount.html">ClientIsUnequippingOnMount</a></strong>([[bool]] OnMount)</td>
+<td><strong><a href="../Nodes/Inventory/nodes/ClientIsUnequippingOnMount.html">ClientIsUnequippingOnMount</a></strong>(bool OnMount)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -930,15 +930,15 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacterAnimInstance/nodes/OnCombatStateBegin.html">OnCombatStateBegin</a></strong>(AActor * Actor, [[FName]] State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * InCombatState)</td>
+<td><strong><a href="../Nodes/TBLCharacterAnimInstance/nodes/OnCombatStateBegin.html">OnCombatStateBegin</a></strong>(AActor * Actor, FName State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * InCombatState)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLCharacter/nodes/OnCombatStateEnd.html">OnCombatStateEnd</a></strong>(AActor * Actor, [[FName]] State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * InCombatState)</td>
+<td><strong><a href="../Nodes/TBLCharacter/nodes/OnCombatStateEnd.html">OnCombatStateEnd</a></strong>(AActor * Actor, FName State, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo, <a href="UCombatState.html">UCombatState</a> * InCombatState)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLHorseAnimInstance/nodes/OnCombatStateEvent.html">OnCombatStateEvent</a></strong>(AActor * Actor, [[FName]] EventName, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo)</td>
+<td><strong><a href="../Nodes/TBLHorseAnimInstance/nodes/OnCombatStateEvent.html">OnCombatStateEvent</a></strong>(AActor * Actor, FName EventName, const <a href="FAttackInfo.html">FAttackInfo</a> &amp; EventAttackInfo)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -966,7 +966,7 @@
 </tr>
 <tr>
 <td><a href="AInventoryItem.html">AInventoryItem</a> *</td>
-<td><strong><a href="../Nodes/Inventory/nodes/RemoveItem.html">RemoveItem</a></strong>([[EInventoryItemSlot]] Slot, [[bool]] bEndAttack)</td>
+<td><strong><a href="../Nodes/Inventory/nodes/RemoveItem.html">RemoveItem</a></strong>([[EInventoryItemSlot]] Slot, bool bEndAttack)</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1000,11 +1000,11 @@
 </thead>
 <tbody>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>BattleCryHeldStartTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>BattleCryHeldTime</strong></td>
 </tr>
 <tr>
@@ -1012,15 +1012,15 @@
 <td><strong>EquippedPenaltyTable</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadBattleCryHeldStartTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadBattleCryHeldTime</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>GamepadBattleCryPressedCount</strong></td>
 </tr>
 <tr>
@@ -1032,11 +1032,11 @@
 <td><strong>GamepadBattlecryStartInteractable</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadHorseBattleCryHeldStartTime</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>GamepadHorseBattleCryPressedCount</strong></td>
 </tr>
 <tr>
@@ -1044,35 +1044,35 @@
 <td><strong>GamepadHorseBattleCryState</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadInputDoubleTapWaitTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadInputWaitTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadJabHeldStartTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadJabHeldTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadRightDPadPressedCount</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadWaitOverheadStartTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadWaitRightDPadStartTime</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>GamepadWaitStabStartTime</strong></td>
 </tr>
 <tr>
@@ -1164,11 +1164,11 @@
 <td><strong>WeaponKnife</strong></td>
 </tr>
 <tr>
-<td>[[uint8]]</td>
+<td>uint8</td>
 <td><strong>bDisableAttackInputs</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bLoadoutSpawned</strong></td>
 </tr>
 </tbody>
@@ -1191,7 +1191,7 @@
 <td><strong>AmmoItems</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>BandageRefillDisplayDuration</strong></td>
 </tr>
 <tr>
@@ -1227,7 +1227,7 @@
 <td><strong>HorseDashPressed_Ability</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; [[FName]], [[EInventoryItemSlot]] &gt;</td>
+<td>TMap&lt; FName, [[EInventoryItemSlot]] &gt;</td>
 <td><strong>InventoryKeybindToSlot</strong></td>
 </tr>
 <tr>
@@ -1247,11 +1247,11 @@
 <td><strong>KeyPressedAbility</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; [[FName]], [[EWeaponAbilitySlotKey]] &gt;</td>
+<td>TMap&lt; FName, [[EWeaponAbilitySlotKey]] &gt;</td>
 <td><strong>KeybindToSlot</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; [[EWeaponAbilitySlotKey]], [[FName]] &gt;</td>
+<td>TMap&lt; [[EWeaponAbilitySlotKey]], FName &gt;</td>
 <td><strong>Keybinds</strong></td>
 </tr>
 <tr>
@@ -1259,7 +1259,7 @@
 <td><strong>KnifeClass</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>LastTriedBandageWorldTimeSeconds</strong></td>
 </tr>
 <tr>
@@ -1291,19 +1291,19 @@
 <td><strong>SuicideReason</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsAddingItem</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsEquippingItem</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsPickingUpItem</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bIsReloading</strong></td>
 </tr>
 <tr>
@@ -1311,15 +1311,15 @@
 <td><strong>bIsUnequippingOnMount</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bWantsToEquipShield</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bWantsToSuicide</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bWasKilled</strong></td>
 </tr>
 </tbody>

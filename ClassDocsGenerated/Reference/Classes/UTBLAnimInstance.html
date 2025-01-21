@@ -747,24 +747,24 @@
 <td><strong><a href="../Nodes/TBLAnimInstance/nodes/GetDebugMontageInstances.html">GetDebugMontageInstances</a></strong>()</td>
 </tr>
 <tr>
-<td>[[bool]]</td>
-<td><strong><a href="../Nodes/TBLAnimInstance/nodes/Montage_IsAnyMontagePlayingOnSlot.html">Montage_IsAnyMontagePlayingOnSlot</a></strong>(const [[FName]] SlotNodeName) const</td>
+<td>bool</td>
+<td><strong><a href="../Nodes/TBLAnimInstance/nodes/Montage_IsAnyMontagePlayingOnSlot.html">Montage_IsAnyMontagePlayingOnSlot</a></strong>(const FName SlotNodeName) const</td>
 </tr>
 <tr>
-<td>[[float]]</td>
-<td><strong><a href="../Nodes/TBLAnimInstance/nodes/Montage_PlaySection.html">Montage_PlaySection</a></strong>(UAnimMontage * MontageToPlay, [[FName]] StartingSection, [[float]] InPlayRate, [[float]] StartSectionPercent, [[float]] InBlendTime, EMontagePlayReturnType ReturnValueType)</td>
-</tr>
-<tr>
-<td>void</td>
-<td><strong><a href="../Nodes/TBLAnimInstance/nodes/Montage_StopAll.html">Montage_StopAll</a></strong>([[float]] InBlendOutTime)</td>
+<td>float</td>
+<td><strong><a href="../Nodes/TBLAnimInstance/nodes/Montage_PlaySection.html">Montage_PlaySection</a></strong>(UAnimMontage * MontageToPlay, FName StartingSection, float InPlayRate, float StartSectionPercent, float InBlendTime, EMontagePlayReturnType ReturnValueType)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLAnimInstance/nodes/SetIsFarFromCamera.html">SetIsFarFromCamera</a></strong>([[bool]] bIsFar)</td>
+<td><strong><a href="../Nodes/TBLAnimInstance/nodes/Montage_StopAll.html">Montage_StopAll</a></strong>(float InBlendOutTime)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="../Nodes/TBLAnimInstance/nodes/SetLODLevel.html">SetLODLevel</a></strong>([[int32]] NewLodLevel)</td>
+<td><strong><a href="../Nodes/TBLAnimInstance/nodes/SetIsFarFromCamera.html">SetIsFarFromCamera</a></strong>(bool bIsFar)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="../Nodes/TBLAnimInstance/nodes/SetLODLevel.html">SetLODLevel</a></strong>(int32 NewLodLevel)</td>
 </tr>
 <tr>
 <td></td>
@@ -813,23 +813,23 @@
 <td><strong>CombatStateComponent</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>FarFromCameraDistance</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>IsFarFromCamera</strong></td>
 </tr>
 <tr>
-<td>[[int32]]</td>
+<td>int32</td>
 <td><strong>LODLevel</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>LastUpdateAnimationInterval</strong></td>
 </tr>
 <tr>
-<td>[[float]]</td>
+<td>float</td>
 <td><strong>LastUpdateAnimationTime</strong></td>
 </tr>
 <tr>
@@ -841,7 +841,7 @@
 <td><strong>SkeletalMesh</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bWantsUpdateAnimation</strong></td>
 </tr>
 </tbody>
@@ -856,19 +856,19 @@
 </thead>
 <tbody>
 <tr>
-<td>TMap&lt; [[FName]], [[FName]] &gt;</td>
+<td>TMap&lt; FName, FName &gt;</td>
 <td><strong>CrowdControlVariant1</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; [[FName]], [[FName]] &gt;</td>
+<td>TMap&lt; FName, FName &gt;</td>
 <td><strong>CrowdControlVariant2</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; [[FName]], [[FName]] &gt;</td>
+<td>TMap&lt; FName, FName &gt;</td>
 <td><strong>CrowdControlVariant3</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[int32]] &gt;</td>
+<td>TArray&lt; int32 &gt;</td>
 <td><strong>DebugAnimNodes</strong></td>
 </tr>
 <tr>
@@ -876,31 +876,31 @@
 <td><strong>DebugNodeVisitFilter</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>DefaultDebugCategories</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>HideLowLodBones</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; [[FName]], <a href="FAnimDebugMontage.html">FAnimDebugMontage</a> &gt;</td>
+<td>TMap&lt; FName, <a href="FAnimDebugMontage.html">FAnimDebugMontage</a> &gt;</td>
 <td><strong>MontageDebug</strong></td>
 </tr>
 <tr>
-<td>TMap&lt; [[FName]], <a href="FAnimDebugStateMachine.html">FAnimDebugStateMachine</a> &gt;</td>
+<td>TMap&lt; FName, <a href="FAnimDebugStateMachine.html">FAnimDebugStateMachine</a> &gt;</td>
 <td><strong>StateMachineDebug</strong></td>
 </tr>
 <tr>
-<td>TArray&lt; [[FName]] &gt;</td>
+<td>TArray&lt; FName &gt;</td>
 <td><strong>StateMachineNames</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bDumpAnimationInfoToFile</strong></td>
 </tr>
 <tr>
-<td>[[bool]]</td>
+<td>bool</td>
 <td><strong>bGatherDebugNodeVisit</strong></td>
 </tr>
 </tbody>
