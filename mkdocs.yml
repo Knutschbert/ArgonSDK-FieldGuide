@@ -6,26 +6,31 @@ edit_uri: blob/main/docs/
 theme:
     name: 'material'
     font:
-      text: Volkov
+      text: Volkhov
+    logo: assets/images/branding/uwu.png
+    favicon: assets/images/branding/uwu.png
+    features:
+      - navigation.instant
+      - navigation.tracking
+      - navigation.top
+      - toc.follow
+      - search.suggest
+      - search.highlight
+      - content.code.copy
+      - content.action.edit
     palette:
-
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue grey
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: amber
-      accent: blue
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+      - scheme: slate
+        primary: amber
+        accent: blue
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+      - scheme: default
+        primary: amber
+        accent: indigo
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
 
 # Extensions
 markdown_extensions:
@@ -65,22 +70,6 @@ plugins:
 extra_css:
   - javascripts/mermaid-center.css
   - javascripts/extra.css
-  - |
-    body {
-      padding-top: 60px; /* Adjust the top padding to make space for the new header */
-    }
-    .md-header-wrapper {
-      display: none; /* Hide the original header */
-    }
-    .custom-header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #37474F; /* Customize the background color */
-      color: #FFFFFF; /* Customize the text color */
-      padding: 10px 20px; /* Customize padding */
-      z-index: 1000; /* Set a high z-index to ensure it's above other elements */
-    }
 
 extra_javascript:
   - javascripts/mathjax.js
