@@ -9,5 +9,7 @@ Most pages are placeholders rn
 ## Objectives
 ## Weapons
 [[Weapons Overview]]
+## Bot Behavior
+[Bot Behavior Guide](Bot Behavior/README.md)
 ## Abilities
 [[Abilities Overview]]
