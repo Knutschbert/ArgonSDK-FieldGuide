@@ -24,6 +24,23 @@ An attack action provides the controller with an allowed attack list and an atta
 request. The controller then checks the current combat situation and carries out a usable attack
 when its combat gate and weapon/range conditions allow it.
 
+### Player-facing combat-state lifecycle
+
+```mermaid
+stateDiagram-v2
+  [*] --> Holding
+  Holding --> Windup: attack becomes usable
+  Windup --> Release: attack releases
+  Release --> Recovery: attack completes
+  Recovery --> Holding: next combat opportunity
+  Windup --> Holding: feint or cancelled path
+  Holding --> [*]: combat/action ends
+```
+
+Plaintext: an attack request can pass through holding, windup, release, and recovery. A feint or
+cancelled path can return to holding; action completion or leaving combat ends the current path.
+These are player-facing combat states, not a proof of which behavior candidate won.
+
 For an ordinary attack behavior, the player-visible lifecycle is typically:
 
 1. the action requests an allowed attack;
@@ -63,6 +80,17 @@ defense behaviors can use more urgent settings when a specific incoming-combat e
 The combat decision-maker configuration has slots for event-associated behavior sets. These are
 best read as reaction **inventories**: they define options that may be considered when the
 corresponding event is handled.
+
+```mermaid
+flowchart LR
+  E[Combat event<br/>incoming attack, shove, parry, damage] --> I[Configured event inventory]
+  I --> C[Eligible reaction candidates]
+  C --> D[Decision and action rules]
+  D --> V[Possible visible reaction]
+```
+
+Plaintext: an event can expose a configured inventory of reaction candidates. It does not itself
+prove a dispatch, a winner, or a visible response.
 
 | Event category | Documented configured options | What it means |
 |---|---|---|

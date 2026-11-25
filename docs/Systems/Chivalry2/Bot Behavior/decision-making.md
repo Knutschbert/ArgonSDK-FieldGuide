@@ -24,6 +24,30 @@ It is not a published percentage chance, and it is not a promise that the behavi
 | **Action** | The request made if the behavior is selected. |
 | **Target generator** | A way to produce candidate targets, when a behavior needs one. |
 
+## How one candidate moves through the system
+
+```mermaid
+flowchart LR
+  I[World input<br/>distance, time, allies, blocks] --> N[Normalize to 0–1]
+  N --> C[Curve score<br/>0–1]
+  C --> K[Combine this consideration<br/>with the candidate's others]
+  W[Behavior weight] --> S[Candidate score]
+  K --> S
+  S --> R[Rank against eligible candidates]
+  R --> A[Selected action<br/>or active action remains]
+  A --> F[Combat controller result<br/>movement, facing, state]
+```
+
+Plaintext: a world measurement is normalized, shaped by a curve, and combined with the
+candidate's other considerations. That result and the behavior's relative weight contribute to a
+candidate score. The system ranks eligible candidates, but action-lifecycle rules can preserve an
+active action before the controller produces the visible result.
+
+!!! warning "A curve is not a winner probability"
+    The orange curve in the [Curve explorer](curve-explorer.md) is one consideration's score, not
+    the chance that its behavior will visibly run. Other considerations, competing candidates, and
+    active-action rules still apply.
+
 ## What the normal combat behaviors are configured to consider
 
 The normal melee combat set includes the following authored candidates:
@@ -78,6 +102,13 @@ allows it to recover.
 The exact score-shaping formulas are in [behavior and movement formulas](formulas.md). That page
 also explains why several considerations are combined as strong, softened multipliers rather than
 as a simple average.
+
+### Compare documented examples
+
+The [Curve explorer](curve-explorer.md) provides an interactive comparison of the documented Slash
+cooldown, Block distance, Block repeat timing, Wait fallback, Shove-pressure, and Feint-randomness
+considerations. Each uses its documented range and parameters; use it to compare **one curve
+output at a time**, not to predict a final winner.
 
 ## Target generation differs between general and combat behavior
 

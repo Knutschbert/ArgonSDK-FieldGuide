@@ -19,6 +19,19 @@ At a high level, combat progression works like this:
 The controller-side target is the anchor for normal melee combat behavior. The documented normal
 combat behaviors do not independently search for targets.
 
+```mermaid
+stateDiagram-v2
+  [*] --> OutOfCombat
+  OutOfCombat --> Engaging: valid engagement target
+  Engaging --> InCombat: engagement conditions met
+  InCombat --> Engaging: target leaves combat range
+  Engaging --> OutOfCombat: engagement ends
+  InCombat --> OutOfCombat: combat ends or target clears
+```
+
+Plaintext: a valid target starts engagement; the controller approaches it and can enter combat.
+Loss of the target or combat ends the combat-specific target, movement, and defensive context.
+
 ## Spacing intents
 
 Combat actions can ask for a named distance intent:
@@ -92,6 +105,19 @@ There are two useful but distinct movement systems:
 
 Do not combine both systems as though they were one steering algorithm. A combat controller and a
 path-following controller can compete for movement and facing ownership.
+
+```mermaid
+flowchart TB
+  T[Combat target] --> N[Native combat controller]
+  N --> NF[Target-facing, spacing,<br/>organic lateral movement]
+  W[Waypoint route] --> P[Path-following controller]
+  P --> PH[Route-facing, repeatable<br/>locations and rings]
+  N -. competing movement/facing ownership .- P
+```
+
+Plaintext: native combat movement owns target-facing engagement and variable combat motion.
+Waypoint movement owns a planned route. Use one as the primary owner when repeatability matters;
+running both as if they were one steering system can make movement and facing fight each other.
 
 ## What has been effective, unreliable, or unavailable
 

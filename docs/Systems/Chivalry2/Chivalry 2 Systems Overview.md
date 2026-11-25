@@ -10,6 +10,6 @@ Most pages are placeholders rn
 ## Weapons
 [[Weapons Overview]]
 ## Bot Behavior
-[Bot Behavior Guide](Bot Behavior/README.md)
+[Bot Behavior TL;DR](Bot Behavior/TLDR.md) · [Full Bot Behavior Guide](Bot Behavior/README.md)
 ## Abilities
 [[Abilities Overview]]

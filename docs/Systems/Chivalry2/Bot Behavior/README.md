@@ -5,6 +5,8 @@ are configured, how combat movement is controlled, and which parts can safely be
 
 ## Start here
 
+[Read the visual TL;DR first.](TLDR.md)
+
 Bots are best understood as several connected layers:
 
 1. **Behavior sets** provide groups of possible behaviors.

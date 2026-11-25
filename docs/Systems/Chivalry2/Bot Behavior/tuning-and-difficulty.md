@@ -50,6 +50,20 @@ not established as a public, general per-spawn control.
 Behavior sets are class-level inventories. A decision maker can create runtime behavior objects from
 them, and those objects retain their own weight, action, consideration, and timer state.
 
+```mermaid
+flowchart LR
+  S[Authored behavior set<br/>BS_Combat_Melee_Normal_C] -->|materializes| C[Runtime behavior cache]
+  C --> I[Live behavior instances<br/>weight, timer, action state]
+  SR[Change set reference] -. does not by itself rebuild .-> C
+  IW[Change live instance weight] --> I
+  I --> D[Later scoring and action rules]
+```
+
+Plaintext: the authored set can be used to create cached runtime objects, which in turn contain
+the live behavior instances. Changing a set reference changes that reference; it does not itself
+rebuild the existing cache. Changing an instance's weight reaches that instance, but does not
+guarantee that it wins or becomes visible.
+
 This produces an important cache boundary:
 
 | Change | What it changes reliably | What it does not guarantee |

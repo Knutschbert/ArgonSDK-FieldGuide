@@ -119,3 +119,61 @@ div.mermaid {
   height: 2.2rem;
   width: 2.2rem;
 }
+
+/*
+ * Mermaid emits different SVG classes for flowcharts and state diagrams.
+ * Keep all links and transition labels high contrast when Material switches
+ * its data-md-color-scheme attribute at runtime.
+ */
+[data-md-color-scheme="slate"] .mermaid {
+  --fg-mermaid-link: #67e8f9;
+  --fg-mermaid-label: #e9edef;
+  --bg-mermaid-label: #111a1e;
+}
+
+[data-md-color-scheme="default"] .mermaid {
+  --fg-mermaid-link: #0f5f73;
+  --fg-mermaid-label: #1c2123;
+  --bg-mermaid-label: #e9edef;
+}
+
+/* Flowchart and state-diagram lines. */
+.mermaid .flowchart-link,
+.mermaid .edgePath path,
+.mermaid path.flowchart-link,
+.mermaid .transition,
+.mermaid .messageLine0,
+.mermaid .messageLine1 {
+  stroke: var(--fg-mermaid-link) !important;
+}
+
+/* Arrowhead paths are inside SVG markers in current Mermaid versions. */
+.mermaid marker path,
+.mermaid .arrowheadPath,
+.mermaid .marker {
+  fill: var(--fg-mermaid-link) !important;
+  stroke: var(--fg-mermaid-link) !important;
+}
+
+/*
+ * Edge labels use foreignObject HTML in flowcharts and SVG text/background
+ * elements in state diagrams, so style both representations.
+ */
+.mermaid .edgeLabel,
+.mermaid .edgeLabel div,
+.mermaid .edgeLabel span,
+.mermaid .edgeLabel p,
+.mermaid .transitionLabel,
+.mermaid .transitionLabel span,
+.mermaid .transitionLabel p {
+  color: var(--fg-mermaid-label) !important;
+  fill: var(--fg-mermaid-label) !important;
+  background-color: var(--bg-mermaid-label) !important;
+}
+
+.mermaid .labelBkg,
+.mermaid .edgeLabel rect,
+.mermaid .transitionLabel rect {
+  fill: var(--bg-mermaid-label) !important;
+  stroke: var(--bg-mermaid-label) !important;
+}
