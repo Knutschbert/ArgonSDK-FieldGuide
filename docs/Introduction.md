@@ -16,7 +16,7 @@ You are provided with following content to support you on your modding path:
 - ArgonSDK project for Unreal Engine 4.25.4 
 - this Field Guide
 - generated docs on TB C++ / Blueprint classes 
-- (WIP) Released Mods as [[Case Studies]] (GiantSlayers, FilthyPeasants, FlashBlades)
+- (WIP) Released Mods as case studies (GiantSlayers, FilthyPeasants, FlashBlades)
 - Examples
 	- Maps
 	- Mutators
@@ -123,7 +123,7 @@ end
 > Blabla
 ### Loose vs Packaged assets
 
-The game can load both PAKs and loose files (Copied from `ArgonSDK/Saved/..`). Distribution via UnchainedLauncher requires you to package your mods. This procedure is further explained in [[T5 Distributing your Mod]]
+The game can load both PAKs and loose files (Copied from `ArgonSDK/Saved/..`). Distribution via UnchainedLauncher requires you to package your mods. This procedure will be covered in a later tutorial (T5 — Distributing your Mod).
 
 ```mermaid
 flowchart LR

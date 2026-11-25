@@ -49,8 +49,10 @@ Generated doxygen-style documentation of Torn Banner's C++ classes and selected 
 - Class properties and their access levels
 - Blueprint node previews (where applicable)
 
-> [!important]
-> This documentation is currently available only as an Obsidian vault.
+> [!tip] Search it from here
+> A browsable, searchable copy is wired into this guide — see the
+> [[Reference|C++/BP Reference]] page, which has its own search box and lets any
+> page link symbols with `[[ref:ClassName]]`.
 
 ![[Readme_obs_preview.png]]
 

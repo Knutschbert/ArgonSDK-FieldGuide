@@ -61,6 +61,9 @@ markdown_extensions:
   - toc:
       permalink: true
 
+hooks:
+  - hooks/ref_links.py
+
 plugins:
   - awesome-pages
   - mermaid2
@@ -82,3 +85,5 @@ extra_javascript:
   # BlueprintUE renderer (vendored, MIT) must load before the embed loader
   - javascripts/bue-render/render.js
   - javascripts/bue-embed.js
+  # Second, independent search box for the C++/BP reference
+  - javascripts/ref-search.js

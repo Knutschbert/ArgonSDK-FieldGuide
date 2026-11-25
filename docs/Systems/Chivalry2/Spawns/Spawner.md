@@ -4,20 +4,26 @@
 >  [[T2 Create a Free-For-All Map (FFA)]]
 
 ## Types
-### General
-[[Base Spawner]]
-[[Run In Spawner]]
-[[Group Spawner]]
-[[Fence Spawner]]
-[[Tent Spawner]]
-[[Seat Spawner]]
-### LevelSpawner
-[[Horse Spawner]]
-[[Peasant Spawner]]
-### Other
-[[Caged Spawner]]
-[[Cinematic Spawner]]
-BP_FreeableVIPSpawner
 
-## CPP_TBL_Docs
-[[classASpawner#Public Functions#]]
+The spawner variants below are documented where pages exist; names without a link
+are not yet written up. Base class: [[ref:ASpawner]].
+
+### General
+- Base Spawner
+- Run In Spawner
+- [[ref:AGroupSpawner|Group Spawner]]
+- Fence Spawner
+- Tent Spawner
+- [[ref:ASeatSpawner|Seat Spawner]]
+
+### LevelSpawner
+- Horse Spawner
+- Peasant Spawner
+
+### Other
+- Caged Spawner
+- Cinematic Spawner
+- BP_FreeableVIPSpawner
+
+## C++ reference
+[[ref:ASpawner]] — see its public functions in the generated reference.

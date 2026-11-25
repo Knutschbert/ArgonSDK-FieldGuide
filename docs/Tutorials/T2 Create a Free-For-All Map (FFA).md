@@ -138,7 +138,7 @@ Make sure current Gamemode is set to `Mode_FFA_C`:
 A Navigation mesh will allow bots to plan their movements in the environment according to their current task. 
 
 > [!note]
-> YT videos explaining UE4 NavMeshes are available in [[Additional Ressources#^f89b4d|Additional Resources: Navigation]]
+> YT videos explaining UE4 NavMeshes are available in [[Additional Ressources#Navigation|Additional Resources: Navigation]]
 
 1. Drag a `Nav Mesh Bounds Volume` from the `Place Actors` window into your scene.
 2. Scale and adjust it’s position to cover an area within your floor mesh

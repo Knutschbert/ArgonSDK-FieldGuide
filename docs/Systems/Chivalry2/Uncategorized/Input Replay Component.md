@@ -1,5 +1,5 @@
 Controller Component which allows you to record and replay player inputs.
-See [[classUInputReplayComponent|UInputReplayComponent]]
+See [[ref:UInputReplayComponent]]
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xXJyTHf9GaE?si=tBqGWcFSvqak454-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -21,9 +21,9 @@ This component offers other functions, for example stitching input replays toget
   
 \* by default, mouse movement overrides input replay on yourself
 # Minimal Example
-1. Add a [[classUInputReplayComponent|UInputReplayComponent]] to your local [[classATBLPlayerController|ATBLPlayerController]] using [[CreateInputReplayComponent]] node.
-2. Record a `.input` file using [[docs/docs/TBL_src_clean/TBLPlayerController/nodes/InputRec|InputRec]].
-3. Spawn an NPC using [[SpawnTBLAIFromClass]] and make it a [[SetDummyBot|dummy bot]].
-4. Play the recorded file [[docs/docs/TBL_src_clean/InputReplayComponent/nodes/InputPlay|on the NPC]] or [[docs/docs/TBL_src_clean/TBLPlayerController/nodes/InputPlay|on yourself]].
+1. Add a [[ref:UInputReplayComponent]] to your local [[ref:ATBLPlayerController]] using the [[ref:CreateInputReplayComponent|CreateInputReplayComponent]] node.
+2. Record a `.input` file using [[ref:TBLPlayerController::InputRec|InputRec]].
+3. Spawn an NPC using [[ref:SpawnTBLAIFromClass]] and make it a [[ref:SetDummyBot|dummy bot]].
+4. Play the recorded file [[ref:InputReplayComponent::InputPlay|on the NPC]] or [[ref:TBLPlayerController::InputPlay|on yourself]].
 ## BlueprintUE
 <div class="bue-embed" data-bp="input-replay" data-height="600px"></div>
