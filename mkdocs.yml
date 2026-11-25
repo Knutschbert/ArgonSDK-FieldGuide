@@ -13,6 +13,7 @@ theme:
       - navigation.instant
       - navigation.tracking
       - navigation.top
+      - navigation.indexes
       - toc.follow
       - search.suggest
       - search.highlight
@@ -61,18 +62,23 @@ markdown_extensions:
       permalink: true
 
 plugins:
+  - awesome-pages
   - mermaid2
   - search
-  - roamlinks 
-  - embed_file 
+  - roamlinks
+  - embed_file
   - callouts
 
 extra_css:
   - javascripts/mermaid-center.css
   - javascripts/extra.css
+  - javascripts/bue-render/render.css
 
 extra_javascript:
   - javascripts/mathjax.js
   - javascripts/mathjax/tex-svg.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
   - javascripts/curve-explorer.js
+  # BlueprintUE renderer (vendored, MIT) must load before the embed loader
+  - javascripts/bue-render/render.js
+  - javascripts/bue-embed.js

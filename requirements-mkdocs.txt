@@ -1,4 +1,5 @@
 mkdocs-material
+mkdocs-awesome-pages-plugin
 mkdocs-roamlinks-plugin
 mkdocs-mermaid2-plugin
 mkdocs-embed-file-plugins

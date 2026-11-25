@@ -1,3 +1,6 @@
+---
+title: Blueprint Know-How
+---
 
 # QOL
 

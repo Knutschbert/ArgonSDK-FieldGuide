@@ -1,0 +1,14 @@
+Vendored BlueprintUE renderer
+=============================
+
+render.js and render.css are the client-side blueprint renderer from
+blueprintue-self-hosted-edition, copied here so the Field Guide can display
+interactive BlueprintUE graphs without any server or external dependency.
+
+  Upstream: https://github.com/blueprintue/blueprintue-self-hosted-edition
+            (directory: www/bue-render/)
+  License:  MIT (c) blueprintUE
+
+These files are vendored verbatim. To update, re-copy them from the upstream
+www/bue-render/ directory. They are loaded site-wide via extra_css /
+extra_javascript in mkdocs.yml; ../bue-embed.js drives them.

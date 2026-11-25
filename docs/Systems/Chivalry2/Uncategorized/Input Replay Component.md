@@ -26,4 +26,4 @@ This component offers other functions, for example stitching input replays toget
 3. Spawn an NPC using [[SpawnTBLAIFromClass]] and make it a [[SetDummyBot|dummy bot]].
 4. Play the recorded file [[docs/docs/TBL_src_clean/InputReplayComponent/nodes/InputPlay|on the NPC]] or [[docs/docs/TBL_src_clean/TBLPlayerController/nodes/InputPlay|on yourself]].
 ## BlueprintUE
-<iframe src="https://blueprintue.com/render/dpbhdw-t/" scrolling="no" allowfullscreen width="100%" height="600"></iframe>
+<div class="bue-embed" data-bp="input-replay" data-height="600px"></div>

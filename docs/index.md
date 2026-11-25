@@ -58,12 +58,12 @@ Generated doxygen-style documentation of Torn Banner's C++ classes and selected 
 
 ## BlueprintUE embeds
 
-Several pages embed a self-hosted version of [BlueprintUE](https://blueprints.polehammer.net/):
+Several pages embed interactive [BlueprintUE](https://blueprintue.com/) graphs. The viewer is self-contained — the blueprint data lives in this repository, so nothing depends on an external server:
 
-- Copy-paste the embedded snippets directly into Unreal Engine's Blueprint editor.
-- Create and share your own snippets with other users.
+- Copy-paste the node text straight into Unreal Engine's Blueprint editor (UE 4.25).
+- Pan with drag, zoom with the scroll wheel.
 
-<iframe src="https://blueprints.polehammer.net/render/p7ursbys/" scrolling="no" allowfullscreen width="100%" height="300"></iframe>
+<div class="bue-embed" data-bp="anti-afk-kick" data-height="300px"></div>
 
 > [!fail]
-> If you can't see the embed above this note, please leave a message on Discord.
+> If you can't see the interactive graph above, make sure JavaScript is enabled (the web version only — the Obsidian vault shows these as embeds instead).

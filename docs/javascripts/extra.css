@@ -177,3 +177,26 @@ div.mermaid {
   fill: var(--bg-mermaid-label) !important;
   stroke: var(--bg-mermaid-label) !important;
 }
+
+/* ------------------------------------------------------------------ */
+/* BlueprintUE embeds (bue-embed.js + vendored bue-render/render.js)   */
+/* ------------------------------------------------------------------ */
+.bue-embed {
+  display: block;
+  margin: 1rem 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* The renderer draws a .bue-render canvas; keep it from overflowing the page. */
+.bue-embed .bue-render {
+  max-width: 100%;
+}
+
+.bue-embed__error {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest, #ccc);
+  border-left: 4px solid #d9534f;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}

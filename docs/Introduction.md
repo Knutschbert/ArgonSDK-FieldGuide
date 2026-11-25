@@ -1,3 +1,6 @@
+---
+title: Introduction
+---
 
 [[ArgonSDK]] is an Unreal Engine 4 project specialized for creating modded content for Chivalry 2. It attempts to mimic the real development environment ("SDK") used by Torn Banner developers. Due to unofficial nature of this project, it inevitably has a set of limitations that will be discussed below.
 
