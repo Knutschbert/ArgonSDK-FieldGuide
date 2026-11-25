@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "ArgonSDK_FieldGuide",
+  "project_id": "bb26b044-f06d-4a0d-a5f1-4999e8c3a3fc"
+}
