@@ -23,8 +23,8 @@
 
 
 ### SaveGame Object
-Save data between Servertravel and game sessions. See also [[TX Using a SaveGame Object]]
-> Unchained [[Mod Loader GUI ]]and [[GiantSlayers]] are both using this to save settings / stats
+Save data between Servertravel and game sessions.
+> Unchained's Mod Loader GUI and GiantSlayers both use this to save settings / stats
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_4usRrTiqak?si=nl2UWn98WqQ14Gvd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

@@ -181,7 +181,7 @@ A Navigation mesh will allow bots to plan their movements in the environment acc
 
 ### 5.3 Testing your map
 > [!info]
-> The [[Mod Loader GUI]] automatically detects custom maps in the `/Content/Mods` directory (also those loaded from a pak file). 
+> The Mod Loader GUI automatically detects custom maps in the `/Content/Mods` directory (also those loaded from a pak file).
 
 1. Launch the moddable version of the game using `Unchained Launcher`
 2. Limit the number of bots to 15 (we only have 16 spawn slots)

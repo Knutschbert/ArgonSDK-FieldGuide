@@ -3,9 +3,6 @@
 > [!NOTE] Tutorial
 >  [[T2 Create a Free-For-All Map (FFA)]]
 
-> [!NOTE] Tutorial
->  [[T4 Create a Team Deathmatch Map (TDM)]]
-
 ## Types
 ### General
 [[Base Spawner]]
