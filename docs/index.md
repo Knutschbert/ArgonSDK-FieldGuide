@@ -10,6 +10,7 @@ A community field guide for modding **Chivalry 2** with [ArgonSDK](https://githu
 - **[[Requirements]]** — tools and project setup you need before you begin
 - **[[Tutorials Overview]]** — step-by-step: cosmetic and gameplay mods
 - **[[Chivalry 2 Systems Overview]]** — how Torn Banner's systems work (spawns, maps, bots, abilities)
+- **[[Reference|C++/BP Reference]]** — searchable Torn Banner C++ class & Blueprint-node reference
 - **[[Glossary]]** — terms used throughout the guide
 
 ## Purpose of this guide
