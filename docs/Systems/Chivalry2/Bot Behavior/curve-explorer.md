@@ -64,6 +64,8 @@ range and curve parameters for that consideration.
 | Block repeat timing | 0–6 seconds | Linear: \(M=10, K=1, C=0.85, B=0\) | A threshold-like delay before the behavior becomes attractive. |
 | Wait fallback | 0–1 | Linear: \(M=0, K=1, C=0, B=0.25\) | A stable low fallback score. |
 | Shove recent blocks | 0–4 | Polynomial: \(M=1, K=2, C=0, B=0\) | Recent blocking pressure makes Shove more attractive. |
+| Overhead/Stab cooldown | 0–1 seconds | Polynomial: \(M=1, K=3, C=0, B=0\) | The score rises over a shorter range than Slash cooldown. |
+| Feint randomness | 0–1 random value | Linear: \(M=1, K=1, C=0, B=0\) | A higher sample gives this one consideration a higher score, not a feint probability. |
 
 If JavaScript is unavailable, this table and the formula page contain the same essential
 interpretation.

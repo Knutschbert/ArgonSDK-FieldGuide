@@ -7,30 +7,27 @@ valid combat target and is in a combat mode.
 
 ## Entering and leaving combat
 
-At a high level, combat progression works like this:
+**Recovered:** a valid engagement request sets up controller-side target and mode state.
+When the combat gate is active, native per-frame processing can approach, face, and adjust
+position around the target. An immediate disengagement tears down that state.
 
-1. An engagement request gives the controller a target.
-2. The controller enters an **engaging** state, records the combat target, and begins approach
-   movement.
-3. Once the target is close enough for the controller’s engagement conditions, it can enter
-   **in-combat** state.
-4. Leaving combat clears the target and stops the combat-specific movement and defensive state.
+This describes a controller capability, **not** an observed General UtilityAI behavior winning
+and causing engagement in every ordinary fight.
 
 The controller-side target is the anchor for normal melee combat behavior. The documented normal
 combat behaviors do not independently search for targets.
 
 ```mermaid
-stateDiagram-v2
-  [*] --> OutOfCombat
-  OutOfCombat --> Engaging: valid engagement target
-  Engaging --> InCombat: engagement conditions met
-  InCombat --> Engaging: target leaves combat range
-  Engaging --> OutOfCombat: engagement ends
-  InCombat --> OutOfCombat: combat ends or target clears
+flowchart LR
+  E[Valid engagement request] -->|Recovered: sets up| T[Combat target and mode]
+  T -->|Recovered: active gate| N[Per-frame native combat movement]
+  T -->|Recovered: immediate Disengage| O[Engagement torn down]
 ```
 
-Plaintext: a valid target starts engagement; the controller approaches it and can enter combat.
-Loss of the target or combat ends the combat-specific target, movement, and defensive context.
+Plaintext: a valid controller engagement request sets up a target and combat mode. When the
+combat target is present and the mode is not OutOfCombat, recovered per-frame code can handle
+combat movement. An immediate Disengage clears that engagement. The diagram does not establish
+the ordinary-match caller of Engage or every internal mode transition.
 
 ## Spacing intents
 

@@ -5,20 +5,19 @@
 > choices can request combat work, while the combat controller owns the immediate fight: target,
 > spacing, movement, facing, attacks, and defensive state.
 
-## The fight in one picture
+## Two layers, not one traced fight
 
 ```mermaid
 flowchart LR
-  A[Target is available]
-  B[General behavior<br/>can request engagement]
-  C[Combat controller<br/>records CombatTarget]
-  D[Combat behavior candidates<br/>Slash · Block · Wait · Shove · Feint]
-  E[Action request]
-  F[Controller handles<br/>range · facing · movement · combat state]
-  G[Visible fight<br/>windup · release · recovery]
-
-  A --> B --> C --> D --> E --> F --> G
+  S[Authored melee behavior set] -->|Configured: contains| B[Slash · Block · Wait<br/>Shove · Feint candidates]
+  B -->|Configured: attaches| A[Action requests]
+  T[Combat target and active combat mode] -->|Recovered: controller processes| N[Range · facing · movement<br/>attack and defense state]
 ```
+
+Plaintext: the authored set contains candidates with actions they can request **if selected**.
+Separately, recovered controller code processes target and combat-mode state to handle movement and
+combat. No arrow joins these layers because an ordinary-match decision winner and its contribution
+to a particular visible fight have not been traced.
 
 | Layer | Short version |
 |---|---|
@@ -66,7 +65,7 @@ inputs, target generators, event sets, and controller functions.
 
 | Established in controlled use | Not a reliable public control |
 |---|---|
-| Set a valid combat target through the supported engagement surface. | Deterministic clockwise or counter-clockwise native circling. |
+| Engage a valid target through the controller in a controlled setup. | Treating engagement as proof of a General behavior winner. |
 | Use controller-side close-range spacing controls. | Public control of native lateral-motion strength, phase, or direction. |
 | Use waypoint/path-following for repeatable scripted routes. | Treating a behavior-set write as an automatic rebuild of existing behavior objects. |
 | Read or tune an exact live behavior instance for controlled research. | Assuming a weight change guarantees a visible winner. |

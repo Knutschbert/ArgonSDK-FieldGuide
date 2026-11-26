@@ -5,7 +5,7 @@ are configured, how combat movement is controlled, and which parts can safely be
 
 ## Start here
 
-[Read the visual TL;DR first.](TLDR.md)
+[Read the visual TL;DR first.](./TLDR.md)
 
 Bots are best understood as several connected layers:
 
@@ -67,7 +67,7 @@ that attack. Neither statement alone proves a complete ordinary-match decision t
 | **Action** | The work requested when a behavior is selected, such as issuing an attack order or holding block. |
 | **Target generator** | A source of candidate targets for a behavior. Normal melee combat behaviors instead use the controller’s existing combat target. |
 | **Combat target** | The actor currently being fought by the combat controller. |
-| **Native combat controller** | The controller layer that owns combat mode, target, movement, spacing, facing, and attack state. |
+| **Native combat controller** | [[ref:ATBLAICombatController|TBLAICombatController]]: the controller layer that owns combat mode, target, movement, spacing, facing, and attack state. |
 | **Personality** | A configuration layer that can choose or override behavior-set and event-reaction settings. |
 | **Event behavior** | A behavior candidate associated with a combat event such as an incoming attack or parry success. |
 

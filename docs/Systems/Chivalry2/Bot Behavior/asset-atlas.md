@@ -32,7 +32,7 @@ semantic catalog, the same root is written as `AI/Utility/`.
 | `Chiv2AIController_Utility_C` | The standard melee AI controller class used by documented normal bot spawns. | **Observed/Configured.** Carries both general and combat decision-making surfaces plus the native combat controller. |
 | `GeneralDecisionMakerComponent` | Holds broad world and engagement candidates. | **Observed.** Its cache can be intentionally cleared by some helper-spawn workflows. |
 | `CombatDecisionMakerComponent` | Holds close-combat candidates and event-associated behavior sets. | **Observed.** It can cache normal combat behaviors even when active decision dispatch is not established. |
-| `TBLAICombatController` | The native controller layer for target, combat state, movement, spacing, and attack control. | **Recovered/Observed.** It can drive visible combat independently of proof of a UtilityAI winner. |
+| [[ref:ATBLAICombatController|TBLAICombatController]] | The native controller layer for target, combat state, movement, spacing, and attack control. | **Recovered/Observed.** It can drive visible combat independently of proof of a UtilityAI winner. |
 
 ## Core normal-melee behavior sets
 
@@ -43,8 +43,10 @@ semantic catalog, the same root is written as `AI/Utility/`.
 | `BS_MeleeFighter_C` | General combat-engagement behavior set. | Includes entering combat, responding to damage, and escaping close danger. |
 | `BS_General_C` | General-purpose behavior set. | Includes revive, combat-zone safety, and objective movement candidates. |
 
-**Configured:** the named normal combat set is present on documented normal bot spawns.  
-**Unknown:** the complete ordinary-match sequence that chooses every set and behavior at runtime.
+**Observed:** the `_Normal` set and six cached behaviors were present on sampled direct and
+owner-created bots. **Configured:** the authored `Normal` personality row names `_Dumb`.
+**Unknown:** the selector/application path reconciling those surfaces and the complete
+ordinary-match sequence that chooses a set and behavior.
 
 ## Normal combat behaviors
 
@@ -144,5 +146,5 @@ are not a generic instruction to force a normal bot’s decision loop.
 - Use the names to recognize a live inventory or asset reference.
 - Treat a live cache as evidence of configured availability, not proof of a selected winner.
 
-For the evidence boundaries that apply to all entries, read *Evidence and limitations* when that
-guide page is available.
+For the evidence boundaries that apply to all entries, read
+[Evidence and limitations](evidence-and-limitations.md).

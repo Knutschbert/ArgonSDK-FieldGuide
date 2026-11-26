@@ -29,18 +29,21 @@ simplified parry-success set can omit the feint follow-up.
 This is a useful **configured capability** difference. It is not, by itself, a complete measured
 difficulty curve.
 
-## What was observed on default spawns
+## What was observed on sampled bots
 
-Documented default spawned bots used the normal combat set and had all six normal combat behaviors,
-including `BC_FeintAttack_C`, available in their combat behavior cache.
+**Observed:** documented direct test spawns and an owner-created bot had the normal combat set and
+all six normal combat behaviors, including `BC_FeintAttack_C`, in their caches. This establishes
+what those sampled bots held, not the selection rule for every default or ordinary-match bot.
 
-That result corrects an earlier expectation that a default spawn might use the simplified set.
-However, the exact general-purpose runtime selector that chooses and reapplies personality rows is
-not established as a public, general per-spawn control.
+**Configured:** the `Normal` personality row names the simplified `_Dumb` melee set. The
+difference from the sampled `_Normal` caches could reflect the spawn path, row application, or
+another configuration choice; it has not been reconciled. The general runtime selector and
+reapplication path for personality rows remain **Unknown**.
 
 | Question | Supported answer |
 |---|---|
-| Does a documented default spawn have normal combat behaviors? | **Observed:** yes, including the feint behavior. |
+| What did the sampled direct/owner-created bots hold? | **Observed:** the six-candidate `_Normal` cache, including Feint. |
+| What does the authored `Normal` personality row name? | **Configured:** the simplified `_Dumb` set. This is not a record of what a sampled bot received. |
 | Can the authored data contain simplified and advanced variants? | **Configured:** yes. |
 | Is there a universal public call to choose any personality row for each newly spawned bot? | **Unknown:** not established. |
 | Does changing a shared controller default automatically change an existing spawn? | **Observed:** no reliable propagation was demonstrated. |
@@ -56,13 +59,12 @@ flowchart LR
   C --> I[Live behavior instances<br/>weight, timer, action state]
   SR[Change set reference] -. does not by itself rebuild .-> C
   IW[Change live instance weight] --> I
-  I --> D[Later scoring and action rules]
 ```
 
 Plaintext: the authored set can be used to create cached runtime objects, which in turn contain
 the live behavior instances. Changing a set reference changes that reference; it does not itself
 rebuild the existing cache. Changing an instance's weight reaches that instance, but does not
-guarantee that it wins or becomes visible.
+guarantee that a decision loop evaluates it, that it wins, or that it becomes visible.
 
 This produces an important cache boundary:
 
@@ -77,25 +79,16 @@ This produces an important cache boundary:
     A live bot can retain behavior objects that were created before a behavior-set reference changed.
     Treat set replacement and runtime-cache rebuilding as separate operations.
 
-## A bounded movement-only control technique
+??? "Research-only movement isolation"
 
-For controlled research, attack pressure can be reduced by changing the live weights of the
-offensive normal-combat behavior instances:
+    In controlled research, attack pressure was reduced by changing live weights on the
+    offensive normal-combat behavior instances: `BC_OverheadStab_C`, `BC_Shove_C`,
+    `BC_FeintAttack_C`, and `BC_Slash_C`. This helped isolate native movement while the
+    combat target and controller gate remained in place.
 
-- `BC_OverheadStab_C`
-- `BC_Shove_C`
-- `BC_FeintAttack_C`
-- `BC_Slash_C`
-
-This has been used to isolate native movement and spacing behavior while retaining the controller’s
-combat target and combat-movement gate.
-
-It is a **research control**, not a general difficulty recipe:
-
-- remaining behaviors can still affect the bot unless they are also accounted for;
-- it does not prove the decision layer is active;
-- it should not be confused with replacing the authored behavior set;
-- it should not be used to enable UtilityAI on a sparring bot.
+    This is **not a difficulty or UtilityAI-enabling recipe**. Other behaviors may remain;
+    changed weights do not prove that a decision maker ran, and changing live instances is
+    different from replacing a behavior set.
 
 ## Personality and variance
 

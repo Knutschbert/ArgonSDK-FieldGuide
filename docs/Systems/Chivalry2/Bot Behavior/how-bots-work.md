@@ -13,22 +13,25 @@ This separation explains several otherwise confusing observations:
 - Changing a behavior configuration and changing a movement setting are different operations with
   different effects.
 
-## The layers
+## The layers and the untraced handoff
 
 ```mermaid
 flowchart TD
-  A[World state and available targets] --> B[General decision layer]
-  A --> C[Combat decision layer]
-  B --> D[Behavior candidate]
-  C --> D
-  D --> E[Action request]
-  E --> F[Native combat controller]
-  F --> G[Combat target and combat mode]
-  F --> H[Movement, spacing, and facing]
-  F --> I[Attack, block, dodge, and combat state]
+  B[General behavior set] -->|Configured: contains| G[Engagement candidates]
+  C[Combat behavior set] -->|Configured: contains| D[Close-fight candidates]
+  G -->|Configured: attaches| E[Action requests]
+  D -->|Configured: attaches| E
+  T[Controller target and combat mode] -->|Recovered: per-frame processing| F[Native combat controller]
+  F -->|Recovered: controls| H[Movement · facing · spacing<br/>attack and defense state]
 ```
 
-Text version:
+Plaintext: general and combat sets contain authored behavior candidates with action requests. If
+selected, an action can write a controller request; the diagram intentionally does not claim that
+selection happened in an ordinary match. Separately, recovered native code uses combat target and
+mode state to drive movement and combat. The observed bot cache and visible fight do not connect
+these two layers into one traced decision-to-action path.
+
+In practical terms:
 
 1. The bot has a controller, a pawn, and world information such as nearby characters and combat
    state.
@@ -65,9 +68,10 @@ Normal melee controllers expose two related decision-making surfaces:
 | **General** | Broader world behavior and target engagement. | Enter combat, respond to damage, revive, move around objectives, escape a local danger. |
 | **Combat** | Choices while a combat target already exists. | Slash, overhead/stab, feint, block, wait, shove, and event-specific reactions. |
 
-The general layer can provide a route into combat: an engagement behavior can select an enemy and
-request that the combat controller engage it. The combat layer contains the close-fight candidates
-used once there is a controller-side combat target.
+**Configured/Recovered:** a general engagement behavior has a target generator and an action that
+can validate an enemy and request controller engagement. The combat set contains close-fight
+candidates configured around the existing controller-side combat target. **Unknown:** whether that
+general behavior initiated a particular ordinary-match fight.
 
 !!! note "Combat behaviors do not normally generate their own targets"
     The documented normal melee combat behaviors use the controller’s current combat target. Their
@@ -154,5 +158,6 @@ decision winner.
 | **Does not control by itself** | Having a behavior set or cached behavior does not itself make the behavior run. |
 | **Unknown** | The full ordinary-match causal chain from perception through every decision winner to every visible action has not been established. |
 
-Next: *Decision-making and scoring* explains how a behavior becomes more or less attractive, while
-*Movement and spacing* explains what happens after the controller has a combat target.
+Next: [Decision-making and scoring](decision-making.md) explains how a behavior becomes more or
+less attractive, while [Movement and spacing](movement-and-spacing.md) explains the controller's
+combat-target-dependent movement.

@@ -23,7 +23,7 @@ the guide precise about what is known, what is configured, and what remains open
 | Spacing | Close-pressure range is a verified controller-side spacing control in controlled tests. | Some written fields and named intents can be reset or overridden by active behavior/action paths. |
 | Waypoint movement | Path-following can make repeatable scripted rings and routes. | It is not the same as native combat orbiting and tends to face movement direction. |
 | Event behavior sets | Multiple incoming-attack, shove, parry-success, damage, and guard-break response inventories are configured. | A configured set is not proof that an event dispatched it or that one of its behaviors won. |
-| Personality and variants | Normal and simplified behavior-set variants exist; documented default spawns used the normal combat inventory. | A universal runtime personality selector/reapplication method is not established. |
+| Personality and variants | Normal and simplified variants exist; sampled direct/owner-created bots cached `_Normal`, while the authored `Normal` row names `_Dumb`. | The row-to-bot selector and application path are not reconciled; do not generalize the sampled cache to all default bots. |
 | Ordinary-match causality | Some direct normal-bot combat observations exist. | A complete normal-match trace from perception through each selected behavior to each visible action is not established. |
 
 ## What not to infer

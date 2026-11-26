@@ -83,14 +83,13 @@ corresponding event is handled.
 
 ```mermaid
 flowchart LR
-  E[Combat event<br/>incoming attack, shove, parry, damage] --> I[Configured event inventory]
-  I --> C[Eligible reaction candidates]
-  C --> D[Decision and action rules]
-  D --> V[Possible visible reaction]
+  E[Authored event slot<br/>incoming attack, shove, parry, damage] -->|Configured: points to| I[Reaction behavior set]
+  I -->|Configured: contains| C[Reaction candidates]
 ```
 
-Plaintext: an event can expose a configured inventory of reaction candidates. It does not itself
-prove a dispatch, a winner, or a visible response.
+Plaintext: an authored combat-event slot points to a reaction set containing candidate behaviors.
+The diagram does not connect a live event to evaluation or a visible response: event dispatch,
+selection, and execution in an ordinary fight remain **Unknown**.
 
 | Event category | Documented configured options | What it means |
 |---|---|---|
@@ -131,5 +130,5 @@ yet give us a complete observed map from every player action to every bot respon
 | **Does not control by itself** | An allowed attack list or configured event set does not guarantee an immediate move, swing, block, or reaction. |
 | **Unknown** | A complete live event-to-winner-to-visible-response trace for ordinary melee bots. |
 
-See *Movement and spacing* for the controller layer that carries attack and defensive requests into
-actual position, facing, and combat state.
+See [Movement and spacing](movement-and-spacing.md) for the controller layer that can carry attack
+and defensive requests into position, facing, and combat state when the engagement gate is active.

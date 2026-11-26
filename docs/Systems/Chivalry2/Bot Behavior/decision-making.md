@@ -34,14 +34,16 @@ flowchart LR
   W[Behavior weight] --> S[Candidate score]
   K --> S
   S --> R[Rank against eligible candidates]
-  R --> A[Selected action<br/>or active action remains]
-  A --> F[Combat controller result<br/>movement, facing, state]
+  R --> A[Action selected<br/>or active action remains]
+  A -->|If invoked: requests| F[Combat controller state]
 ```
 
-Plaintext: a world measurement is normalized, shaped by a curve, and combined with the
+Plaintext: recovered scoring logic normalizes a world measurement, shapes it with a curve, and
+combines it with the
 candidate's other considerations. That result and the behavior's relative weight contribute to a
-candidate score. The system ranks eligible candidates, but action-lifecycle rules can preserve an
-active action before the controller produces the visible result.
+candidate score. Decision and action-lifecycle rules may select a new action or preserve an active
+one; if invoked, an action can request controller state. This diagram does **not** show a measured
+winner or guarantee a visible combat result in an ordinary fight.
 
 !!! warning "A curve is not a winner probability"
     The orange curve in the [Curve explorer](curve-explorer.md) is one consideration's score, not
