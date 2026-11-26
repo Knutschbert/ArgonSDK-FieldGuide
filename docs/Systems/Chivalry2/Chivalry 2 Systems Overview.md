@@ -13,6 +13,12 @@ How players and actors are placed into a match.
 
 - [[Spawn System Overview]]
 
+## Stages and rounds
+How sampled match modes start, advance, and end through stage actors or native
+round state.
+
+- [Stages and rounds guide](Stages/README.md)
+
 ## Maps
 - [[Chivalry 2 Official Maps]]
 
