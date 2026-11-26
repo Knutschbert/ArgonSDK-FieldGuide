@@ -9,7 +9,7 @@ state observed in Last Team Standing (LTS) and Arena.
 
 ## Start here
 
-[Read the TL;DR first.](TLDR.md)
+[Read the TL;DR first.](stages-tldr.md)
 
 The smallest useful model is not one universal stage system:
 
@@ -33,7 +33,7 @@ every Chivalry 2 map.
 
 | If you want to understand… | Read… |
 |---|---|
-| The shortest correct mental model | [Stages and rounds TL;DR](TLDR.md) |
+| The shortest correct mental model | [Stages and rounds TL;DR](stages-tldr.md) |
 | Which layer owns a stage or round | [Stage and round overview](stages-overview.md) |
 | How FFA, TDM, and TO differ as staged modes | [Staged modes](stages-staged-modes.md) |
 | How LTS and Arena use native round state | [Native-round modes](stages-native-round-modes.md) |
