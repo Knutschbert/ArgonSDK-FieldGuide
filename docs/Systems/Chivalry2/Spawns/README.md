@@ -39,6 +39,7 @@ callable did not write.
 | What each sequence, spawner, wave, and queuer owns | [Components](components.md) |
 | How wave, cumulative, and group queues differ | [Queues and timing](queues-and-timing.md) |
 | What FFA, TDM, LTS, and TO configure and what was observed | [Game modes](game-modes.md) |
+| What to inspect in an existing map | [Map-reading guide](game-modes.md#if-youre-inspecting-a-map) |
 | Which spawner variants are named in authored assets | [Spawner types](Spawner.md) |
 | Where each spawner variant is placed and what it configures | [Spawner variants](Spawner%20Variants.md) |
 | Which conclusions are firm and which remain open | [Evidence and limitations](spawning-evidence-and-limitations.md) |
@@ -51,6 +52,7 @@ The guide labels material by what supports it:
 |---|---|
 | **Observed** | Directly seen in a documented live match or controlled test. |
 | **Configured** | Present in an authored level, class, or default configuration. |
+| **Declared** | A native header exposes a class relationship, field, or callable surface; this alone does not establish what its body does. |
 | **Recovered** | Established from the game implementation, described here in player-facing terms. |
 | **Inferred** | A working explanation supported by evidence but not fully traced. |
 | **Unknown** | Not established by the available evidence. |
@@ -65,7 +67,7 @@ the implementation can do something; it does not prove that call ran in a given 
     |---|---|
     | **Spawn sequence** | An actor that orders waves across spawners and limits how many run at once. |
     | **Spawner** | An actor that creates and configures a spawn wave at a placed location. |
-    | **Forward spawn** | An authored forward-spawning call shape appears in Team Objective stage scripts. The concrete receiver and its general runtime meaning are **Unknown** in the catalog build. |
+    | **Forward spawn** | An authored forward-spawning call appears in Team Objective stage scripts. Its concrete receiver in the sampled map and its ordinary-match behavior remain **Unknown**. |
     | **Spawn wave** | A temporary actor that collects joining controllers and tracks spawn timing and state. |
     | **Wave state** | The wave's progression label, such as not started, spawning, or ending. |
     | **Queuer** | A policy layer that admits controllers and schedules when they can spawn. It appears under a mode in samples; mode ownership is **Inferred**, not observed creation. |

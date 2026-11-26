@@ -28,7 +28,7 @@ releases its spawner and schedules cleanup. The complete ownership model is **In
 | **Queuer** | A separate policy for admission and respawn timing; its ownership by a mode is **Inferred** from where it appears. |
 | **Authored spawner** | Adds presentation and movement behavior on top of the native spawner. |
 
-For the full guide, start at the [spawning guide landing page](README.md).
+For the full guide, return to the [spawning guide landing page](../).
 
 ??? "Sample and interpretation cautions"
 

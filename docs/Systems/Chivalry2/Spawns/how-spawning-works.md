@@ -114,6 +114,21 @@ player without a pawn while a faction wave gained one joined controller. A new p
 possessed. The wave belonged to an authored run-in spawner, and the queuer's bot-waiting array was
 empty throughout.
 
+This diagram records **successive observed states**, not a confirmed
+controller-to-wave-to-pawn call chain:
+
+```mermaid
+flowchart LR
+  P["Player without pawn"] -->|"later snapshot"| W["Faction wave: one joined controller"]
+  W -->|"later snapshot"| N["New pawn possessed"]
+```
+
+Plaintext: in the TDM Wardenglade / InProgress controlled death sample, the
+player was first pawnless, a faction wave then held one joined controller, and
+the player later possessed a new pawn. The native function that wrote wave
+membership and the path that created the pawn remain **Unknown**; the arrows
+represent time order only.
+
 ??? "Worked example: observed respawn and recovered path"
 
     | Evidence | What it establishes | What it does **not** establish |

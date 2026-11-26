@@ -9,7 +9,28 @@ not a rule for a whole mode.
 | **FFA** | Level scripts author a sequence reference and an activation call; maps expose different scoring and distance settings. | FFA Fighting Pit / InProgress had a single active looping sequence with one spawner and one empty wave with a short pre-spawn delay. | Whether that configuration is the ordinary player-respawn path; full actor and sequence inventories. |
 | **TDM** | Separate faction sequences; Courtyard authors group-spawner references and Wardenglade authors named faction spawner references. Maps differ in simultaneous waves and interval length, with loop and fast-first-spawn flags. | TDM Courtyard / InProgress samples alternated between no live sequences and active faction sequences; a queuer instance under the mode object and faction-paired empty waves were present. TDM Wardenglade / InProgress showed a wave gaining one joined controller and then a new pawn. | Queue selection, which callable wrote membership, and whether the observed path holds on other maps. |
 | **LTS** | Round and life settings on the mode; level scripts expose initial-spawner names and match-state presentation. | LTS Courtyard / WaitingToStart had two inactive faction sequences and a queuer but no waves. | Whether LTS bypasses, constrains, or uses the shared sequence/spawner/wave path, and when sequences activate. |
-| **TO** | Stage scripts reference faction spawners, run-in spawners, sequence activation, and forward spawning. | No ordinary-match forward spawn was established. | Which concrete spawner a stage event selects in the catalog build, and whether forward spawns occur in ordinary play. |
+| **TO** | Stage scripts reference faction spawners, run-in spawners, sequence activation, and forward spawning. | No ordinary-match forward spawn was established. | Which concrete spawner the sampled stage event selects, and whether forward spawns occur in ordinary play. |
+
+## If you're inspecting a map
+
+Use the mode comparison above as a **reading guide**, not as a tested recipe
+for creating a new spawn system:
+
+1. Find the authored level-script references and activation calls, then check
+   whether the map names faction sequences, stage-specific spawners, or both.
+   Their presence is **Configured**, not evidence that they were selected.
+2. Compare the sequence's authored loop, wave-concurrency and timing settings
+   with its placed spawner types in [Spawner variants](Spawner%20Variants.md).
+   A typed placement does not identify which location served a player.
+3. In a live match, record the map, mode and match state before interpreting
+   sequences or waves. A `WaitingToStart` LTS snapshot without waves is not
+   evidence about its later rounds, and a TDM wave with membership does not
+   identify the native join caller.
+
+For an editor walkthrough that **does** construct a simple map, see the
+[Free-for-All map tutorial](../../../Tutorials/T2%20Create%20a%20Free-For-All%20Map%20%28FFA%29.md).
+It is a separate tutorial, not proof that the sampled shipped maps use the
+same setup or that this guide has verified a new-map spawning recipe.
 
 ??? "FFA details"
 
@@ -63,9 +84,9 @@ not a rule for a whole mode.
     **Configured.** Bridgetown and Coxwell level scripts expose faction- and stage-specific spawner
     references, run-in-named objects, sequence calls, and both normal and forward spawn call shapes.
 
-    **Unknown.** Catalog truncation kept a stage entry from being tied to a concrete receiver in the
-    catalog build. A bounded recovery against a different source build found a receiver-specific stage
-    path, but it cannot prove the catalog build's path. No ordinary-match forward spawn is established.
+    **Unknown.** The available data does not tie the sampled stage event to a concrete spawner.
+    A receiver-specific stage path found in a different content version cannot establish this map's
+    path or an ordinary-match forward spawn.
 
 ??? "How to read the mode samples"
 

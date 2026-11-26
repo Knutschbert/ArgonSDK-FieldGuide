@@ -2,8 +2,9 @@
 
 This page answers a narrower question than [Spawner types](Spawner.md): which authored spawner
 classes are actually placed in maps, and what configuration do they expose? The counts below are
-**Configured** authored exports in the indexed data. They are not records of which spawner a live
-match selected.
+**Configured** typed actor exports in the indexed map data; “maps” counts map assets containing
+that type. They are not spawn counts, unique physical locations, or records of which spawner a
+live match selected.
 
 > [!warning] Placement is not selection
 > A typed map export proves that a class was authored into a level. It does not prove that a
@@ -16,7 +17,7 @@ match selected.
 | `RunInSpawner_C` | 1,863 | 49 | Team Objective and FFA maps; the most widely placed authored variant. |
 | `BaseSpawner_C` | 544 | 31 | Directly placed alongside its descendants, including Brawl and FFA maps. |
 | `FenceSpawner_C` | 271 | 11 | Tournament Arena, Hippodrome, Fighting Pit, Lionspire, and Courtyard. |
-| `GroupSpawner` | 258 | 52 | Native group aggregator used across many objectives and modes. |
+| `GroupSpawner` | 258 | 52 | Native group aggregator placed across many objectives and modes. |
 | `CagedSpawner_C` | 44 | 4 | All four Falmire variants: FFA, LTS, TDM, and Team Objective. |
 | `RunInSpawner_Long_TG_C` | 26 | 4 | Coxwell and the Tournament Arena/LTS/TDM variants. |
 | `RunInSpawner_Short_C` | 9 | 3 | Tournament Arena, LTS, and TDM. |
@@ -38,8 +39,8 @@ use visible, not because the two hierarchies have been merged.
 Falmire is the clearest example of several variants appearing in one map family:
 
 - **CagedSpawner_C** is placed in FFA, LTS, TDM, and Team Objective Falmire.
-- **BP_FreeableVIPSpawner_C** is placed in Team Objective Falmire at the VIP spawn. Its wave uses
-  `WarHeroSpawn_C` and is marked private.
+- **BP_FreeableVIPSpawner_C** is placed in Team Objective Falmire at the VIP spawn. Its authored
+  wave parameters specify `WarHeroSpawn_C` and a private-wave flag; live use was not observed.
 - **GroupSpawner** is also placed in Team Objective Falmire.
 
 These are authored placements. They do not show which caged, group, or VIP spawner was selected for
@@ -47,7 +48,8 @@ a particular death or objective stage.
 
 ### Tournament Grounds
 
-Tournament Grounds uses **FenceSpawner_C** and all three Run-In subtypes:
+Across the indexed Tournament Grounds map variants, authored placements
+include **FenceSpawner_C** and all three Run-In subtypes:
 
 - `RunInSpawner_Long_TG_C`
 - `RunInSpawner_Medium_C`

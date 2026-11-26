@@ -66,10 +66,11 @@ policy for players.
     earlier state. This demonstrates a bot-admission surface; it does not establish the ordinary
     player-respawn path.
 
-    **Observed — wave objects are transient.** Across the TDM Courtyard / InProgress, TDM Wardenglade
-    / InProgress, and LTS Courtyard / WaitingToStart samples, wave objects appeared, rotated among
-    placed spawners, and disappeared. An empty wave in one sample is not evidence that waves never
-    hold players.
+    **Observed — wave objects are transient.** TDM Courtyard / InProgress and TDM Wardenglade /
+    InProgress samples showed waves appearing or rotating among placed spawners; an empty wave in
+    one snapshot is not evidence that waves never hold players. By contrast, the LTS Courtyard /
+    WaitingToStart sample had two inactive sequences and a queuer but **no waves**. A pre-round
+    absence is not a claim about LTS during play.
 
 ??? "Timing questions that remain open"
 

@@ -9,6 +9,7 @@ the guide precise about what is known, what is configured, what was seen, and wh
 |---|---|
 | **Observed** | Seen in a documented live match or controlled test. |
 | **Configured** | Present in an authored level, class, or default configuration. |
+| **Declared** | A header lists a class, member, or interface; it is not recovered runtime behavior. |
 | **Recovered** | Established implementation behavior, described here in player-facing terms. |
 | **Inferred** | A supported working explanation that has not been fully traced. |
 | **Unknown** | Not established by the available evidence. |
@@ -28,7 +29,7 @@ the guide precise about what is known, what is configured, what was seen, and wh
 | Player respawn | TDM Wardenglade / InProgress showed a pawnless player, a wave with one joined controller, then a new pawn. | The native function that wrote that membership and created the pawn was not attributed in that sample. |
 | Authored spawner behavior | Base and run-in spawners configure presentation, movement, and control-restriction checks. | Which authored path runs in an ordinary spawn is not established. |
 | Mode differences | FFA, TDM, LTS, and TO author different sequences, spawners, and timing values. | One sample per mode cannot establish a universal mode rule. |
-| Team Objective forward spawns | Stage scripts reference forward spawning and run-in spawners. | The catalog build's stage-to-spawner receiver binding is unknown. |
+| Team Objective forward spawns | Stage scripts reference forward spawning and run-in spawners. | The sampled map's stage-to-spawner receiver binding is unknown. |
 
 ??? "What not to infer"
 
@@ -69,7 +70,7 @@ the guide precise about what is known, what is configured, what was seen, and wh
     | No attributed live path | A wave gains a member, but the writing function was not identified. | Report the visible sequence and name the writer Unknown. |
     | Negative result with a control | Sampled callables do not fire while a control callable does. | State the negative result for those callables in that sample only. |
     | Incomplete static surface | A deferred queue policy admits controllers, but its due-entry consumer is not recovered. | Describe admission, not the full spawn. |
-    | Catalog truncation | A stage entry cannot be bound to a concrete receiver in the catalog build. | Keep the stage reference as configured and the receiver as Unknown. |
+    | Incomplete map evidence | A stage event cannot be bound to a concrete spawner in the sampled map data. | Keep the stage reference as configured and the receiver as Unknown. |
     | Single-sample evidence | One map shows a sequence or queuer in a specific match state. | State the map and state; do not infer a mode-wide rule. |
 
 ??? "Open questions"
@@ -83,7 +84,7 @@ the guide precise about what is known, what is configured, what was seen, and wh
     6. Which authored run-in spawner paths run in ordinary player spawns, and when is control released?
     7. Which spawn data is authoritative, replicated, or only local presentation and mode state?
     8. Does LTS bypass, constrain, or use the shared sequence/spawner/wave path?
-    9. Which concrete spawner does a Team Objective stage select in the catalog build?
+    9. Which concrete spawner does a Team Objective stage select in the sampled map?
     10. How far do these bounded samples generalize to other maps and match states?
 
 ??? "How to use the guide responsibly"
