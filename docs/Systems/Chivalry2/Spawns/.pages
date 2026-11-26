@@ -1,4 +1,11 @@
 title: Spawns
 nav:
+  - README.md
   - Spawn System Overview.md
+  - how-spawning-works.md
+  - components.md
+  - queues-and-timing.md
+  - game-modes.md
   - Spawner.md
+  - Spawner Variants.md
+  - spawning-evidence-and-limitations.md
