@@ -1,0 +1,1685 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../how-bots-work/" rel="prev"/>
+<link href="../combat-actions-and-reactions/" rel="next"/>
+<link href="../../../../assets/images/branding/uwu.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.8.2" name="generator"/>
+<title>Decision-making and scoring - Field Guide for ArgonSDK</title>
+<link href="../../../../assets/stylesheets/main.57a0d79d.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.fb2fffe2.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Volkhov:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Volkhov";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../javascripts/mermaid-center.css" rel="stylesheet"/>
+<link href="../../../../javascripts/extra.css" rel="stylesheet"/>
+<link href="../../../../javascripts/bue-render/render.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="blue" data-md-color-primary="amber" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#decision-making-and-scoring">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Field Guide for ArgonSDK" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Field Guide for ArgonSDK">
+<img alt="logo" src="../../../../assets/images/branding/uwu.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Field Guide for ArgonSDK
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Decision-making and scoring
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="" data-md-color-primary="amber" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="amber" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Knutschbert/ArgonSDK-FieldGuide" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Field Guide for ArgonSDK" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Field Guide for ArgonSDK">
+<img alt="logo" src="../../../../assets/images/branding/uwu.png"/>
+</a>
+    Field Guide for ArgonSDK
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/Knutschbert/ArgonSDK-FieldGuide" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    
+  
+    ArgonSDK Field Guide
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Introduction/">
+<span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Tutorials/Tutorials%20Overview/">
+<span class="md-ellipsis">
+    
+  
+    Tutorials Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Tutorials/Requirements/">
+<span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Tutorials/Blueprint%20Know-How/">
+<span class="md-ellipsis">
+    
+  
+    Blueprint Know-How
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Tutorials/T2%20Create%20a%20Free-For-All%20Map%20%28FFA%29/">
+<span class="md-ellipsis">
+    
+  
+    T2 Create a Free For All Map (FFA)
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Tutorials/T3%20Create%20your%20first%20Blueprint%20Mod/">
+<span class="md-ellipsis">
+    
+  
+    T3 Create your first Blueprint Mod
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Tutorials/Additional%20Ressources/">
+<span class="md-ellipsis">
+    
+  
+    Additional Resources
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Systems
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Chivalry 2
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Chivalry 2
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Chivalry%202%20Systems%20Overview/">
+<span class="md-ellipsis">
+    
+  
+    Chivalry 2 Systems Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_1_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Bot Behavior
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_4_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Bot Behavior
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../TLDR/">
+<span class="md-ellipsis">
+    
+  
+    Melee bot combat — TL;DR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../how-bots-work/">
+<span class="md-ellipsis">
+    
+  
+    How melee bots work
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Decision-making and scoring
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Decision-making and scoring
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-decision-vocabulary">
+<span class="md-ellipsis">
+      
+        The decision vocabulary
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-one-candidate-moves-through-the-system">
+<span class="md-ellipsis">
+      
+        How one candidate moves through the system
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-the-normal-combat-behaviors-are-configured-to-consider">
+<span class="md-ellipsis">
+      
+        What the normal combat behaviors are configured to consider
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inputs-are-measurements-not-decisions">
+<span class="md-ellipsis">
+      
+        Inputs are measurements, not decisions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curves-turn-measurements-into-preference">
+<span class="md-ellipsis">
+      
+        Curves turn measurements into preference
+      
+    </span>
+</a>
+<nav aria-label="Curves turn measurements into preference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compare-documented-examples">
+<span class="md-ellipsis">
+      
+        Compare documented examples
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#target-generation-differs-between-general-and-combat-behavior">
+<span class="md-ellipsis">
+      
+        Target generation differs between general and combat behavior
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#from-eligible-to-selected-to-complete">
+<span class="md-ellipsis">
+      
+        From eligible to selected to complete
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#active-actions-and-interruption">
+<span class="md-ellipsis">
+      
+        Active actions and interruption
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#worked-conceptual-example">
+<span class="md-ellipsis">
+      
+        Worked conceptual example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-this-controls-does-not-control-and-leaves-unknown">
+<span class="md-ellipsis">
+      
+        What this controls, does not control, and leaves unknown
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../combat-actions-and-reactions/">
+<span class="md-ellipsis">
+    
+  
+    Combat actions and reactions
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../movement-and-spacing/">
+<span class="md-ellipsis">
+    
+  
+    Movement, spacing, facing, and combat state
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../formulas/">
+<span class="md-ellipsis">
+    
+  
+    Behavior and movement formulas
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tuning-and-difficulty/">
+<span class="md-ellipsis">
+    
+  
+    Personality, difficulty, and safe tuning
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../curve-explorer/">
+<span class="md-ellipsis">
+    
+  
+    Curve explorer
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../asset-atlas/">
+<span class="md-ellipsis">
+    
+  
+    Asset and function atlas
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../evidence-and-limitations/">
+<span class="md-ellipsis">
+    
+  
+    Evidence and limitations
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Spawns/">
+<span class="md-ellipsis">
+    
+  
+    Spawns
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Spawns
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spawns/Spawn%20System%20Overview/">
+<span class="md-ellipsis">
+    
+  
+    Spawn System Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spawns/how-spawning-works/">
+<span class="md-ellipsis">
+    
+  
+    How spawning works
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spawns/components/">
+<span class="md-ellipsis">
+    
+  
+    Spawning components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spawns/queues-and-timing/">
+<span class="md-ellipsis">
+    
+  
+    Queues and timing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spawns/game-modes/">
+<span class="md-ellipsis">
+    
+  
+    Spawning by game mode
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spawns/Spawner/">
+<span class="md-ellipsis">
+    
+  
+    Spawner types
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spawns/Spawner%20Variants/">
+<span class="md-ellipsis">
+    
+  
+    Spawner variants and map usage
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spawns/spawning-evidence-and-limitations/">
+<span class="md-ellipsis">
+    
+  
+    Evidence and limitations
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../Stages/">
+<span class="md-ellipsis">
+    
+  
+    Stages and Rounds
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stages and Rounds
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Stages/stages-tldr/">
+<span class="md-ellipsis">
+    
+  
+    Stages and rounds TL;DR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Stages/stages-overview/">
+<span class="md-ellipsis">
+    
+  
+    Stage and round overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Stages/stages-map-authoring/">
+<span class="md-ellipsis">
+    
+  
+    Stage and round authoring surfaces
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Stages/stages-staged-modes/">
+<span class="md-ellipsis">
+    
+  
+    Sampled staged modes: FFA, TDM, and TO
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Stages/stages-native-round-modes/">
+<span class="md-ellipsis">
+    
+  
+    Sampled native-round modes: LTS and Arena
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Stages/stages-timers-and-readiness/">
+<span class="md-ellipsis">
+    
+  
+    Timers and readiness
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Stages/stages-endings-and-handoff/">
+<span class="md-ellipsis">
+    
+  
+    Endings and successor handoff
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Stages/stages-evidence-and-limitations/">
+<span class="md-ellipsis">
+    
+  
+    Evidence, limits, and terminology
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Maps
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Maps
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Maps/Chivalry%202%20Official%20Maps/">
+<span class="md-ellipsis">
+    
+  
+    Chivalry 2 Official Maps
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_6" id="__nav_4_1_6_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Data Tables
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Tables
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/Abilities%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    Abilities DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/CharacterMovementModifiers%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    CharacterMovementModifiers DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/CharacterStats%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    CharacterStats DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/EmoteNames%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    EmoteNames DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/EquippedPenalty%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    EquippedPenalty DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/LoadingHintsDescriptionsStringTable%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    LoadingHintsDescriptionsStringTable DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/LoadingHintsTitlesStringTable%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    LoadingHintsTitlesStringTable DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/ST_Class_Perks%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    ST Class Perks DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/ST_Classes%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    ST Classes DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/ST_WeaponDesc%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    ST WeaponDesc DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/ST_WeaponPerks%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    ST WeaponPerks DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/ST_WeaponStrings%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    ST WeaponStrings DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Tables/SubclassPerks%20DataTable/">
+<span class="md-ellipsis">
+    
+  
+    SubclassPerks DataTable
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_7" id="__nav_4_1_7_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Components
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_7">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Components
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Uncategorized/Input%20Replay%20Component/">
+<span class="md-ellipsis">
+    
+  
+    Input Replay Component
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Unchained
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Unchained
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Mod Loading
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Mod Loading
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Unchained/ModLoading/Mod%20Loader%20Command%20Line%20Arguments/">
+<span class="md-ellipsis">
+    
+  
+    Mod Loader Command Line Arguments
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Reference/">
+<span class="md-ellipsis">
+    
+  
+    C++/BP Reference
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Glossary
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Glossary/Glossary/">
+<span class="md-ellipsis">
+    
+  
+    Mod Types
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Glossary/ArgonSDK/">
+<span class="md-ellipsis">
+    
+  
+    ArgonSDK
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-decision-vocabulary">
+<span class="md-ellipsis">
+      
+        The decision vocabulary
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-one-candidate-moves-through-the-system">
+<span class="md-ellipsis">
+      
+        How one candidate moves through the system
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-the-normal-combat-behaviors-are-configured-to-consider">
+<span class="md-ellipsis">
+      
+        What the normal combat behaviors are configured to consider
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inputs-are-measurements-not-decisions">
+<span class="md-ellipsis">
+      
+        Inputs are measurements, not decisions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curves-turn-measurements-into-preference">
+<span class="md-ellipsis">
+      
+        Curves turn measurements into preference
+      
+    </span>
+</a>
+<nav aria-label="Curves turn measurements into preference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compare-documented-examples">
+<span class="md-ellipsis">
+      
+        Compare documented examples
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#target-generation-differs-between-general-and-combat-behavior">
+<span class="md-ellipsis">
+      
+        Target generation differs between general and combat behavior
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#from-eligible-to-selected-to-complete">
+<span class="md-ellipsis">
+      
+        From eligible to selected to complete
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#active-actions-and-interruption">
+<span class="md-ellipsis">
+      
+        Active actions and interruption
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#worked-conceptual-example">
+<span class="md-ellipsis">
+      
+        Worked conceptual example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-this-controls-does-not-control-and-leaves-unknown">
+<span class="md-ellipsis">
+      
+        What this controls, does not control, and leaves unknown
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/Knutschbert/ArgonSDK-FieldGuide/blob/main/docs/Systems/Chivalry2/Bot Behavior/decision-making.md" rel="edit" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+</a>
+<h1 id="decision-making-and-scoring">Decision-making and scoring<a class="headerlink" href="#decision-making-and-scoring" title="Permanent link">¶</a></h1>
+<p>When a bot has more than one possible behavior, it does not simply choose the one with the largest<br/>
+named weight. Each behavior starts with a relative bias, then its considerations make it more or<br/>
+less suitable for the current situation.</p>
+<p>The result is best understood as a ranking signal:</p>
+<blockquote>
+<p>“Given this target and situation, how suitable is this behavior compared with the other available<br/>
+behaviors?”</p>
+</blockquote>
+<p>It is not a published percentage chance, and it is not a promise that the behavior will visibly run.</p>
+<h2 id="the-decision-vocabulary">The decision vocabulary<a class="headerlink" href="#the-decision-vocabulary" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Role in a decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Behavior set</strong></td>
+<td>A group of possible behaviors.</td>
+</tr>
+<tr>
+<td><strong>Behavior</strong></td>
+<td>One candidate, such as Slash, Block, Wait, or Shove.</td>
+</tr>
+<tr>
+<td><strong>Weight</strong></td>
+<td>The candidate’s starting relative bias.</td>
+</tr>
+<tr>
+<td><strong>Consideration</strong></td>
+<td>A test that changes suitability based on the present situation.</td>
+</tr>
+<tr>
+<td><strong>Input</strong></td>
+<td>The world signal a consideration reads.</td>
+</tr>
+<tr>
+<td><strong>Curve</strong></td>
+<td>The function that turns the input into a 0–1 influence.</td>
+</tr>
+<tr>
+<td><strong>Action</strong></td>
+<td>The request made if the behavior is selected.</td>
+</tr>
+<tr>
+<td><strong>Target generator</strong></td>
+<td>A way to produce candidate targets, when a behavior needs one.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-one-candidate-moves-through-the-system">How one candidate moves through the system<a class="headerlink" href="#how-one-candidate-moves-through-the-system" title="Permanent link">¶</a></h2>
+<div class="mermaid">flowchart LR
+  I[World input<br/>distance, time, allies, blocks] --&gt; N[Normalize to 0–1]
+  N --&gt; C[Curve score<br/>0–1]
+  C --&gt; K[Combine this consideration<br/>with the candidate's others]
+  W[Behavior weight] --&gt; S[Candidate score]
+  K --&gt; S
+  S --&gt; R[Rank against eligible candidates]
+  R --&gt; A[Action selected<br/>or active action remains]
+  A --&gt;|If invoked: requests| F[Combat controller state]
+</div>
+<p>Plaintext: recovered scoring logic normalizes a world measurement, shapes it with a curve, and<br/>
+combines it with the<br/>
+candidate's other considerations. That result and the behavior's relative weight contribute to a<br/>
+candidate score. Decision and action-lifecycle rules may select a new action or preserve an active<br/>
+one; if invoked, an action can request controller state. This diagram does <strong>not</strong> show a measured<br/>
+winner or guarantee a visible combat result in an ordinary fight.</p>
+<div class="admonition warning">
+<p class="admonition-title">A curve is not a winner probability</p>
+<p>The orange curve in the <a href="../curve-explorer/">Curve explorer</a> is one consideration's score, not<br/>
+the chance that its behavior will visibly run. Other considerations, competing candidates, and<br/>
+active-action rules still apply.</p>
+</div>
+<h2 id="what-the-normal-combat-behaviors-are-configured-to-consider">What the normal combat behaviors are configured to consider<a class="headerlink" href="#what-the-normal-combat-behaviors-are-configured-to-consider" title="Permanent link">¶</a></h2>
+<p>The normal melee combat set includes the following authored candidates:</p>
+<table>
+<thead>
+<tr>
+<th>Behavior</th>
+<th style="text-align: right;">Relative weight</th>
+<th>Main configured concerns</th>
+<th>Requested action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Slash</td>
+<td style="text-align: right;">1</td>
+<td>Time since the last attack</td>
+<td>Request a slash attack.</td>
+</tr>
+<tr>
+<td>Overhead/Stab</td>
+<td style="text-align: right;">2</td>
+<td>Attack cooldown and nearby teammates</td>
+<td>Request overhead or stab.</td>
+</tr>
+<tr>
+<td>Feint attack</td>
+<td style="text-align: right;">1</td>
+<td>Randomness and time since the last feint behavior</td>
+<td>Request an attack followed by a possible feint.</td>
+</tr>
+<tr>
+<td>Block</td>
+<td style="text-align: right;">1</td>
+<td>Distance and time since the last block behavior</td>
+<td>Hold parry briefly.</td>
+</tr>
+<tr>
+<td>Wait</td>
+<td style="text-align: right;">1</td>
+<td>A constant low fallback score</td>
+<td>Maintain its configured spacing intent and wait.</td>
+</tr>
+<tr>
+<td>Shove</td>
+<td style="text-align: right;">2</td>
+<td>Recent enemy blocks and shove cooldown</td>
+<td>Request shove.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Configured:</strong> these are the normal melee behavior definitions.<br/>
+<strong>Unknown:</strong> which one wins in every ordinary-match combat situation.</p>
+<div class="admonition tip">
+<p class="admonition-title">How to read the table</p>
+<p>A weight of 2 does not mean “twice as likely to happen.” The other conditions can reduce a<br/>
+candidate sharply, and the decision system also has active-action and interruption rules.</p>
+</div>
+<h2 id="inputs-are-measurements-not-decisions">Inputs are measurements, not decisions<a class="headerlink" href="#inputs-are-measurements-not-decisions" title="Permanent link">¶</a></h2>
+<p>An input reports a world value. The behavior decides how much to care about that value through its<br/>
+curve.</p>
+<table>
+<thead>
+<tr>
+<th>Input category</th>
+<th>Example reader question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distance</td>
+<td>“Is the current combat target close enough?”</td>
+</tr>
+<tr>
+<td>Time since last attack or behavior</td>
+<td>“Has this action cooled down enough?”</td>
+</tr>
+<tr>
+<td>Nearby allies</td>
+<td>“Would this attack be awkward around teammates?”</td>
+</tr>
+<tr>
+<td>Recent blocks</td>
+<td>“Has the opponent recently blocked enough that a shove is attractive?”</td>
+</tr>
+<tr>
+<td>Random value</td>
+<td>“Should this lower-frequency variation be considered now?”</td>
+</tr>
+<tr>
+<td>Constant</td>
+<td>“Should this behavior retain a small fallback value?”</td>
+</tr>
+</tbody>
+</table>
+<p>The same input type can behave differently in two behaviors because each behavior can give it a<br/>
+different range and curve.</p>
+<h2 id="curves-turn-measurements-into-preference">Curves turn measurements into preference<a class="headerlink" href="#curves-turn-measurements-into-preference" title="Permanent link">¶</a></h2>
+<p>Inputs are normalized to a 0–1 range and then transformed by curves. A curve can make a behavior:</p>
+<ul>
+<li>steadily more attractive as a value rises;</li>
+<li>steadily less attractive as a value rises;</li>
+<li>almost unchanged until a threshold;</li>
+<li>strongly responsive to small changes;</li>
+<li>best in a middle band.</li>
+</ul>
+<p>For example, a close-range defensive behavior can use a distance curve that scores well nearby and<br/>
+poorly far away. A cooldown can use a curve that holds a behavior back immediately after use, then<br/>
+allows it to recover.</p>
+<p>The exact score-shaping formulas are in <a href="../formulas/">behavior and movement formulas</a>. That page<br/>
+also explains why several considerations are combined as strong, softened multipliers rather than<br/>
+as a simple average.</p>
+<h3 id="compare-documented-examples">Compare documented examples<a class="headerlink" href="#compare-documented-examples" title="Permanent link">¶</a></h3>
+<p>The <a href="../curve-explorer/">Curve explorer</a> provides an interactive comparison of the documented Slash<br/>
+cooldown, Block distance, Block repeat timing, Wait fallback, Shove-pressure, and Feint-randomness<br/>
+considerations. Each uses its documented range and parameters; use it to compare <strong>one curve<br/>
+output at a time</strong>, not to predict a final winner.</p>
+<h2 id="target-generation-differs-between-general-and-combat-behavior">Target generation differs between general and combat behavior<a class="headerlink" href="#target-generation-differs-between-general-and-combat-behavior" title="Permanent link">¶</a></h2>
+<p>Some behavior types need to find a target first. A general engagement behavior can search for an<br/>
+appropriate enemy or a movement behavior can search for a destination.</p>
+<p>Normal melee <strong>combat</strong> behaviors are different: their target-generator field is empty. They are<br/>
+configured around the controller’s already-established combat target.</p>
+<p>This gives combat decision-making a simple practical dependency:</p>
+<ol>
+<li>the controller needs a valid combat target;</li>
+<li>combat behaviors evaluate the situation relative to that target;</li>
+<li>a selected action requests combat work against that target.</li>
+</ol>
+<p>If there is no valid target, a target-dependent candidate can be unsuitable even if its nominal<br/>
+weight is high.</p>
+<h2 id="from-eligible-to-selected-to-complete">From eligible to selected to complete<a class="headerlink" href="#from-eligible-to-selected-to-complete" title="Permanent link">¶</a></h2>
+<p>These stages should not be collapsed into one:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Present</strong></td>
+<td>The behavior exists in a set or runtime cache.</td>
+</tr>
+<tr>
+<td><strong>Eligible</strong></td>
+<td>Its target/context and basic conditions allow it to be considered.</td>
+</tr>
+<tr>
+<td><strong>Scored</strong></td>
+<td>Its considerations have produced a candidate score.</td>
+</tr>
+<tr>
+<td><strong>Selected</strong></td>
+<td>The decision system has chosen it over alternatives.</td>
+</tr>
+<tr>
+<td><strong>Active</strong></td>
+<td>Its action is currently in progress.</td>
+</tr>
+<tr>
+<td><strong>Complete or interrupted</strong></td>
+<td>Its action has reported completion or has been replaced under the action rules.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Present is not selected</p>
+<p>A live inventory can prove the first stage. It cannot, by itself, prove the later stages.<br/>
+This distinction is especially important for event behaviors, because a bot can cache the<br/>
+possible reactions without an observed event dispatch.</p>
+</div>
+<h2 id="active-actions-and-interruption">Active actions and interruption<a class="headerlink" href="#active-actions-and-interruption" title="Permanent link">¶</a></h2>
+<p>Actions are not necessarily instantaneous. Attack, block, wait, movement, and event-response<br/>
+actions can persist until a combat-state transition, a timer, or another completion condition says<br/>
+they are done.</p>
+<p>The decision system has rules for whether an active action is ready to finish or may be interrupted.<br/>
+This means a newly attractive behavior does not always replace the current action immediately.</p>
+<p><strong>Recovered:</strong> an active matching action can be preserved, while a completed or interruptible action<br/>
+can be replaced by a new winner.<br/>
+<strong>Unknown:</strong> a complete public equation that combines all active-action, inertia, and<br/>
+target-switching effects into the final score for every ordinary fight.</p>
+<h2 id="worked-conceptual-example">Worked conceptual example<a class="headerlink" href="#worked-conceptual-example" title="Permanent link">¶</a></h2>
+<p>Imagine a bot that is close to its combat target shortly after using block:</p>
+<ol>
+<li>The Block behavior’s distance input may favor blocking because the opponent is nearby.</li>
+<li>Its “time since block” input may still penalize it because the bot blocked recently.</li>
+<li>The combined score therefore may be lower than the distance alone suggests.</li>
+<li>Wait, Slash, or another candidate can remain competitive.</li>
+<li>Even if Block looks good, an existing active action may still be allowed to finish first.</li>
+</ol>
+<p>This example explains the model. It does not claim a recorded bot must choose one particular result.</p>
+<h2 id="what-this-controls-does-not-control-and-leaves-unknown">What this controls, does not control, and leaves unknown<a class="headerlink" href="#what-this-controls-does-not-control-and-leaves-unknown" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Controls</strong></td>
+<td>Weights, input ranges, curves, and considerations shape the relative suitability of authored behavior candidates.</td>
+</tr>
+<tr>
+<td><strong>Does not control by itself</strong></td>
+<td>A behavior’s weight or a single favorable input does not guarantee its selection or immediate execution.</td>
+</tr>
+<tr>
+<td><strong>Unknown</strong></td>
+<td>The complete ordinary-match winner trace and one closed-form model for inertia, active actions, target switching, and all runtime decision cadence.</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+<script src="../../../../javascripts/mathjax.js"></script>
+<script src="../../../../javascripts/mathjax/tex-svg.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../../../../javascripts/curve-explorer.js"></script>
+<script src="../../../../javascripts/bue-render/render.js"></script>
+<script src="../../../../javascripts/bue-embed.js"></script>
+<script src="../../../../javascripts/ref-search.js"></script>
+<script>mermaid.initialize({});</script></body>
+</html>
